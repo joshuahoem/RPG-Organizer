@@ -314,6 +314,7 @@
 -r:"C:/Program Files/Unity/Hub/Editor/2021.1.12f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2021.1.12f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll"
 <<<<<<< HEAD
+<<<<<<< HEAD
 -r:"C:/Users/Owner/Documents/Unity/RPG-Organizer/RPG Organizer/Library/PackageCache/com.unity.collab-proxy@1.5.7/Lib/Editor/PlasticSCM/log4netPlastic.dll"
 -r:"C:/Users/Owner/Documents/Unity/RPG-Organizer/RPG Organizer/Library/PackageCache/com.unity.collab-proxy@1.5.7/Lib/Editor/PlasticSCM/Unity.Plastic.Antlr3.Runtime.dll"
 -r:"C:/Users/Owner/Documents/Unity/RPG-Organizer/RPG Organizer/Library/PackageCache/com.unity.collab-proxy@1.5.7/Lib/Editor/PlasticSCM/unityplastic.dll"
@@ -322,6 +323,8 @@
 -r:"C:/Users/Owner/Documents/Unity/RPG-Organizer/RPG Organizer/Library/PackageCache/com.unity.visualscripting@1.6.1/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll"
 -r:"C:/Users/Owner/Documents/Unity/RPG-Organizer/RPG Organizer/Library/PackageCache/com.unity.visualscripting@1.6.1/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll"
 =======
+=======
+>>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
 -r:"C:/Users/jonah/Documents/RPG-Organizer/RPG Organizer/Library/PackageCache/com.unity.collab-proxy@1.5.7/Lib/Editor/PlasticSCM/log4netPlastic.dll"
 -r:"C:/Users/jonah/Documents/RPG-Organizer/RPG Organizer/Library/PackageCache/com.unity.collab-proxy@1.5.7/Lib/Editor/PlasticSCM/Unity.Plastic.Antlr3.Runtime.dll"
 -r:"C:/Users/jonah/Documents/RPG-Organizer/RPG Organizer/Library/PackageCache/com.unity.collab-proxy@1.5.7/Lib/Editor/PlasticSCM/unityplastic.dll"
@@ -329,7 +332,10 @@
 -r:"C:/Users/jonah/Documents/RPG-Organizer/RPG Organizer/Library/PackageCache/com.unity.visualscripting@1.6.1/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll"
 -r:"C:/Users/jonah/Documents/RPG-Organizer/RPG Organizer/Library/PackageCache/com.unity.visualscripting@1.6.1/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll"
 -r:"C:/Users/jonah/Documents/RPG-Organizer/RPG Organizer/Library/PackageCache/com.unity.visualscripting@1.6.1/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll"
+<<<<<<< HEAD
 >>>>>>> 61ad5aa24fb3f62dcdb593b01a68d16fc270a4e6
+=======
+>>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
 "Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/EventData/AxisEventData.cs"
 "Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/EventData/BaseEventData.cs"
 "Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/EventData/PointerEventData.cs"
