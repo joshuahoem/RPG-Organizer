@@ -1,8 +1,14 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:RPG Organizer/Assets/Prefabs/Instantiated Objects.meta
 guid: d1bc86ca8bbd33d499933c348c440c43
 folderAsset: yes
 DefaultImporter:
+========
+guid: 56121a417c5b5d442a78fb78cd1f784b
+NativeFormatImporter:
+>>>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1:RPG Organizer/Assets/Scriptable Objects/Abilities/Paladin/Holy Light.asset.meta
   externalObjects: {}
+  mainObjectFileID: 11400000
   userData: 
   assetBundleName: 
   assetBundleVariant: 
