@@ -2,7 +2,11 @@ m_ProjectFiles:
   m_ManifestFileStatus:
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_FilePath: C:/Users/Owner/Documents/Unity/RPG-Organizer/RPG Organizer/Packages/manifest.json
+=======
+    m_FilePath: C:/Users/jonah/Documents/RPG-Organizer/RPG Organizer/Packages/manifest.json
+>>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
 =======
     m_FilePath: C:/Users/jonah/Documents/RPG-Organizer/RPG Organizer/Packages/manifest.json
 >>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
@@ -18,7 +22,11 @@ m_ProjectFiles:
   m_LockFileStatus:
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_FilePath: C:/Users/Owner/Documents/Unity/RPG-Organizer/RPG Organizer/Packages/packages-lock.json
+=======
+    m_FilePath: C:/Users/jonah/Documents/RPG-Organizer/RPG Organizer/Packages/packages-lock.json
+>>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
 =======
     m_FilePath: C:/Users/jonah/Documents/RPG-Organizer/RPG Organizer/Packages/packages-lock.json
 >>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
@@ -37,7 +45,11 @@ m_LocalPackages:
   m_LocalFileStatus: []
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 m_ProjectPath: C:/Users/Owner/Documents/Unity/RPG-Organizer/RPG Organizer/Packages
+=======
+m_ProjectPath: C:/Users/jonah/Documents/RPG-Organizer/RPG Organizer/Packages
+>>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
 =======
 m_ProjectPath: C:/Users/jonah/Documents/RPG-Organizer/RPG Organizer/Packages
 >>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
@@ -53,7 +65,11 @@ m_ResolvedPackages:
   source: 1
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   resolvedPath: C:\Users\Owner\Documents\Unity\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.2d.animation@6.0.3
+=======
+  resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.2d.animation@6.0.3
+>>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
 =======
   resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.2d.animation@6.0.3
 >>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
@@ -142,12 +158,15 @@ m_ResolvedPackages:
     - 5.1.0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     - 5.1.1
     - 5.2.0
     - 5.2.1
     - 5.2.3
     - 5.2.4
     - 5.2.6
+=======
+>>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
 =======
 >>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
 =======
@@ -165,6 +184,7 @@ m_ResolvedPackages:
     - 7.0.1
     - 7.0.2
     - 7.0.3
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     - 7.0.4
@@ -186,6 +206,11 @@ m_ResolvedPackages:
     - 9.0.0
     - 9.0.1
     - 10.0.0-pre.1
+=======
+    - 8.0.0-pre.3
+    - 8.0.0-pre.4
+    - 8.0.0
+>>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
 =======
     - 8.0.0-pre.3
     - 8.0.0-pre.4
@@ -265,7 +290,11 @@ m_ResolvedPackages:
   source: 1
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   resolvedPath: C:\Users\Owner\Documents\Unity\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.2d.pixel-perfect@5.0.0
+=======
+  resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.2d.pixel-perfect@5.0.0
+>>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
 =======
   resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.2d.pixel-perfect@5.0.0
 >>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
@@ -355,7 +384,11 @@ m_ResolvedPackages:
   source: 1
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   resolvedPath: C:\Users\Owner\Documents\Unity\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.2d.psdimporter@5.0.3
+=======
+  resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.2d.psdimporter@5.0.3
+>>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
 =======
   resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.2d.psdimporter@5.0.3
 >>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
@@ -417,8 +450,11 @@ m_ResolvedPackages:
     - 4.2.0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     - 4.3.0
     - 4.3.1
+=======
+>>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
 =======
 >>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
 =======
@@ -437,6 +473,7 @@ m_ResolvedPackages:
     - 6.0.2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     - 6.0.3
     - 6.0.4
     - 6.0.5
@@ -452,6 +489,11 @@ m_ResolvedPackages:
     - 8.0.0
     - 8.0.1
     - 9.0.0-pre.1
+=======
+    - 7.0.0-pre.3
+    - 7.0.0-pre.4
+    - 7.0.0
+>>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
 =======
     - 7.0.0-pre.3
     - 7.0.0-pre.4
@@ -529,7 +571,11 @@ m_ResolvedPackages:
   source: 2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   resolvedPath: C:\Users\Owner\Documents\Unity\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.2d.sprite@1.0.0
+=======
+  resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.2d.sprite@1.0.0
+>>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
 =======
   resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.2d.sprite@1.0.0
 >>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
@@ -591,7 +637,11 @@ m_ResolvedPackages:
   source: 1
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   resolvedPath: C:\Users\Owner\Documents\Unity\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.2d.spriteshape@6.0.0
+=======
+  resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.2d.spriteshape@6.0.0
+>>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
 =======
   resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.2d.spriteshape@6.0.0
 >>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
@@ -680,6 +730,7 @@ m_ResolvedPackages:
     - 7.0.3
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     - 7.0.4
     - 7.0.5
     - 7.0.6
@@ -691,6 +742,11 @@ m_ResolvedPackages:
     - 9.0.0
     - 9.0.1
     - 10.0.0-pre.1
+=======
+    - 8.0.0-pre.4
+    - 8.0.0-pre.5
+    - 8.0.0
+>>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
 =======
     - 8.0.0-pre.4
     - 8.0.0-pre.5
@@ -773,7 +829,11 @@ m_ResolvedPackages:
   source: 2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   resolvedPath: C:\Users\Owner\Documents\Unity\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.2d.tilemap@1.0.0
+=======
+  resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.2d.tilemap@1.0.0
+>>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
 =======
   resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.2d.tilemap@1.0.0
 >>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
@@ -834,7 +894,11 @@ m_ResolvedPackages:
   source: 1
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   resolvedPath: C:\Users\Owner\Documents\Unity\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.2d.tilemap.extras@2.0.0
+=======
+  resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.2d.tilemap.extras@2.0.0
+>>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
 =======
   resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.2d.tilemap.extras@2.0.0
 >>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
@@ -886,9 +950,12 @@ m_ResolvedPackages:
     - 3.0.0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     - 3.0.1
     - 3.0.2
     - 4.0.0-pre.1
+=======
+>>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
 =======
 >>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
 =======
@@ -942,7 +1009,11 @@ m_ResolvedPackages:
   source: 1
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   resolvedPath: C:\Users\Owner\Documents\Unity\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.collab-proxy@1.5.7
+=======
+  resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.collab-proxy@1.5.7
+>>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
 =======
   resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.collab-proxy@1.5.7
 >>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
@@ -1007,6 +1078,7 @@ m_ResolvedPackages:
     - 1.15.13
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     - 1.15.15
     - 1.15.16
     - 1.15.17
@@ -1016,6 +1088,8 @@ m_ResolvedPackages:
     - 1.17.2
     - 1.17.6
     - 1.17.7
+=======
+>>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
 =======
 >>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
 =======
@@ -1054,6 +1128,7 @@ m_ResolvedPackages:
     - 1.15.13
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     - 1.15.15
     - 1.15.16
     - 1.15.17
@@ -1063,6 +1138,8 @@ m_ResolvedPackages:
     - 1.17.2
     - 1.17.6
     - 1.17.7
+=======
+>>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
 =======
 >>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
 =======
@@ -1125,7 +1202,11 @@ m_ResolvedPackages:
   source: 1
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   resolvedPath: C:\Users\Owner\Documents\Unity\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.ide.rider@3.0.7
+=======
+  resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.ide.rider@3.0.7
+>>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
 =======
   resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.ide.rider@3.0.7
 >>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
@@ -1178,10 +1259,13 @@ m_ResolvedPackages:
     - 3.0.12
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     - 3.0.13
     - 3.0.14
     - 3.0.15
     - 3.0.16
+=======
+>>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
 =======
 >>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
 =======
@@ -1193,11 +1277,15 @@ m_ResolvedPackages:
     - 3.0.12
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     - 3.0.13
     - 3.0.14
     - 3.0.15
     - 3.0.16
     verified: 3.0.16
+=======
+    verified: 3.0.12
+>>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
 =======
     verified: 3.0.12
 >>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
@@ -1241,7 +1329,11 @@ m_ResolvedPackages:
   source: 1
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   resolvedPath: C:\Users\Owner\Documents\Unity\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.ide.visualstudio@2.0.9
+=======
+  resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.ide.visualstudio@2.0.9
+>>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
 =======
   resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.ide.visualstudio@2.0.9
 >>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
@@ -1283,8 +1375,11 @@ m_ResolvedPackages:
     - 2.0.14
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     - 2.0.15
     - 2.0.16
+=======
+>>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
 =======
 >>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
 =======
@@ -1296,9 +1391,13 @@ m_ResolvedPackages:
     - 2.0.14
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     - 2.0.15
     - 2.0.16
     verified: 2.0.16
+=======
+    verified: 2.0.14
+>>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
 =======
     verified: 2.0.14
 >>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
@@ -1348,7 +1447,11 @@ m_ResolvedPackages:
   source: 1
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   resolvedPath: C:\Users\Owner\Documents\Unity\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.ide.vscode@1.2.3
+=======
+  resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.ide.vscode@1.2.3
+>>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
 =======
   resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.ide.vscode@1.2.3
 >>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
@@ -1422,7 +1525,11 @@ m_ResolvedPackages:
   source: 1
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   resolvedPath: C:\Users\Owner\Documents\Unity\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.test-framework@1.1.24
+=======
+  resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.test-framework@1.1.24
+>>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
 =======
   resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.test-framework@1.1.24
 >>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
@@ -1478,9 +1585,12 @@ m_ResolvedPackages:
     - 1.1.31
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     - 1.1.33
     - 1.3.0
     - 2.0.1-exp.1
+=======
+>>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
 =======
 >>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
 =======
@@ -1496,9 +1606,12 @@ m_ResolvedPackages:
     - 1.1.31
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     - 1.1.33
     - 1.3.0
     - 2.0.1-exp.1
+=======
+>>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
 =======
 >>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
 =======
@@ -1553,7 +1666,11 @@ m_ResolvedPackages:
   source: 1
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   resolvedPath: C:\Users\Owner\Documents\Unity\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.textmeshpro@3.0.6
+=======
+  resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.textmeshpro@3.0.6
+>>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
 =======
   resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.textmeshpro@3.0.6
 >>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
@@ -1726,7 +1843,11 @@ m_ResolvedPackages:
   source: 1
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   resolvedPath: C:\Users\Owner\Documents\Unity\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.timeline@1.5.5
+=======
+  resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.timeline@1.5.5
+>>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
 =======
   resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.timeline@1.5.5
 >>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
@@ -1820,10 +1941,13 @@ m_ResolvedPackages:
     - 1.7.0-pre.2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     - 1.7.0
     - 1.7.1
     - 1.7.2
     - 1.8.0
+=======
+>>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
 =======
 >>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
 =======
@@ -1844,10 +1968,13 @@ m_ResolvedPackages:
     - 1.7.0-pre.2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     - 1.7.0
     - 1.7.1
     - 1.7.2
     - 1.8.0
+=======
+>>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
 =======
 >>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
 =======
@@ -1907,7 +2034,11 @@ m_ResolvedPackages:
   source: 2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   resolvedPath: C:\Users\Owner\Documents\Unity\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.ugui@1.0.0
+=======
+  resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.ugui@1.0.0
+>>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
 =======
   resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.ugui@1.0.0
 >>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
@@ -1980,7 +2111,11 @@ m_ResolvedPackages:
   source: 1
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   resolvedPath: C:\Users\Owner\Documents\Unity\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.visualscripting@1.6.1
+=======
+  resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.visualscripting@1.6.1
+>>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
 =======
   resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.visualscripting@1.6.1
 >>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
@@ -2076,7 +2211,11 @@ m_ResolvedPackages:
   source: 2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   resolvedPath: C:\Users\Owner\Documents\Unity\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.ai@1.0.0
+=======
+  resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.ai@1.0.0
+>>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
 =======
   resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.ai@1.0.0
 >>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
@@ -2135,7 +2274,11 @@ m_ResolvedPackages:
   source: 2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   resolvedPath: C:\Users\Owner\Documents\Unity\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.androidjni@1.0.0
+=======
+  resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.androidjni@1.0.0
+>>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
 =======
   resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.androidjni@1.0.0
 >>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
@@ -2193,7 +2336,11 @@ m_ResolvedPackages:
   source: 2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   resolvedPath: C:\Users\Owner\Documents\Unity\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.animation@1.0.0
+=======
+  resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.animation@1.0.0
+>>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
 =======
   resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.animation@1.0.0
 >>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
@@ -2252,7 +2399,11 @@ m_ResolvedPackages:
   source: 2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   resolvedPath: C:\Users\Owner\Documents\Unity\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.assetbundle@1.0.0
+=======
+  resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.assetbundle@1.0.0
+>>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
 =======
   resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.assetbundle@1.0.0
 >>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
@@ -2311,7 +2462,11 @@ m_ResolvedPackages:
   source: 2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   resolvedPath: C:\Users\Owner\Documents\Unity\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.audio@1.0.0
+=======
+  resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.audio@1.0.0
+>>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
 =======
   resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.audio@1.0.0
 >>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
@@ -2370,7 +2525,11 @@ m_ResolvedPackages:
   source: 2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   resolvedPath: C:\Users\Owner\Documents\Unity\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.cloth@1.0.0
+=======
+  resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.cloth@1.0.0
+>>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
 =======
   resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.cloth@1.0.0
 >>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
@@ -2433,7 +2592,11 @@ m_ResolvedPackages:
   source: 2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   resolvedPath: C:\Users\Owner\Documents\Unity\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.director@1.0.0
+=======
+  resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.director@1.0.0
+>>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
 =======
   resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.director@1.0.0
 >>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
@@ -2500,7 +2663,11 @@ m_ResolvedPackages:
   source: 2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   resolvedPath: C:\Users\Owner\Documents\Unity\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.imageconversion@1.0.0
+=======
+  resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.imageconversion@1.0.0
+>>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
 =======
   resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.imageconversion@1.0.0
 >>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
@@ -2560,7 +2727,11 @@ m_ResolvedPackages:
   source: 2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   resolvedPath: C:\Users\Owner\Documents\Unity\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.imgui@1.0.0
+=======
+  resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.imgui@1.0.0
+>>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
 =======
   resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.imgui@1.0.0
 >>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
@@ -2619,7 +2790,11 @@ m_ResolvedPackages:
   source: 2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   resolvedPath: C:\Users\Owner\Documents\Unity\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.jsonserialize@1.0.0
+=======
+  resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.jsonserialize@1.0.0
+>>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
 =======
   resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.jsonserialize@1.0.0
 >>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
@@ -2678,7 +2853,11 @@ m_ResolvedPackages:
   source: 2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   resolvedPath: C:\Users\Owner\Documents\Unity\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.particlesystem@1.0.0
+=======
+  resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.particlesystem@1.0.0
+>>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
 =======
   resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.particlesystem@1.0.0
 >>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
@@ -2737,7 +2916,11 @@ m_ResolvedPackages:
   source: 2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   resolvedPath: C:\Users\Owner\Documents\Unity\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.physics@1.0.0
+=======
+  resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.physics@1.0.0
+>>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
 =======
   resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.physics@1.0.0
 >>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
@@ -2796,7 +2979,11 @@ m_ResolvedPackages:
   source: 2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   resolvedPath: C:\Users\Owner\Documents\Unity\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.physics2d@1.0.0
+=======
+  resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.physics2d@1.0.0
+>>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
 =======
   resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.physics2d@1.0.0
 >>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
@@ -2855,7 +3042,11 @@ m_ResolvedPackages:
   source: 2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   resolvedPath: C:\Users\Owner\Documents\Unity\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.screencapture@1.0.0
+=======
+  resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.screencapture@1.0.0
+>>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
 =======
   resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.screencapture@1.0.0
 >>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
@@ -2918,7 +3109,11 @@ m_ResolvedPackages:
   source: 2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   resolvedPath: C:\Users\Owner\Documents\Unity\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.terrain@1.0.0
+=======
+  resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.terrain@1.0.0
+>>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
 =======
   resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.terrain@1.0.0
 >>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
@@ -2977,7 +3172,11 @@ m_ResolvedPackages:
   source: 2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   resolvedPath: C:\Users\Owner\Documents\Unity\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.terrainphysics@1.0.0
+=======
+  resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.terrainphysics@1.0.0
+>>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
 =======
   resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.terrainphysics@1.0.0
 >>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
@@ -3044,7 +3243,11 @@ m_ResolvedPackages:
   source: 2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   resolvedPath: C:\Users\Owner\Documents\Unity\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.tilemap@1.0.0
+=======
+  resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.tilemap@1.0.0
+>>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
 =======
   resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.tilemap@1.0.0
 >>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
@@ -3106,7 +3309,11 @@ m_ResolvedPackages:
   source: 2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   resolvedPath: C:\Users\Owner\Documents\Unity\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.ui@1.0.0
+=======
+  resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.ui@1.0.0
+>>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
 =======
   resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.ui@1.0.0
 >>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
@@ -3165,7 +3372,11 @@ m_ResolvedPackages:
   source: 2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   resolvedPath: C:\Users\Owner\Documents\Unity\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.uielements@1.0.0
+=======
+  resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.uielements@1.0.0
+>>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
 =======
   resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.uielements@1.0.0
 >>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
@@ -3240,7 +3451,11 @@ m_ResolvedPackages:
   source: 2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   resolvedPath: C:\Users\Owner\Documents\Unity\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.umbra@1.0.0
+=======
+  resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.umbra@1.0.0
+>>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
 =======
   resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.umbra@1.0.0
 >>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
@@ -3299,7 +3514,11 @@ m_ResolvedPackages:
   source: 2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   resolvedPath: C:\Users\Owner\Documents\Unity\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.unityanalytics@1.0.0
+=======
+  resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.unityanalytics@1.0.0
+>>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
 =======
   resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.unityanalytics@1.0.0
 >>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
@@ -3366,7 +3585,11 @@ m_ResolvedPackages:
   source: 2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   resolvedPath: C:\Users\Owner\Documents\Unity\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.unitywebrequest@1.0.0
+=======
+  resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.unitywebrequest@1.0.0
+>>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
 =======
   resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.unitywebrequest@1.0.0
 >>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
@@ -3425,7 +3648,11 @@ m_ResolvedPackages:
   source: 2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   resolvedPath: C:\Users\Owner\Documents\Unity\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.unitywebrequestassetbundle@1.0.0
+=======
+  resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.unitywebrequestassetbundle@1.0.0
+>>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
 =======
   resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.unitywebrequestassetbundle@1.0.0
 >>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
@@ -3492,7 +3719,11 @@ m_ResolvedPackages:
   source: 2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   resolvedPath: C:\Users\Owner\Documents\Unity\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.unitywebrequestaudio@1.0.0
+=======
+  resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.unitywebrequestaudio@1.0.0
+>>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
 =======
   resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.unitywebrequestaudio@1.0.0
 >>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
@@ -3559,7 +3790,11 @@ m_ResolvedPackages:
   source: 2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   resolvedPath: C:\Users\Owner\Documents\Unity\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.unitywebrequesttexture@1.0.0
+=======
+  resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.unitywebrequesttexture@1.0.0
+>>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
 =======
   resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.unitywebrequesttexture@1.0.0
 >>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
@@ -3626,7 +3861,11 @@ m_ResolvedPackages:
   source: 2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   resolvedPath: C:\Users\Owner\Documents\Unity\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.unitywebrequestwww@1.0.0
+=======
+  resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.unitywebrequestwww@1.0.0
+>>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
 =======
   resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.unitywebrequestwww@1.0.0
 >>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
@@ -3709,7 +3948,11 @@ m_ResolvedPackages:
   source: 2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   resolvedPath: C:\Users\Owner\Documents\Unity\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.vehicles@1.0.0
+=======
+  resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.vehicles@1.0.0
+>>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
 =======
   resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.vehicles@1.0.0
 >>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
@@ -3772,7 +4015,11 @@ m_ResolvedPackages:
   source: 2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   resolvedPath: C:\Users\Owner\Documents\Unity\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.video@1.0.0
+=======
+  resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.video@1.0.0
+>>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
 =======
   resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.video@1.0.0
 >>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
@@ -3843,7 +4090,11 @@ m_ResolvedPackages:
   source: 2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   resolvedPath: C:\Users\Owner\Documents\Unity\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.vr@1.0.0
+=======
+  resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.vr@1.0.0
+>>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
 =======
   resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.vr@1.0.0
 >>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
@@ -3916,7 +4167,11 @@ m_ResolvedPackages:
   source: 2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   resolvedPath: C:\Users\Owner\Documents\Unity\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.wind@1.0.0
+=======
+  resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.wind@1.0.0
+>>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
 =======
   resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.wind@1.0.0
 >>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
@@ -3975,7 +4230,11 @@ m_ResolvedPackages:
   source: 2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   resolvedPath: C:\Users\Owner\Documents\Unity\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.xr@1.0.0
+=======
+  resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.xr@1.0.0
+>>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
 =======
   resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.xr@1.0.0
 >>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
@@ -4046,7 +4305,11 @@ m_ResolvedPackages:
   source: 2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   resolvedPath: C:\Users\Owner\Documents\Unity\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.subsystems@1.0.0
+=======
+  resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.subsystems@1.0.0
+>>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
 =======
   resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.subsystems@1.0.0
 >>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
@@ -4109,7 +4372,11 @@ m_ResolvedPackages:
   source: 2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   resolvedPath: C:\Users\Owner\Documents\Unity\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.uielementsnative@1.0.0
+=======
+  resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.uielementsnative@1.0.0
+>>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
 =======
   resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.modules.uielementsnative@1.0.0
 >>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
@@ -4179,7 +4446,11 @@ m_ResolvedPackages:
   source: 1
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   resolvedPath: C:\Users\Owner\Documents\Unity\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.ext.nunit@1.0.6
+=======
+  resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.ext.nunit@1.0.6
+>>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
 =======
   resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.ext.nunit@1.0.6
 >>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
@@ -4204,12 +4475,17 @@ m_ResolvedPackages:
     - 1.0.6
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     - 2.0.2
     - 2.0.3
     compatible:
     - 1.0.6
     - 2.0.2
     - 2.0.3
+=======
+    compatible:
+    - 1.0.6
+>>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
 =======
     compatible:
     - 1.0.6
@@ -4255,7 +4531,11 @@ m_ResolvedPackages:
   source: 1
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   resolvedPath: C:\Users\Owner\Documents\Unity\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.nuget.newtonsoft-json@2.0.0
+=======
+  resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.nuget.newtonsoft-json@2.0.0
+>>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
 =======
   resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.nuget.newtonsoft-json@2.0.0
 >>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
@@ -4322,7 +4602,11 @@ m_ResolvedPackages:
   source: 1
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   resolvedPath: C:\Users\Owner\Documents\Unity\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.mathematics@1.2.1
+=======
+  resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.mathematics@1.2.1
+>>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
 =======
   resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.mathematics@1.2.1
 >>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
@@ -4399,7 +4683,11 @@ m_ResolvedPackages:
   source: 1
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   resolvedPath: C:\Users\Owner\Documents\Unity\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.2d.common@5.0.0
+=======
+  resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.2d.common@5.0.0
+>>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
 =======
   resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.2d.common@5.0.0
 >>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
@@ -4421,6 +4709,7 @@ m_ResolvedPackages:
   errors: []
   versions:
     all:
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     - 1.0.9-preview.1
@@ -4469,6 +4758,9 @@ m_ResolvedPackages:
     - 8.0.0
     - 8.0.1
     - 9.0.0-pre.1
+=======
+    - 5.0.0
+>>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
 =======
     - 5.0.0
 >>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
@@ -4528,7 +4820,11 @@ m_ResolvedPackages:
   source: 1
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   resolvedPath: C:\Users\Owner\Documents\Unity\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.2d.path@5.0.0
+=======
+  resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.2d.path@5.0.0
+>>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
 =======
   resolvedPath: C:\Users\jonah\Documents\RPG-Organizer\RPG Organizer\Library\PackageCache\com.unity.2d.path@5.0.0
 >>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
