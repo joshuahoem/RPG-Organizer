@@ -151,3 +151,4 @@ Received Import Request.
   path: Assets/Prefabs/Instantiated Objects
   artifactKey: Guid(d1bc86ca8bbd33d499933c348c440c43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Prefabs/Instantiated Objects using Guid(d1bc86ca8bbd33d499933c348c440c43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8324ade952a7a93d167eaeba4cffab5b') in 0.012686 seconds 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file

@@ -4,6 +4,7 @@
 { "cat":"", "pid":1, "tid":0, "ts":0, "ph":"M", "name":"process_name", "args": { "name":"tundra" } }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ,{ "pid":1, "tid":0, "ts":389716642667, "dur":5484, "ph":"X", "name": "DriverCheckDagSignatures",  "args": { "durationMS":5, "detail":"" }}
 ,{ "pid":1, "tid":0, "ts":389716648151, "dur":24414, "ph":"X", "name": "DriverInitData",  "args": { "durationMS":24, "detail":"" }}
 ,{ "pid":1, "tid":0, "ts":389716672880, "dur":5262, "ph":"X", "name": "Tundra",  "args": { "durationMS":5, "detail":"RemoveStaleOutputs" }}
@@ -863,6 +864,8 @@
 ,{ "pid":1, "tid":8, "ts":389774791320, "dur":2025792, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "durationMS":2026, "detail":"" }}
 ,{ "pid":1, "tid":8, "ts":389776817112, "dur":21796, "ph":"X", "name": "Exiting",  "args": { "durationMS":22, "detail":"BuildLoop" }}
 =======
+=======
+>>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
 =======
 >>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
 ,{ "pid":1, "tid":0, "ts":324025576211, "dur":1889, "ph":"X", "name": "DriverCheckDagSignatures",  "args": { "durationMS":2, "detail":"" }}
@@ -1809,7 +1812,10 @@
 ,{ "pid":1, "tid":16, "ts":324034102450, "dur":516003, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "durationMS":516, "detail":"" }}
 ,{ "pid":1, "tid":16, "ts":324034618453, "dur":10400, "ph":"X", "name": "Exiting",  "args": { "durationMS":10, "detail":"BuildLoop" }}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 61ad5aa24fb3f62dcdb593b01a68d16fc270a4e6
+=======
+>>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
 =======
 >>>>>>> 749102c49a5cba98a9c40bf993297a7675111ad1
 
