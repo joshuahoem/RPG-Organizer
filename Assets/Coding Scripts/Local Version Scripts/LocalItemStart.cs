@@ -77,6 +77,18 @@ public class LocalItemStart : MonoBehaviour
         
     }
 
+    public void DisplayAbilityInfo(AbilitySaveObject ability)
+    {
+        imageSprite.sprite = ability.ability.abilitySpriteIcon;
+        itemName.text = ability.ability.abilityName;
+        statStringOne.text = string.Empty;
+        statStringTwo.text = string.Empty;
+        statNumberOne.text = string.Empty;
+        statNumberTwo.text = string.Empty;
+        backgroundSprite.color = SpecialColor;
+    }
+
+
     public void ClickedItem()
     {
         FindObjectOfType<TabManager>().itemInfoPanel.SetActive(true);

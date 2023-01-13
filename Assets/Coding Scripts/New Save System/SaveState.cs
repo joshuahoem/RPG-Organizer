@@ -7,8 +7,8 @@ public class SaveState
     public int numberOfCharacters;
     public string fileIndexString;
     public bool raceAbilityBool;
-
     public bool classAbilityBool;
+    public bool learnedAbilityBool;
     public ScreenState screenState;
 }
 

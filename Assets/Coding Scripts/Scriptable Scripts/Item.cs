@@ -32,7 +32,8 @@ public enum ItemType
     Weapon,
     Armor,
     Consumable,
-    Special
+    Special,
+    Scroll
 }
 
 public enum ItemRarity
@@ -81,6 +82,10 @@ public class Item : ScriptableObject
     public int strengthModifier;
     public int intelligenceModifier;
     public int speedModifier;    
+
+    [Header("Scroll Info")]
+    public Ability ability;
+
 
     public ItemType GetItemType()
     {

@@ -249,6 +249,24 @@ public class LocalInventoryManager : MonoBehaviour
                 _item.GetComponent<LocalItemStart>().DisplayItemInfo(item.item, item);
             }
         }
+
+        if (tabManager.tabState.ToString() == TabManagerState.Special.ToString())
+        {
+            foreach (AbilitySaveObject ability in save.abilityInventory)
+            {
+                if (ability.abilityType == AbilityType.learnedAbility)
+                {
+                    GameObject _ability = Instantiate(inventoryObject, 
+                        transform.position, transform.rotation);
+
+                    _ability.transform.SetParent(parentObject.transform, false);
+                    displayedItems.Add(_ability);
+
+                    _ability.GetComponent<LocalItemStart>().DisplayAbilityInfo(ability);
+                }
+            }
+        }
+        
         
     }
 

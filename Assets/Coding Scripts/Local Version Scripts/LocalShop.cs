@@ -45,7 +45,9 @@ public class LocalShop : MonoBehaviour
 
         foreach (Item item in database.allItems)
         {
-            if (item.GetItemType().ToString() == tabManager.tabState.ToString())
+            if (item.GetItemType().ToString() == tabManager.tabState.ToString()
+                || (item.GetItemType().ToString() == ItemType.Scroll.ToString() && 
+                tabManager.tabState.ToString() == TabManagerState.Special.ToString()))
             {
                 GameObject _item = Instantiate(itemPrefab, transform.position, 
                     transform.rotation);

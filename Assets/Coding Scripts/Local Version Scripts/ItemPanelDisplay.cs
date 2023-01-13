@@ -401,7 +401,7 @@ public class ItemPanelDisplay : MonoBehaviour
     public void PurchaseItem()
     {
         //need to check gold
-        if(save.gold >= item.goldCost)
+        if(save.gold >= item.goldCost && item.GetItemType() != ItemType.Scroll)
         {
             InventoryItem newItem = new InventoryItem
                 (item, database.GetID[item], item.numberInStack, false, 0);
@@ -409,6 +409,14 @@ public class ItemPanelDisplay : MonoBehaviour
 
             save.gold -= item.goldCost;
         }
+        else if (save.gold >= item.goldCost && item.GetItemType() == ItemType.Scroll)
+        {
+            AbilitySaveObject abilitySaveObject = new AbilitySaveObject(item.ability, AbilityType.learnedAbility, 1, 1, true);
+            save.abilityInventory.Add(abilitySaveObject);
+
+        }
+
+
 
         FindObjectOfType<LocalShop>().LoadShop();
         

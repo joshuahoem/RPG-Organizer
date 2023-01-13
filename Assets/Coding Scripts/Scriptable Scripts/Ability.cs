@@ -40,7 +40,8 @@ public class Ability : ScriptableObject
 public enum AbilityType
 {
     classAblity,
-    raceAbility
+    raceAbility,
+    learnedAbility
 }
 
 [System.Serializable] public class AbilitySaveObject

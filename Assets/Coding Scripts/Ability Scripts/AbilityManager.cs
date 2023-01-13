@@ -16,14 +16,16 @@ public class AbilityManager : MonoBehaviour
     [SerializeField] GameObject raceAbilityTab;
     [SerializeField] GameObject classAbilityTab;
     [SerializeField] GameObject perkTab;
+    [SerializeField] GameObject learnedAbilityTab;
+
 
     [SerializeField] Transform raceAbilityContent;
     [SerializeField] Transform classAbilityContent;
     [SerializeField] Transform perkContent;
+    [SerializeField] Transform learnedAbilityContent;
 
 
-    
-    
+
     private void Start() 
     {
         save = NewSaveSystem.FindCurrentSave();
@@ -32,6 +34,7 @@ public class AbilityManager : MonoBehaviour
         raceAbilityTab.SetActive(true);
         classAbilityTab.SetActive(false);
         perkTab.SetActive(false);
+        learnedAbilityTab.SetActive(false);
         abilityPanelObject.SetActive(false);
 
         saveState.screenState = ScreenState.CharacterInfo;
@@ -41,6 +44,7 @@ public class AbilityManager : MonoBehaviour
 
     public void RaceAbilityTreeOption()
     {
+        saveState.learnedAbilityBool = false;
         saveState.classAbilityBool = false;
         saveState.raceAbilityBool = true;
         NewSaveSystem.SaveStateOfGame(saveState);
@@ -48,8 +52,17 @@ public class AbilityManager : MonoBehaviour
 
     public void ClassAbilityTreeOption()
     {
+        saveState.learnedAbilityBool = false;
         saveState.raceAbilityBool = false;
         saveState.classAbilityBool = true;
+        NewSaveSystem.SaveStateOfGame(saveState);
+    }
+
+    public void LearnedAbilityOption()
+    {
+        saveState.learnedAbilityBool = true;
+        saveState.raceAbilityBool = false;
+        saveState.classAbilityBool = false;
         NewSaveSystem.SaveStateOfGame(saveState);
     }
 
@@ -81,6 +94,15 @@ public class AbilityManager : MonoBehaviour
                     {
                         GameObject abilityInstance = Instantiate(abilityObjectPrefab, transform.position, transform.rotation);
                         abilityInstance.transform.SetParent(classAbilityContent, false);
+                        abilityInstance.GetComponent<AbilityCardInstance>().DisplayInfo(abilitySO);
+                        abilityCardPrefabs.Add(abilityInstance);
+                    }
+                    break;
+                case AbilityType.learnedAbility:
+                    if (saveState.learnedAbilityBool)
+                    {
+                        GameObject abilityInstance = Instantiate(abilityObjectPrefab, transform.position, transform.rotation);
+                        abilityInstance.transform.SetParent(learnedAbilityContent, false);
                         abilityInstance.GetComponent<AbilityCardInstance>().DisplayInfo(abilitySO);
                         abilityCardPrefabs.Add(abilityInstance);
                     }
