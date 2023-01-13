@@ -34,7 +34,11 @@ public class CharacterUpdate : MonoBehaviour
 
             characterName.text = saveObject.nameOfCharacter;
             characterLevel.text = saveObject.level.ToString();
-            characterPicture.sprite = saveObject.raceObject.picture;
+            
+            if (saveObject.raceObject != null)
+            {
+                characterPicture.sprite = saveObject.raceObject.picture;
+            }
 
             if (saveObject.hasLevelUp)
             {
