@@ -73,6 +73,14 @@ public class LocalItemStart : MonoBehaviour
                 statNumberTwo.text = string.Empty;
                 backgroundSprite.color = SpecialColor;
                 break;
+            case ItemType.Scroll:
+                statStringOne.text = string.Empty;
+                statStringTwo.text = string.Empty;
+                statNumberOne.text = string.Empty;
+                statNumberTwo.text = string.Empty;
+                backgroundSprite.color = SpecialColor;
+                break;
+
         }
         
     }

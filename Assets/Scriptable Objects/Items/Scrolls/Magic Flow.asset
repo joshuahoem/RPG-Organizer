@@ -12,16 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c7f441553f287b4fb57cd0845e2e111, type: 3}
   m_Name: Magic Flow
   m_EditorClassIdentifier: 
-  itemName: 
-  description: 
+  itemName: Magic Flow Scroll
+  description: Can use an ability as an item action instead
   imageSprite: {fileID: 0}
-  goldCost: 0
-  sellCost: 0
+  goldCost: 5
+  sellCost: 3
   numberInStack: 1
-  itemType: 0
-  itemRarity: 0
-  equipmentSlot: 0
-  enchanted: 0
+  itemType: 4
+  itemRarity: 3
+  equipmentSlot: 12
+  enchanted: 1
   mainDamage: 0
   mainMagicDamage: 0
   mainAttackRange: 0
@@ -37,4 +37,4 @@ MonoBehaviour:
   strengthModifier: 0
   intelligenceModifier: 0
   speedModifier: 0
-  ability: {fileID: 0}
+  ability: {fileID: 11400000, guid: 046de82e1289f5a4c8c39857d2fd6d3d, type: 2}

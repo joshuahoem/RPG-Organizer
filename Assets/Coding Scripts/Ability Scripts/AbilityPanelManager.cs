@@ -28,6 +28,7 @@ public class AbilityPanelManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI descriptionTMP;
     [SerializeField] TextMeshProUGUI abilityCostToUnlockTMP;
     [SerializeField] TextMeshProUGUI buttonCostToUse;
+    [SerializeField] string freeString;
 
 
     #endregion
@@ -38,7 +39,7 @@ public class AbilityPanelManager : MonoBehaviour
 
     private void Start() 
     {
-        abilityInfoPanel.SetActive(false);
+        // abilityInfoPanel.SetActive(false);
     }
 
     public void DisableAbilityInfoPanl()
@@ -96,20 +97,28 @@ public class AbilityPanelManager : MonoBehaviour
         else
         {
             //free
-            Debug.Log("free");
+            costOneTMP.text = freeString;
+            costTypeOneTMP.text = string.Empty;
+
+            costTwoTMP.text = string.Empty;
+            costTypeTwoTMP.text = string.Empty;
+            costStringTMP.text = string.Empty;
+
+            useButtonObject.SetActive(false);
         }
 
         switch (NewSaveSystem.FindSaveState().screenState)
         {
             case ScreenState.CharacterInfo:
                 unlockButtonObject.SetActive(false);
-                useButtonObject.SetActive(true);
                 if (ability.costType == CostType.Magic)
                 {
+                    useButtonObject.SetActive(true);
                     buttonCostToUse.text = ability.allAbilityLevels[_levelIndex].magicCost.ToString();
                 }
                 if (ability.costType == CostType.Stamina)
                 {        
+                    useButtonObject.SetActive(true);
                     buttonCostToUse.text = ability.allAbilityLevels[_levelIndex].staminaCost.ToString();
                 }
                 break;

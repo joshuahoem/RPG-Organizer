@@ -12,9 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3a5683874466c64da079d94c09f1a43, type: 3}
   m_Name: Magic Flow
   m_EditorClassIdentifier: 
-  abilityName: 
-  abilitySpriteIcon: {fileID: 0}
-  borderColor: {r: 0, g: 0, b: 0, a: 0}
-  costType: 0
+  abilityName: Magic Flow
+  abilitySpriteIcon: {fileID: 21300000, guid: f8c9467a892580344bb697526dac0d13, type: 3}
+  borderColor: {r: 0.19106455, g: 0.09122462, b: 0.7735849, a: 0.9490196}
+  costType: 3
   unlockCost: 0
-  allAbilityLevels: []
+  allAbilityLevels:
+  - level: 1
+    upgradeCost: 0
+    magicCost: 0
+    staminaCost: 0
+    range: 0
+    damage: 0
+    magicDamage: 0
+    description: Can use ability during item action (taking up to two ability actions
+      in a single turn)

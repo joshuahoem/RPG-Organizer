@@ -59,6 +59,8 @@ public class ItemPanelDisplay : MonoBehaviour
     [SerializeField] GameObject unequipButton;
     [SerializeField] GameObject sellToShopButton;
     [SerializeField] GameObject PurchaseButton;
+    [SerializeField] GameObject learnScrollAbilityButton;
+
 
     [SerializeField] Image itemImage;
     #endregion
@@ -170,6 +172,9 @@ public class ItemPanelDisplay : MonoBehaviour
                 DisplayConsumableInfo(_item, _itemInfo);
                 break;
             case ItemType.Special:
+                DisplaySpecialInfo(_item, _itemInfo);
+                break;
+            case ItemType.Scroll:
                 DisplaySpecialInfo(_item, _itemInfo);
                 break;
         }
@@ -300,20 +305,27 @@ public class ItemPanelDisplay : MonoBehaviour
         if (FindObjectOfType<LocalShop>().inShop) {return;}
         if (this.equipRingOne == null || this.equipRingTwo == null || this.equipSpecial == null) { return; }
 
-        if (_itemInfo.equipped)
+        if (_itemInfo.item.itemType.ToString() == ItemType.Scroll.ToString())
         {
-            unequipButton.SetActive(true);
+            learnScrollAbilityButton.SetActive(true);
         }
         else
         {
-            if (item.equipmentSlot == EquipmentSlot.RingOne || item.equipmentSlot == EquipmentSlot.RingTwo)
+            if (_itemInfo.equipped)
             {
-                equipRingOne.SetActive(true);
-                equipRingTwo.SetActive(true);
+                unequipButton.SetActive(true);
             }
             else
             {
-                equipSpecial.SetActive(true);
+                if (item.equipmentSlot == EquipmentSlot.RingOne || item.equipmentSlot == EquipmentSlot.RingTwo)
+                {
+                    equipRingOne.SetActive(true);
+                    equipRingTwo.SetActive(true);
+                }
+                else
+                {
+                    equipSpecial.SetActive(true);
+                }
             }
         }
         
@@ -411,8 +423,11 @@ public class ItemPanelDisplay : MonoBehaviour
         }
         else if (save.gold >= item.goldCost && item.GetItemType() == ItemType.Scroll)
         {
-            AbilitySaveObject abilitySaveObject = new AbilitySaveObject(item.ability, AbilityType.learnedAbility, 1, 1, true);
-            save.abilityInventory.Add(abilitySaveObject);
+            InventoryItem newItem = new InventoryItem
+                (item, database.GetID[item], item.numberInStack, false, 0);
+            save.inventory.Add(newItem);
+
+            save.gold -= item.goldCost;
 
         }
 
@@ -453,6 +468,26 @@ public class ItemPanelDisplay : MonoBehaviour
             SaveChanges();        
         }
 
+    }
+
+    public void LearnAbilityAction()
+    {
+        foreach (AbilitySaveObject abilitySO in save.abilityInventory)
+        {
+            if (abilitySO.ability == item.ability)
+            {
+                //already has it
+                Debug.Log("already has it");
+                return;
+            }
+        }
+
+        Debug.Log("does not have it");
+        AbilitySaveObject abilitySaveObject = new AbilitySaveObject(item.ability, AbilityType.learnedAbility, 0, 0, true);
+        save.abilityInventory.Add(abilitySaveObject);
+        ConsumeItem();
+
+        SaveChanges();
     }
 
     private void SaveChanges()
