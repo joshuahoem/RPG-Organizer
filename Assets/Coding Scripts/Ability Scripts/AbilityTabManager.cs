@@ -50,9 +50,9 @@ public class AbilityTabManager : MonoBehaviour
 
     private void Subscriber_UnlockAbility(object sender, AbilityPanelManager.UnlockAbilityEventArgs e)
     {
-        Debug.Log("here");
+        // Debug.Log("here");
         UpdateTabs(e._ability.ability);
-        Debug.Log(e._ability.currentLevel);
+        // Debug.Log(e._ability.currentLevel);
     }
 
     public void UpdateTabs(Ability _ability)

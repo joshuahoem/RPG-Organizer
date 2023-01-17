@@ -35,6 +35,7 @@ public class AbilityPanelManager : MonoBehaviour
 
     [SerializeField] GameObject unlockButtonObject;
     [SerializeField] GameObject useButtonObject;
+    int _levelIndex;
 
 
     private void Start() 
@@ -49,15 +50,33 @@ public class AbilityPanelManager : MonoBehaviour
 
     public void DisplayAbility(AbilitySaveObject _ability)
     {
-        unlockButtonObject.SetActive(true);
-
         abilitySO = _ability;
         ability = _ability.ability;
-        int _levelIndex = _ability.viewingLevel;
-        if (abilitySO.unlocked)
+        
+        SaveState saveState = NewSaveSystem.FindSaveState();
+        if (saveState.screenState == ScreenState.CharacterInfo)
+        {
+            _levelIndex = (_ability.currentLevel -1);
+
+        }
+        else if (saveState.screenState == ScreenState.AbilityScreen)
+        {
+            _levelIndex = _ability.viewingLevel;
+        }
+
+        Debug.Log("current: " + _ability.currentLevel);
+        Debug.Log("View: " + (_ability.viewingLevel + 1));
+
+
+        if (_ability.currentLevel < (_ability.viewingLevel + 1))
+        {
+            unlockButtonObject.SetActive(true);
+        }
+        else
         {
             unlockButtonObject.SetActive(false);
         }
+        
 
         abilityNameTMP.text = ability.abilityName;
         abilityIcon.sprite = ability.abilitySpriteIcon;

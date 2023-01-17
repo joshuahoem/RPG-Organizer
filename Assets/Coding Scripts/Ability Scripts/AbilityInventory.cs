@@ -11,6 +11,8 @@ public class AbilityInventory : MonoBehaviour
     SaveObject save;
     string charString;
     private List<AbilitySaveObject> abilities;
+    AbilitySaveObject objectToRemove;
+
 
     private void Start() 
     {
@@ -45,12 +47,42 @@ public class AbilityInventory : MonoBehaviour
         if (abilitySaveObject != null)
         {
             Debug.Log("does not have it");
+            Debug.Log("current level: " + abilitySaveObject.currentLevel);
             abilitySaveObject.unlocked = true;
             save.abilityInventory.Add(abilitySaveObject);
         }
         else
         {
             Debug.Log("has it");
+
+            AbilitySaveObject _abilitySaveObject = new AbilitySaveObject(e._ability.ability, AbilityType.classAblity, 1, 0, true);
+            foreach (AbilitySaveObject item in save.abilityInventory)
+            {
+                if (item.ability == _abilitySaveObject.ability)
+                {
+                    abilitySaveObject = item;
+                }
+            }
+
+            Debug.Log(abilitySaveObject.currentLevel);
+            Debug.Log(abilitySaveObject.ability.allAbilityLevels.Length);
+            int checkNumber = (abilitySaveObject.currentLevel + 1);
+            if (abilitySaveObject.ability.allAbilityLevels.Length >= checkNumber)
+            {
+                Debug.Log("Level Increased");
+                abilitySaveObject.currentLevel++;
+
+                foreach (AbilitySaveObject abilitySO in save.abilityInventory)
+                {
+                    if (abilitySO.ability == abilitySaveObject.ability)
+                    {
+                        objectToRemove = abilitySO;
+                    }
+                }
+                save.abilityInventory.Remove(objectToRemove);
+                save.abilityInventory.Add(abilitySaveObject);
+
+            }
         }
 
         SaveChanges();
@@ -62,7 +94,7 @@ public class AbilityInventory : MonoBehaviour
             if (e._ability.ability == instance.abilitySO.ability)
             {
                 instance.abilitySO = abilitySaveObject;
-                Debug.Log("replace");
+                FindObjectOfType<AbilityPanelManager>().abilitySO = abilitySaveObject;
             }
         }
     }

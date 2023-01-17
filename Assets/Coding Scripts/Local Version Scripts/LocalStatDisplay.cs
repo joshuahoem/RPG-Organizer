@@ -115,8 +115,11 @@ public class LocalStatDisplay : MonoBehaviour
         race.text = save.race;
         characterSelectedClass.text = save.characterClass;
         levelText.text = save.level.ToString();
-        if (save.raceObject.picture != null)
+        if (save.raceObject != null)
+        {
+            if (save.raceObject.picture != null)
             { imageReference.sprite = save.raceObject.picture; }
+        }
         
         int _bonusHealth = bonusHealth + save.baseHealth;
         int _bonusStamina = bonusStamina + save.baseStamina;
