@@ -7,18 +7,19 @@ using TMPro;
 public class PerkInstanceObject : MonoBehaviour
 {
     [Header("Perk Info")]
-    [SerializeField] Perk perk;
-    PerkObject perkObject;
+    [SerializeField] public Perk perk;
+    public PerkObject perkObject;
 
     [SerializeField] Image perkImage;
     [SerializeField] Image borderImage;
     [SerializeField] TextMeshProUGUI perkNameTMP;
-    [SerializeField] TextMeshProUGUI perkCountTMP;
+    [SerializeField] public TextMeshProUGUI perkCountTMP;
 
     [Header("Perk Unlock Info")]
     [SerializeField] GameObject[] abilitiesThatUnlock;
     List<GameObject> arrows = new List<GameObject>();
     [SerializeField] Transform parentTransformForArrows;
+    [SerializeField] public int objectID;
 
     private void Start() 
     {
@@ -59,7 +60,7 @@ public class PerkInstanceObject : MonoBehaviour
 
         foreach (PerkObject perkObject in save.perks)
         {
-            if (perkObject.perk == this.perk)
+            if (perkObject.ID == this.objectID)
             {
                 if (perkObject.unlockedBool)
                 {
@@ -78,7 +79,7 @@ public class PerkInstanceObject : MonoBehaviour
 
     private void Subscriber_UnlockPerk(object sender, PerkPanelManager.UnlockPerkEventArgs e)
     {
-        if (e.eventPerkObject.perk == this.perk)
+        if (e.eventPerkObject.ID == this.objectID)
         {
             foreach (GameObject perk in abilitiesThatUnlock)
             {
@@ -97,13 +98,13 @@ public class PerkInstanceObject : MonoBehaviour
 
         foreach (PerkObject _perkObject in save.perks)
         {
-            if (_perkObject.perk == this.perk)
+            if (_perkObject.ID == this.objectID)
             {
                 return _perkObject;
             }
         }
 
-        return new PerkObject(perk, 0, false);
+        return new PerkObject(perk, 0, false, objectID);
     }
 
     public void ClickedImage()
@@ -112,9 +113,10 @@ public class PerkInstanceObject : MonoBehaviour
         FindObjectOfType<PerkPanelManager>().DisplayPerkPanel(FindPerkObject());
     }
     
-    public void DisplayPerk(PerkObject perkObject)
+    public void DisplayPerk(PerkObject _perkObject)
     {
-        perk = perkObject.perk;
+        perk = _perkObject.perk;
+        perkObject = _perkObject;
 
         if (perk.perkImageIcon != null)
         {

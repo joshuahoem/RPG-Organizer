@@ -10,6 +10,7 @@ public class PerkPanelManager : MonoBehaviour
     public event EventHandler<UnlockPerkEventArgs> onPerkUnlocked;
     [SerializeField] public GameObject perkPanelObject;
     Perk perk;
+    PerkObject perkObjectFromItem;
 
     #region Display Items
     [SerializeField] Image perkImageIcon;
@@ -34,6 +35,7 @@ public class PerkPanelManager : MonoBehaviour
     public void DisplayPerkPanel(PerkObject _perkObject)
     {
         perk = _perkObject.perk;
+        perkObjectFromItem = _perkObject;
 
         perkImageIcon.sprite = perk.perkImageIcon;
         borderIcon.color = perk.borderColor;
@@ -60,7 +62,7 @@ public class PerkPanelManager : MonoBehaviour
         PerkObject foundPerkObject;
         foreach (PerkObject _perkObject in save.perks)
         {
-            if (_perkObject.perk == perk)
+            if (_perkObject.ID == perkObjectFromItem.ID)
             {
                 _perkObject.count++;
                 NewSaveSystem.SaveChanges(save);
@@ -69,7 +71,7 @@ public class PerkPanelManager : MonoBehaviour
             }
         }
 
-        PerkObject perkObject = new PerkObject(perk, 1, true);
+        PerkObject perkObject = new PerkObject(perk, 1, true, perkObjectFromItem.ID);
         foundPerkObject = perkObject;
         save.perks.Add(perkObject);
         NewSaveSystem.SaveChanges(save);

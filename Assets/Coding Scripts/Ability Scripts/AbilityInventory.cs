@@ -46,8 +46,6 @@ public class AbilityInventory : MonoBehaviour
 
         if (abilitySaveObject != null)
         {
-            Debug.Log("does not have it");
-            Debug.Log("current level: " + abilitySaveObject.currentLevel);
             abilitySaveObject.unlocked = true;
             save.abilityInventory.Add(abilitySaveObject);
         }

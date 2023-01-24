@@ -110,8 +110,6 @@ public class AbilityManager : MonoBehaviour
             }
         }
 
-        //TODO button for clicking on ability
-        //TODO deleting save file
     }
 
     public void LoadAbilityPanel(AbilitySaveObject _abilitySO)
@@ -130,10 +128,23 @@ public class AbilityManager : MonoBehaviour
 
         foreach (PerkObject perk in save.perks)
         {
+            foreach (GameObject GO in perkPrefabList)
+            {
+                if (GO.GetComponent<PerkInstanceObject>().perk == perk.perk)
+                {
+                    int displayNumber = GO.GetComponent<PerkInstanceObject>().perkObject.count + perk.count;
+                    GO.GetComponent<PerkInstanceObject>().perkObject.count = displayNumber;
+                    GO.GetComponent<PerkInstanceObject>().perkCountTMP.text = displayNumber.ToString();
+                    return;
+                }
+                
+            }
+
             GameObject _perk = Instantiate(perkPrefab, transform.position, transform.rotation);
             _perk.transform.SetParent(perkContent, false);
             _perk.GetComponent<PerkInstanceObject>().DisplayPerk(perk);
             perkPrefabList.Add(_perk);
+            
         }
     }
 }

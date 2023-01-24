@@ -28,11 +28,13 @@ public class Perk : ScriptableObject
     public Perk perk;
     public int count;
     public bool unlockedBool;
+    public int ID;
 
-    public PerkObject(Perk _perk, int _count, bool _unlockedBool)
+    public PerkObject(Perk _perk, int _count, bool _unlockedBool, int _ID)
     {
         perk = _perk;
         count = _count;
         unlockedBool = _unlockedBool;
+        ID = _ID;
     }
 }

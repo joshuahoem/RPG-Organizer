@@ -64,10 +64,6 @@ public class AbilityPanelManager : MonoBehaviour
             _levelIndex = _ability.viewingLevel;
         }
 
-        Debug.Log("current: " + _ability.currentLevel);
-        Debug.Log("View: " + (_ability.viewingLevel + 1));
-
-
         if (_ability.currentLevel < (_ability.viewingLevel + 1))
         {
             unlockButtonObject.SetActive(true);
