@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class RectTransformHandler : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] RectTransform startingFocusObject;
     void Start()
     {
         CheckForChanges();
+        SetPosition();
     }
 
     public void CheckForChanges() 
@@ -39,5 +40,14 @@ public class RectTransformHandler : MonoBehaviour
         }
 
         GetComponent<RectTransform>().sizeDelta = new Vector2(max_x - min_x, max_y - min_y);
+    }
+
+    private void SetPosition()
+    {
+        if (startingFocusObject != null)
+        {
+            GetComponent<RectTransform>().localPosition = 
+                new Vector2(-startingFocusObject.localPosition.x, -startingFocusObject.localPosition.y);
+        }
     }
 }

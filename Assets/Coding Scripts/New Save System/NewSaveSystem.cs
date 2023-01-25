@@ -146,4 +146,46 @@ public static class NewSaveSystem
             File.WriteAllText(SAVE_FOLDER + "/save_" + charString + ".txt", newCharacterString);
         }
     }
+
+    public static PlayerInfo FindPlayerInfoFile()
+    {
+        if (File.Exists(SAVE_FOLDER + "/PlayerInfo.txt"))
+        {
+            string saveString = File.ReadAllText(SAVE_FOLDER + "/PlayerInfo.txt");
+
+            PlayerInfo playerInfo = JsonUtility.FromJson<PlayerInfo>(saveString);
+
+            return playerInfo;
+        }
+        else
+        {
+            //create File
+            Debug.Log("new Player Info");
+            PlayerInfo playerInfo = new PlayerInfo
+            {
+                
+            };
+
+            string json = JsonUtility.ToJson(playerInfo);
+
+            File.WriteAllText(SAVE_FOLDER + "/PlayerInfo.txt", json);
+
+            return playerInfo;
+        }
+    }
+
+    public static void SavePlayerInfo(PlayerInfo _playerInfo)
+    {
+        if (File.Exists(SAVE_FOLDER + "/PlayerInfo.txt"))
+        {
+            string json = JsonUtility.ToJson(_playerInfo);
+
+            File.WriteAllText(SAVE_FOLDER + "/PlayerInfo.txt", json);
+        }
+        else
+        {
+            Debug.LogError("Could not find Player Info");
+        }
+
+    }
 }

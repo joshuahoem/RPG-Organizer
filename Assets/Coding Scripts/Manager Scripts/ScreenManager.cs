@@ -18,6 +18,10 @@ public class ScreenManager : MonoBehaviour
     [SerializeField] int mapSceneIndex = 7;
     [SerializeField] int optionSceneIndex = 8;
     [SerializeField] int abilitieScene = 9;
+    [SerializeField] int glossarySceneIndex = 10;
+    [SerializeField] int enemySceneIndex = 11;
+    [SerializeField] int charactersUnlockSceneIndex = 12;
+
 
 
 
@@ -77,6 +81,24 @@ public class ScreenManager : MonoBehaviour
     public void LoadAbilitieScene()
     {
         scene = abilitieScene;
+        Invoke("LoadNextScene", sceneLoadTime);
+    }
+
+    public void LoadGlossaryScene()
+    {
+        scene = glossarySceneIndex;
+        Invoke("LoadNextScene", sceneLoadTime);
+    }
+
+    public void LoadEnemyScene()
+    {
+        scene = enemySceneIndex;
+        Invoke("LoadNextScene", sceneLoadTime);
+    }
+
+    public void LoadCharacterUnlockScene()
+    {
+        scene = charactersUnlockSceneIndex;
         Invoke("LoadNextScene", sceneLoadTime);
     }
 

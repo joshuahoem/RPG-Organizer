@@ -26,6 +26,8 @@ public class PerkPanelManager : MonoBehaviour
 
     [SerializeField] TextMeshProUGUI unlockCostTMP;
     [SerializeField] TextMeshProUGUI perkCountTMP;
+
+    [SerializeField] GameObject perkButtonUnlock;
     #endregion
 
     private void Start() {
@@ -36,6 +38,15 @@ public class PerkPanelManager : MonoBehaviour
     {
         perk = _perkObject.perk;
         perkObjectFromItem = _perkObject;
+
+        if (perkObjectFromItem.unlockedBool)
+        {
+            perkButtonUnlock.SetActive(false);
+        }
+        else
+        {
+            perkButtonUnlock.SetActive(true);
+        }
 
         perkImageIcon.sprite = perk.perkImageIcon;
         borderIcon.color = perk.borderColor;
@@ -77,6 +88,7 @@ public class PerkPanelManager : MonoBehaviour
         NewSaveSystem.SaveChanges(save);
         onPerkUnlocked?.Invoke(this, new UnlockPerkEventArgs { eventPerkObject = foundPerkObject });
 
+        perkButtonUnlock.SetActive(false);
     }
 
     public class UnlockPerkEventArgs : EventArgs 
