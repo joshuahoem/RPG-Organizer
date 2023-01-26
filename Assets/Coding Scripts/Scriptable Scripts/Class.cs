@@ -7,6 +7,7 @@ public class Class : ScriptableObject
 {
     public new string name;
     public string description;
+    public Sprite logo;
     
     public int health;
     public int stamina;

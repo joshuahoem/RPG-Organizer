@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class CharacterUnlockManager : MonoBehaviour
 {
@@ -11,8 +12,19 @@ public class CharacterUnlockManager : MonoBehaviour
 
     private void Start() 
     {
+        CharacterUnlockItemInfo[] unlockItemsInfo = FindObjectsOfType<CharacterUnlockItemInfo>();
+        Debug.Log(unlockItemsInfo.Length);
+        foreach (CharacterUnlockItemInfo go in unlockItemsInfo)
+        {
+            go.OnNewRaceOrClassUnlocked += Subscriber_OnEventClicked;
+        }
+        
         LoadDefaults();
         LoadUnlocks();
+    }
+
+    private void Update() {
+        ResetUnlocks();
     }
 
     private void LoadDefaults()
@@ -66,4 +78,31 @@ public class CharacterUnlockManager : MonoBehaviour
             }
         }
     }
+
+    public void SwitchPanels()
+    {
+        CharacterUnlockItemInfo[] unlockItemsInfo = FindObjectsOfType<CharacterUnlockItemInfo>();
+        Debug.Log(unlockItemsInfo.Length);
+        foreach (CharacterUnlockItemInfo go in unlockItemsInfo)
+        {
+            go.OnNewRaceOrClassUnlocked += Subscriber_OnEventClicked;
+        }
+    }
+
+    private void Subscriber_OnEventClicked(object sender, CharacterUnlockItemInfo e)
+    {
+        Debug.Log("click");
+        LoadUnlocks();
+    }
+
+    private void ResetUnlocks()
+    {
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            Debug.Log("Clear Unlocks");
+            PlayerInfo playerInfo = NewSaveSystem.FindPlayerInfoFile();
+            playerInfo.unlocks.Clear();
+            NewSaveSystem.SavePlayerInfo(playerInfo);
+        }
+    } 
 }

@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Trapper
   description: 
+  logo: {fileID: 21300000, guid: 3037fc9729d5e9241bbfb3da29cf1452, type: 3}
   health: 2
   stamina: 2
   magic: 0
