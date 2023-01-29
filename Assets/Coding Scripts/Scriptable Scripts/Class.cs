@@ -8,6 +8,7 @@ public class Class : ScriptableObject
     public new string name;
     public string description;
     public Sprite logo;
+    public Color imageColor;
     
     public int health;
     public int stamina;

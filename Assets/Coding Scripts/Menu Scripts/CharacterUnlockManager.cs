@@ -13,12 +13,11 @@ public class CharacterUnlockManager : MonoBehaviour
     private void Start() 
     {
         CharacterUnlockItemInfo[] unlockItemsInfo = FindObjectsOfType<CharacterUnlockItemInfo>();
-        Debug.Log(unlockItemsInfo.Length);
         foreach (CharacterUnlockItemInfo go in unlockItemsInfo)
         {
             go.OnNewRaceOrClassUnlocked += Subscriber_OnEventClicked;
         }
-        
+
         LoadDefaults();
         LoadUnlocks();
     }
@@ -89,7 +88,7 @@ public class CharacterUnlockManager : MonoBehaviour
         }
     }
 
-    private void Subscriber_OnEventClicked(object sender, CharacterUnlockItemInfo e)
+    private void Subscriber_OnEventClicked(object sender, EventArgs e)
     {
         Debug.Log("click");
         LoadUnlocks();

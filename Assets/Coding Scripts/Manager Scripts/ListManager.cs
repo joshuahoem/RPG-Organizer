@@ -5,7 +5,9 @@ using TMPro;
 
 public class ListManager : MonoBehaviour
 {
-    [SerializeField] ScriptableObject[] dropdownList;
+    [SerializeField] bool raceSelect = false;
+    [SerializeField] bool classSelect = false;
+
 
     void Start()
     {
@@ -14,9 +16,18 @@ public class ListManager : MonoBehaviour
 
         dropdown.options.Clear();
 
-        foreach (ScriptableObject item in dropdownList)
+        PlayerInfo playerInfo = NewSaveSystem.FindPlayerInfoFile();
+
+        foreach (UnlockObject unlock in playerInfo.unlocks)
         {
-            dropdown.options.Add(new TMP_Dropdown.OptionData() { text = item.name});
+            if (raceSelect && unlock.unlockedRace != null)
+            {
+                dropdown.options.Add(new TMP_Dropdown.OptionData() { text = unlock.unlockedRace.name});
+            }
+            else if (classSelect && unlock.unlockedClass != null)
+            {
+                dropdown.options.Add(new TMP_Dropdown.OptionData() { text = unlock.unlockedClass.name});
+            }
         }
 
         dropdown.RefreshShownValue();

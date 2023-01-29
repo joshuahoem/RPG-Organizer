@@ -8,6 +8,7 @@ public class Race : ScriptableObject
     public new string name;
     public Sprite picture;
     public string history;
+    public Color imageColor;
     
     public int health;
     public int stamina;

@@ -15,16 +15,16 @@ public class CharacterUnlockItemInfo : MonoBehaviour
     [SerializeField] GameObject lockImage;
     [SerializeField] Image characterImage;
     [SerializeField] Image bgOject;
-    [SerializeField] Color bgColor;
     [SerializeField] TextMeshProUGUI nameTMPro;
-    public event EventHandler<CharacterUnlockItemInfo> OnNewRaceOrClassUnlocked;
+    public event System.EventHandler OnNewRaceOrClassUnlocked;
+    public event System.EventHandler<SelectedClassEventArgs> onSelectedRaceOrClass;
 
 
     private void Start() {
         DisplayName();
     }
 
-    private void DisplayName()
+    public void DisplayName()
     {
         if (classToUnlock != null)
         {
@@ -46,13 +46,13 @@ public class CharacterUnlockItemInfo : MonoBehaviour
         if (raceToUnlock != null)
         {
             characterImage.sprite = raceToUnlock.picture;
+            bgOject.color = raceToUnlock.imageColor;
         }
         if (classToUnlock != null)
         {
             characterImage.sprite = classToUnlock.logo;
+            bgOject.color = classToUnlock.imageColor;
         }
-
-        bgOject.color = bgColor;
     }
 
     public void ClickToUnlock()
@@ -71,6 +71,18 @@ public class CharacterUnlockItemInfo : MonoBehaviour
         playerInfo.unlocks.Add(newUnlock);
         NewSaveSystem.SavePlayerInfo(playerInfo);
 
-        OnNewRaceOrClassUnlocked?.Invoke(this, new CharacterUnlockItemInfo{});
+        OnNewRaceOrClassUnlocked?.Invoke(this, EventArgs.Empty);
+    }
+
+    public void ClickToSelect()
+    {
+        onSelectedRaceOrClass?.Invoke(this, new SelectedClassEventArgs 
+            {selectedClass = classToUnlock, selectedRace = raceToUnlock});
+    }
+
+    public class SelectedClassEventArgs : EventArgs
+    {
+        public Race selectedRace;
+        public Class selectedClass;
     }
 }
