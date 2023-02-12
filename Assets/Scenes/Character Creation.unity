@@ -282,7 +282,6 @@ MonoBehaviour:
   lockImage: {fileID: 2008762823}
   characterImage: {fileID: 765404947}
   bgOject: {fileID: 73761454}
-  bgColor: {r: 0.7176471, g: 0.08235294, b: 0.2509804, a: 1}
   nameTMPro: {fileID: 61101194}
 --- !u!1 &61101192
 GameObject:
@@ -970,8 +969,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 488661002}
-        m_TargetAssemblyTypeName: SaveLoadManager, Assembly-CSharp
+      - m_Target: {fileID: 2094533522}
+        m_TargetAssemblyTypeName: CharacterCreationManager, Assembly-CSharp
         m_MethodName: SaveNewCharacter
         m_Mode: 1
         m_Arguments:
@@ -1098,17 +1097,6 @@ MonoBehaviour:
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
---- !u!114 &488661002 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4984130096535686973, guid: 75f5c6a7c7d7cb5468f3351883033f4d, type: 3}
-  m_PrefabInstance: {fileID: 4984130096621662007}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58d43ca7b0911ce4fbee05a7fd52b19f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &517881345
 GameObject:
   m_ObjectHideFlags: 0
@@ -2820,9 +2808,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Character''s Name?
-
-'
+  m_text: Character's Name
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 87432e78323e6df45a8121ea7007aff4, type: 2}
   m_sharedMaterial: {fileID: -7054226532496081844, guid: 87432e78323e6df45a8121ea7007aff4, type: 2}
@@ -3492,7 +3478,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Enter text...
+  m_text: Name...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 87432e78323e6df45a8121ea7007aff4, type: 2}
   m_sharedMaterial: {fileID: -7054226532496081844, guid: 87432e78323e6df45a8121ea7007aff4, type: 2}
@@ -3612,10 +3598,18 @@ MonoBehaviour:
   returnButton: {fileID: 1985852337}
   raceDisplayObject: {fileID: 3239365714341760146}
   classDisplayObject: {fileID: 32559410}
+  inputTextName: {fileID: 1658518250}
   titleTextTMP: {fileID: 704829195}
   creationMainText: Character Creation
   raceSelectText: Race Select
   classSelectText: Class Select
+  bonusAttackModifer: 5
+  bonusDefenseModifer: 10
+  holdingCapacityModifer: 2
+  bonusMagicAttackModifer: 5
+  bonusMagicDefenseModifer: 10
+  spellbookCapacityModifer: 2
+  movementModifer: 2
 --- !u!4 &2094533523
 Transform:
   m_ObjectHideFlags: 0
@@ -4058,7 +4052,6 @@ MonoBehaviour:
   lockImage: {fileID: 3239365714473100387}
   characterImage: {fileID: 3239365713247277650}
   bgOject: {fileID: 3239365713502667316}
-  bgColor: {r: 0.7176471, g: 0.08235294, b: 0.2509804, a: 1}
   nameTMPro: {fileID: 4483153814059672898}
 --- !u!1 &3239365714341760146
 GameObject:

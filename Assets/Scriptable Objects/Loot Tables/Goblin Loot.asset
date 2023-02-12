@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5aa80a4f21652164d8ac37ff492439b4, type: 3}
+  m_Name: Goblin Loot
+  m_EditorClassIdentifier: 
+  GuaranteedLootTable: []
+  OneItemFromList:
+  - Weight: 5
+    Drop: {fileID: 11400000, guid: fd9e1ffe87dd64841952345340fe9b51, type: 2}
+    MinCountItem: 1
+    MaxCountItem: 1
+  - Weight: 15
+    Drop: {fileID: 11400000, guid: 5c0c87821f0c2084aa9ad7045df928c2, type: 2}
+    MinCountItem: 1
+    MaxCountItem: 3
+  WeightToNoDrop: 80

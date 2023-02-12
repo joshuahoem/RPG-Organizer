@@ -15,6 +15,7 @@ MonoBehaviour:
   name: Skeleton
   picture: {fileID: 21300000, guid: 1968a4146ebc95e4a8b0d366a515cdd6, type: 3}
   history: 
+  imageColor: {r: 0.50980395, g: 0.8000001, b: 0.86666673, a: 1}
   health: 6
   stamina: 6
   magic: 2

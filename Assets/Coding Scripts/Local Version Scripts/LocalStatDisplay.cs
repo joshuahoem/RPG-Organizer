@@ -40,6 +40,11 @@ public class LocalStatDisplay : MonoBehaviour
     [SerializeField] TextMeshProUGUI bonusMagicAttackEquipment;
     [SerializeField] TextMeshProUGUI bonusMagicDefenseEquipment;
 
+    [SerializeField] TextMeshProUGUI bonusAttackStatTMP;
+    [SerializeField] TextMeshProUGUI bonusArmorStatTMP;
+    [SerializeField] TextMeshProUGUI bonusArcaneStatTMP;
+    [SerializeField] TextMeshProUGUI bonusWardStatTMP;
+
     [SerializeField] TextMeshProUGUI totalAttackEquipment;
     [SerializeField] TextMeshProUGUI totalDefenseEquipment;
     [SerializeField] TextMeshProUGUI totalMagicAttackEquipment;
@@ -152,14 +157,15 @@ public class LocalStatDisplay : MonoBehaviour
 
     private void UpdateBonusUI()
     {
+        SaveObject _save = NewSaveSystem.FindCurrentSave();
         int _bonusAttack = 0;
-        int _totalAttack = 0;
+        int _totalAttack = save.bonusAttack;
         int _bonusDefense = 0;
-        int _totalDefense = 0;
+        int _totalDefense = save.bonusDefense;
         int _bonusMagicAttack = 0;
-        int _totalMagicAttack = 0;
+        int _totalMagicAttack = save.bonusMagicAttack;
         int _bonusMagicDefense = 0;
-        int _totalMagicDefense = 0;
+        int _totalMagicDefense = save.bonusMagicDefense;
 
         foreach (InventoryItem item in save.equipment)
         {
@@ -167,17 +173,17 @@ public class LocalStatDisplay : MonoBehaviour
             {
                 if (item.equipmentSlotIndex == (int) EquipmentSlot.MainHand)
                 {
-                    _totalAttack += item.item.mainDamage;
-                    _totalMagicAttack += item.item.mainMagicDamage;
+                    _bonusAttack += item.item.mainDamage;
+                    _bonusMagicAttack += item.item.mainMagicDamage;
                 }
                 else if (item.equipmentSlotIndex == (int) EquipmentSlot.OffHand)
                 {
-                    _totalAttack += item.item.offDamage;
-                    _totalMagicAttack += item.item.offMagicDamage;
+                    _bonusAttack += item.item.offDamage;
+                    _bonusMagicAttack += item.item.offMagicDamage;
                 }
 
-                _totalDefense += item.item.defense;
-                _totalMagicDefense += item.item.magicDefense;
+                _bonusDefense += item.item.defense;
+                _bonusMagicDefense += item.item.magicDefense;
             }
         }
 
@@ -190,6 +196,11 @@ public class LocalStatDisplay : MonoBehaviour
         _totalDefense += _bonusDefense;
         _totalMagicAttack += _bonusMagicAttack;
         _totalMagicDefense += _bonusMagicDefense;
+
+        bonusAttackStatTMP.text = save.bonusAttack.ToString();
+        bonusArmorStatTMP.text = save.bonusDefense.ToString();
+        bonusArcaneStatTMP.text = save.bonusMagicAttack.ToString();
+        bonusWardStatTMP.text = save.bonusMagicDefense.ToString();
 
         totalAttackEquipment.text = _totalAttack.ToString();
         totalDefenseEquipment.text = _totalDefense.ToString();

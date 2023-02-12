@@ -15,6 +15,7 @@ MonoBehaviour:
   name: Weapon Mage
   description: 
   logo: {fileID: 21300000, guid: f300152bedeef6344be22d8655893256, type: 3}
+  imageColor: {r: 0.37647063, g: 0.6392157, b: 0.7372549, a: 1}
   health: 1
   stamina: 2
   magic: 3

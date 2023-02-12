@@ -14,7 +14,6 @@ public class LocalShop : MonoBehaviour
     [SerializeField] TextMeshProUGUI goldText;
     [SerializeField] TMP_Dropdown locationInputField;
 
-    SaveObject save;
     public bool inShop = false;
 
     List<GameObject> displayedItems = new List<GameObject>();
@@ -30,7 +29,7 @@ public class LocalShop : MonoBehaviour
     public void LoadShop()
     {   
         database = FindObjectOfType<LocationShopDatabase>().GetItemDatabase();
-        Debug.Log(database);
+        // Debug.Log(database);
         inShop = true;
         foreach (GameObject item in displayedItems)
         {
@@ -59,7 +58,7 @@ public class LocalShop : MonoBehaviour
             
         }
 
-        save = FindObjectOfType<LocalStatDisplay>().save;
+        SaveObject save = NewSaveSystem.FindCurrentSave();
         goldText.text = save.gold.ToString();
 
         itemInfoPanel.GetComponent<ItemPanelDisplay>().DeactivateAllButtons();

@@ -15,6 +15,7 @@ MonoBehaviour:
   name: Wizard
   description: 
   logo: {fileID: 21300000, guid: d0c3834b77d216045876ad23acb7f139, type: 3}
+  imageColor: {r: 0.2901961, g: 0.41176474, b: 0.7411765, a: 1}
   health: 1
   stamina: 0
   magic: 4

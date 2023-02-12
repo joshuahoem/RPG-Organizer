@@ -15,6 +15,7 @@ MonoBehaviour:
   name: Gladiator
   description: 
   logo: {fileID: 21300000, guid: 6c7ba8a30cc7b0d4e937a4bf809a301e, type: 3}
+  imageColor: {r: 0.9215687, g: 0.18431373, b: 0.023529414, a: 1}
   health: 4
   stamina: 3
   magic: 0

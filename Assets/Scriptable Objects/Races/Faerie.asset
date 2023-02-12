@@ -15,6 +15,7 @@ MonoBehaviour:
   name: Faerie
   picture: {fileID: 21300000, guid: 7cd75847a9e66ec4fb0353fb7a300d7e, type: 3}
   history: 
+  imageColor: {r: 0.04705883, g: 0.14117648, b: 0.3803922, a: 1}
   health: 1
   stamina: 1
   magic: 7

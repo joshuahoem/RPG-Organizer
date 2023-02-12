@@ -440,8 +440,10 @@ public class ItemPanelDisplay : MonoBehaviour
 
     public void SellItem()
     {
-        foreach (InventoryItem _item in save.inventory)
+        SaveObject _save = NewSaveSystem.FindCurrentSave();
+        foreach (InventoryItem _item in _save.inventory)
         {
+            // Debug.Log(_item.item);
             if(_item.ID == database.GetID[item])
             {
                 // Debug.Log(_item.item.itemName);
@@ -453,19 +455,20 @@ public class ItemPanelDisplay : MonoBehaviour
         if (searchResult.equipped)
         {
             Debug.Log("equipped");
-            inventoryManager.Unequip(item, save);
+            inventoryManager.Unequip(item, _save);
             inventoryManager.LoadEquipment();
         }
-        save.inventory.Remove(searchResult);
+        _save.inventory.Remove(searchResult);
 
         if (itemInfo.amount < item.numberInStack)
         {
-            SaveChanges();        
+            NewSaveSystem.SaveChanges(_save);        
         }
         else
         {
-            save.gold += item.sellCost;
-            SaveChanges();        
+            _save.gold += item.sellCost;
+            NewSaveSystem.SaveChanges(_save);        
+      
         }
 
     }

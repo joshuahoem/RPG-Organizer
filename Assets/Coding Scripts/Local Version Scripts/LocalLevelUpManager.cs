@@ -20,11 +20,18 @@ public class LocalLevelUpManager : MonoBehaviour
     [SerializeField] GameObject[] alertObjects;
     [SerializeField] TextMeshProUGUI alertText;
 
+    #region Level Up Panel
+    [SerializeField] GameObject levelupPanel;
+    [SerializeField] TextMeshProUGUI numberOfRollsTMP;
+    int maxRolls;
+    #endregion
+
     SaveObject save;
     string indexOfSave;
 
     int level;
     int points;
+    int rolls;
     int currentHealth;
     int currentStamina;
     int currentMagic;
@@ -55,6 +62,7 @@ public class LocalLevelUpManager : MonoBehaviour
     {
         level = save.level;
         points = save.levelPoints;
+        rolls = save.levelRolls;
 
         currentHealth = save.baseHealth;
         currentStamina = save.baseStamina;
@@ -79,7 +87,9 @@ public class LocalLevelUpManager : MonoBehaviour
     public void AddLevel()
     {
         level++;
-        points += 3;
+        points += 1;
+        rolls += 2;
+
         save.hasLevelUp = true;
         ConfirmLevelChanges();
     }
@@ -88,6 +98,7 @@ public class LocalLevelUpManager : MonoBehaviour
     {
         save.level = level;
         save.levelPoints = points;
+        save.levelRolls = rolls;
 
         save.baseHealth = currentHealth;
         save.baseStamina = currentStamina;
@@ -241,6 +252,49 @@ public class LocalLevelUpManager : MonoBehaviour
         if ( currentSpeed == save.baseSpeed) {return;}
         currentSpeed--;
         points++;
+        UpdateUI();
+    }
+
+    public void LoadRolls()
+    {
+        SaveObject _save = NewSaveSystem.FindCurrentSave();
+        if (save.levelRolls <= 0) {return;}
+        levelupPanel.SetActive(true);
+        maxRolls = save.levelRolls;
+        save.levelRolls = 0;
+        numberOfRollsTMP.text = save.levelRolls.ToString();
+        NewSaveSystem.SaveChanges(_save);
+    }
+
+    public void AddLevelRolls()
+    {
+        SaveObject _save = NewSaveSystem.FindCurrentSave();
+        if (save.levelRolls + 1 > maxRolls) {return;}
+        save.levelRolls++;
+        numberOfRollsTMP.text = save.levelRolls.ToString();
+        NewSaveSystem.SaveChanges(_save);
+    }
+
+    public void SubtractLevelRolls()
+    {
+        SaveObject _save = NewSaveSystem.FindCurrentSave();
+        if (save.levelRolls - 1 < 0) {return;}
+        save.levelRolls--;
+        numberOfRollsTMP.text = save.levelRolls.ToString();
+        NewSaveSystem.SaveChanges(_save);
+    }
+
+    public void ConfirmLevelRolls()
+    {
+        SaveObject _save = NewSaveSystem.FindCurrentSave();
+        Debug.Log(save.levelRolls);
+        Debug.Log(save.levelPoints);
+        save.levelPoints += save.levelRolls;
+        save.levelRolls = 0;
+        NewSaveSystem.SaveChanges(_save);
+
+        levelupPanel.SetActive(false);
+        SetStats();
         UpdateUI();
     }
 

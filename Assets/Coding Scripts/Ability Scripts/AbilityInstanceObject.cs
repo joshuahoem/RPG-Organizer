@@ -9,7 +9,7 @@ public class AbilityInstanceObject : MonoBehaviour
     [Header("Ability Info")]
     [SerializeField] Ability abilty;
     public AbilitySaveObject abilitySO;
-    [SerializeField] Image abilityImage;
+    [SerializeField] Sprite abilityImage;
     [SerializeField] Image borderImage;
     [Space(20)]
     [Header("Unlocked Info")]
@@ -22,7 +22,7 @@ public class AbilityInstanceObject : MonoBehaviour
     {
         if (abilty.abilitySpriteIcon != null)
         {
-            abilityImage.sprite = abilty.abilitySpriteIcon;
+            abilityImage = abilty.abilitySpriteIcon;
         }
         if (abilityImage != null)
         {

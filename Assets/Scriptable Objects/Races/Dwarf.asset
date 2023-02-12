@@ -15,6 +15,7 @@ MonoBehaviour:
   name: Dwarf
   picture: {fileID: 21300000, guid: 65ff8481e2e784744aae1b3d1c473ce3, type: 3}
   history: 
+  imageColor: {r: 0.8980393, g: 0.3137255, b: 0.22352943, a: 1}
   health: 4
   stamina: 4
   magic: 2

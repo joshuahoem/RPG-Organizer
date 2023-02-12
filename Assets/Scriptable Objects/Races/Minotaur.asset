@@ -15,6 +15,7 @@ MonoBehaviour:
   name: Minotaur
   picture: {fileID: 21300000, guid: 72c77fbd47aaadd498fdd449ee744bd1, type: 3}
   history: 
+  imageColor: {r: 0.7176471, g: 0.08235294, b: 0.2509804, a: 1}
   health: 6
   stamina: 5
   magic: 1

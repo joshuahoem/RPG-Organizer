@@ -15,6 +15,7 @@ MonoBehaviour:
   name: Gargoyle
   picture: {fileID: 21300000, guid: 48856855152d7c340998f91c654660dc, type: 3}
   history: 
+  imageColor: {r: 0.2901961, g: 0.41176474, b: 0.7411765, a: 1}
   health: 5
   stamina: 5
   magic: 5

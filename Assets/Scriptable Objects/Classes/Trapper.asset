@@ -15,6 +15,7 @@ MonoBehaviour:
   name: Trapper
   description: 
   logo: {fileID: 21300000, guid: 3037fc9729d5e9241bbfb3da29cf1452, type: 3}
+  imageColor: {r: 0.8980393, g: 0.3137255, b: 0.22352943, a: 1}
   health: 2
   stamina: 2
   magic: 0

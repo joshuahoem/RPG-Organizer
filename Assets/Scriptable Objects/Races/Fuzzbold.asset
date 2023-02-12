@@ -15,6 +15,7 @@ MonoBehaviour:
   name: Fuzzbold
   picture: {fileID: 21300000, guid: 277de857cae3b8444bb0a4d175aab2f5, type: 3}
   history: 
+  imageColor: {r: 0.027450982, g: 0.6, b: 0.57254905, a: 1}
   health: 5
   stamina: 5
   magic: 2

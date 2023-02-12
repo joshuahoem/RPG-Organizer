@@ -25,6 +25,7 @@ public class SaveObject
 
     public int level;
     public int levelPoints;
+    public int levelRolls;
     public int classAbilityPoints;
     public int raceAbilityPoints;
     public bool hasLevelUp = false;
