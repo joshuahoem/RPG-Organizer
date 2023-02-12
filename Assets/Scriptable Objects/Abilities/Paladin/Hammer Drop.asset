@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3a5683874466c64da079d94c09f1a43, type: 3}
+  m_Name: Hammer Drop
+  m_EditorClassIdentifier: 
+  abilityName: Hammer Drop
+  abilitySpriteIcon: {fileID: 0}
+  borderColor: {r: 0.8980393, g: 0.3137255, b: 0.22352943, a: 1}
+  costType: 1
+  unlockCost: 1
+  allAbilityLevels:
+  - level: 1
+    upgradeCost: 0
+    magicCost: 0
+    staminaCost: 2
+    range: 1
+    damage: 0
+    magicDamage: 0
+    description: '+3 Damage
+
+      As long as the user is carrying a heavy weapon,
+      roll for a chance to stun (+3 if using a hammer)'
