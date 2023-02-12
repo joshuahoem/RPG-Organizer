@@ -29,9 +29,9 @@ public class Ability : ScriptableObject
 
     public int magicCost;
     public int staminaCost;
-    public int range;
-    public int damage;
-    public int magicDamage;
+    public string range;
+    public string damage;
+    public string magicDamage;
 
     [TextArea(5,20)] public string description;
 
