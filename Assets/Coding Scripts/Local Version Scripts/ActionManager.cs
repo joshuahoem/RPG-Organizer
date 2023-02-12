@@ -1,47 +1,50 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System.IO;
+using TMPro;
 
 public class ActionManager : MonoBehaviour
 {
-    SaveObject save;
-    string indexOfSave;
-    
+    [SerializeField] TextMeshProUGUI goldToAddTMP;
+    int goldToAdd;
+    private void Start() 
+    {
+        goldToAdd = 5;
+        goldToAddTMP.text = goldToAdd.ToString();
+    }
+
     public void FullRest()
     {
-        save = FindObjectOfType<LocalStatDisplay>().save;
-        indexOfSave = FindObjectOfType<LocalStatDisplay>().charString;
+        SaveObject save = NewSaveSystem.FindCurrentSave();
 
         save.currentHealth = save.baseHealth;
         save.currentStamina = save.baseStamina;
         save.currentMagic = save.baseMagic;
 
-        SaveChanges();
+        NewSaveSystem.SaveChanges(save);
     }
 
-    public void GainGold(int rolls)
+    public void IncreaseGold()
     {
-        save = FindObjectOfType<LocalStatDisplay>().save;
-        indexOfSave = FindObjectOfType<LocalStatDisplay>().charString;
-
-        int goldAmount = 0;
-        for (int i = 0; i<=rolls; i++)
-        {
-            goldAmount += Random.Range(0,3);
-        }
-
-        Debug.Log(goldAmount);
-
-        save.gold += goldAmount;
-
-        SaveChanges();
+        goldToAdd++;
+        goldToAddTMP.text = goldToAdd.ToString();
     }
 
-    private void SaveChanges()
+    public void DecreaseGold()
     {
-        string newCharacterString = JsonUtility.ToJson(save);
-        File.WriteAllText(Application.dataPath + "/Saves/" + 
-            "/save_" + indexOfSave + ".txt", newCharacterString);
+        if (goldToAdd - 1 < 0) {return;}
+        goldToAdd--;
+        goldToAddTMP.text = goldToAdd.ToString();
     }
+
+    public void AddGold()
+    {
+        SaveObject save = NewSaveSystem.FindCurrentSave();
+        save.gold += goldToAdd;
+        goldToAdd = 5;
+        goldToAddTMP.text = goldToAdd.ToString();
+        NewSaveSystem.SaveChanges(save);
+    }
+
+    
 }

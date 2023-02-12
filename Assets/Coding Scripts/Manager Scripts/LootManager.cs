@@ -21,6 +21,11 @@ public class LootManager : MonoBehaviour
     [SerializeField] int minRolls;
     [SerializeField] int maxRolls;
 
+    [Header("Gold Modifiers")]
+    [SerializeField] Sprite goldImage;
+    [SerializeField] int minGoldRange;
+    [SerializeField] int maxGoldRange;
+
 
     List<GameObject> lootListPrefabs = new List<GameObject>();
     bool added;
@@ -153,7 +158,24 @@ public class LootManager : MonoBehaviour
             }
 
         }
+
+        //ADD GOLD
+        int goldAmount = 0;
+        for (int i = 0; i<rolls; i++)
+        {
+            Debug.Log("adding");
+            goldAmount += Random.Range(minGoldRange, maxGoldRange);
+        }
+
+        GameObject goldLoot = Instantiate(lootItemPrefab, transform.position, transform.rotation);
+        goldLoot.transform.SetParent(parentLootTransform);
+        goldLoot.GetComponent<LootDisplay>().DisplayGoldLoot(goldAmount);
+        lootListPrefabs.Add(goldLoot);
         
+        save.gold += goldAmount;
+        Debug.Log(goldAmount);
+        
+        //Save Loot
         NewSaveSystem.SaveChanges(save);       
         rolls = 3;  
         rollsTMP.text = rolls.ToString();

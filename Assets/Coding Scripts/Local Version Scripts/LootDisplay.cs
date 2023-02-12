@@ -6,8 +6,8 @@ using UnityEngine.UI;
 
 public class LootDisplay : MonoBehaviour
 {
-    [SerializeField] TextMeshProUGUI itemNameTMP;
-    [SerializeField] TextMeshProUGUI amountTMP;
+    [SerializeField] public TextMeshProUGUI itemNameTMP;
+    [SerializeField] public TextMeshProUGUI amountTMP;
     [SerializeField] Image objectImage;
 
     [SerializeField] Vector2 scale;
@@ -26,8 +26,18 @@ public class LootDisplay : MonoBehaviour
 
     public void UpdateLootDisplay()
     {
-        Debug.Log("update");
         amount++;
         amountTMP.text = amount.ToString();
+    }
+
+    public void DisplayGoldLoot(int gold)
+    {
+        if (gold < 1)
+        {
+            gameObject.SetActive(false);
+        }
+        itemNameTMP.text = "Gold";
+        amountTMP.text = gold.ToString();
+        GetComponent<RectTransform>().localScale = scale;
     }
 }
