@@ -11,12 +11,29 @@ public class LootManager : MonoBehaviour
     [SerializeField] TMP_Dropdown dropdown;
     [SerializeField] ItemDatabase database;
 
+    [Header("Loot Panel Display")]
+    [SerializeField] GameObject lootPanel;
+    [SerializeField] GameObject lootItemPrefab;
+    [SerializeField] Transform parentLootTransform;
+
+    [Header("Rolls Options")]
+    [SerializeField] TextMeshProUGUI rollsTMP;
+    [SerializeField] int minRolls;
+    [SerializeField] int maxRolls;
+
+
+    List<GameObject> lootListPrefabs = new List<GameObject>();
     bool added;
+    int rolls;
+    int numberBeingAdded;
 
     private void Start() 
     {
+        lootPanel.SetActive(false);
+        rolls = 3;
+        rollsTMP.text = rolls.ToString();
+
         dropdown.options.Clear();
-        
         foreach (LootDrop loot in lootTables)
         {
             dropdown.options.Add(new TMP_Dropdown.OptionData() { text = loot.name});
@@ -28,21 +45,23 @@ public class LootManager : MonoBehaviour
         FindCurrentLootDrop();
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            foreach (InventoryItem item in NewSaveSystem.FindCurrentSave().inventory)
-            {
-                Debug.Log(item.item);
-            }
+    #region update Debug
+    // private void Update()
+    // {
+    //     if (Input.GetKeyDown(KeyCode.E))
+    //     {
+    //         foreach (InventoryItem item in NewSaveSystem.FindCurrentSave().inventory)
+    //         {
+    //             Debug.Log(item.item);
+    //         }
 
-            if (NewSaveSystem.FindCurrentSave().inventory.Count <= 0)
-            {
-                Debug.Log("none");
-            }
-        }
-    }
+    //         if (NewSaveSystem.FindCurrentSave().inventory.Count <= 0)
+    //         {
+    //             Debug.Log("none");
+    //         }
+    //     }
+    // }
+    #endregion
 
     public void FindCurrentLootDrop()
     {
@@ -58,17 +77,42 @@ public class LootManager : MonoBehaviour
 
     }
 
+    public void IncreaseRolls()
+    {
+        if (rolls + 1 > maxRolls) {return;}
+        rolls++;
+        rollsTMP.text = rolls.ToString();
+    }
+
+    public void DecreaseRolls()
+    {
+        if (rolls - 1 < minRolls) {return;}
+        rolls--;
+        rollsTMP.text = rolls.ToString();
+    }
+
+
+
     public void GetLoot()
     {
         List<Item> loot = new List<Item>();
-        loot = currentLootTable.SpawnDrop(1);
+        loot = currentLootTable.SpawnDrop(rolls);
         SaveObject save = NewSaveSystem.FindCurrentSave();
+
+        lootPanel.SetActive(true);
+
+        foreach (GameObject prefabGO in lootListPrefabs)
+        {
+            Destroy(prefabGO);
+        }
+        lootListPrefabs.Clear();
 
         foreach (Item item in loot)
         {
             foreach (InventoryItem invItem in save.inventory)
             {
                 added = false;
+                numberBeingAdded = 1;
 
                 if (invItem.item == item)
                 {
@@ -88,9 +132,32 @@ public class LootManager : MonoBehaviour
                 save.inventory.Add(newItem);  
             }
 
+            added = false;
+            
+            foreach (GameObject lootPreabGO in lootListPrefabs)
+            {
+                Item lootedItem = lootPreabGO.GetComponent<LootDisplay>().item;
+                if (lootedItem == item)
+                {
+                    lootPreabGO.GetComponent<LootDisplay>().UpdateLootDisplay();
+                    added = true;
+                }
+            }
+
+            if (!added)
+            {
+                GameObject newLoot = Instantiate(lootItemPrefab, transform.position, transform.rotation);
+                newLoot.transform.SetParent(parentLootTransform);
+                newLoot.GetComponent<LootDisplay>().DisplayLoot(item);
+                lootListPrefabs.Add(newLoot);
+            }
+
         }
         
-        NewSaveSystem.SaveChanges(save);          
+        NewSaveSystem.SaveChanges(save);       
+        rolls = 3;  
+        rollsTMP.text = rolls.ToString();
+
     }
 
 }

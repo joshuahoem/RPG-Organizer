@@ -38,12 +38,12 @@ namespace TinyScript {
         public List<Item> GetRandomLoot(int ChangeCount)
         {
             List<Item> lootList = new List<Item>();
-            float totalWeight = WeightToNoDrop;
 
             // Executes a function a specified number of times
             for (int j = 0; j < ChangeCount; j++)
             {
                 // They add up the entire weight of the items
+                float totalWeight = WeightToNoDrop;
                 for (int i = 0; i < OneItemFromList.Length; i++)
                 {
                     totalWeight += OneItemFromList[i].Weight;
@@ -64,6 +64,7 @@ namespace TinyScript {
                             lootList.Add(OneItemFromList[i].Drop);
                         }
                         break;
+                        
                     }
                 }
             }
