@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b3a5683874466c64da079d94c09f1a43, type: 3}
-  m_Name: Blessing of the Curch
+  m_Name: Blessing of the Church
   m_EditorClassIdentifier: 
   abilityName: Blessing of the Curch
   abilitySpriteIcon: {fileID: 0}
