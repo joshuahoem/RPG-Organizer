@@ -10,25 +10,26 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c7f441553f287b4fb57cd0845e2e111, type: 3}
-  m_Name: Geromino Grapes
+  m_Name: Reinforced Bow
   m_EditorClassIdentifier: 
-  itemName: Geronimo Grapes
-  description: When consumed, heal for 1 point of health
+  itemName: Reinforced Bow
+  description: A oak bow with brass reinforced along  the entire front prtion of
+    the bow. Pierce 1
   imageSprite: {fileID: 0}
-  goldCost: 1
-  sellCost: 1
-  numberInStack: 3
-  itemType: 2
-  itemRarity: 0
-  equipmentSlot: 12
+  goldCost: 3
+  sellCost: 2
+  numberInStack: 1
+  itemType: 0
+  itemRarity: 1
+  equipmentSlot: 0
   enchanted: 0
-  mainDamage: 0
+  mainDamage: 3
   mainMagicDamage: 0
-  mainAttackRange: 0
+  mainAttackRange: 4
   offDamage: 0
   offMagicDamage: 0
   offAttackRange: 0
-  numberOfHands: 2
+  numberOfHands: 1
   defense: 0
   magicDefense: 0
   healthModifier: 0
@@ -37,3 +38,4 @@ MonoBehaviour:
   strengthModifier: 0
   intelligenceModifier: 0
   speedModifier: 0
+  ability: {fileID: 0}

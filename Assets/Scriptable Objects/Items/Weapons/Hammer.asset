@@ -10,27 +10,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c7f441553f287b4fb57cd0845e2e111, type: 3}
-  m_Name: Knife
+  m_Name: Hammer
   m_EditorClassIdentifier: 
-  itemName: Knife
-  description: 'A common knife used mostly in food preperation.
-
-    Pierce 1'
+  itemName: Hammer
+  description: A two handed hammer with the end being a heavy stone. Heavy
   imageSprite: {fileID: 0}
-  goldCost: 1
-  sellCost: 0
+  goldCost: 4
+  sellCost: 2
   numberInStack: 1
   itemType: 0
   itemRarity: 0
   equipmentSlot: 5
   enchanted: 0
-  mainDamage: 1
+  mainDamage: 3
   mainMagicDamage: 0
   mainAttackRange: 1
-  offDamage: 1
+  offDamage: 0
   offMagicDamage: 0
-  offAttackRange: 1
-  numberOfHands: 0
+  offAttackRange: 0
+  numberOfHands: 1
   defense: 0
   magicDefense: 0
   healthModifier: 0

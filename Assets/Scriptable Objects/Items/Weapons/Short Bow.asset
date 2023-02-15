@@ -10,25 +10,26 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c7f441553f287b4fb57cd0845e2e111, type: 3}
-  m_Name: Pink Berries
+  m_Name: Short Bow
   m_EditorClassIdentifier: 
-  itemName: Pink Berries
-  description: Restores 1 Magic when consumed
+  itemName: Short Bow
+  description: A shorter bow about shoulder width in span. Crafted from sturdy oak
+    able to be used quickly.
   imageSprite: {fileID: 0}
-  goldCost: 1
+  goldCost: 2
   sellCost: 1
-  numberInStack: 3
-  itemType: 2
+  numberInStack: 1
+  itemType: 0
   itemRarity: 0
-  equipmentSlot: 12
+  equipmentSlot: 5
   enchanted: 0
-  mainDamage: 0
+  mainDamage: 2
   mainMagicDamage: 0
-  mainAttackRange: 0
+  mainAttackRange: 3
   offDamage: 0
   offMagicDamage: 0
   offAttackRange: 0
-  numberOfHands: 0
+  numberOfHands: 1
   defense: 0
   magicDefense: 0
   healthModifier: 0

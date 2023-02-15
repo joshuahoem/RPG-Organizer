@@ -10,27 +10,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c7f441553f287b4fb57cd0845e2e111, type: 3}
-  m_Name: Knife
+  m_Name: Oak Staff
   m_EditorClassIdentifier: 
-  itemName: Knife
-  description: 'A common knife used mostly in food preperation.
-
-    Pierce 1'
+  itemName: Oak Staff
+  description: 'This slightly better then normal staff has a high potency of magic. '
   imageSprite: {fileID: 0}
-  goldCost: 1
-  sellCost: 0
+  goldCost: 4
+  sellCost: 2
   numberInStack: 1
   itemType: 0
   itemRarity: 0
   equipmentSlot: 5
   enchanted: 0
-  mainDamage: 1
-  mainMagicDamage: 0
-  mainAttackRange: 1
-  offDamage: 1
-  offMagicDamage: 0
+  mainDamage: 0
+  mainMagicDamage: 2
+  mainAttackRange: 4
+  offDamage: 0
+  offMagicDamage: 2
   offAttackRange: 1
-  numberOfHands: 0
+  numberOfHands: 1
   defense: 0
   magicDefense: 0
   healthModifier: 0

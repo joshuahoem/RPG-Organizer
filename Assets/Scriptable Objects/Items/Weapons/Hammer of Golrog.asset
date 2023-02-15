@@ -16,8 +16,9 @@ MonoBehaviour:
   description: 'Heavy, 2-Handed
 
     Ignores all target''s Defense and Ward'
+  imageSprite: {fileID: 0}
   goldCost: 50
-  sellCost: 25
+  sellCost: 30
   numberInStack: 1
   itemType: 0
   itemRarity: 4
@@ -38,3 +39,4 @@ MonoBehaviour:
   strengthModifier: 0
   intelligenceModifier: -5
   speedModifier: -1
+  ability: {fileID: 0}

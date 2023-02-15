@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c7f441553f287b4fb57cd0845e2e111, type: 3}
   m_Name: Orange Root
   m_EditorClassIdentifier: 
-  itemName: 
-  description: 
+  itemName: Orange Root
+  description: When consumed, restores 1 point of stamina
   imageSprite: {fileID: 0}
-  goldCost: 0
+  goldCost: 1
   sellCost: 0
-  numberInStack: 1
+  numberInStack: 3
   itemType: 0
   itemRarity: 0
   equipmentSlot: 0

@@ -10,26 +10,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c7f441553f287b4fb57cd0845e2e111, type: 3}
-  m_Name: Knife
+  m_Name: Cloud Berry
   m_EditorClassIdentifier: 
-  itemName: Knife
-  description: 'A common knife used mostly in food preperation.
-
-    Pierce 1'
+  itemName: Cloud Berry
+  description: When Consumed adds 3 to speed this turn
   imageSprite: {fileID: 0}
   goldCost: 1
   sellCost: 0
-  numberInStack: 1
+  numberInStack: 2
   itemType: 0
   itemRarity: 0
-  equipmentSlot: 5
+  equipmentSlot: 0
   enchanted: 0
-  mainDamage: 1
+  mainDamage: 0
   mainMagicDamage: 0
-  mainAttackRange: 1
-  offDamage: 1
+  mainAttackRange: 0
+  offDamage: 0
   offMagicDamage: 0
-  offAttackRange: 1
+  offAttackRange: 0
   numberOfHands: 0
   defense: 0
   magicDefense: 0
