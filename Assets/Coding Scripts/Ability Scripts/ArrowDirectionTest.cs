@@ -9,16 +9,13 @@ public class ArrowDirectionTest : MonoBehaviour
     public GameObject endingObject;
     [SerializeField] public Transform parentTransform;
     [SerializeField] float scaleX;
-
-
     public GameObject arrowInstance;
-
-    private void Start() {
-        
-    }
 
     public void UpdateArrow(string abilityName)
     {
+        scaleX = FindObjectOfType<ArrowInfo>().globalScale;
+        arrowObject = FindObjectOfType<ArrowInfo>().arrowObject;
+
         GameObject _arrow = Instantiate(arrowObject, transform.position, Quaternion.identity);
         _arrow.transform.SetParent(parentTransform,false);
         arrowInstance = _arrow;
@@ -33,7 +30,8 @@ public class ArrowDirectionTest : MonoBehaviour
 
         Vector3 spawnRotation = new Vector3(0,0,degrees);
 
-        Debug.Log(Vector2.Distance(startingObject.transform.position, endingObject.transform.position));
+        Debug.Log(scaleX);
+        // Debug.Log(Vector2.Distance(startingObject.transform.position, endingObject.transform.position));
         float scaleFactor = (Vector2.Distance(startingObject.transform.position, endingObject.transform.position) / scaleX); //* 0.75f - 0.55f;
 
         // GameObject arrow = Instantiate(arrowObject, transform.position, Quaternion.identity);

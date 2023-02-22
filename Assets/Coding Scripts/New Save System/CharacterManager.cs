@@ -42,17 +42,25 @@ public class CharacterManager : MonoBehaviour
             {
                 //load characters 
 
-                while (numberOfCharacters > 0)
+                DirectoryInfo directoryInfo = new DirectoryInfo(SAVE_FOLDER);
+                FileInfo[] saveFiles = directoryInfo.GetFiles("*.txt");
+                int filesLength = saveFiles.Length;
+
+                foreach (FileInfo fileInfo in saveFiles)
                 {
-                    // Debug.Log("Loading Character " + numberOfCharacters);
-                    GameObject character = Instantiate(characterPrefab, 
-                        transform.position, Quaternion.identity);
-                    
-                    character.transform.SetParent(scrollManager.transform, false);
-                    character.GetComponent<CharacterUpdate>().LoadCharacter(numberOfCharacters);
-                    
-                    numberOfCharacters--;
-                }
+                    if (File.Exists(SAVE_FOLDER + "/save_" + filesLength + ".txt"))
+                    {
+                        GameObject character = Instantiate(characterPrefab, 
+                            transform.position, Quaternion.identity);
+                        
+                        character.transform.SetParent(scrollManager.transform, false);
+                        character.GetComponent<CharacterUpdate>().LoadCharacter(filesLength);
+                        
+                    }
+
+                    filesLength--;
+                }   
+                
             }
         }
         else

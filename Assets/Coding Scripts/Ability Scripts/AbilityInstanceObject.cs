@@ -8,11 +8,15 @@ public class AbilityInstanceObject : MonoBehaviour
 {
     [Header("Ability Info")]
     [SerializeField] Ability abilty;
-    public AbilitySaveObject abilitySO;
-    [SerializeField] Sprite abilityImage;
+
+    [Header("Set Up Info")]
     [SerializeField] Image borderImage;
-    [Space(20)]
-    [Header("Unlocked Info")]
+    [SerializeField] Image abilityImage;
+    
+    [Header("To View Only")]
+    public AbilitySaveObject abilitySO;
+    
+    [Space(20)] [Header("Unlocked Info")]
     [SerializeField] GameObject[] abilitiesThatUnlock;
     List<GameObject> arrows = new List<GameObject>();
     [SerializeField] Transform parentTransformForArrows;
@@ -22,7 +26,7 @@ public class AbilityInstanceObject : MonoBehaviour
     {
         if (abilty.abilitySpriteIcon != null)
         {
-            abilityImage = abilty.abilitySpriteIcon;
+            abilityImage.sprite = abilty.abilitySpriteIcon;
         }
         if (abilityImage != null)
         {
