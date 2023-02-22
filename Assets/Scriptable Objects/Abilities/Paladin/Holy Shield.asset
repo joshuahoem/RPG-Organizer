@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Holy Shield
   m_EditorClassIdentifier: 
   abilityName: Holy Shield
-  abilitySpriteIcon: {fileID: 0}
+  abilitySpriteIcon: {fileID: 21300000, guid: ae8d195424116ac47a0ce09684d2f8fe, type: 3}
   borderColor: {r: 0.21960786, g: 0.6784314, b: 0.6627451, a: 1}
   costType: 3
   unlockCost: 1

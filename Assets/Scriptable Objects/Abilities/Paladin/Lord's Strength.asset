@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Lord's Strength
   m_EditorClassIdentifier: 
   abilityName: Lord's Strength
-  abilitySpriteIcon: {fileID: 0}
+  abilitySpriteIcon: {fileID: 21300000, guid: 023be1ab7cd243344a261503ff291a7c, type: 3}
   borderColor: {r: 0.47058827, g: 0.87843144, b: 0.56078434, a: 1}
   costType: 0
   unlockCost: 1

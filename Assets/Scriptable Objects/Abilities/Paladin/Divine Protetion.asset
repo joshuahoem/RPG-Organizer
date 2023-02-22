@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Divine Protetion
   m_EditorClassIdentifier: 
   abilityName: Divine Protection
-  abilitySpriteIcon: {fileID: 0}
+  abilitySpriteIcon: {fileID: 21300000, guid: be2e336fcd35cf54592ff9213b1ee31b, type: 3}
   borderColor: {r: 0.47058827, g: 0.87843144, b: 0.56078434, a: 1}
   costType: 0
   unlockCost: 1

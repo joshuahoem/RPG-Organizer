@@ -37,3 +37,4 @@ MonoBehaviour:
   strengthModifier: 2
   intelligenceModifier: 0
   speedModifier: 0
+  ability: {fileID: 0}

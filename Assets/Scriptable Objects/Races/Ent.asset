@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Ent
   m_EditorClassIdentifier: 
   name: Ent
-  picture: {fileID: 21300000, guid: 73f162a901c77e749b44f883bcd7f7e0, type: 3}
+  picture: {fileID: 21300000, guid: 8a5819c9c023fd542bf5fb0af4f884fe, type: 3}
   history: 
   imageColor: {r: 0.47058827, g: 0.87843144, b: 0.56078434, a: 1}
   health: 4
