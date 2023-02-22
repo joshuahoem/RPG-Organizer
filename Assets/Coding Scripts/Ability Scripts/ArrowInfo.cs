@@ -4,5 +4,6 @@ using UnityEngine;
 
 public class ArrowInfo : MonoBehaviour
 {
-    [SerializeField] GameObject arrowBody;
+    [SerializeField] public float globalScale;
+    [SerializeField] public GameObject arrowObject;
 }
