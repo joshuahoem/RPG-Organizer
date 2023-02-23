@@ -78,7 +78,6 @@ public class ItemPanelDisplay : MonoBehaviour
     // [SerializeField] Image itemImage;
     Item item;
     InventoryItem itemInfo;
-    SaveObject save;
     bool inShop;
     InventoryItem searchResult;
     [SerializeField] ItemDatabase database;
@@ -93,7 +92,7 @@ public class ItemPanelDisplay : MonoBehaviour
     }
     public void DisplayItemInfo(Item _item, InventoryItem _itemInfo)
     {
-        save = FindObjectOfType<LocalStatDisplay>().save;
+        SaveObject save = NewSaveSystem.FindCurrentSave();
         DeactivateAllButtons();
         inShop = FindObjectOfType<LocalShop>().inShop;
         ItemType type = _item.GetItemType();
@@ -378,6 +377,8 @@ public class ItemPanelDisplay : MonoBehaviour
 
     public void Unequip()
     {
+        SaveObject save = NewSaveSystem.FindCurrentSave();
+
         inventoryManager.Unequip(item, save);
         inventoryManager.LoadEquipment();
         inventoryManager.LoadInventory();     
@@ -387,6 +388,7 @@ public class ItemPanelDisplay : MonoBehaviour
     public void ConsumeItem()
     {
         //consume item
+        SaveObject save = NewSaveSystem.FindCurrentSave();
 
         foreach (InventoryItem inv in save.inventory)
         {
@@ -406,13 +408,15 @@ public class ItemPanelDisplay : MonoBehaviour
 
         save.inventory.Remove(searchResult);
 
-        SaveChanges();
+        NewSaveSystem.SaveChanges(save);        
+
         inventoryManager.LoadInventory();
     }
 
     public void PurchaseItem()
     {
         //need to check gold
+        SaveObject save = NewSaveSystem.FindCurrentSave();
         if(save.gold >= item.goldCost && item.GetItemType() != ItemType.Scroll)
         {
             InventoryItem newItem = new InventoryItem
@@ -431,11 +435,8 @@ public class ItemPanelDisplay : MonoBehaviour
 
         }
 
-
-
+        NewSaveSystem.SaveChanges(save);
         FindObjectOfType<LocalShop>().LoadShop();
-        
-        SaveChanges();
     }
 
     public void SellItem()
@@ -475,6 +476,8 @@ public class ItemPanelDisplay : MonoBehaviour
 
     public void LearnAbilityAction()
     {
+        SaveObject save = NewSaveSystem.FindCurrentSave();
+
         foreach (AbilitySaveObject abilitySO in save.abilityInventory)
         {
             if (abilitySO.ability == item.ability)
@@ -490,20 +493,7 @@ public class ItemPanelDisplay : MonoBehaviour
         save.abilityInventory.Add(abilitySaveObject);
         ConsumeItem();
 
-        SaveChanges();
-    }
-
-    private void SaveChanges()
-    {
-        string newCharacterString = JsonUtility.ToJson(save);
-        string indexOfSave = FindObjectOfType<LocalStatDisplay>().charString;
-        File.WriteAllText(Application.dataPath + "/Saves/" + 
-            "/save_" + indexOfSave + ".txt", newCharacterString);
-                    
-        string newSaveString = File.ReadAllText(Application.dataPath + 
-            "/Saves/" + "/save_" + indexOfSave + ".txt");
-        SaveObject newSave = JsonUtility.FromJson<SaveObject>(newSaveString);
-        FindObjectOfType<LocalStatDisplay>().save = newSave;
+        NewSaveSystem.SaveChanges(save);        
 
     }
 }

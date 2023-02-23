@@ -96,7 +96,7 @@ public class CharacterUnlockManager : MonoBehaviour
 
     private void ResetUnlocks()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.A))
         {
             Debug.Log("Clear Unlocks");
             PlayerInfo playerInfo = NewSaveSystem.FindPlayerInfoFile();
