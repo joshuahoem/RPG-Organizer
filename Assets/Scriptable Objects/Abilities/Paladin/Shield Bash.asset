@@ -25,6 +25,24 @@ MonoBehaviour:
     range: 1
     damage: 1
     magicDamage: 0
+    description: Push Enemy back 3 spaces. Chance to disarm.
+  - level: 2
+    upgradeCost: 0
+    magicCost: 0
+    staminaCost: 1
+    range: 1
+    damage: 2
+    magicDamage: 0
+    description: 'Push Enemy back 3 spaces.
+
+      Chance to disarm (18+)'
+  - level: 3
+    upgradeCost: 0
+    magicCost: 0
+    staminaCost: 1
+    range: 1
+    damage: 3
+    magicDamage: 0
     description: 'Push Enemy back 3 spaces.
 
       Chance to disarm (18+)'

@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b3a5683874466c64da079d94c09f1a43, type: 3}
-  m_Name: Justice Swing
+  m_Name: Magic Knife
   m_EditorClassIdentifier: 
-  abilityName: Justice Swing
+  abilityName: Magic Knife
   abilitySpriteIcon: {fileID: 0}
-  borderColor: {r: 0.4156863, g: 0.5372549, b: 0.8000001, a: 1}
+  borderColor: {r: 0.50980395, g: 0.8000001, b: 0.86666673, a: 1}
   costType: 0
   unlockCost: 1
   allAbilityLevels:
@@ -22,24 +22,26 @@ MonoBehaviour:
     upgradeCost: 0
     magicCost: 1
     staminaCost: 0
-    range: 2
-    damage: 3
-    magicDamage: 0
-    description: If the user got hurt by this target, add +2 to your attack this
-      turn
-  - level: 2
-    upgradeCost: 0
+    range: 1
+    damage: 
+    magicDamage: 2
+    description: Conjure a magic knife until end of battle or unequipped. Pierce
+      1.
+  - level: 1
+    upgradeCost: 1
     magicCost: 1
     staminaCost: 0
-    range: 2
-    damage: 5
-    magicDamage: 0
-    description: If the user got hurt by this target, add +2 to attack this turn
-  - level: 3
-    upgradeCost: 0
+    range: 1
+    damage: 
+    magicDamage: 3
+    description: Conjure a magic knife until end of battle or unequipped. Pierce
+      1.
+  - level: 1
+    upgradeCost: 1
     magicCost: 1
     staminaCost: 0
-    range: 2
-    damage: 5
-    magicDamage: 0
-    description: If the user got hurt by this target, add x2 to attack this turn
+    range: 1
+    damage: 
+    magicDamage: 3
+    description: Conjure a magic knife until end of battle or unequipped. Pierce
+      2.

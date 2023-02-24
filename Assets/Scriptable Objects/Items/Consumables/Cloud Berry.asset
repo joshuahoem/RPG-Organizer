@@ -18,9 +18,9 @@ MonoBehaviour:
   goldCost: 1
   sellCost: 0
   numberInStack: 2
-  itemType: 0
+  itemType: 2
   itemRarity: 0
-  equipmentSlot: 0
+  equipmentSlot: 12
   enchanted: 0
   mainDamage: 0
   mainMagicDamage: 0

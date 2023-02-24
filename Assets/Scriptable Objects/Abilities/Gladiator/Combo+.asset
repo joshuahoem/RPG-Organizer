@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b3a5683874466c64da079d94c09f1a43, type: 3}
-  m_Name: Heavy Expert
+  m_Name: Combo+
   m_EditorClassIdentifier: 
-  abilityName: Heavy Expert
-  abilitySpriteIcon: {fileID: 21300000, guid: 9a7ce9b9497960d45a73cf3b10f6fc45, type: 3}
-  borderColor: {r: 0.30058157, g: 0.20518868, b: 0.8207547, a: 0.9019608}
+  abilityName: Combo
+  abilitySpriteIcon: {fileID: 0}
+  borderColor: {r: 0.9725491, g: 0.7607844, b: 0.5686275, a: 1}
   costType: 3
   unlockCost: 1
   allAbilityLevels:
@@ -25,20 +25,21 @@ MonoBehaviour:
     range: 
     damage: 
     magicDamage: 
-    description: Add 1 damage to all heavy weapons.
+    description: You may replace your spell and item action with an attack action.
   - level: 2
-    upgradeCost: 1
+    upgradeCost: 0
     magicCost: 0
     staminaCost: 0
     range: 
     damage: 
     magicDamage: 
-    description: Add 2 damage to all heavy weapons.
+    description: You may replace your spell or item action with an attack action.
   - level: 3
-    upgradeCost: 1
+    upgradeCost: 0
     magicCost: 0
     staminaCost: 0
     range: 
     damage: 
     magicDamage: 
-    description: Add 3 damage to all heavy weapons.
+    description: You may replace your spell with an attack action and/or item action
+      with an attack action.
