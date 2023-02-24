@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3a5683874466c64da079d94c09f1a43, type: 3}
+  m_Name: Magic Blowdart
+  m_EditorClassIdentifier: 
+  abilityName: Magic Blowdart
+  abilitySpriteIcon: {fileID: 0}
+  borderColor: {r: 0.72156864, g: 0.91372555, b: 0.5803922, a: 1}
+  costType: 0
+  unlockCost: 1
+  allAbilityLevels:
+  - level: 1
+    upgradeCost: 0
+    magicCost: 2
+    staminaCost: 0
+    range: 3
+    damage: 1
+    magicDamage: 
+    description: Conjure a magic blowdart to replace either main hand or off hand.
+      Chance to poison.
+  - level: 2
+    upgradeCost: 1
+    magicCost: 2
+    staminaCost: 0
+    range: 3
+    damage: 1
+    magicDamage: 
+    description: Conjure a magic blowdart to replace either main hand or off hand.
+      Chance to poison +2.
+  - level: 3
+    upgradeCost: 1
+    magicCost: 2
+    staminaCost: 0
+    range: 3
+    damage: 2
+    magicDamage: 
+    description: Conjure a magic blowdart to replace either main hand or off hand.
+      Chance to poison +4.
