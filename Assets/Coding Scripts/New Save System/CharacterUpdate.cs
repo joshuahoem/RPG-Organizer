@@ -42,12 +42,18 @@ public class CharacterUpdate : MonoBehaviour
 
             if (saveObject.hasLevelUp)
             {
-                levelAlert.SetActive(true);
-                levelPoints.text = saveObject.levelPoints.ToString();
+                if (levelAlert != null)
+                {
+                    levelAlert.SetActive(true);
+                    levelPoints.text = saveObject.levelPoints.ToString();
+                }
             }
             else
             {
-                levelAlert.SetActive(false);
+                if (levelAlert != null)
+                {
+                    levelAlert.SetActive(false);
+                }
             }
 
             gameObject.name = characterFileNumber.ToString();
