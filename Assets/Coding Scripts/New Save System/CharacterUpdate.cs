@@ -14,9 +14,8 @@ public class CharacterUpdate : MonoBehaviour
     [SerializeField] TextMeshProUGUI characterLevel;
     [SerializeField] GameObject levelAlert;
     [SerializeField] TextMeshProUGUI levelPoints;
-    [SerializeField] Image characterPicture;
 
-    public int _characterFileNumber;
+    [SerializeField] Image characterPicture;
 
     private void Awake() 
     {
@@ -30,7 +29,6 @@ public class CharacterUpdate : MonoBehaviour
         {
             //Debug.Log("Foud file: " + characterFileNumber);
             string saveString = File.ReadAllText(SAVE_FOLDER + "/save_" + characterFileNumber + ".txt");
-            _characterFileNumber = characterFileNumber;
 
             SaveObject saveObject = JsonUtility.FromJson<SaveObject>(saveString);
 
@@ -44,19 +42,12 @@ public class CharacterUpdate : MonoBehaviour
 
             if (saveObject.hasLevelUp)
             {
-                if (levelAlert != null)
-                {
-                    levelAlert.SetActive(true);
-                    levelPoints.text = saveObject.levelPoints.ToString();
-                }
-                
+                levelAlert.SetActive(true);
+                levelPoints.text = saveObject.levelPoints.ToString();
             }
             else
             {
-                if (levelAlert != null)
-                {
-                    levelAlert.SetActive(false);
-                }
+                levelAlert.SetActive(false);
             }
 
             gameObject.name = characterFileNumber.ToString();
