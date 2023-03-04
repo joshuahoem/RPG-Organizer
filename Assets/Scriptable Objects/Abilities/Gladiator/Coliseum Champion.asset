@@ -34,5 +34,14 @@ MonoBehaviour:
     range: 
     damage: 
     magicDamage: 
+    description: For the next three turn after all your attacks have been calculated,
+      double them.
+  - level: 3
+    upgradeCost: 1
+    magicCost: 0
+    staminaCost: 8
+    range: 
+    damage: 
+    magicDamage: 
     description: For the next two turn after all your attacks have been calculated,
       triple them.

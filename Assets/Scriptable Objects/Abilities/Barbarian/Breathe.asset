@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Breathe
   m_EditorClassIdentifier: 
   abilityName: Breathe
-  abilitySpriteIcon: {fileID: 21300000, guid: 7a07a5c41c6f77b42a60daed30bb2842, type: 3}
+  abilitySpriteIcon: {fileID: 0}
   borderColor: {r: 0.41006586, g: 0.84147674, b: 0.9150943, a: 0.8784314}
   costType: 3
   unlockCost: 1
