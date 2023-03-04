@@ -2356,6 +2356,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2541366775060361956, guid: b25e14206b7886a4d9c67e8f796639d2, type: 3}
+      propertyPath: m_fontSize
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 2541366775060361956, guid: b25e14206b7886a4d9c67e8f796639d2, type: 3}
+      propertyPath: m_fontSizeMax
+      value: 80
+      objectReference: {fileID: 0}
     - target: {fileID: 2892120170968161469, guid: b25e14206b7886a4d9c67e8f796639d2, type: 3}
       propertyPath: m_Name
       value: Bonus Arcane
@@ -2512,6 +2520,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 2b395d469cd235449a4277e4ff5aa9d3, type: 3}
+    - target: {fileID: 5390517757878539087, guid: b25e14206b7886a4d9c67e8f796639d2, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -8
+      objectReference: {fileID: 0}
     - target: {fileID: 6286014878802966247, guid: b25e14206b7886a4d9c67e8f796639d2, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 340.99997
@@ -2520,6 +2532,22 @@ PrefabInstance:
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: -6057452312950274839, guid: 4943c58627f73d749afc6997cdaff812, type: 2}
+    - target: {fileID: 6375599629446317788, guid: b25e14206b7886a4d9c67e8f796639d2, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f606a6296c0d5534d8d80dd6aa17687d, type: 3}
+    - target: {fileID: 6375599629446317788, guid: b25e14206b7886a4d9c67e8f796639d2, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6375599629446317788, guid: b25e14206b7886a4d9c67e8f796639d2, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6375599629446317788, guid: b25e14206b7886a4d9c67e8f796639d2, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6410436706622712480, guid: b25e14206b7886a4d9c67e8f796639d2, type: 3}
       propertyPath: m_sharedMaterial
       value: 
@@ -2547,6 +2575,22 @@ PrefabInstance:
     - target: {fileID: 6474562986126275252, guid: b25e14206b7886a4d9c67e8f796639d2, type: 3}
       propertyPath: m_Name
       value: Bonus Ward
+      objectReference: {fileID: 0}
+    - target: {fileID: 6789497281667021491, guid: b25e14206b7886a4d9c67e8f796639d2, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -11.6237
+      objectReference: {fileID: 0}
+    - target: {fileID: 6789497281667021491, guid: b25e14206b7886a4d9c67e8f796639d2, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -10.6778
+      objectReference: {fileID: 0}
+    - target: {fileID: 6789497281667021491, guid: b25e14206b7886a4d9c67e8f796639d2, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.008201599
+      objectReference: {fileID: 0}
+    - target: {fileID: 6789497281667021491, guid: b25e14206b7886a4d9c67e8f796639d2, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -6.2
       objectReference: {fileID: 0}
     - target: {fileID: 6982827063583559530, guid: b25e14206b7886a4d9c67e8f796639d2, type: 3}
       propertyPath: m_AnchoredPosition.x
