@@ -5848,6 +5848,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7022196481703161583}
     m_Modifications:
+    - target: {fileID: 432655419230390664, guid: 1ff2bce8042a29444b19310bb0f93d22, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d6752607175e9d247bf84e99f90b0c95, type: 3}
     - target: {fileID: 432655419230390669, guid: 1ff2bce8042a29444b19310bb0f93d22, type: 3}
       propertyPath: m_Name
       value: Back Button
