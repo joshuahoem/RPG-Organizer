@@ -3990,7 +3990,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1703946126}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.56499827
+  m_Size: 0.564684
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -4504,7 +4504,7 @@ RectTransform:
   m_LocalScale: {x: 1.9808557, y: 1.8750051, z: 1.9808557}
   m_Children: []
   m_Father: {fileID: 1773712117}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -5131,14 +5131,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.47058827, g: 0.87843144, b: 0.56078434, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6bea5f031d4ad5145ba032ab5ba435d4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7261a53ed84a1134dabb8b1c27aa1696, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6456,8 +6456,8 @@ RectTransform:
   m_Children:
   - {fileID: 704829194}
   - {fileID: 562162490}
-  - {fileID: 1446415742}
   - {fileID: 1243729808}
+  - {fileID: 1446415742}
   - {fileID: 1396986064}
   m_Father: {fileID: 6266100}
   m_RootOrder: 0
