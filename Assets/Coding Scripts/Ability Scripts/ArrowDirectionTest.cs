@@ -30,7 +30,7 @@ public class ArrowDirectionTest : MonoBehaviour
 
         Vector3 spawnRotation = new Vector3(0,0,degrees);
 
-        Debug.Log(scaleX);
+        // Debug.Log(scaleX);
         // Debug.Log(Vector2.Distance(startingObject.transform.position, endingObject.transform.position));
         float scaleFactor = (Vector2.Distance(startingObject.transform.position, endingObject.transform.position) / scaleX); //* 0.75f - 0.55f;
 
