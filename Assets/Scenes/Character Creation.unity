@@ -699,7 +699,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5482361247021462724, guid: f6d54363e7aaa8d4b87b43bd6a051a72, type: 3}
       propertyPath: m_Name
-      value: Back Button (1)
+      value: Return Button
       objectReference: {fileID: 0}
     - target: {fileID: 5482361247021462725, guid: f6d54363e7aaa8d4b87b43bd6a051a72, type: 3}
       propertyPath: m_Pivot.x
@@ -1843,6 +1843,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa6757acebd18cd438a8982f9645839f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1024654381 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5482361247021462724, guid: f6d54363e7aaa8d4b87b43bd6a051a72, type: 3}
+  m_PrefabInstance: {fileID: 348418010}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1419454784
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3617,7 +3622,7 @@ MonoBehaviour:
   raceSelectPanel: {fileID: 1621680949}
   classSelectPanel: {fileID: 2139456935}
   backButton: {fileID: 48638013}
-  returnButton: {fileID: 0}
+  returnButton: {fileID: 1024654381}
   raceDisplayObject: {fileID: 3239365714341760146}
   classDisplayObject: {fileID: 32559410}
   inputTextName: {fileID: 1658518250}
