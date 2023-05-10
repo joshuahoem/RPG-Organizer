@@ -190,7 +190,6 @@ MonoBehaviour:
   lockImage: {fileID: 2216177683926916807}
   characterImage: {fileID: 2216177684680812790}
   bgOject: {fileID: 2216177684970158224}
-  bgColor: {r: 0.7176471, g: 0.08235294, b: 0.2509804, a: 1}
   nameTMPro: {fileID: 865435003592761318}
 --- !u!1 &2216177683926916807
 GameObject:
@@ -250,14 +249,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e4a0123ccef5e244a879f7ae0f1e9668, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b4761d4f32b28b44bb3170f6e86d577f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
