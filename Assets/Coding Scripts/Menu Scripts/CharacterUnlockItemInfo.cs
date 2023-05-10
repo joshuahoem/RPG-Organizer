@@ -10,6 +10,7 @@ public class CharacterUnlockItemInfo : MonoBehaviour
     [SerializeField] public Race raceToUnlock;
     [SerializeField] public Class classToUnlock;
     private UnlockObject newUnlock;
+    bool thisItemIsUnlocked = false;
 
 
     [SerializeField] GameObject lockImage;
@@ -68,10 +69,25 @@ public class CharacterUnlockItemInfo : MonoBehaviour
             newUnlock = new UnlockObject(null, classToUnlock);
         }
 
-        playerInfo.unlocks.Add(newUnlock);
-        NewSaveSystem.SavePlayerInfo(playerInfo);
+        foreach (UnlockObject unlock in playerInfo.unlocks)
+        {
+            if (newUnlock == unlock)
+            {
+                thisItemIsUnlocked = true;
+            }
+        }
 
-        OnNewRaceOrClassUnlocked?.Invoke(this, EventArgs.Empty);
+        if (!thisItemIsUnlocked)
+        {
+            playerInfo.unlocks.Add(newUnlock);
+            NewSaveSystem.SavePlayerInfo(playerInfo);
+
+            OnNewRaceOrClassUnlocked?.Invoke(this, EventArgs.Empty);
+
+            thisItemIsUnlocked = true;
+        }
+
+        
     }
 
     public void ClickToSelect()

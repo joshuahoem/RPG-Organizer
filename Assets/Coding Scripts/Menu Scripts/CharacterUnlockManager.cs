@@ -32,7 +32,6 @@ public class CharacterUnlockManager : MonoBehaviour
 
         if (playerInfo.unlocks.Count <= 1)
         {
-            Debug.Log("Loading");
             foreach (Race race in defaultRaces)
             {
                 UnlockObject unlockObject = new UnlockObject(race, null);
@@ -96,12 +95,13 @@ public class CharacterUnlockManager : MonoBehaviour
 
     private void ResetUnlocks()
     {
-        if (Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKeyDown(KeyCode.L))
         {
             Debug.Log("Clear Unlocks");
             PlayerInfo playerInfo = NewSaveSystem.FindPlayerInfoFile();
             playerInfo.unlocks.Clear();
             NewSaveSystem.SavePlayerInfo(playerInfo);
+            LoadDefaults();
         }
     } 
 }
