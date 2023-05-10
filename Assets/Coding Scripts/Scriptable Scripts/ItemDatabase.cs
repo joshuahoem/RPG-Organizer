@@ -11,11 +11,19 @@ public class ItemDatabase : ScriptableObject, ISerializationCallbackReceiver
 
     public void OnAfterDeserialize()
     {
+        //
+    }
+
+    private void OnEnable() 
+    {
         GetID = new Dictionary<Item, int>();
         // GetItem = new Dictionary<int, Item>();
         for (int i = 0; i < allItems.Length; i++)
         {
-            GetID.Add(allItems[i], i);
+            if (!GetID.ContainsKey(allItems[i]))
+            {
+                GetID.Add(allItems[i], i);
+            }
             // GetItem.Add(i, allItems[i]);
         }
     }
@@ -23,5 +31,6 @@ public class ItemDatabase : ScriptableObject, ISerializationCallbackReceiver
     public void OnBeforeSerialize()
     {
         //
+        // GetID = new Dictionary<Item, int>();
     }
 }
