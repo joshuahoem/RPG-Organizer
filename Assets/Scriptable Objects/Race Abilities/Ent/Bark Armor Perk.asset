@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e66b32bf09104544db89100661d99a02, type: 3}
   m_Name: Bark Armor Perk
   m_EditorClassIdentifier: 
-  unlockCost: 0
+  unlockCost: 5
   perkName: Bark Armor
   perkImageIcon: {fileID: 0}
   borderColor: {r: 0, g: 0, b: 0, a: 0}

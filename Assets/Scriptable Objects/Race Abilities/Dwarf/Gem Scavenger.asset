@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3a5683874466c64da079d94c09f1a43, type: 3}
+  m_Name: Gem Scavenger
+  m_EditorClassIdentifier: 
+  abilityName: Gem Scavenger
+  abilitySpriteIcon: {fileID: 0}
+  borderColor: {r: 0, g: 0, b: 0, a: 0}
+  costType: 3
+  unlockCost: 1
+  allAbilityLevels:
+  - level: 1
+    upgradeCost: 0
+    magicCost: 0
+    staminaCost: 0
+    range: 
+    damage: 
+    magicDamage: 
+    description: "If there is a minable rock nearby and character has a mining tool
+      in inventory (or nearby to use) roll to check if they were able to find a gem
+      in the stone. \r\nIf successful, add a gem or metal to your inventory with
+      a weight of 1."

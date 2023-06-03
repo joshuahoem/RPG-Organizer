@@ -10,20 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b3a5683874466c64da079d94c09f1a43, type: 3}
-  m_Name: Natural Skin
+  m_Name: 2-Handed Proficiency
   m_EditorClassIdentifier: 
-  abilityName: Natural Skin
+  abilityName: 
   abilitySpriteIcon: {fileID: 0}
   borderColor: {r: 0, g: 0, b: 0, a: 0}
   costType: 3
   unlockCost: 1
   allAbilityLevels:
-  - level: 0
+  - level: 1
     upgradeCost: 0
     magicCost: 0
     staminaCost: 0
     range: 
     damage: 
     magicDamage: 
-    description: Immune to poison. Talk half damage from earth damage. Take double
-      damage from fire damage.
+    description: Add +1 Attack if using a two-handed weapon

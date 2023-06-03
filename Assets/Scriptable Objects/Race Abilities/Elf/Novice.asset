@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b3a5683874466c64da079d94c09f1a43, type: 3}
-  m_Name: Sap Armor
+  m_Name: Novice
   m_EditorClassIdentifier: 
-  abilityName: Sap Armor
+  abilityName: Novice
   abilitySpriteIcon: {fileID: 0}
   borderColor: {r: 0, g: 0, b: 0, a: 0}
   costType: 3
@@ -25,5 +25,7 @@ MonoBehaviour:
     range: 
     damage: 
     magicDamage: 
-    description: If an attacker is using a sharp weapon, chance for their weapon
-      to get lodged into this character, disarming the attacker.
+    description: Starting with this character you get the normal d6Custom roll to
+      determine how many points to use to upgrade stats, but on top of the number
+      you get, this character gets 2 more. (if you rolled for 4 points, this character
+      would get 2 more for a total of 6 points to use to upgrade stats)

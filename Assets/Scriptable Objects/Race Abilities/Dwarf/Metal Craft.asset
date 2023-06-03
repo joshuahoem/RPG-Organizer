@@ -10,19 +10,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b3a5683874466c64da079d94c09f1a43, type: 3}
-  m_Name: Rooted+
+  m_Name: Metal Craft
   m_EditorClassIdentifier: 
-  abilityName: Rooted+
+  abilityName: Metal Craft
   abilitySpriteIcon: {fileID: 0}
   borderColor: {r: 0, g: 0, b: 0, a: 0}
   costType: 3
-  unlockCost: 0
+  unlockCost: 1
   allAbilityLevels:
-  - level: 0
+  - level: 1
     upgradeCost: 0
     magicCost: 0
     staminaCost: 0
     range: 
     damage: 
     magicDamage: 
-    description: At the end of this characters turn gain 1d Custom of health.
+    description: 'With Metal or gemstones in your inventory, you can craft to make
+      a weapon.
+
+      1 metal = 1 attack
+
+      1 gemstone = 1 enchantment'
