@@ -57,7 +57,7 @@ public class AbilityTreeManager : MonoBehaviour
         }
         for (int i = 0; i < raceAbilityTrees.Length; i++)
         {
-            classAbilityTrees[i].SetActive(false);
+            raceAbilityTrees[i].SetActive(false);
         }
 
         SaveState saveState = NewSaveSystem.FindSaveState();

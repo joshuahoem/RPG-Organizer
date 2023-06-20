@@ -2638,7 +2638,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 2, y: -23}
+  m_AnchoredPosition: {x: 2, y: -4.8}
   m_SizeDelta: {x: 217.7392, y: 50}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &334965389
@@ -2661,7 +2661,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Ability Points:'
+  m_text: Class Ability Points
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 87432e78323e6df45a8121ea7007aff4, type: 2}
   m_sharedMaterial: {fileID: -7054226532496081844, guid: 87432e78323e6df45a8121ea7007aff4, type: 2}
@@ -2688,18 +2688,18 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 44.5
+  m_fontSizeBase: 44.5
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
-  m_wordSpacing: 0
+  m_wordSpacing: 32.8
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
@@ -6648,8 +6648,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0008392334, y: -66.09575}
-  m_SizeDelta: {x: 217.74, y: 89.0264}
+  m_AnchoredPosition: {x: 0.0008392334, y: -92.49851}
+  m_SizeDelta: {x: 217.74, y: 69.2234}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &811872831
 MonoBehaviour:
@@ -6698,15 +6698,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 72
+  m_fontSize: 91.11
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 72
+  m_fontSizeMax: 91.11
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
+  m_VerticalAlignment: 4096
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -9580,7 +9580,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5102de1003614a4fa4c4fec0aace2be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  abilityPointsText: {fileID: 811872831}
+  abilityPointsTextNumber: {fileID: 811872831}
+  abilityPointsText: {fileID: 334965389}
+  classAbilityText: Class Ability Points
+  raceAbilityText: Race Ability Points
 --- !u!4 &1151212231
 Transform:
   m_ObjectHideFlags: 0
@@ -22437,7 +22440,7 @@ MonoBehaviour:
   borderImage: {fileID: 3066882011601962108}
   abilityImage: {fileID: 3066882011208599636}
   abilitySO:
-    ability: {fileID: 0}
+    ability: {fileID: 11400000, guid: 0fae968b847c8e941857ccfc84b30fcc, type: 2}
     abilityType: 0
     currentLevel: 0
     viewingLevel: 0
@@ -26723,11 +26726,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe089407fa33fc74f894a8d9600ca388, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  abilty: {fileID: 0}
+  abilty: {fileID: 11400000, guid: 6fff8dbbd850b5240892e9651d1910d8, type: 2}
   borderImage: {fileID: 3066882012261290984}
   abilityImage: {fileID: 3066882010557669312}
   abilitySO:
-    ability: {fileID: 0}
+    ability: {fileID: 11400000, guid: 7f24bff47e94d5d4cb4aad4838436d6c, type: 2}
     abilityType: 0
     currentLevel: 0
     viewingLevel: 0
@@ -41431,7 +41434,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe089407fa33fc74f894a8d9600ca388, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  abilty: {fileID: 0}
+  abilty: {fileID: 11400000, guid: 5a6c77a25cd6a5c44b3cc7beb9c1eb93, type: 2}
   borderImage: {fileID: 3066882010982500186}
   abilityImage: {fileID: 3066882011695680370}
   abilitySO:

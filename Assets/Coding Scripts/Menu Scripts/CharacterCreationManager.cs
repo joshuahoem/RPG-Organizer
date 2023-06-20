@@ -235,7 +235,9 @@ public class CharacterCreationManager : MonoBehaviour
             level = 1,
             hasLevelUp = true,
             levelPoints = 3,
-            levelRolls = 3,                        
+            levelRolls = 3,    
+            raceAbilityPoints = 1,
+            classAbilityPoints = 1                    
 
         };
 

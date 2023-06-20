@@ -7,7 +7,11 @@ using System;
 
 public class AbilityInventory : MonoBehaviour
 {
+    [SerializeField] TextMeshProUGUI abilityPointsTextNumber;
     [SerializeField] TextMeshProUGUI abilityPointsText;
+    [SerializeField] string classAbilityText;
+    [SerializeField] string raceAbilityText;
+
     SaveObject save;
     string charString;
     private List<AbilitySaveObject> abilities;
@@ -20,7 +24,6 @@ public class AbilityInventory : MonoBehaviour
 
         abilities = save.abilityInventory;
 
-        abilityPointsText.text = save.classAbilityPoints.ToString(); //need to determine if race or class
 
         AbilityPanelManager panelManager = FindObjectOfType<AbilityPanelManager>();
         panelManager.onAbilityUnlocked += Subscriber_UnlockAbility;
@@ -28,6 +31,22 @@ public class AbilityInventory : MonoBehaviour
         SaveState saveState = NewSaveSystem.FindSaveState();
         saveState.screenState = ScreenState.AbilityScreen;
         NewSaveSystem.SaveStateOfGame(saveState);
+
+        if(saveState.classAbilityBool)
+        {
+            abilityPointsTextNumber.text = save.classAbilityPoints.ToString(); 
+            abilityPointsText.text = classAbilityText;
+        }
+        else if (saveState.raceAbilityBool)
+        {
+            abilityPointsTextNumber.text = save.raceAbilityPoints.ToString(); 
+            abilityPointsText.text = raceAbilityText;
+        }
+        else
+        {
+            Debug.LogError("no state for class or race");
+        }
+
     }
 
     private void Update()
@@ -43,9 +62,32 @@ public class AbilityInventory : MonoBehaviour
     private void Subscriber_UnlockAbility(object sender, AbilityPanelManager.UnlockAbilityEventArgs e)
     {   
         AbilitySaveObject abilitySaveObject = ReturnNewAbilityObject(e._ability.ability);
+        SaveState state = NewSaveSystem.FindSaveState();
+
+        if (state.raceAbilityBool && save.raceAbilityPoints < e._ability.ability.unlockCost)
+        {
+            Debug.Log("not enough points");
+            return;
+        }
+        if (state.classAbilityBool && save.classAbilityPoints < e._ability.ability.unlockCost)
+        {
+            Debug.Log("not enough points");
+            return;
+        }
 
         if (abilitySaveObject != null)
         {
+            if (state.classAbilityBool)
+            { 
+                save.classAbilityPoints -= e._ability.ability.unlockCost; 
+                abilityPointsTextNumber.text = save.classAbilityPoints.ToString(); 
+            }
+            else if (state.raceAbilityBool)
+            { 
+                save.raceAbilityPoints -= e._ability.ability.unlockCost; 
+                abilityPointsTextNumber.text = save.raceAbilityPoints.ToString(); 
+            }
+
             abilitySaveObject.unlocked = true;
             save.abilityInventory.Add(abilitySaveObject);
         }
@@ -62,8 +104,8 @@ public class AbilityInventory : MonoBehaviour
                 }
             }
 
-            Debug.Log(abilitySaveObject.currentLevel);
-            Debug.Log(abilitySaveObject.ability.allAbilityLevels.Length);
+            // Debug.Log(abilitySaveObject.currentLevel);
+            // Debug.Log(abilitySaveObject.ability.allAbilityLevels.Length);
             int checkNumber = (abilitySaveObject.currentLevel + 1);
             if (abilitySaveObject.ability.allAbilityLevels.Length >= checkNumber)
             {

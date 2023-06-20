@@ -137,7 +137,9 @@ public class SaveLoadManager : MonoBehaviour
             //Level Info
             level = 1,
             hasLevelUp = true,
-            levelPoints = 6                        
+            levelPoints = 6,    
+            raceAbilityPoints = 1,
+            classAbilityPoints = 1
 
         };
 

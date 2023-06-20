@@ -39,6 +39,9 @@ public class LocalLevelUpManager : MonoBehaviour
     int currentIntelligence;
     int currentSpeed;
 
+    int _classAbilityPoints;
+    int _raceAbilityPoints;
+
     private void Start() 
     {
         save = FindObjectOfType<LocalStatDisplay>().save;
@@ -70,6 +73,9 @@ public class LocalLevelUpManager : MonoBehaviour
         currentStrength = save.baseStrength;
         currentIntelligence = save.baseIntelligence;
         currentSpeed = save.baseSpeed;
+
+        _raceAbilityPoints = save.raceAbilityPoints;
+        _classAbilityPoints = save.classAbilityPoints;
     }
 
     private void UpdateUI()
@@ -90,6 +96,9 @@ public class LocalLevelUpManager : MonoBehaviour
         points += 1;
         rolls += 2;
 
+        _raceAbilityPoints += 1;
+        _classAbilityPoints += 1;
+
         save.hasLevelUp = true;
         ConfirmLevelChanges();
     }
@@ -106,6 +115,9 @@ public class LocalLevelUpManager : MonoBehaviour
         save.baseStrength = currentStrength;
         save.baseIntelligence = currentIntelligence;
         save.baseSpeed = currentSpeed;
+
+        save.classAbilityPoints = _classAbilityPoints;
+        save.raceAbilityPoints = _raceAbilityPoints;
 
         #region//bonus Stats
         SaveLoadManager saveLoad = FindObjectOfType<SaveLoadManager>();
