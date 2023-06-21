@@ -8,6 +8,8 @@ using System;
 public class AbilityPanelManager : MonoBehaviour
 {
     public event EventHandler<UnlockAbilityEventArgs> onAbilityUnlocked;
+    [SerializeField] private ErrorMessageHandler errorMessageHandler;
+
     [SerializeField] public GameObject abilityInfoPanel;
     public Ability ability;
     public AbilitySaveObject abilitySO;
@@ -154,16 +156,19 @@ public class AbilityPanelManager : MonoBehaviour
         if (state.raceAbilityBool && save.raceAbilityPoints < abilitySO.ability.unlockCost)
         {
             Debug.Log("not enough points");//error
+            errorMessageHandler.ReceivingOnErrorOccured(ErrorMessageHandler.ErrorType.NoRacePoints);
             return;
         }
         if (state.classAbilityBool && save.classAbilityPoints < abilitySO.ability.unlockCost)
         {
             Debug.Log("not enough points"); //error
+            errorMessageHandler.ReceivingOnErrorOccured(ErrorMessageHandler.ErrorType.NoClassPoints);
             return;
         }
         if (save.spellbookCapacity <= save.abilityInventory.Count)
         {
             Debug.Log("not enough intelligence to get an ability");//error
+            errorMessageHandler.ReceivingOnErrorOccured(ErrorMessageHandler.ErrorType.NoIntelligence);
             return;
         }
         unlockButtonObject.SetActive(false);

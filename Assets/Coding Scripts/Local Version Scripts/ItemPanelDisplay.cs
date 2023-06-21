@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using System.IO;
 using UnityEngine.UI;
+using System;
 
 public class ItemPanelDisplay : MonoBehaviour
 {
@@ -82,6 +83,8 @@ public class ItemPanelDisplay : MonoBehaviour
     InventoryItem searchResult;
     [SerializeField] ItemDatabase database;
     [SerializeField] LocalInventoryManager inventoryManager;
+
+    [SerializeField] private ErrorMessageHandler errorMessageHandler;
 
     public void DeactivateAllButtons()
     {
@@ -421,6 +424,7 @@ public class ItemPanelDisplay : MonoBehaviour
         if (save.inventory.Count >= save.holdingCapacity)
         {
             Debug.Log("not strong enough to carry"); //error
+            errorMessageHandler.ReceivingOnErrorOccured(ErrorMessageHandler.ErrorType.NoStrength);
             return;
         }
 
@@ -434,7 +438,8 @@ public class ItemPanelDisplay : MonoBehaviour
         }
         else
         {
-           Debug.Log("not enough gold"); //error
+            Debug.Log("not enough gold"); //error
+            errorMessageHandler.ReceivingOnErrorOccured(ErrorMessageHandler.ErrorType.NoGold);
         }
 
         NewSaveSystem.SaveChanges(save);

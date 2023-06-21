@@ -10,6 +10,7 @@ public class LootManager : MonoBehaviour
     [SerializeField] LootDrop currentLootTable;
     [SerializeField] TMP_Dropdown dropdown;
     [SerializeField] ItemDatabase database;
+    [SerializeField] private ErrorMessageHandler errorMessageHandler;
 
     [Header("Loot Panel Display")]
     [SerializeField] GameObject lootPanel;
@@ -31,6 +32,7 @@ public class LootManager : MonoBehaviour
     bool added;
     int rolls;
     int numberBeingAdded;
+
 
     private void Start() 
     {
@@ -106,6 +108,7 @@ public class LootManager : MonoBehaviour
         if (save.inventory.Count >= save.holdingCapacity)
         {
             Debug.Log("not strong enough to carry"); //error
+            errorMessageHandler.ReceivingOnErrorOccured(ErrorMessageHandler.ErrorType.NoStrength);
             return;
         }
 

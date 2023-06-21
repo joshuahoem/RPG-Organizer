@@ -8,6 +8,8 @@ using System;
 public class PerkPanelManager : MonoBehaviour
 {
     public event EventHandler<UnlockPerkEventArgs> onPerkUnlocked;
+    [SerializeField] private ErrorMessageHandler errorMessageHandler;
+
     [SerializeField] public GameObject perkPanelObject;
     Perk perk;
     PerkObject perkObjectFromItem;
@@ -76,11 +78,13 @@ public class PerkPanelManager : MonoBehaviour
         if (state.raceAbilityBool && save.raceAbilityPoints < perk.unlockCost)
         {
             Debug.Log("not enough points"); //error
+            errorMessageHandler.ReceivingOnErrorOccured(ErrorMessageHandler.ErrorType.NoRacePoints);
             return;
         }
         if (state.classAbilityBool && save.classAbilityPoints < perk.unlockCost)
         {
             Debug.Log("not enough points"); //error
+            errorMessageHandler.ReceivingOnErrorOccured(ErrorMessageHandler.ErrorType.NoClassPoints);
             return;
         }
 
