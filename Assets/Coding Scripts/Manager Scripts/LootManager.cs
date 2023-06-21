@@ -100,9 +100,17 @@ public class LootManager : MonoBehaviour
 
     public void GetLoot()
     {
+        SaveObject save = NewSaveSystem.FindCurrentSave();
+
+        //check if can hold first
+        if (save.inventory.Count >= save.holdingCapacity)
+        {
+            Debug.Log("not strong enough to carry"); //error
+            return;
+        }
+
         List<Item> loot = new List<Item>();
         loot = currentLootTable.SpawnDrop(rolls);
-        SaveObject save = NewSaveSystem.FindCurrentSave();
 
         lootPanel.SetActive(true);
 

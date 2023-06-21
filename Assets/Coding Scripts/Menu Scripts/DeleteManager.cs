@@ -25,7 +25,6 @@ public class DeleteManager : MonoBehaviour
         }
         deleteManager.deleteObjects.Clear();
 
-        Debug.Log("loading");
         string SAVE_FOLDER = Application.dataPath + "/Saves/";
         DirectoryInfo directoryInfo = new DirectoryInfo(SAVE_FOLDER);
         FileInfo[] saveFiles = directoryInfo.GetFiles("*.txt");

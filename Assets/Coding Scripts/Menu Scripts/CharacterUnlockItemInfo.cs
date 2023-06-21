@@ -60,6 +60,7 @@ public class CharacterUnlockItemInfo : MonoBehaviour
     {
         PlayerInfo playerInfo = NewSaveSystem.FindPlayerInfoFile();
         thisItemIsUnlocked = false;
+        newUnlock = null;
 
         if(raceToUnlock != null)
         {
@@ -70,13 +71,14 @@ public class CharacterUnlockItemInfo : MonoBehaviour
             newUnlock = new UnlockObject(null, classToUnlock);
         }
 
+        if (newUnlock == null)
+        {
+            Debug.Log("error - no new unlock");
+            return;
+        }
+
         foreach (UnlockObject unlock in playerInfo.unlocks)
         {
-            // Debug.Log(newUnlock.unlockedClass + "class of new");
-            // Debug.Log(newUnlock.unlockedRace + "race of new");
-            // Debug.Log(unlock.unlockedClass + "class of check");
-            // Debug.Log(unlock.unlockedRace + "race of check");
-
             if (newUnlock.unlockedRace == unlock.unlockedRace && newUnlock.unlockedClass == unlock.unlockedClass)
             {
                 Debug.Log("found result");

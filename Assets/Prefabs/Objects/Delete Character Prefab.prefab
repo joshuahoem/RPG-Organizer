@@ -410,21 +410,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4984130096535686973, guid: 75f5c6a7c7d7cb5468f3351883033f4d, type: 3}
-        m_TargetAssemblyTypeName: SaveLoadManager, Assembly-CSharp
-        m_MethodName: TrackButtonPressed
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 7933478516205605896, guid: 73c472a97cf1cc1469193f75858309db, type: 3}
-        m_TargetAssemblyTypeName: ScreenManager, Assembly-CSharp
-        m_MethodName: LoadCharacterInfoScene
+      - m_Target: {fileID: 8579244989569172520, guid: b289a4faa6b7a1a40bb6e6110845c953, type: 3}
+        m_TargetAssemblyTypeName: DeleteManager, Assembly-CSharp
+        m_MethodName: DeleteCharacter
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

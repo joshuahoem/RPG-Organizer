@@ -46,10 +46,10 @@ public class CharacterUnlockManager : MonoBehaviour
 
             NewSaveSystem.SavePlayerInfo(playerInfo);
 
-            foreach (UnlockObject unlock in playerInfo.unlocks)
-            {
-                Debug.Log(unlock.unlockedClass + " " + unlock.unlockedRace);
-            }
+            // foreach (UnlockObject unlock in playerInfo.unlocks)
+            // {
+            //     Debug.Log(unlock.unlockedClass + " " + unlock.unlockedRace);
+            // }
         }
     }
 
@@ -95,7 +95,7 @@ public class CharacterUnlockManager : MonoBehaviour
 
     private void ResetUnlocks()
     {
-        if (Input.GetKeyDown(KeyCode.L))
+        if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             Debug.Log("Clear Unlocks");
             PlayerInfo playerInfo = NewSaveSystem.FindPlayerInfoFile();
@@ -104,7 +104,7 @@ public class CharacterUnlockManager : MonoBehaviour
             LoadDefaults();
         }
 
-        if (Input.GetKeyDown(KeyCode.P))
+        if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             Debug.Log("check unlocks");
             PlayerInfo playerInfo = NewSaveSystem.FindPlayerInfoFile();
