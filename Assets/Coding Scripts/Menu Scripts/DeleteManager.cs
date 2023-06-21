@@ -49,6 +49,8 @@ public class DeleteManager : MonoBehaviour
         // var path = AssetDatabase.GUIDToAssetPath(SAVE_FOLDER + "/save_" + selectedCharacter + ".txt");
 
         File.Delete(SAVE_FOLDER + "/save_" + selectedCharacter + ".txt");
+        File.Delete(SAVE_FOLDER + "/save_" + selectedCharacter + ".txt.meta");
+
         UnityEditor.AssetDatabase.Refresh();
 
         LoadCharacterFiles();
