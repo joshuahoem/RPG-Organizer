@@ -417,7 +417,14 @@ public class ItemPanelDisplay : MonoBehaviour
     {
         //need to check gold
         SaveObject save = NewSaveSystem.FindCurrentSave();
-        if(save.gold >= item.goldCost && item.GetItemType() != ItemType.Scroll)
+
+        if (save.inventory.Count >= save.holdingCapacity)
+        {
+            Debug.Log("not strong enough to carry"); //error
+            return;
+        }
+
+        if(save.gold >= item.goldCost)
         {
             InventoryItem newItem = new InventoryItem
                 (item, database.GetID[item], item.numberInStack, false, 0);
@@ -425,14 +432,9 @@ public class ItemPanelDisplay : MonoBehaviour
 
             save.gold -= item.goldCost;
         }
-        else if (save.gold >= item.goldCost && item.GetItemType() == ItemType.Scroll)
+        else
         {
-            InventoryItem newItem = new InventoryItem
-                (item, database.GetID[item], item.numberInStack, false, 0);
-            save.inventory.Add(newItem);
-
-            save.gold -= item.goldCost;
-
+           Debug.Log("not enough gold"); //error
         }
 
         NewSaveSystem.SaveChanges(save);

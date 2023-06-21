@@ -148,6 +148,24 @@ public class AbilityPanelManager : MonoBehaviour
     public void UnlockAbility()
     {
         //button clicked
+        SaveObject save = NewSaveSystem.FindCurrentSave();
+        SaveState state = NewSaveSystem.FindSaveState();
+
+        if (state.raceAbilityBool && save.raceAbilityPoints < abilitySO.ability.unlockCost)
+        {
+            Debug.Log("not enough points");//error
+            return;
+        }
+        if (state.classAbilityBool && save.classAbilityPoints < abilitySO.ability.unlockCost)
+        {
+            Debug.Log("not enough points"); //error
+            return;
+        }
+        if (save.spellbookCapacity <= save.abilityInventory.Count)
+        {
+            Debug.Log("not enough intelligence to get an ability");//error
+            return;
+        }
         unlockButtonObject.SetActive(false);
         onAbilityUnlocked?.Invoke(this, new UnlockAbilityEventArgs { _ability = abilitySO });
     }

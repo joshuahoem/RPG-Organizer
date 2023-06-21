@@ -75,12 +75,12 @@ public class PerkPanelManager : MonoBehaviour
 
         if (state.raceAbilityBool && save.raceAbilityPoints < perk.unlockCost)
         {
-            Debug.Log("not enough points");
+            Debug.Log("not enough points"); //error
             return;
         }
         if (state.classAbilityBool && save.classAbilityPoints < perk.unlockCost)
         {
-            Debug.Log("not enough points");
+            Debug.Log("not enough points"); //error
             return;
         }
 

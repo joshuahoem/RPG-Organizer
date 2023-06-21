@@ -59,6 +59,7 @@ public class CharacterUnlockItemInfo : MonoBehaviour
     public void ClickToUnlock()
     {
         PlayerInfo playerInfo = NewSaveSystem.FindPlayerInfoFile();
+        thisItemIsUnlocked = false;
 
         if(raceToUnlock != null)
         {
@@ -71,14 +72,21 @@ public class CharacterUnlockItemInfo : MonoBehaviour
 
         foreach (UnlockObject unlock in playerInfo.unlocks)
         {
-            if (newUnlock == unlock)
+            // Debug.Log(newUnlock.unlockedClass + "class of new");
+            // Debug.Log(newUnlock.unlockedRace + "race of new");
+            // Debug.Log(unlock.unlockedClass + "class of check");
+            // Debug.Log(unlock.unlockedRace + "race of check");
+
+            if (newUnlock.unlockedRace == unlock.unlockedRace && newUnlock.unlockedClass == unlock.unlockedClass)
             {
+                Debug.Log("found result");
                 thisItemIsUnlocked = true;
             }
         }
 
         if (!thisItemIsUnlocked)
         {
+            Debug.Log("new one added");
             playerInfo.unlocks.Add(newUnlock);
             NewSaveSystem.SavePlayerInfo(playerInfo);
 

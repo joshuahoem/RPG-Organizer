@@ -65,7 +65,6 @@ public class CharacterCreationManager : MonoBehaviour
             }
             else if (loadingClassesBool && unlock.unlockedClass != null)
             {
-                Debug.Log("class");
                 GameObject _classObject = Instantiate(raceClassPrefabObject, transform.position, transform.rotation);
                 _classObject.transform.SetParent(parentClass);
                 _classObject.GetComponent<CharacterUnlockItemInfo>().classToUnlock = unlock.unlockedClass;

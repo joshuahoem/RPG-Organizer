@@ -64,17 +64,6 @@ public class AbilityInventory : MonoBehaviour
         AbilitySaveObject abilitySaveObject = ReturnNewAbilityObject(e._ability.ability);
         SaveState state = NewSaveSystem.FindSaveState();
 
-        if (state.raceAbilityBool && save.raceAbilityPoints < e._ability.ability.unlockCost)
-        {
-            Debug.Log("not enough points");
-            return;
-        }
-        if (state.classAbilityBool && save.classAbilityPoints < e._ability.ability.unlockCost)
-        {
-            Debug.Log("not enough points");
-            return;
-        }
-
         if (abilitySaveObject != null)
         {
             if (state.classAbilityBool)

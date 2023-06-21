@@ -103,5 +103,25 @@ public class CharacterUnlockManager : MonoBehaviour
             NewSaveSystem.SavePlayerInfo(playerInfo);
             LoadDefaults();
         }
+
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            Debug.Log("check unlocks");
+            PlayerInfo playerInfo = NewSaveSystem.FindPlayerInfoFile();
+            foreach (UnlockObject unlock in playerInfo.unlocks)
+            {
+                if(unlock.unlockedRace != null)
+                {
+                    Debug.Log(unlock.unlockedRace);
+                }
+                if (unlock.unlockedClass != null)
+                {
+                    Debug.Log(unlock.unlockedClass);
+                }
+            }
+            Debug.Log(playerInfo.unlocks.Count);
+
+        }
+
     } 
 }
