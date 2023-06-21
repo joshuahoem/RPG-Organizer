@@ -2,22 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ContentSizeFitterImproved : MonoBehaviour
+public class ShopContentFitter : MonoBehaviour
 {
-    private void Start() 
-    {
+    [SerializeField] GameObject parent;
+
+    private void Start() {
         FitContent();
     }
 
     public void FitContent()
     {
         GameObject contentToBeSized = this.gameObject;
-        GameObject[] children = new GameObject[contentToBeSized.transform.childCount];
+        GameObject[] children = new GameObject[parent.transform.childCount];
         float height = 0;
 
         for (int i=0; i < children.Length; i++)
         {
-            children[i] = contentToBeSized.transform.GetChild(i).gameObject;
+            children[i] = parent.transform.GetChild(i).gameObject;
 
             if (children[i] != null)
             {
@@ -25,8 +26,8 @@ public class ContentSizeFitterImproved : MonoBehaviour
             }
         }
 
-        float currentX = contentToBeSized.GetComponent<RectTransform>().sizeDelta.x;
-        contentToBeSized.GetComponent<RectTransform>().sizeDelta = new Vector2(currentX, height);
+        contentToBeSized.GetComponent<RectTransform>().offsetMin = new Vector2(0, -height);
+        contentToBeSized.GetComponent<RectTransform>().offsetMax = new Vector2(0, 0);
+        
     }
-
 }
