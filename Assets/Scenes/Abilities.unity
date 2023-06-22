@@ -10743,7 +10743,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae7af6e7d250c784ea6f48f5d986380a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  errorMessageHandler: {fileID: 0}
+  errorMessageHandler: {fileID: 1644140460}
   abilityInfoPanel: {fileID: 1944111533}
   ability: {fileID: 0}
   abilitySO:
@@ -11859,7 +11859,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1644140460}
         m_TargetAssemblyTypeName: ErrorMessageHandler, Assembly-CSharp
         m_MethodName: CloseErrorPanel
         m_Mode: 1
@@ -17000,6 +17000,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingFocusObject: {fileID: 0}
+--- !u!114 &1644140460 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5115561778573004304, guid: ef6f5a87f3efb2743b916321b855aff9, type: 3}
+  m_PrefabInstance: {fileID: 840546233}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 469e841e59dd8b44cbcb3dbde585248d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1653055466
 MonoBehaviour:
   m_ObjectHideFlags: 0
