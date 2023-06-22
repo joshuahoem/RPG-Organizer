@@ -194,6 +194,7 @@ public class AbilityPanelManager : MonoBehaviour
             }
             else
             {
+                errorMessageHandler.ReceivingOnErrorOccured(ErrorMessageHandler.ErrorType.NoMagic);
                 Debug.Log("not enough magic");
             }
         }
@@ -206,6 +207,7 @@ public class AbilityPanelManager : MonoBehaviour
             }
             else
             {
+                errorMessageHandler.ReceivingOnErrorOccured(ErrorMessageHandler.ErrorType.NoStamina);
                 Debug.Log("not enough stamina");
             }
         }

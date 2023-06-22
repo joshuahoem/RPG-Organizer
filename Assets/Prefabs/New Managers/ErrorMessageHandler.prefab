@@ -50,3 +50,5 @@ MonoBehaviour:
   errorNotEnoughGold: You do not have enough gold!
   errorNotEnoughClassPoints: Not enough class ability points to purchase this ability
   errorNotEnoughRacePoints: Not enough race ability points to purchase this ability
+  errorNoMagic: Not enough Magic to use this!
+  errorNoStamina: Not enough Stamina to use this!

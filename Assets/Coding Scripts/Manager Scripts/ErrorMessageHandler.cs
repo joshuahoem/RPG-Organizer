@@ -9,7 +9,8 @@ public class ErrorMessageHandler : MonoBehaviour
     [SerializeField] TextMeshProUGUI errorMessageTMP;
 
     [SerializeField] [TextArea(5,10)] string errorNotStrongEnough, errorNotSmartEnough, 
-        errorNotEnoughGold, errorNotEnoughClassPoints, errorNotEnoughRacePoints;
+        errorNotEnoughGold, errorNotEnoughClassPoints, errorNotEnoughRacePoints, errorNoMagic,
+        errorNoStamina;
 
     public enum ErrorType
     {
@@ -17,7 +18,9 @@ public class ErrorMessageHandler : MonoBehaviour
         NoStrength,
         NoIntelligence,
         NoRacePoints,
-        NoClassPoints
+        NoClassPoints,
+        NoMagic,
+        NoStamina
     }
 
     private void Start() {
@@ -43,6 +46,12 @@ public class ErrorMessageHandler : MonoBehaviour
                 break;
             case ErrorType.NoClassPoints:
                 errorMessageTMP.text = errorNotEnoughClassPoints;
+                break;
+            case ErrorType.NoMagic:
+                errorMessageTMP.text = errorNoMagic;
+                break;
+            case ErrorType.NoStamina:
+                errorMessageTMP.text = errorNoStamina;
                 break;
         }
     }

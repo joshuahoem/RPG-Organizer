@@ -12,6 +12,7 @@ public class ShopContentFitter : MonoBehaviour
 
     public void FitContent()
     {
+        Debug.Log("fitting content...");
         GameObject contentToBeSized = this.gameObject;
         GameObject[] children = new GameObject[parent.transform.childCount];
         float height = 0;
@@ -25,6 +26,8 @@ public class ShopContentFitter : MonoBehaviour
                 height += children[i].GetComponent<RectTransform>().sizeDelta.y;
             }
         }
+
+        Debug.Log(height + " height of content");
 
         contentToBeSized.GetComponent<RectTransform>().offsetMin = new Vector2(0, -height);
         contentToBeSized.GetComponent<RectTransform>().offsetMax = new Vector2(0, 0);
