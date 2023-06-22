@@ -20,6 +20,10 @@ public class LocalStatDisplay : MonoBehaviour
     [SerializeField] TextMeshProUGUI intelligence;
     [SerializeField] TextMeshProUGUI speed;
     [SerializeField] Image imageReference;
+    [SerializeField] Image classimage;
+    [SerializeField] TextMeshProUGUI racePointsTMP;
+    [SerializeField] TextMeshProUGUI classPointsTMP;
+    [SerializeField] TextMeshProUGUI goldTMP;
     #endregion
 
     [Header("Bonus Stats")]
@@ -120,10 +124,18 @@ public class LocalStatDisplay : MonoBehaviour
         race.text = save.race;
         characterSelectedClass.text = save.characterClass;
         levelText.text = save.level.ToString();
+        racePointsTMP.text = save.raceAbilityPoints.ToString();
+        classPointsTMP.text = save.classAbilityPoints.ToString();
+        goldTMP.text = save.gold.ToString();
         if (save.raceObject != null)
         {
             if (save.raceObject.picture != null)
             { imageReference.sprite = save.raceObject.picture; }
+        }
+        if (save.classObject != null)
+        {
+            if (save.classObject.logo != null)
+            { classimage.sprite = save.classObject.logo; }
         }
         
         int _bonusHealth = bonusHealth + save.baseHealth;

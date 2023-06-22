@@ -71,7 +71,7 @@ Material:
     - _Reflectivity: 10
     - _ScaleRatioA: 0.90909094
     - _ScaleRatioB: 0.7386364
-    - _ScaleRatioC: 0.7386364
+    - _ScaleRatioC: 0.3693182
     - _ScaleX: 1
     - _ScaleY: 1
     - _ShaderFlags: 0
@@ -84,9 +84,9 @@ Material:
     - _StencilWriteMask: 255
     - _TextureHeight: 1024
     - _TextureWidth: 1024
-    - _UnderlayDilate: 0
-    - _UnderlayOffsetX: 0
-    - _UnderlayOffsetY: 0
+    - _UnderlayDilate: 1
+    - _UnderlayOffsetX: 1
+    - _UnderlayOffsetY: 1
     - _UnderlaySoftness: 0
     - _VertexOffsetX: 0
     - _VertexOffsetY: 0
@@ -161,11 +161,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
-  m_Name: Go2DungeonV11-Regular SDF
+  m_Name: Go2Dungeon Font
   m_EditorClassIdentifier: 
-  hashCode: -857123658
+  hashCode: 1291639599
   material: {fileID: -7054226532496081844}
-  materialHashCode: 71243734
+  materialHashCode: 1411238575
   m_Version: 1.1.0
   m_SourceFontFileGUID: c94678c7d591ac040870bf001745bbdc
   m_SourceFontFile_EditorRef: {fileID: 12800000, guid: c94678c7d591ac040870bf001745bbdc, type: 3}
