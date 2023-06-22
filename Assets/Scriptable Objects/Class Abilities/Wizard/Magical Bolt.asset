@@ -19,7 +19,7 @@ MonoBehaviour:
   unlockCost: 0
   allAbilityLevels:
   - level: 1
-    upgradeCost: 0
+    upgradeCost: 1
     magicCost: 1
     staminaCost: 0
     range: 4
@@ -27,7 +27,7 @@ MonoBehaviour:
     magicDamage: 2
     description: Shoots a small bolt of magical energy that harms enemies
   - level: 2
-    upgradeCost: 1
+    upgradeCost: 2
     magicCost: 1
     staminaCost: 0
     range: 5

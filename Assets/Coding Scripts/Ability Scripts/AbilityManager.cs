@@ -38,8 +38,12 @@ public class AbilityManager : MonoBehaviour
         abilityPanelObject.SetActive(false);
 
         saveState.screenState = ScreenState.CharacterInfo;
+        
+        saveState.raceAbilityBool = true;
+
         NewSaveSystem.SaveStateOfGame(saveState);
         saveState = NewSaveSystem.FindSaveState();
+
     }
 
     public void RaceAbilityTreeOption()
@@ -72,6 +76,7 @@ public class AbilityManager : MonoBehaviour
 
         foreach (GameObject card in abilityCardPrefabs)
         {
+            Debug.Log("destroy");
             Destroy(card);
         }
         abilityCardPrefabs.Clear();
@@ -83,6 +88,7 @@ public class AbilityManager : MonoBehaviour
                 case AbilityType.raceAbility:
                     if (saveState.raceAbilityBool)
                     {
+                        Debug.Log("race ability");
                         GameObject abilityInstance = Instantiate(abilityObjectPrefab, transform.position, transform.rotation);
                         abilityInstance.transform.SetParent(raceAbilityContent, false);
                         abilityInstance.GetComponent<AbilityCardInstance>().DisplayInfo(abilitySO);

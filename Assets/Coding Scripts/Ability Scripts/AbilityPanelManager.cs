@@ -37,8 +37,11 @@ public class AbilityPanelManager : MonoBehaviour
 
     [SerializeField] GameObject unlockButtonObject;
     [SerializeField] GameObject useButtonObject;
-    int _levelIndex;
+    [SerializeField] Image[] buttonIcon;
+    [SerializeField] Sprite magicSprite;
+    [SerializeField] Sprite experienceSprite;
 
+    int _levelIndex;
 
     private void Start() 
     {
@@ -128,20 +131,29 @@ public class AbilityPanelManager : MonoBehaviour
         {
             case ScreenState.CharacterInfo:
                 unlockButtonObject.SetActive(false);
+                useButtonObject.SetActive(true);
+
+                foreach (Image image in buttonIcon)
+                {
+                    image.sprite = magicSprite;
+                }
+
                 if (ability.costType == CostType.Magic)
                 {
-                    useButtonObject.SetActive(true);
                     buttonCostToUse.text = ability.allAbilityLevels[_levelIndex].magicCost.ToString();
                 }
                 if (ability.costType == CostType.Stamina)
                 {        
-                    useButtonObject.SetActive(true);
                     buttonCostToUse.text = ability.allAbilityLevels[_levelIndex].staminaCost.ToString();
                 }
                 break;
             case ScreenState.AbilityScreen:
                 // unlockButtonObject.SetActive(true);
                 useButtonObject.SetActive(false);
+                foreach (Image image in buttonIcon)
+                {
+                    image.sprite = experienceSprite;
+                }
                 break;
         }
 

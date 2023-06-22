@@ -98,7 +98,22 @@ public class AbilityInstanceObject : MonoBehaviour
             }
         }
 
-        return new AbilitySaveObject(abilty, AbilityType.classAblity, 0, 0, false);
+        SaveState state = NewSaveSystem.FindSaveState();
+
+        if (state.raceAbilityBool)
+        {
+            return new AbilitySaveObject(abilty, AbilityType.raceAbility, 0, 0, false);
+        }
+        else if (state.classAbilityBool)
+        {
+            return new AbilitySaveObject(abilty, AbilityType.classAblity, 0, 0, false);
+        }
+        else
+        {
+            Debug.Log("Error - no race or class bool set in save state");
+            return null;
+        }
+
     }
 
     public void DisplayAbilityPanel()

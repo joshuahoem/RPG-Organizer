@@ -1376,11 +1376,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe089407fa33fc74f894a8d9600ca388, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  abilty: {fileID: 0}
+  abilty: {fileID: 11400000, guid: 92ef4333a7985aa4c8c866126644f250, type: 2}
   borderImage: {fileID: 707552484}
   abilityImage: {fileID: 995121522}
   abilitySO:
-    ability: {fileID: 0}
+    ability: {fileID: 11400000, guid: 92ef4333a7985aa4c8c866126644f250, type: 2}
     abilityType: 0
     currentLevel: 0
     viewingLevel: 0
@@ -3644,11 +3644,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe089407fa33fc74f894a8d9600ca388, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  abilty: {fileID: 0}
+  abilty: {fileID: 11400000, guid: 0d5f1e2bf92596447970c9395e891f9d, type: 2}
   borderImage: {fileID: 1992887943}
   abilityImage: {fileID: 2042827661}
   abilitySO:
-    ability: {fileID: 0}
+    ability: {fileID: 11400000, guid: 0d5f1e2bf92596447970c9395e891f9d, type: 2}
     abilityType: 0
     currentLevel: 0
     viewingLevel: 0
@@ -5434,11 +5434,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe089407fa33fc74f894a8d9600ca388, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  abilty: {fileID: 0}
+  abilty: {fileID: 11400000, guid: 8c248ea0c55ae0041a4d0a66ef49981e, type: 2}
   borderImage: {fileID: 249759953}
   abilityImage: {fileID: 2119945733}
   abilitySO:
-    ability: {fileID: 0}
+    ability: {fileID: 11400000, guid: 8c248ea0c55ae0041a4d0a66ef49981e, type: 2}
     abilityType: 0
     currentLevel: 0
     viewingLevel: 0
@@ -6804,11 +6804,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe089407fa33fc74f894a8d9600ca388, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  abilty: {fileID: 0}
+  abilty: {fileID: 11400000, guid: 04e28bf7ea27af94092a55a88aa19bd1, type: 2}
   borderImage: {fileID: 994804870}
   abilityImage: {fileID: 1961457210}
   abilitySO:
-    ability: {fileID: 0}
+    ability: {fileID: 11400000, guid: 04e28bf7ea27af94092a55a88aa19bd1, type: 2}
     abilityType: 0
     currentLevel: 0
     viewingLevel: 0
@@ -7942,11 +7942,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe089407fa33fc74f894a8d9600ca388, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  abilty: {fileID: 0}
+  abilty: {fileID: 11400000, guid: fffa4fe80cd652244925f5a829b540c4, type: 2}
   borderImage: {fileID: 1362928004}
   abilityImage: {fileID: 1722248676}
   abilitySO:
-    ability: {fileID: 0}
+    ability: {fileID: 11400000, guid: fffa4fe80cd652244925f5a829b540c4, type: 2}
     abilityType: 0
     currentLevel: 0
     viewingLevel: 0
@@ -8164,11 +8164,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe089407fa33fc74f894a8d9600ca388, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  abilty: {fileID: 0}
+  abilty: {fileID: 11400000, guid: b8ec230c6cf92aa4ab5c98408c3c748f, type: 2}
   borderImage: {fileID: 927708155}
   abilityImage: {fileID: 864827319}
   abilitySO:
-    ability: {fileID: 0}
+    ability: {fileID: 11400000, guid: b8ec230c6cf92aa4ab5c98408c3c748f, type: 2}
     abilityType: 0
     currentLevel: 0
     viewingLevel: 0
@@ -10770,6 +10770,8 @@ MonoBehaviour:
   freeString: 
   unlockButtonObject: {fileID: 8893455418095489997}
   useButtonObject: {fileID: 8733075456028856119}
+  experienceImage: {fileID: 0}
+  magicImage: {fileID: 0}
 --- !u!4 &1030721051
 Transform:
   m_ObjectHideFlags: 0
@@ -12178,11 +12180,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe089407fa33fc74f894a8d9600ca388, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  abilty: {fileID: 0}
+  abilty: {fileID: 11400000, guid: e548c837e41c4ed4f86eac2ba29b54f4, type: 2}
   borderImage: {fileID: 413741447}
   abilityImage: {fileID: 184809763}
   abilitySO:
-    ability: {fileID: 0}
+    ability: {fileID: 11400000, guid: e548c837e41c4ed4f86eac2ba29b54f4, type: 2}
     abilityType: 0
     currentLevel: 0
     viewingLevel: 0
@@ -12307,11 +12309,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe089407fa33fc74f894a8d9600ca388, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  abilty: {fileID: 0}
+  abilty: {fileID: 11400000, guid: 2b14fe3886165e240b68a6f3c217b5c7, type: 2}
   borderImage: {fileID: 488488869}
   abilityImage: {fileID: 909169870}
   abilitySO:
-    ability: {fileID: 0}
+    ability: {fileID: 11400000, guid: 2b14fe3886165e240b68a6f3c217b5c7, type: 2}
     abilityType: 0
     currentLevel: 0
     viewingLevel: 0
@@ -15186,11 +15188,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe089407fa33fc74f894a8d9600ca388, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  abilty: {fileID: 0}
+  abilty: {fileID: 11400000, guid: bc23964acfcab1841b35a0192f225c35, type: 2}
   borderImage: {fileID: 1970631167}
   abilityImage: {fileID: 435351927}
   abilitySO:
-    ability: {fileID: 0}
+    ability: {fileID: 11400000, guid: bc23964acfcab1841b35a0192f225c35, type: 2}
     abilityType: 0
     currentLevel: 0
     viewingLevel: 0
@@ -15768,11 +15770,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe089407fa33fc74f894a8d9600ca388, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  abilty: {fileID: 0}
+  abilty: {fileID: 11400000, guid: 6a14178369c70984d8846d645164f85c, type: 2}
   borderImage: {fileID: 305911307}
   abilityImage: {fileID: 2041977379}
   abilitySO:
-    ability: {fileID: 0}
+    ability: {fileID: 11400000, guid: 6a14178369c70984d8846d645164f85c, type: 2}
     abilityType: 0
     currentLevel: 0
     viewingLevel: 0
@@ -17100,11 +17102,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe089407fa33fc74f894a8d9600ca388, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  abilty: {fileID: 0}
+  abilty: {fileID: 11400000, guid: 660a0f0ede415b24d997da071ad32b75, type: 2}
   borderImage: {fileID: 1848254844}
   abilityImage: {fileID: 2039283850}
   abilitySO:
-    ability: {fileID: 0}
+    ability: {fileID: 11400000, guid: 660a0f0ede415b24d997da071ad32b75, type: 2}
     abilityType: 0
     currentLevel: 0
     viewingLevel: 0
@@ -17947,11 +17949,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe089407fa33fc74f894a8d9600ca388, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  abilty: {fileID: 0}
+  abilty: {fileID: 11400000, guid: 7f79c06d773899b44b31f35e74db9024, type: 2}
   borderImage: {fileID: 1266778085}
   abilityImage: {fileID: 2009088176}
   abilitySO:
-    ability: {fileID: 0}
+    ability: {fileID: 11400000, guid: 7f79c06d773899b44b31f35e74db9024, type: 2}
     abilityType: 0
     currentLevel: 0
     viewingLevel: 0
@@ -19112,11 +19114,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe089407fa33fc74f894a8d9600ca388, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  abilty: {fileID: 0}
+  abilty: {fileID: 11400000, guid: 1253ac6be27a5934d99359f1c971a415, type: 2}
   borderImage: {fileID: 558614036}
   abilityImage: {fileID: 1983498394}
   abilitySO:
-    ability: {fileID: 0}
+    ability: {fileID: 11400000, guid: 1253ac6be27a5934d99359f1c971a415, type: 2}
     abilityType: 0
     currentLevel: 0
     viewingLevel: 0
@@ -20369,11 +20371,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe089407fa33fc74f894a8d9600ca388, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  abilty: {fileID: 0}
+  abilty: {fileID: 11400000, guid: 68465fc90d90e1646a6ee3f0ef360bc2, type: 2}
   borderImage: {fileID: 64187846}
   abilityImage: {fileID: 34663683}
   abilitySO:
-    ability: {fileID: 0}
+    ability: {fileID: 11400000, guid: 68465fc90d90e1646a6ee3f0ef360bc2, type: 2}
     abilityType: 0
     currentLevel: 0
     viewingLevel: 0
@@ -25512,11 +25514,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe089407fa33fc74f894a8d9600ca388, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  abilty: {fileID: 0}
+  abilty: {fileID: 11400000, guid: 7912d56acfab2c6438213ca42a1f7f8e, type: 2}
   borderImage: {fileID: 3066882011690599576}
   abilityImage: {fileID: 3066882010994133168}
   abilitySO:
-    ability: {fileID: 0}
+    ability: {fileID: 11400000, guid: 7912d56acfab2c6438213ca42a1f7f8e, type: 2}
     abilityType: 0
     currentLevel: 0
     viewingLevel: 0
@@ -28314,11 +28316,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe089407fa33fc74f894a8d9600ca388, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  abilty: {fileID: 0}
+  abilty: {fileID: 11400000, guid: 730d11f5e9d19564aa89c1eca4a1daa8, type: 2}
   borderImage: {fileID: 3066882012006479887}
   abilityImage: {fileID: 3066882011343074343}
   abilitySO:
-    ability: {fileID: 0}
+    ability: {fileID: 11400000, guid: 730d11f5e9d19564aa89c1eca4a1daa8, type: 2}
     abilityType: 0
     currentLevel: 0
     viewingLevel: 0
@@ -31650,11 +31652,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe089407fa33fc74f894a8d9600ca388, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  abilty: {fileID: 0}
+  abilty: {fileID: 11400000, guid: caa97a0094124724e95ed980f1c24b74, type: 2}
   borderImage: {fileID: 3066882012274690372}
   abilityImage: {fileID: 3066882010537969004}
   abilitySO:
-    ability: {fileID: 0}
+    ability: {fileID: 11400000, guid: caa97a0094124724e95ed980f1c24b74, type: 2}
     abilityType: 0
     currentLevel: 0
     viewingLevel: 0
@@ -32748,11 +32750,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe089407fa33fc74f894a8d9600ca388, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  abilty: {fileID: 0}
+  abilty: {fileID: 11400000, guid: 6fff8dbbd850b5240892e9651d1910d8, type: 2}
   borderImage: {fileID: 3066882012129376561}
   abilityImage: {fileID: 3066882010678850841}
   abilitySO:
-    ability: {fileID: 0}
+    ability: {fileID: 11400000, guid: 6fff8dbbd850b5240892e9651d1910d8, type: 2}
     abilityType: 0
     currentLevel: 0
     viewingLevel: 0
@@ -38699,11 +38701,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe089407fa33fc74f894a8d9600ca388, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  abilty: {fileID: 0}
+  abilty: {fileID: 11400000, guid: 3933c31d26ae9e548ac30d22b0046138, type: 2}
   borderImage: {fileID: 3066882010563907582}
   abilityImage: {fileID: 3066882012250850262}
   abilitySO:
-    ability: {fileID: 0}
+    ability: {fileID: 11400000, guid: 3933c31d26ae9e548ac30d22b0046138, type: 2}
     abilityType: 0
     currentLevel: 0
     viewingLevel: 0
@@ -48529,11 +48531,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe089407fa33fc74f894a8d9600ca388, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  abilty: {fileID: 0}
+  abilty: {fileID: 11400000, guid: 1c997a87264b4454dbf3f821724e655d, type: 2}
   borderImage: {fileID: 3066882011329842913}
   abilityImage: {fileID: 3066882012025717449}
   abilitySO:
-    ability: {fileID: 0}
+    ability: {fileID: 11400000, guid: 1c997a87264b4454dbf3f821724e655d, type: 2}
     abilityType: 0
     currentLevel: 0
     viewingLevel: 0

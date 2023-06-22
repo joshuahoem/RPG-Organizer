@@ -57008,6 +57008,11 @@ MonoBehaviour:
   freeString: Free
   unlockButtonObject: {fileID: 1354965606317733475}
   useButtonObject: {fileID: 2904308379381971245}
+  buttonIcon:
+  - {fileID: 122995864038320734}
+  - {fileID: 2904308378231530775}
+  magicSprite: {fileID: 21300000, guid: 7c97037fa6c4fa2408f385f937eff5f6, type: 3}
+  experienceSprite: {fileID: 21300000, guid: 00097121a0698ef44aff696bc2fe5c24, type: 3}
 --- !u!114 &6812787158973920581
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58512,7 +58517,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &7612816883548815364
 MonoBehaviour:
   m_ObjectHideFlags: 0

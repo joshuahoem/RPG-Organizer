@@ -16,6 +16,7 @@ public class AbilityInventory : MonoBehaviour
     string charString;
     private List<AbilitySaveObject> abilities;
     AbilitySaveObject objectToRemove;
+    AbilitySaveObject _abilityToAdd;
 
 
     private void Start() 
@@ -51,9 +52,9 @@ public class AbilityInventory : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyUp("a"))
+        if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            Debug.Log("a");
+            Debug.Log("cleared abilities");
             save.abilityInventory.Clear();
             save.perks.Clear();
             SaveChanges();
@@ -130,18 +131,34 @@ public class AbilityInventory : MonoBehaviour
 
     public AbilitySaveObject ReturnNewAbilityObject(Ability _ability)
     {
-        save = FindCurrentSave();
-        AbilitySaveObject abilitySaveObject = new AbilitySaveObject(_ability, AbilityType.classAblity, 1, 0, true);
+        save = FindCurrentSave(); 
+        SaveState state = NewSaveSystem.FindSaveState();
+
+        if (state.raceAbilityBool)
+        {
+            Debug.Log("race ability");
+            _abilityToAdd = new AbilitySaveObject(_ability, AbilityType.raceAbility, 1, 0, true);
+        }
+        else if (state.classAbilityBool)
+        {
+            Debug.Log("class ability");
+            _abilityToAdd = new AbilitySaveObject(_ability, AbilityType.classAblity, 1, 0, true);
+        }
+        else
+        {
+            Debug.Log("Error - no race or class bool set in save state");
+            _abilityToAdd = null;
+        }
 
         foreach (AbilitySaveObject item in save.abilityInventory)
         {
-            if (item.ability == abilitySaveObject.ability)
+            if (item.ability == _abilityToAdd.ability)
             {
                 return null;
             }
         }
 
-        return abilitySaveObject;
+        return _abilityToAdd;
     }
 
     private SaveObject FindCurrentSave()
