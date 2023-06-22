@@ -10523,6 +10523,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae7af6e7d250c784ea6f48f5d986380a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  errorMessageHandler: {fileID: 0}
   abilityInfoPanel: {fileID: 1944111533}
   ability: {fileID: 0}
   abilitySO:
@@ -13642,6 +13643,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdfe5fb6665c4cb4d9d25a4478d96457, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  errorMessageHandler: {fileID: 0}
   perkPanelObject: {fileID: 1936875275515903297}
   perkImageIcon: {fileID: 1936875275569598790}
   borderIcon: {fileID: 2026858159269913238}
@@ -17579,7 +17581,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c636154c2978ea428be7aaa07cbb03c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  globalScale: 246.0666
+  globalScale: 300
   arrowObject: {fileID: 1577128863264913028, guid: 1b3c405fe8907e44dae9313ee338006f, type: 3}
 --- !u!1 &1712902668
 GameObject:
