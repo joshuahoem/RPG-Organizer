@@ -256,7 +256,7 @@ public class LocalInventoryManager : MonoBehaviour
 
     public void DisplayInventoryUI()
     {
-        holdingCapacityNumber.text = save.holdingCapacity.ToString();
+        holdingCapacityNumber.text = save.inventory.Count + "/" + save.holdingCapacity;
         itemInfoPanel.SetActive(false);
         equipmentPanel.SetActive(false);
 

@@ -55,7 +55,7 @@ public class LootManager : MonoBehaviour
     #region update Debug
     // private void Update()
     // {
-    //     if (Input.GetKeyDown(KeyCode.E))
+    //     if (Input.GetKeyDown(KeyCode.Alpha1))
     //     {
     //         foreach (InventoryItem item in NewSaveSystem.FindCurrentSave().inventory)
     //         {
@@ -169,28 +169,57 @@ public class LootManager : MonoBehaviour
             }
 
         }
-
-        //ADD GOLD
-        int goldAmount = 0;
-        for (int i = 0; i<rolls; i++)
-        {
-            Debug.Log("adding");
-            goldAmount += Random.Range(minGoldRange, maxGoldRange);
-        }
-
-        GameObject goldLoot = Instantiate(lootItemPrefab, transform.position, transform.rotation);
-        goldLoot.transform.SetParent(parentLootTransform);
-        goldLoot.GetComponent<LootDisplay>().DisplayGoldLoot(goldAmount);
-        lootListPrefabs.Add(goldLoot);
-        
-        save.gold += goldAmount;
-        Debug.Log(goldAmount);
-        
         //Save Loot
         NewSaveSystem.SaveChanges(save);       
         rolls = 3;  
         rollsTMP.text = rolls.ToString();
 
+        AddGold(rolls, 0);
+        
+    }
+
+    public void AddGold(int _rolls, int _amount)
+    {
+        SaveObject save = NewSaveSystem.FindCurrentSave();
+
+        if (_rolls ==0)
+        {
+            foreach (GameObject prefabGO in lootListPrefabs)
+            {
+                Destroy(prefabGO);
+            }
+            lootListPrefabs.Clear();
+
+            lootPanel.SetActive(true);
+
+        }
+
+        int goldAmount = 0;
+        GameObject goldLoot = Instantiate(lootItemPrefab, transform.position, transform.rotation);
+        goldLoot.transform.SetParent(parentLootTransform);
+        lootListPrefabs.Add(goldLoot);
+        
+        if (_rolls == 0)
+        {
+            save.gold += _amount;
+            NewSaveSystem.SaveChanges(save);   
+            goldLoot.GetComponent<LootDisplay>().DisplayGoldLoot(_amount, goldImage);
+
+        }
+        else
+        {
+            for (int i = 0; i<_rolls; i++)
+            {
+                Debug.Log("adding");
+                goldAmount += Random.Range(minGoldRange, maxGoldRange);
+            }
+            save.gold += goldAmount;
+            NewSaveSystem.SaveChanges(save); 
+
+            goldLoot.GetComponent<LootDisplay>().DisplayGoldLoot(goldAmount, goldImage);
+            Debug.Log(goldAmount);
+        }
+        
     }
 
 }

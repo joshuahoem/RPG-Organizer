@@ -30,7 +30,7 @@ public class LootDisplay : MonoBehaviour
         amountTMP.text = amount.ToString();
     }
 
-    public void DisplayGoldLoot(int gold)
+    public void DisplayGoldLoot(int gold, Sprite goldSprite)
     {
         if (gold < 1)
         {
@@ -38,6 +38,7 @@ public class LootDisplay : MonoBehaviour
         }
         itemNameTMP.text = "Gold";
         amountTMP.text = gold.ToString();
+        objectImage.sprite = goldSprite;
         GetComponent<RectTransform>().localScale = scale;
     }
 }

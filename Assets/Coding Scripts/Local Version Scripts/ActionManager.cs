@@ -6,6 +6,7 @@ using TMPro;
 public class ActionManager : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI goldToAddTMP;
+    [SerializeField] LootManager lootManager;
     int goldToAdd;
     private void Start() 
     {
@@ -39,11 +40,9 @@ public class ActionManager : MonoBehaviour
 
     public void AddGold()
     {
-        SaveObject save = NewSaveSystem.FindCurrentSave();
-        save.gold += goldToAdd;
+        lootManager.AddGold(0, goldToAdd);
         goldToAdd = 5;
         goldToAddTMP.text = goldToAdd.ToString();
-        NewSaveSystem.SaveChanges(save);
     }
 
     

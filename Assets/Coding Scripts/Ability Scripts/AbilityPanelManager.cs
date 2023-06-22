@@ -39,6 +39,8 @@ public class AbilityPanelManager : MonoBehaviour
     [SerializeField] GameObject useButtonObject;
     [SerializeField] Image[] buttonIcon;
     [SerializeField] Sprite magicSprite;
+    [SerializeField] Sprite staminaSprite;
+
     [SerializeField] Sprite experienceSprite;
 
     int _levelIndex;
@@ -135,7 +137,19 @@ public class AbilityPanelManager : MonoBehaviour
 
                 foreach (Image image in buttonIcon)
                 {
-                    image.sprite = magicSprite;
+                    if (ability.costType == CostType.Magic)
+                    {
+                        image.sprite = magicSprite;
+                    }
+                    else if (ability.costType == CostType.Stamina)
+                    {
+                        image.sprite = staminaSprite;
+                    }
+                    else
+                    {
+                        //free
+                        useButtonObject.SetActive(false);
+                    }
                 }
 
                 if (ability.costType == CostType.Magic)

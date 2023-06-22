@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class AbilityManager : MonoBehaviour
 {
     SaveState saveState;
     SaveObject save;
+    [SerializeField] TextMeshProUGUI spellbookCapacityTextTMP;
     [SerializeField] GameObject abilityObjectPrefab;
     [SerializeField] GameObject perkPrefab;
 
@@ -44,6 +46,13 @@ public class AbilityManager : MonoBehaviour
         NewSaveSystem.SaveStateOfGame(saveState);
         saveState = NewSaveSystem.FindSaveState();
 
+        UpdateSpellBook();
+
+    }
+
+    public void UpdateSpellBook()
+    {
+        spellbookCapacityTextTMP.text = save.abilityInventory.Count + "/" + save.spellbookCapacity;
     }
 
     public void RaceAbilityTreeOption()
@@ -76,7 +85,6 @@ public class AbilityManager : MonoBehaviour
 
         foreach (GameObject card in abilityCardPrefabs)
         {
-            Debug.Log("destroy");
             Destroy(card);
         }
         abilityCardPrefabs.Clear();
@@ -88,7 +96,6 @@ public class AbilityManager : MonoBehaviour
                 case AbilityType.raceAbility:
                     if (saveState.raceAbilityBool)
                     {
-                        Debug.Log("race ability");
                         GameObject abilityInstance = Instantiate(abilityObjectPrefab, transform.position, transform.rotation);
                         abilityInstance.transform.SetParent(raceAbilityContent, false);
                         abilityInstance.GetComponent<AbilityCardInstance>().DisplayInfo(abilitySO);
