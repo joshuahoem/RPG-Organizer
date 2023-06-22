@@ -689,56 +689,22 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -180.97092}
   m_SizeDelta: {x: 0, y: -2.3048}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &386175169
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 386175171}
-  - component: {fileID: 386175170}
-  m_Layer: 0
-  m_Name: ErrorMessageHandler
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &386175170
+--- !u!114 &386175170 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 5115561778573004304, guid: ef6f5a87f3efb2743b916321b855aff9, type: 3}
+  m_PrefabInstance: {fileID: 5115561778757787346}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 386175169}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 469e841e59dd8b44cbcb3dbde585248d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  errorPanel: {fileID: 966181071}
-  errorMessageTMP: {fileID: 1902663591}
-  errorNotStrongEnough: You are not strong enough to carry more items!
-  errorNotSmartEnough: You are not smart enough to learn a new ability!
-  errorNotEnoughGold: You do not have enough gold!
-  errorNotEnoughClassPoints: Not enough class ability points to purchase this ability
-  errorNotEnoughRacePoints: Not enough race ability points to purchase this ability
---- !u!4 &386175171
+--- !u!4 &386175171 stripped
 Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 5115561778573004305, guid: ef6f5a87f3efb2743b916321b855aff9, type: 3}
+  m_PrefabInstance: {fileID: 5115561778757787346}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 386175169}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2904308379203471983}
-  m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &406363729 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5482361247021462725, guid: f6d54363e7aaa8d4b87b43bd6a051a72, type: 3}
@@ -43959,6 +43925,71 @@ RectTransform:
   m_AnchoredPosition: {x: -303.7361, y: -10.799561}
   m_SizeDelta: {x: 180.5945, y: 75.6221}
   m_Pivot: {x: 0.5, y: 1}
+--- !u!1001 &5115561778757787346
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2904308379203471983}
+    m_Modifications:
+    - target: {fileID: 5115561778573004304, guid: ef6f5a87f3efb2743b916321b855aff9, type: 3}
+      propertyPath: errorPanel
+      value: 
+      objectReference: {fileID: 966181071}
+    - target: {fileID: 5115561778573004304, guid: ef6f5a87f3efb2743b916321b855aff9, type: 3}
+      propertyPath: errorMessageTMP
+      value: 
+      objectReference: {fileID: 1902663591}
+    - target: {fileID: 5115561778573004305, guid: ef6f5a87f3efb2743b916321b855aff9, type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 5115561778573004305, guid: ef6f5a87f3efb2743b916321b855aff9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5115561778573004305, guid: ef6f5a87f3efb2743b916321b855aff9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5115561778573004305, guid: ef6f5a87f3efb2743b916321b855aff9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5115561778573004305, guid: ef6f5a87f3efb2743b916321b855aff9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5115561778573004305, guid: ef6f5a87f3efb2743b916321b855aff9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5115561778573004305, guid: ef6f5a87f3efb2743b916321b855aff9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5115561778573004305, guid: ef6f5a87f3efb2743b916321b855aff9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5115561778573004305, guid: ef6f5a87f3efb2743b916321b855aff9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5115561778573004305, guid: ef6f5a87f3efb2743b916321b855aff9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5115561778573004305, guid: ef6f5a87f3efb2743b916321b855aff9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5115561778573004307, guid: ef6f5a87f3efb2743b916321b855aff9, type: 3}
+      propertyPath: m_Name
+      value: ErrorMessageHandler
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ef6f5a87f3efb2743b916321b855aff9, type: 3}
 --- !u!224 &5124380488462752154
 RectTransform:
   m_ObjectHideFlags: 0
