@@ -15,7 +15,7 @@ MonoBehaviour:
   itemName: Leather Shield
   description: A wooden shield made together with nails and ropes. The cheaps of
     all off-hand options.
-  imageSprite: {fileID: 0}
+  imageSprite: {fileID: 21300000, guid: a6cede139ecacef43be8881516fc67f1, type: 3}
   goldCost: 2
   sellCost: 1
   numberInStack: 1

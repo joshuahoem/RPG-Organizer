@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c7f441553f287b4fb57cd0845e2e111, type: 3}
-  m_Name: Leather Pants
+  m_Name: Steel Helmet
   m_EditorClassIdentifier: 
-  itemName: Leather Pants
-  description: Common protection for a fighter. Tougher hide around the hips.
-  imageSprite: {fileID: 21300000, guid: 4972833cc36d14949ae0f205c229cc3f, type: 3}
-  goldCost: 2
-  sellCost: 1
+  itemName: Steel Helmet
+  description: A rushed peice of armor with rough unfinished surface.
+  imageSprite: {fileID: 21300000, guid: ba72e6a87a5a7f74c9117c4c4dd50c9d, type: 3}
+  goldCost: 5
+  sellCost: 3
   numberInStack: 1
   itemType: 1
-  itemRarity: 0
-  equipmentSlot: 2
+  itemRarity: 2
+  equipmentSlot: 0
   enchanted: 0
   mainDamage: 0
   mainMagicDamage: 0
@@ -29,7 +29,7 @@ MonoBehaviour:
   offMagicDamage: 0
   offAttackRange: 0
   numberOfHands: 0
-  defense: 1
+  defense: 3
   magicDefense: 0
   healthModifier: 0
   staminaModifier: 0

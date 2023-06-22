@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Leather Helmet
   description: Leather hide to protect your skull.
-  imageSprite: {fileID: 0}
+  imageSprite: {fileID: 21300000, guid: 1bd1c8bd6dee8f549aff76cb4092bac1, type: 3}
   goldCost: 2
   sellCost: 1
   numberInStack: 1
   itemType: 1
-  itemRarity: 1
+  itemRarity: 0
   equipmentSlot: 0
   enchanted: 0
   mainDamage: 0

@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Leather Gloves
   description: Basic protection for the hands.
-  imageSprite: {fileID: 0}
+  imageSprite: {fileID: 21300000, guid: 5b48a0d36e6a2aa418797867aa680d99, type: 3}
   goldCost: 2
   sellCost: 1
   numberInStack: 1
   itemType: 1
-  itemRarity: 1
+  itemRarity: 0
   equipmentSlot: 4
   enchanted: 0
   mainDamage: 0
