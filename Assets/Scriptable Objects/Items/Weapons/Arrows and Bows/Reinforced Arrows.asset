@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Reinforced Arrows
   description: Arrows reinforced with a brass shaft. Pierce 1.
-  imageSprite: {fileID: 0}
+  imageSprite: {fileID: 21300000, guid: ae36b27581ab285469f3861b75f092d3, type: 3}
   goldCost: 2
   sellCost: 1
   numberInStack: 1

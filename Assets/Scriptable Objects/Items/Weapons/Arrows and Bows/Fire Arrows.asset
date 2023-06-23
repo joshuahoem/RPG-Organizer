@@ -16,7 +16,7 @@ MonoBehaviour:
   description: This magical quiver is is able to ingite the arrows on draw. The flame
     is much more potent and out of control it quickly consumes the arrow. Chance
     to burn +1
-  imageSprite: {fileID: 0}
+  imageSprite: {fileID: 21300000, guid: 0259f28d21d4d29488defa50faaecf11, type: 3}
   goldCost: 6
   sellCost: 3
   numberInStack: 1

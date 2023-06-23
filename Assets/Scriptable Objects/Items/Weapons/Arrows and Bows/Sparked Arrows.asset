@@ -16,7 +16,7 @@ MonoBehaviour:
   description: These copper tipped arrows allow for the condiction of electricity
     pulsing back and forth through the arrow. Requires the operator to wear special
     insulating linning under gloves to block current. Chance to stun.
-  imageSprite: {fileID: 0}
+  imageSprite: {fileID: 21300000, guid: f8f022791318ec84e9fc8bff82795808, type: 3}
   goldCost: 5
   sellCost: 3
   numberInStack: 1

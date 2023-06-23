@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Geronimo Grape
   description: When consumed, heal for 1 point of health
-  imageSprite: {fileID: 21300000, guid: 6cae70816bb27a9408417007a1237f89, type: 3}
+  imageSprite: {fileID: 21300000, guid: b50d8ea94617fda46b51d67540c40683, type: 3}
   goldCost: 1
   sellCost: 0
   numberInStack: 3

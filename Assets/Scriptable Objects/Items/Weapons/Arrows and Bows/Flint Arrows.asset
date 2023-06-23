@@ -16,7 +16,7 @@ MonoBehaviour:
   description: Basic arrows tipped with flint and flamible material. The inner portion
     of this quiver is laced with steel to allow the tip of the arrow to be sparked
     when drawn quickly. Chance to burn.
-  imageSprite: {fileID: 0}
+  imageSprite: {fileID: 21300000, guid: 3d331de9657b17041933ead45201fb67, type: 3}
   goldCost: 4
   sellCost: 2
   numberInStack: 1
