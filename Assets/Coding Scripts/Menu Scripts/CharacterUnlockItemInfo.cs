@@ -9,6 +9,8 @@ public class CharacterUnlockItemInfo : MonoBehaviour
 {
     [SerializeField] public Race raceToUnlock;
     [SerializeField] public Class classToUnlock;
+
+    
     private UnlockObject newUnlock;
     bool thisItemIsUnlocked = false;
 

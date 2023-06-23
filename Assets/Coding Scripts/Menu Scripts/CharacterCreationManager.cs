@@ -19,7 +19,36 @@ public class CharacterCreationManager : MonoBehaviour
     [SerializeField] GameObject classDisplayObject;
     [SerializeField] TMP_InputField inputTextName;
 
+    #region //stats display
+    [SerializeField] TextMeshProUGUI raceHealthTMP;
+    [SerializeField] TextMeshProUGUI raceStaminaTMP;
+    [SerializeField] TextMeshProUGUI raceMagicTMP;
+    [SerializeField] TextMeshProUGUI raceStregthTMP;
+    [SerializeField] TextMeshProUGUI raceIntelligenceTMP;
+    [SerializeField] TextMeshProUGUI raceSpeedTMP;
 
+    [SerializeField] TextMeshProUGUI classHealthTMP;
+    [SerializeField] TextMeshProUGUI classStaminaTMP;
+    [SerializeField] TextMeshProUGUI classMagicTMP;
+    [SerializeField] TextMeshProUGUI classStregthTMP;
+    [SerializeField] TextMeshProUGUI classIntelligenceTMP;
+    [SerializeField] TextMeshProUGUI classSpeedTMP;
+
+    [SerializeField] TextMeshProUGUI totalHealthTMP;
+    [SerializeField] TextMeshProUGUI totalStaminaTMP;
+    [SerializeField] TextMeshProUGUI totalMagicTMP;
+    [SerializeField] TextMeshProUGUI totalStregthTMP;
+    [SerializeField] TextMeshProUGUI totalIntelligenceTMP;
+    [SerializeField] TextMeshProUGUI totalSpeedTMP;
+    int totalHealthNumber;
+    int totalStaminaNumber;
+    int totalMagicNumber;
+    int totalStrengthNumber;
+    int totalIntelligenceNumber;
+    int totalSpeedNumber;
+    [SerializeField] string emptyNumberString;
+
+    #endregion
 
     [SerializeField] TextMeshProUGUI titleTextTMP;
     [SerializeField] string creationMainText;
@@ -40,8 +69,7 @@ public class CharacterCreationManager : MonoBehaviour
 
     private void Start() 
     {
-        returnButton.SetActive(false);
-        backButton.SetActive(true);
+        DisplayCreationMainPanel();
     }
 
     private void LoadRacesAndClasses()
@@ -120,6 +148,85 @@ public class CharacterCreationManager : MonoBehaviour
         returnButton.SetActive(false);
         backButton.SetActive(true);
 
+        totalHealthNumber = 0;
+        totalStaminaNumber = 0;
+        totalMagicNumber = 0;
+        totalStrengthNumber = 0;
+        totalIntelligenceNumber = 0;
+        totalSpeedNumber = 0;
+
+        Race _race = raceDisplayObject.GetComponent<CharacterUnlockItemInfo>().raceToUnlock;
+        if(_race != null)
+        {
+            raceHealthTMP.text = _race.health.ToString();
+            raceStaminaTMP.text = _race.stamina.ToString();
+            raceMagicTMP.text = _race.magic.ToString();
+            raceStregthTMP.text = _race.strength.ToString();
+            raceIntelligenceTMP.text = _race.intelligence.ToString();
+            raceSpeedTMP.text = _race.speed.ToString();
+
+            totalHealthNumber += _race.health;
+            totalStaminaNumber += _race.stamina;
+            totalMagicNumber += _race.magic;
+            totalStrengthNumber += _race.strength;
+            totalIntelligenceNumber += _race.intelligence;
+            totalSpeedNumber += _race.speed;
+
+        }
+        else
+        {
+            raceHealthTMP.text = emptyNumberString;
+            raceStaminaTMP.text = emptyNumberString;
+            raceMagicTMP.text = emptyNumberString;
+            raceStregthTMP.text = emptyNumberString;
+            raceIntelligenceTMP.text = emptyNumberString;
+            raceSpeedTMP.text = emptyNumberString;
+        }
+
+        Class _class = classDisplayObject.GetComponent<CharacterUnlockItemInfo>().classToUnlock;
+        if (_class != null)
+        {
+            classHealthTMP.text = _class.health.ToString();
+            classStaminaTMP.text = _class.stamina.ToString();
+            classMagicTMP.text = _class.magic.ToString();
+            classStregthTMP.text = _class.strength.ToString();
+            classIntelligenceTMP.text = _class.intelligence.ToString();
+            classSpeedTMP.text = _class.speed.ToString();
+
+            totalHealthNumber += _class.health;
+            totalStaminaNumber += _class.stamina;
+            totalMagicNumber += _class.magic;
+            totalStrengthNumber += _class.strength;
+            totalIntelligenceNumber += _class.intelligence;
+            totalSpeedNumber += _class.speed;
+        }
+        else
+        {
+            classHealthTMP.text = emptyNumberString;
+            classStaminaTMP.text = emptyNumberString;
+            classMagicTMP.text = emptyNumberString;
+            classStregthTMP.text = emptyNumberString;
+            classIntelligenceTMP.text = emptyNumberString;
+            classSpeedTMP.text = emptyNumberString;
+        }
+
+        totalHealthTMP.text = totalHealthNumber.ToString();
+        totalStaminaTMP.text = totalStaminaNumber.ToString();
+        totalMagicTMP.text = totalMagicNumber.ToString();
+        totalStregthTMP.text = totalStrengthNumber.ToString();
+        totalIntelligenceTMP.text = totalIntelligenceNumber.ToString();
+        totalSpeedTMP.text = totalSpeedNumber.ToString();
+
+        if (totalHealthNumber == 0)
+        {
+            totalHealthTMP.text = emptyNumberString;
+            totalStaminaTMP.text = emptyNumberString;
+            totalMagicTMP.text = emptyNumberString;
+            totalStregthTMP.text = emptyNumberString;
+            totalIntelligenceTMP.text = emptyNumberString;
+            totalSpeedTMP.text = emptyNumberString;
+        }
+
     }
 
     public void DisplayRaceSelectPanel()
@@ -136,7 +243,7 @@ public class CharacterCreationManager : MonoBehaviour
         LoadRacesAndClasses();
 
         returnButton.SetActive(true);
-        backButton.SetActive(false);
+        backButton.SetActive(false);      
 
     }
 
