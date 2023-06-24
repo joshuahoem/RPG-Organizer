@@ -23,6 +23,7 @@ public class TabManager : MonoBehaviour
     [SerializeField] LocalInventoryManager inventoryManager;
     [SerializeField] public GameObject itemInfoPanel;
     [SerializeField] GameObject equipmentPanel;
+    [SerializeField] Scrollbar scrollbar;
 
     public void SwitchToWeaponsTab()
     {
@@ -67,6 +68,8 @@ public class TabManager : MonoBehaviour
             // Debug.Log("inventory");
             inventoryManager.LoadInventory();
         }
+
+        scrollbar.value = 1;
     }
 
     public void OpenItemInfoPanel()
