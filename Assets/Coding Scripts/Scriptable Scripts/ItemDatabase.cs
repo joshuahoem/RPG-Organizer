@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
+using System.Linq;
 
 [CreateAssetMenu(fileName = "ItemDatabase", menuName = "ScriptableObject/ItemDatabase")]
 public class ItemDatabase : ScriptableObject, ISerializationCallbackReceiver
@@ -12,10 +14,13 @@ public class ItemDatabase : ScriptableObject, ISerializationCallbackReceiver
     public void OnAfterDeserialize()
     {
         //
+        Array.Sort(allItems, (x,y) => String.Compare(x.itemName, y.itemName));
+
     }
 
     private void OnEnable() 
     {
+
         GetID = new Dictionary<Item, int>();
         // GetItem = new Dictionary<int, Item>();
         for (int i = 0; i < allItems.Length; i++)
