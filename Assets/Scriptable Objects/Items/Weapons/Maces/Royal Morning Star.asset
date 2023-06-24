@@ -10,21 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c7f441553f287b4fb57cd0845e2e111, type: 3}
-  m_Name: Fire Splinter Wand
+  m_Name: Royal Morning Star
   m_EditorClassIdentifier: 
-  itemName: Fire Splinter Wand
-  description: A Basic Wand imbuded with firey particals. Chance to Burn +1.
-  imageSprite: {fileID: 21300000, guid: 166034dcb5a8c0b4e91e2188c54eff11, type: 3}
-  goldCost: 4
-  sellCost: 2
+  itemName: Royal Morning Star
+  description: This weapon was made for the protection of a King. A mace like weapon
+    with a ball of spikes at the end. Crushing 3.
+  imageSprite: {fileID: 21300000, guid: dd44e0079233e9b4c8eafb8772020465, type: 3}
+  goldCost: 9
+  sellCost: 5
   numberInStack: 1
   itemType: 0
   itemRarity: 2
   equipmentSlot: 5
   enchanted: 0
-  mainDamage: 0
-  mainMagicDamage: 3
-  mainAttackRange: 4
+  mainDamage: 4
+  mainMagicDamage: 0
+  mainAttackRange: 1
   offDamage: 0
   offMagicDamage: 0
   offAttackRange: 0
@@ -33,8 +34,8 @@ MonoBehaviour:
   magicDefense: 0
   healthModifier: 0
   staminaModifier: 0
-  magicModifier: 1
+  magicModifier: 0
   strengthModifier: 0
   intelligenceModifier: 0
-  speedModifier: 0
+  speedModifier: -1
   ability: {fileID: 0}

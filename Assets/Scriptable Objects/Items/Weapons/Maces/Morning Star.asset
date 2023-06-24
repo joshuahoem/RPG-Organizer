@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: Morning Star
   m_EditorClassIdentifier: 
   itemName: Morning Star
-  description: A mace like weapon with a ball of spikes at the end. Crushing 2.
-  imageSprite: {fileID: 0}
+  description: A mace like weapon with a ball of spikes at the end. Crushing 4.
+  imageSprite: {fileID: 21300000, guid: 8ded6f6e4d80dd44798de3a2479196fa, type: 3}
   goldCost: 6
   sellCost: 4
   numberInStack: 1
   itemType: 0
-  itemRarity: 2
+  itemRarity: 1
   equipmentSlot: 5
   enchanted: 0
   mainDamage: 4
@@ -36,5 +36,5 @@ MonoBehaviour:
   magicModifier: 0
   strengthModifier: 0
   intelligenceModifier: 0
-  speedModifier: -1
+  speedModifier: 0
   ability: {fileID: 0}

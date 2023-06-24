@@ -16,7 +16,7 @@ MonoBehaviour:
   description: This wand was crafted from the roots of the Elven Forest. These trees
     contain a higher amount of magical properties making for a great use by wizards
     and mages.
-  imageSprite: {fileID: 0}
+  imageSprite: {fileID: 21300000, guid: d47c95dd17e068b438be0f94ac366b4f, type: 3}
   goldCost: 4
   sellCost: 2
   numberInStack: 1
