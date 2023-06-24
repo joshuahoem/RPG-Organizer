@@ -256,7 +256,26 @@ public class LocalInventoryManager : MonoBehaviour
 
     public void DisplayInventoryUI()
     {
-        holdingCapacityNumber.text = save.inventory.Count + "/" + save.holdingCapacity;
+        save = NewSaveSystem.FindCurrentSave();
+        int lootCheck = 0;
+        foreach (InventoryItem item in save.inventory)
+        {
+            if (item.item.GetItemType() != ItemType.Special && item.item.GetItemType() != ItemType.Scroll)
+            {
+                lootCheck += 1;
+            }
+        }
+
+        foreach (InventoryItem item in save.equipment)
+        {
+            if (item.item == null) { continue; }
+            if (item.item.GetItemType() != ItemType.Special && item.item.GetItemType() != ItemType.Scroll)
+            {
+                lootCheck += 1;
+            }
+        }
+
+        holdingCapacityNumber.text = lootCheck + "/" + save.holdingCapacity;
         itemInfoPanel.SetActive(false);
         equipmentPanel.SetActive(false);
 
@@ -264,7 +283,7 @@ public class LocalInventoryManager : MonoBehaviour
 
     public void LoadEquipment()
     {
-        save = FindCurrentSave();
+        save = NewSaveSystem.FindCurrentSave();
         currentEquipment = save.equipment;
 
         foreach (GameObject equipInstance in equipmentDisplayItems)

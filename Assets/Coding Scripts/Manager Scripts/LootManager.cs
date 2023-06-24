@@ -32,6 +32,7 @@ public class LootManager : MonoBehaviour
     bool added;
     int rolls;
     int numberBeingAdded;
+    int lootCheck;
 
 
     private void Start() 
@@ -105,7 +106,25 @@ public class LootManager : MonoBehaviour
         SaveObject save = NewSaveSystem.FindCurrentSave();
 
         //check if can hold first
-        if (save.inventory.Count >= save.holdingCapacity)
+        lootCheck = 0;
+        foreach (InventoryItem item in save.inventory)
+        {
+            if (item.item.GetItemType() != ItemType.Special && item.item.GetItemType() != ItemType.Scroll)
+            {
+                lootCheck += 1;
+            }
+        }
+
+        foreach (InventoryItem item in save.equipment)
+        {
+            if (item.item == null) { continue; }
+            if (item.item.GetItemType() != ItemType.Special && item.item.GetItemType() != ItemType.Scroll)
+            {
+                lootCheck += 1;
+            }
+        }
+
+        if (lootCheck >= save.holdingCapacity)
         {
             Debug.Log("not strong enough to carry"); //error
             errorMessageHandler.ReceivingOnErrorOccured(ErrorMessageHandler.ErrorType.NoStrength);

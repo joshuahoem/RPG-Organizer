@@ -85,6 +85,29 @@ public class ItemPanelDisplay : MonoBehaviour
     [SerializeField] LocalInventoryManager inventoryManager;
 
     [SerializeField] private ErrorMessageHandler errorMessageHandler;
+    int lootCheck;
+    int searchIndex;
+
+    private void Update() {
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            Debug.Log("1");
+            SaveObject _save = NewSaveSystem.FindCurrentSave();
+            foreach (InventoryItem _item in _save.inventory)
+            {
+                Debug.Log(_item.item.itemName + " inventory");
+            }
+
+            foreach (InventoryItem _item in _save.equipment)
+            {
+                if (_item.item != null)
+                {
+                    Debug.Log(_item.item.itemName + "equipment");
+                }
+            }
+        }
+    }
+
 
     public void DeactivateAllButtons()
     {
@@ -112,7 +135,7 @@ public class ItemPanelDisplay : MonoBehaviour
         if (!inShop)
         {
             //inventory version
-            if (_itemInfo.amount < _item.numberInStack)
+            if (_itemInfo.amount < _item.numberInStack && _item.GetItemType() == ItemType.Special)
             {
                 goldSellDisplay.text = "0";
             }
@@ -336,6 +359,7 @@ public class ItemPanelDisplay : MonoBehaviour
     public void EquipArmor()
     {
         inventoryManager.Equip(item,0);
+        inventoryManager.DisplayInventoryUI();
         // SaveChanges();
     }
 
@@ -343,6 +367,7 @@ public class ItemPanelDisplay : MonoBehaviour
     {
         //5 equips to main hand
         inventoryManager.Equip(item,5);
+        inventoryManager.DisplayInventoryUI();
         // SaveChanges();
 
     }
@@ -351,6 +376,7 @@ public class ItemPanelDisplay : MonoBehaviour
     {
         //6 equips to off hand
         inventoryManager.Equip(item,6);
+        inventoryManager.DisplayInventoryUI();
         // SaveChanges();
 
     }
@@ -360,6 +386,7 @@ public class ItemPanelDisplay : MonoBehaviour
         //for two-handed weapons
         inventoryManager.Equip(item,5);
         inventoryManager.Equip(item,6);
+        inventoryManager.DisplayInventoryUI();
         // SaveChanges();
 
     }
@@ -367,15 +394,18 @@ public class ItemPanelDisplay : MonoBehaviour
     public void EquipSpecial()
     {
         inventoryManager.Equip(item, 0);
+        inventoryManager.DisplayInventoryUI();
     }
 
     public void EquipRingOne()
     {
         inventoryManager.Equip(item, 9);
+        inventoryManager.DisplayInventoryUI();
     }
     public void EquipRingTwo()
     {
         inventoryManager.Equip(item, 10);
+        inventoryManager.DisplayInventoryUI();
     }
 
     public void Unequip()
@@ -385,6 +415,7 @@ public class ItemPanelDisplay : MonoBehaviour
         inventoryManager.Unequip(item, save);
         inventoryManager.LoadEquipment();
         inventoryManager.LoadInventory();     
+        inventoryManager.DisplayInventoryUI();
 
     }
 
@@ -414,6 +445,8 @@ public class ItemPanelDisplay : MonoBehaviour
         NewSaveSystem.SaveChanges(save);        
 
         inventoryManager.LoadInventory();
+        inventoryManager.DisplayInventoryUI();
+
     }
 
     public void PurchaseItem()
@@ -421,7 +454,26 @@ public class ItemPanelDisplay : MonoBehaviour
         //need to check gold
         SaveObject save = NewSaveSystem.FindCurrentSave();
 
-        if (save.inventory.Count >= save.holdingCapacity)
+        //Check if can hold
+        lootCheck = 0;
+        foreach (InventoryItem item in save.inventory)
+        {
+            if (item.item.GetItemType() != ItemType.Special && item.item.GetItemType() != ItemType.Scroll)
+            {
+                lootCheck += 1;
+            }
+        }
+
+        foreach (InventoryItem item in save.equipment)
+        {
+            if (item.item == null) { continue; }
+            if (item.item.GetItemType() != ItemType.Special && item.item.GetItemType() != ItemType.Scroll)
+            {
+                lootCheck += 1;
+            }
+        }
+
+        if (lootCheck >= save.holdingCapacity && item.GetItemType() != ItemType.Special)
         {
             Debug.Log("not strong enough to carry"); //error
             errorMessageHandler.ReceivingOnErrorOccured(ErrorMessageHandler.ErrorType.NoStrength);
@@ -448,42 +500,112 @@ public class ItemPanelDisplay : MonoBehaviour
 
     public void SellItem()
     {
+        Debug.Log(item.itemName + " global item name start");
         SaveObject _save = NewSaveSystem.FindCurrentSave();
+        searchResult = null;
         foreach (InventoryItem _item in _save.inventory)
         {
-            // Debug.Log(_item.item);
-            if(_item.ID == database.GetID[item])
+            Debug.Log(_item.item.itemName + " _item local");
+            Debug.Log(item.itemName + " item global");
+            if(_item.item.itemName == item.itemName)
             {
-                // Debug.Log(_item.item.itemName);
+                Debug.Log("found in inventory");
                 searchResult = _item;
             }
         }
+
+        if (searchResult == null)
+        {
+            foreach (InventoryItem _item in _save.equipment)
+            {
+                Debug.Log(item.itemName + " item global");
+                if (_item.item != null)
+                {
+                    Debug.Log(_item.item.itemName + " _item local");
+                    if (_item.item.itemName == item.itemName)
+                    {
+                        Debug.Log("found in equipment");
+                        searchResult = _item;
+                    }
+                }
+            }
+        }
+
+        Debug.Log(searchResult.item.itemName + " Item found for search");
+
         
         //Actions
         if (searchResult.equipped)
         {
             Debug.Log("equipped");
-            inventoryManager.Unequip(item, _save);
-            inventoryManager.LoadEquipment();
-        }
-        _save.inventory.Remove(searchResult);
+            
+            foreach (InventoryItem inv in _save.equipment)
+            {
+                if (inv.item == searchResult.item)
+                {
+                    searchIndex = inv.equipmentSlotIndex;
+                }
+            }
 
-        if (itemInfo.amount < item.numberInStack)
+            _save.equipment[searchIndex].equipmentSlotIndex = 0;
+            InventoryItem _newItem = new InventoryItem
+                        (searchResult.item, database.GetID[searchResult.item], searchResult.item.numberInStack, false, 0);
+            _save.inventory.Add(_newItem);
+
+            _save.equipment[searchIndex].equipped = false;
+            _save.equipment[searchIndex].item = null;
+
+            NewSaveSystem.SaveChanges(_save);
+
+            // inventoryManager.LoadEquipment();
+        }
+
+        _save = NewSaveSystem.FindCurrentSave();
+        foreach (InventoryItem _item in _save.inventory)
         {
-            NewSaveSystem.SaveChanges(_save);        
+            if(_item.ID == database.GetID[item])
+            {
+                searchResult = _item;
+            }
+        }
+
+        Debug.Log(searchResult.item + " item");
+
+        if (searchResult.amount < searchResult.item.numberInStack)
+        {
+            //selling grapes with less than max amount
         }
         else
         {
-            _save.gold += item.sellCost;
-            NewSaveSystem.SaveChanges(_save);        
-      
+            Debug.Log("sold");
+            _save.gold += item.sellCost;      
         }
+
+        Debug.Log(searchResult.item + " item");
+        Debug.Log(_save.inventory.Count + " inv count 1");
+
+        _save.inventory.Remove(searchResult);
+        NewSaveSystem.SaveChanges(_save); 
+        _save = NewSaveSystem.FindCurrentSave();
+
+        Debug.Log(_save.inventory.Count + " inv count 2");
+
+
+        
+
+        // Debug.Log(_save.inventory.Count + " inv count");
+
+        inventoryManager.DisplayInventoryUI();
+        inventoryManager.LoadEquipment();
+        inventoryManager.LoadInventory();
 
     }
 
     public void LearnAbilityAction()
     {
         SaveObject save = NewSaveSystem.FindCurrentSave();
+
+        //error to add
 
         foreach (AbilitySaveObject abilitySO in save.abilityInventory)
         {
