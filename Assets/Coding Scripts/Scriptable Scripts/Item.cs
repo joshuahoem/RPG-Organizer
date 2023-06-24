@@ -34,6 +34,13 @@ public enum ItemType
     Scroll
 }
 
+public enum WeaponType
+{
+    None,
+    Bow,
+    Other
+}
+
 public enum ItemRarity
 {
     PeasantCraft, //Common
@@ -68,6 +75,7 @@ public class Item : ScriptableObject
     public int offMagicDamage;
     public int offAttackRange;
     public NumberOfHands numberOfHands;
+    public WeaponType weaponType;
 
     [Header("Armor Info")]
     public int defense;
@@ -97,6 +105,11 @@ public class Item : ScriptableObject
     public ItemRarity GetRarity()
     {
         return itemRarity;
+    }
+
+    public WeaponType GetWeaponType()
+    {
+        return weaponType;
     }
 
 }

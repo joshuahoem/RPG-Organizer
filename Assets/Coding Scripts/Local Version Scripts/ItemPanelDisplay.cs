@@ -423,13 +423,15 @@ public class ItemPanelDisplay : MonoBehaviour
     {
         //consume item
         SaveObject save = NewSaveSystem.FindCurrentSave();
+        bool removedBool = false;
 
         foreach (InventoryItem inv in save.inventory)
         {
-            if (inv.item == item)
+            if (inv.item == item && !removedBool)
             {
                 inv.amount -= 1;
                 Debug.Log(inv.amount);
+                removedBool = true;
 
                 if (inv.amount <= 0)
                 {
@@ -471,6 +473,16 @@ public class ItemPanelDisplay : MonoBehaviour
             {
                 lootCheck += 1;
             }
+        }
+
+        if (save.equipment[5].item != null)
+        {
+            if (save.equipment[5].item.numberOfHands == NumberOfHands.TwoHanded)
+            {
+                Debug.Log("removing 1");
+                lootCheck -= 1;
+            }
+
         }
 
         if (lootCheck >= save.holdingCapacity && item.GetItemType() != ItemType.Special)
@@ -587,7 +599,13 @@ public class ItemPanelDisplay : MonoBehaviour
     {
         SaveObject save = NewSaveSystem.FindCurrentSave();
 
-        //error to add
+        //error 
+        if (save.spellbookCapacity <= save.abilityInventory.Count)
+        {
+            Debug.Log("not enough intelligence to get an ability");//error
+            errorMessageHandler.ReceivingOnErrorOccured(ErrorMessageHandler.ErrorType.NoIntelligence);
+            return;
+        }
 
         foreach (AbilitySaveObject abilitySO in save.abilityInventory)
         {

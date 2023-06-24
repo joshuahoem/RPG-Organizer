@@ -153,6 +153,24 @@ public class LocalInventoryManager : MonoBehaviour
         }
 
         save.equipment[searchIndex].equipmentSlotIndex = 0;
+
+        if (save.equipment[searchIndex].item.numberOfHands == NumberOfHands.TwoHanded)
+        {
+            if (save.equipment[5].item != null)
+            {  
+                Debug.Log("main");
+                save.equipment[5].equipmentSlotIndex = 0;
+                save.equipment[5].item = null;
+
+            }
+            if (save.equipment[6].item != null)
+            {
+                Debug.Log("off");
+                save.equipment[6].equipmentSlotIndex = 0;
+                save.equipment[6].item = null;
+            }
+        }
+
         InventoryItem _newItem = new InventoryItem
                     (newItem, database.GetID[newItem], newItem.numberInStack, false, 0);
         save.inventory.Add(_newItem);
@@ -280,6 +298,16 @@ public class LocalInventoryManager : MonoBehaviour
             }
         }
 
+        if (save.equipment[5].item != null)
+        {
+            if (save.equipment[5].item.numberOfHands == NumberOfHands.TwoHanded)
+            {
+                Debug.Log("removing 1");
+                lootCheck -= 1;
+            }
+
+        }
+        
         holdingCapacityNumber.text = lootCheck + "/" + save.holdingCapacity;
         itemInfoPanel.SetActive(false);
         equipmentPanel.SetActive(false);

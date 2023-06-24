@@ -124,6 +124,16 @@ public class LootManager : MonoBehaviour
             }
         }
 
+        if (save.equipment[5].item != null)
+        {
+            if (save.equipment[5].item.numberOfHands == NumberOfHands.TwoHanded)
+            {
+                Debug.Log("removing 1");
+                lootCheck -= 1;
+            }
+
+        }
+
         if (lootCheck >= save.holdingCapacity)
         {
             Debug.Log("not strong enough to carry"); //error
