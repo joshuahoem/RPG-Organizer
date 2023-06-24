@@ -19,6 +19,7 @@ public class LocalInventoryManager : MonoBehaviour
 
     [SerializeField] GameObject parentObject;
     [SerializeField] TabManager tabManager;
+    [SerializeField] ShopContentFitter contentFitter;
     [SerializeField] TextMeshProUGUI holdingCapacityNumber;
     #endregion
 
@@ -43,6 +44,8 @@ public class LocalInventoryManager : MonoBehaviour
         if (save.equipment.Length <= 1)
         {
             int numSlots = System.Enum.GetNames(typeof(EquipmentSlot)).Length - 1;
+            Debug.Log(numSlots);
+
             save.equipment = new InventoryItem[numSlots];
         }
 
@@ -250,7 +253,9 @@ public class LocalInventoryManager : MonoBehaviour
 
                 _item.GetComponent<LocalItemStart>().DisplayItemInfo(item.item, item);
             }
-        }        
+        }
+
+        contentFitter.FitContent(displayedItems.Count);        
         
     }
 

@@ -11,20 +11,19 @@ public class ShopContentFitter : MonoBehaviour
 
     public void FitContent(int numberOfItems)
     {
-        Debug.Log("fitting content...");
         GameObject contentToBeSized = this.gameObject;
 
         float height = numberOfItems * sizePerItem + constantSizeVariable;
 
         if(numberOfItems <= minItemsWithoutChange)
         {
-            Debug.Log("min size");
+            // Debug.Log("min size");
             contentToBeSized.GetComponent<RectTransform>().offsetMin = new Vector2(0, 0);
             contentToBeSized.GetComponent<RectTransform>().offsetMax = new Vector2(0, 0);
         }
         else
         {
-            Debug.Log("changing size");
+            // Debug.Log("changing size");
             contentToBeSized.GetComponent<RectTransform>().offsetMin = new Vector2(0, -height);
             contentToBeSized.GetComponent<RectTransform>().offsetMax = new Vector2(0, 0);
         }

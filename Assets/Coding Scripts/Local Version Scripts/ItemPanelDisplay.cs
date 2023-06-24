@@ -342,7 +342,7 @@ public class ItemPanelDisplay : MonoBehaviour
             }
             else
             {
-                if (item.equipmentSlot == EquipmentSlot.RingOne || item.equipmentSlot == EquipmentSlot.RingTwo)
+                if (item.equipmentSlot == EquipmentSlot.JewelryOne || item.equipmentSlot == EquipmentSlot.JewelryTwo)
                 {
                     equipRingOne.SetActive(true);
                     equipRingTwo.SetActive(true);

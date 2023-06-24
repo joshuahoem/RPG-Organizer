@@ -19,11 +19,9 @@ public enum EquipmentSlot
     Arms, //gloves
     MainHand, //weapon
     OffHand, //weapon
-    RightWrist, //bracelet
-    LeftWrist,
-    RingOne,
-    RingTwo,
-    Neck, //necklace
+    JewelryOne,
+    JewelryTwo,
+    Quiver, //Arrows
     None
 }
 
@@ -81,7 +79,11 @@ public class Item : ScriptableObject
     public int magicModifier;
     public int strengthModifier;
     public int intelligenceModifier;
-    public int speedModifier;    
+    public int speedModifier;  
+    public int attackModifier;
+    public int defenseModifier;
+    public int arcaneModifier;
+    public int wardModifier;  
 
     [Header("Scroll Info")]
     public Ability ability;
