@@ -15,7 +15,7 @@ MonoBehaviour:
   itemName: Leather Boots
   description: Covered Boots to keep the elements out
   imageSprite: {fileID: 21300000, guid: caca5e34405cae542856e5e05a45ffaa, type: 3}
-  goldCost: 3
+  goldCost: 2
   sellCost: 1
   numberInStack: 1
   itemType: 1

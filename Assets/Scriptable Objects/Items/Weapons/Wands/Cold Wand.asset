@@ -10,21 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c7f441553f287b4fb57cd0845e2e111, type: 3}
-  m_Name: Fire Splinter Wand
+  m_Name: Cold Wand
   m_EditorClassIdentifier: 
-  itemName: Fire Splinter Wand
-  description: A Basic Wand imbuded with firey particals. Chance to Burn +1.
-  imageSprite: {fileID: 21300000, guid: 166034dcb5a8c0b4e91e2188c54eff11, type: 3}
-  goldCost: 4
-  sellCost: 2
+  itemName: Cold Wand
+  description: Chance to Freeze.
+  imageSprite: {fileID: 21300000, guid: 00bc1f7da70acbd4ca0f5aefb9644e4b, type: 3}
+  goldCost: 2
+  sellCost: 1
   numberInStack: 1
   itemType: 0
-  itemRarity: 2
+  itemRarity: 1
   equipmentSlot: 5
   enchanted: 0
   mainDamage: 0
-  mainMagicDamage: 3
-  mainAttackRange: 4
+  mainMagicDamage: 2
+  mainAttackRange: 3
   offDamage: 0
   offMagicDamage: 0
   offAttackRange: 0

@@ -15,7 +15,7 @@ MonoBehaviour:
   itemName: Wood Spliting Axe
   description: A household object used for heating the collection of Wood its slitting
     powers are great againts the most basic of materials. Pierce 1
-  imageSprite: {fileID: 0}
+  imageSprite: {fileID: 21300000, guid: 72903a70308447c428f4c30fad4f9ce1, type: 3}
   goldCost: 3
   sellCost: 2
   numberInStack: 1

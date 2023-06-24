@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Mace
   description: An elongated mace head with many blades coming from the ends center.
-    Crushing 1.
-  imageSprite: {fileID: 0}
+    Crushing 4.
+  imageSprite: {fileID: 21300000, guid: ed470c02a35fa3e4cbe092430a68d793, type: 3}
   goldCost: 4
   sellCost: 2
   numberInStack: 1

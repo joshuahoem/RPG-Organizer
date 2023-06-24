@@ -15,7 +15,7 @@ MonoBehaviour:
   itemName: Brass Sword
   description: The most basic sword, mastly produced for armies many you find are
     dull and rusted.
-  imageSprite: {fileID: 0}
+  imageSprite: {fileID: 21300000, guid: a9aa4cb7d6d8f2c4eb5cbdabc6754299, type: 3}
   goldCost: 5
   sellCost: 3
   numberInStack: 1
