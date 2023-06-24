@@ -5,32 +5,30 @@ using UnityEngine;
 public class ShopContentFitter : MonoBehaviour
 {
     [SerializeField] GameObject parent;
+    [SerializeField] int minItemsWithoutChange;
+    [SerializeField] float sizePerItem;
+    [SerializeField] float constantSizeVariable;
 
-    private void Start() {
-        FitContent();
-    }
-
-    public void FitContent()
+    public void FitContent(int numberOfItems)
     {
         Debug.Log("fitting content...");
         GameObject contentToBeSized = this.gameObject;
-        GameObject[] children = new GameObject[parent.transform.childCount];
-        float height = 0;
 
-        for (int i=0; i < children.Length; i++)
+        float height = numberOfItems * sizePerItem + constantSizeVariable;
+
+        if(numberOfItems <= minItemsWithoutChange)
         {
-            children[i] = parent.transform.GetChild(i).gameObject;
-
-            if (children[i] != null)
-            {
-                height += children[i].GetComponent<RectTransform>().sizeDelta.y;
-            }
+            Debug.Log("min size");
+            contentToBeSized.GetComponent<RectTransform>().offsetMin = new Vector2(0, 0);
+            contentToBeSized.GetComponent<RectTransform>().offsetMax = new Vector2(0, 0);
         }
-
-        Debug.Log(height + " height of content");
-
-        contentToBeSized.GetComponent<RectTransform>().offsetMin = new Vector2(0, -height);
-        contentToBeSized.GetComponent<RectTransform>().offsetMax = new Vector2(0, 0);
+        else
+        {
+            Debug.Log("changing size");
+            contentToBeSized.GetComponent<RectTransform>().offsetMin = new Vector2(0, -height);
+            contentToBeSized.GetComponent<RectTransform>().offsetMax = new Vector2(0, 0);
+        }
         
     }
+
 }

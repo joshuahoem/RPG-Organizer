@@ -8,6 +8,7 @@ public class LocalShop : MonoBehaviour
 {
     ItemDatabase database;
     [SerializeField] TabManager tabManager;
+    [SerializeField] ShopContentFitter contentFitter;
     [SerializeField] GameObject itemPrefab;
     [SerializeField] GameObject parentObject;
     [SerializeField] GameObject itemInfoPanel;
@@ -62,6 +63,8 @@ public class LocalShop : MonoBehaviour
         goldText.text = save.gold.ToString();
 
         itemInfoPanel.GetComponent<ItemPanelDisplay>().DeactivateAllButtons();
+
+        contentFitter.FitContent(displayedItems.Count);
     }
 
     public void CloseShop()

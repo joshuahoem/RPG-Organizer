@@ -500,13 +500,10 @@ public class ItemPanelDisplay : MonoBehaviour
 
     public void SellItem()
     {
-        Debug.Log(item.itemName + " global item name start");
         SaveObject _save = NewSaveSystem.FindCurrentSave();
         searchResult = null;
         foreach (InventoryItem _item in _save.inventory)
         {
-            Debug.Log(_item.item.itemName + " _item local");
-            Debug.Log(item.itemName + " item global");
             if(_item.item.itemName == item.itemName)
             {
                 Debug.Log("found in inventory");
@@ -518,10 +515,8 @@ public class ItemPanelDisplay : MonoBehaviour
         {
             foreach (InventoryItem _item in _save.equipment)
             {
-                Debug.Log(item.itemName + " item global");
                 if (_item.item != null)
                 {
-                    Debug.Log(_item.item.itemName + " _item local");
                     if (_item.item.itemName == item.itemName)
                     {
                         Debug.Log("found in equipment");
@@ -530,15 +525,10 @@ public class ItemPanelDisplay : MonoBehaviour
                 }
             }
         }
-
-        Debug.Log(searchResult.item.itemName + " Item found for search");
-
         
         //Actions
         if (searchResult.equipped)
         {
-            Debug.Log("equipped");
-            
             foreach (InventoryItem inv in _save.equipment)
             {
                 if (inv.item == searchResult.item)
@@ -581,17 +571,9 @@ public class ItemPanelDisplay : MonoBehaviour
             _save.gold += item.sellCost;      
         }
 
-        Debug.Log(searchResult.item + " item");
-        Debug.Log(_save.inventory.Count + " inv count 1");
-
         _save.inventory.Remove(searchResult);
         NewSaveSystem.SaveChanges(_save); 
-        _save = NewSaveSystem.FindCurrentSave();
-
-        Debug.Log(_save.inventory.Count + " inv count 2");
-
-
-        
+        _save = NewSaveSystem.FindCurrentSave();        
 
         // Debug.Log(_save.inventory.Count + " inv count");
 
