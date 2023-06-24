@@ -5118,6 +5118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tabManager: {fileID: 4826665097305677969}
+  contentFitter: {fileID: 3943021861485819316}
   itemPrefab: {fileID: 571662316030222034, guid: 5d06bda542d1c274c9aef3eec6fdde77, type: 3}
   parentObject: {fileID: 72283958194098895}
   itemInfoPanel: {fileID: 629462200054435851}
@@ -9313,7 +9314,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &537784023918776217
 GameObject:
   m_ObjectHideFlags: 0
@@ -14363,7 +14364,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -32357,6 +32358,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parent: {fileID: 72283958194098895}
+  minItemsWithoutChange: 7
+  sizePerItem: 139.23
+  constantSizeVariable: -1063
 --- !u!114 &3943909347818541347
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50950,7 +50954,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6412884456399249517
 RectTransform:
   m_ObjectHideFlags: 0
@@ -52542,8 +52546,8 @@ RectTransform:
   m_Father: {fileID: 6412884455761211208}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 0.2998169}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
