@@ -9,6 +9,8 @@ public class CharacterCreationManager : MonoBehaviour
     List<GameObject> prefabs = new List<GameObject>();
     [SerializeField] Transform parentRace;
     [SerializeField] Transform parentClass;
+    [SerializeField] Canvas canvas;
+
     [SerializeField] GameObject[] panels;
     [SerializeField] GameObject creationMainPanel;
     [SerializeField] GameObject raceSelectPanel;
@@ -76,6 +78,10 @@ public class CharacterCreationManager : MonoBehaviour
     {
         foreach (GameObject go in prefabs)
         {
+            go.GetComponent<CharacterUnlockItemInfo>().onSelectedRaceOrClass -= Subscriber_OnEventClicked;
+        }
+        foreach (GameObject go in prefabs)
+        {
             Destroy(go);
         }
         prefabs.Clear();
@@ -90,6 +96,11 @@ public class CharacterCreationManager : MonoBehaviour
                 _raceObject.GetComponent<CharacterUnlockItemInfo>().raceToUnlock = unlock.unlockedRace;
                 _raceObject.GetComponent<CharacterUnlockItemInfo>().DisplayUnlocked();
                 prefabs.Add(_raceObject);
+
+                float x = canvas.transform.localScale.x * _raceObject.transform.localScale.x;
+                float y = canvas.transform.localScale.y * _raceObject.transform.localScale.y;
+                _raceObject.transform.localScale = new Vector3(x,y,1);
+
             }
             else if (loadingClassesBool && unlock.unlockedClass != null)
             {
@@ -98,6 +109,10 @@ public class CharacterCreationManager : MonoBehaviour
                 _classObject.GetComponent<CharacterUnlockItemInfo>().classToUnlock = unlock.unlockedClass;
                 _classObject.GetComponent<CharacterUnlockItemInfo>().DisplayUnlocked();
                 prefabs.Add(_classObject);
+
+                float x = canvas.transform.localScale.x * _classObject.transform.localScale.x;
+                float y = canvas.transform.localScale.y * _classObject.transform.localScale.y;
+                _classObject.transform.localScale = new Vector3(x,y,1);
             }
         }
 

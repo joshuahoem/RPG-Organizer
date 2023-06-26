@@ -16,7 +16,7 @@ MonoBehaviour:
   abilitySpriteIcon: {fileID: 0}
   borderColor: {r: 0.8867924, g: 0.5906593, b: 0.30535775, a: 0.8784314}
   costType: 1
-  unlockCost: 0
+  unlockCost: 1
   allAbilityLevels:
   - level: 1
     upgradeCost: 0
