@@ -8534,6 +8534,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5838860560285549851, guid: 3cb93440bcc425f4db2d321e7400068c, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 7376442}
+    - target: {fileID: 5838860560285549851, guid: 3cb93440bcc425f4db2d321e7400068c, type: 3}
       propertyPath: backButton
       value: 
       objectReference: {fileID: 48638013}
