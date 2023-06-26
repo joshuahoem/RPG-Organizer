@@ -44,10 +44,10 @@ public class LocalInventoryManager : MonoBehaviour
         if (save.equipment.Length <= 1)
         {
             int numSlots = System.Enum.GetNames(typeof(EquipmentSlot)).Length - 1;
-            Debug.Log(numSlots);
-
             save.equipment = new InventoryItem[numSlots];
         }
+
+        SaveChanges();
 
         save = FindObjectOfType<LocalStatDisplay>().save;
         currentEquipment = save.equipment;
@@ -302,15 +302,19 @@ public class LocalInventoryManager : MonoBehaviour
             }
         }
 
-        if (save.equipment[5].item != null)
+        if (save.equipment.Length > 1)
         {
-            if (save.equipment[5].item.numberOfHands == NumberOfHands.TwoHanded)
+            if (save.equipment[5].item != null)
             {
-                Debug.Log("removing 1");
-                lootCheck -= 1;
-            }
+                if (save.equipment[5].item.numberOfHands == NumberOfHands.TwoHanded)
+                {
+                    Debug.Log("removing 1");
+                    lootCheck -= 1;
+                }
 
+            }    
         }
+        
         
         holdingCapacityNumber.text = lootCheck + "/" + save.holdingCapacity;
         itemInfoPanel.SetActive(false);
