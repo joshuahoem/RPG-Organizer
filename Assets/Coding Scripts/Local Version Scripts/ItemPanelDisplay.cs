@@ -412,7 +412,7 @@ public class ItemPanelDisplay : MonoBehaviour
     {
         SaveObject save = NewSaveSystem.FindCurrentSave();
 
-        inventoryManager.Unequip(item, save);
+        inventoryManager.Unequip(itemInfo, save);
         inventoryManager.LoadEquipment();
         inventoryManager.LoadInventory();     
         inventoryManager.DisplayInventoryUI();

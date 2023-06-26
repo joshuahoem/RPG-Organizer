@@ -141,16 +141,20 @@ public class LocalInventoryManager : MonoBehaviour
         LoadInventory();
     }
 
-    public void Unequip(Item newItem, SaveObject _save)
+    public void Unequip(InventoryItem newItem, SaveObject _save)
     {
-        foreach (InventoryItem inv in save.equipment)
-        {
-            if (inv.item == newItem)
-            {
-                searchResult = inv;
-                searchIndex = inv.equipmentSlotIndex;
-            }
-        }
+        // searchResult = null;
+        // foreach (InventoryItem inv in save.equipment)
+        // {
+        //     if (inv.item == newItem)
+        //     {
+        //         searchResult = inv;
+        //         searchIndex = inv.equipmentSlotIndex;
+        //     }
+        // }
+
+        searchIndex = newItem.equipmentSlotIndex;
+        searchResult = _save.equipment[searchIndex];
 
         save.equipment[searchIndex].equipmentSlotIndex = 0;
 
@@ -172,7 +176,7 @@ public class LocalInventoryManager : MonoBehaviour
         }
 
         InventoryItem _newItem = new InventoryItem
-                    (newItem, database.GetID[newItem], newItem.numberInStack, false, 0);
+                    (newItem.item, database.GetID[newItem.item], newItem.item.numberInStack, false, 0);
         save.inventory.Add(_newItem);
 
         save.equipment[searchIndex].equipped = false;

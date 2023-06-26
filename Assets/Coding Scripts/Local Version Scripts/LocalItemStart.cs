@@ -53,11 +53,25 @@ public class LocalItemStart : MonoBehaviour
                 backgroundSprite.color = ArmorColor;
                 break;
             case ItemType.Weapon:
-                statStringOne.text = attackString;
-                statStringTwo.text = rangeString;
-                statNumberOne.text = _item.mainDamage.ToString();
-                statNumberTwo.text = _item.mainAttackRange.ToString();
-                backgroundSprite.color = WeaponColor;
+                if (_itemInfo.equipmentSlotIndex == 6)
+                {
+                    //offhand
+                    statStringOne.text = attackString;
+                    statStringTwo.text = rangeString;
+                    statNumberOne.text = _item.offDamage.ToString();
+                    statNumberTwo.text = _item.offAttackRange.ToString();
+                    backgroundSprite.color = WeaponColor;
+                }
+                else
+                {
+                    //main hand
+                    statStringOne.text = attackString;
+                    statStringTwo.text = rangeString;
+                    statNumberOne.text = _item.mainDamage.ToString();
+                    statNumberTwo.text = _item.mainAttackRange.ToString();
+                    backgroundSprite.color = WeaponColor;
+                }
+
                 break;
             case ItemType.Consumable:
                 statStringOne.text = stackSizeString;

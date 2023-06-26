@@ -89,7 +89,17 @@ public class AbilityPanelManager : MonoBehaviour
         magicDamageTMP.text = ability.allAbilityLevels[_levelIndex].magicDamage.ToString();
         rangeTMP.text = ability.allAbilityLevels[_levelIndex].range.ToString();
         descriptionTMP.text = ability.allAbilityLevels[_levelIndex].description;
-        abilityCostToUnlockTMP.text = ability.unlockCost.ToString();
+
+        if (abilitySO.unlocked)
+        {
+            Debug.Log("unlocked");
+            abilityCostToUnlockTMP.text = ability.allAbilityLevels[abilitySO.currentLevel - 1].upgradeCost.ToString();
+        }
+        else
+        {
+            Debug.Log("not unlocked");
+            abilityCostToUnlockTMP.text = ability.unlockCost.ToString();
+        }
 
         if( ability.costType == CostType.Both)
         {

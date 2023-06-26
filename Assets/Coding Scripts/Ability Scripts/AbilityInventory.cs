@@ -67,10 +67,11 @@ public class AbilityInventory : MonoBehaviour
 
         if (abilitySaveObject != null)
         {
+            //just unlocked
             if (state.classAbilityBool)
             { 
                 save.classAbilityPoints -= e._ability.ability.unlockCost; 
-                abilityPointsTextNumber.text = save.classAbilityPoints.ToString(); 
+                abilityPointsTextNumber.text = save.classAbilityPoints.ToString();    
             }
             else if (state.raceAbilityBool)
             { 
@@ -83,7 +84,7 @@ public class AbilityInventory : MonoBehaviour
         }
         else
         {
-            Debug.Log("has it");
+            //Has it
 
             AbilitySaveObject _abilitySaveObject = new AbilitySaveObject(e._ability.ability, AbilityType.classAblity, 1, 0, true);
             foreach (AbilitySaveObject item in save.abilityInventory)
@@ -99,7 +100,6 @@ public class AbilityInventory : MonoBehaviour
             int checkNumber = (abilitySaveObject.currentLevel + 1);
             if (abilitySaveObject.ability.allAbilityLevels.Length >= checkNumber)
             {
-                Debug.Log("Level Increased");
                 abilitySaveObject.currentLevel++;
 
                 foreach (AbilitySaveObject abilitySO in save.abilityInventory)
@@ -114,6 +114,39 @@ public class AbilityInventory : MonoBehaviour
 
             }
         }
+
+        if (state.classAbilityBool)
+            { 
+                if (e._ability.unlocked)
+                {
+                    //find new cost
+                    save.classAbilityPoints -= e._ability.ability.allAbilityLevels[e._ability.currentLevel - 1].upgradeCost;
+                    abilityPointsTextNumber.text = save.classAbilityPoints.ToString(); 
+                }
+                else
+                {
+                    //unlock for first time
+                    save.classAbilityPoints -= e._ability.ability.unlockCost; 
+                    abilityPointsTextNumber.text = save.classAbilityPoints.ToString(); 
+                }
+                
+            }
+            else if (state.raceAbilityBool)
+            { 
+                if (e._ability.unlocked)
+                {
+                    //find new cost
+                    save.raceAbilityPoints -= e._ability.ability.allAbilityLevels[e._ability.currentLevel - 1].upgradeCost;
+                    abilityPointsTextNumber.text = save.raceAbilityPoints.ToString(); 
+                }
+                else
+                {
+                    //unlock first time
+                    save.raceAbilityPoints -= e._ability.ability.unlockCost; 
+                    abilityPointsTextNumber.text = save.raceAbilityPoints.ToString(); 
+                }
+                
+            }        
 
         SaveChanges();
 
@@ -136,12 +169,12 @@ public class AbilityInventory : MonoBehaviour
 
         if (state.raceAbilityBool)
         {
-            Debug.Log("race ability");
+            // Debug.Log("race ability");
             _abilityToAdd = new AbilitySaveObject(_ability, AbilityType.raceAbility, 1, 0, true);
         }
         else if (state.classAbilityBool)
         {
-            Debug.Log("class ability");
+            // Debug.Log("class ability");
             _abilityToAdd = new AbilitySaveObject(_ability, AbilityType.classAblity, 1, 0, true);
         }
         else
