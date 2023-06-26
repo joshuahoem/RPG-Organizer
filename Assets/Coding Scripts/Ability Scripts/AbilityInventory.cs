@@ -113,14 +113,13 @@ public class AbilityInventory : MonoBehaviour
                 save.abilityInventory.Add(abilitySaveObject);
 
             }
-        }
 
         if (state.classAbilityBool)
             { 
                 if (e._ability.unlocked)
                 {
                     //find new cost
-                    save.classAbilityPoints -= e._ability.ability.allAbilityLevels[e._ability.currentLevel - 1].upgradeCost;
+                    save.classAbilityPoints -= e._ability.ability.allAbilityLevels[e._ability.currentLevel].upgradeCost;
                     abilityPointsTextNumber.text = save.classAbilityPoints.ToString(); 
                 }
                 else
@@ -136,7 +135,7 @@ public class AbilityInventory : MonoBehaviour
                 if (e._ability.unlocked)
                 {
                     //find new cost
-                    save.raceAbilityPoints -= e._ability.ability.allAbilityLevels[e._ability.currentLevel - 1].upgradeCost;
+                    save.raceAbilityPoints -= e._ability.ability.allAbilityLevels[e._ability.currentLevel].upgradeCost;
                     abilityPointsTextNumber.text = save.raceAbilityPoints.ToString(); 
                 }
                 else
@@ -147,6 +146,9 @@ public class AbilityInventory : MonoBehaviour
                 }
                 
             }        
+
+        }
+
 
         SaveChanges();
 

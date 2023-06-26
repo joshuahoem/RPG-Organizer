@@ -93,7 +93,7 @@ public class AbilityPanelManager : MonoBehaviour
         if (abilitySO.unlocked)
         {
             Debug.Log("unlocked");
-            abilityCostToUnlockTMP.text = ability.allAbilityLevels[abilitySO.currentLevel - 1].upgradeCost.ToString();
+            abilityCostToUnlockTMP.text = ability.allAbilityLevels[abilitySO.currentLevel].upgradeCost.ToString();
         }
         else
         {
@@ -201,6 +201,7 @@ public class AbilityPanelManager : MonoBehaviour
             errorMessageHandler.ReceivingOnErrorOccured(ErrorMessageHandler.ErrorType.NoClassPoints);
             return;
         }
+        //check if its an upgrade or new ability
         if (save.spellbookCapacity <= save.abilityInventory.Count)
         {
             Debug.Log("not enough intelligence to get an ability");//error
