@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2711961303893799541}
   - component: {fileID: 8289305081527068017}
   m_Layer: 0
-  m_Name: Perk Intelligence
+  m_Name: Perk Tree Object
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

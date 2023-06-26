@@ -137,13 +137,34 @@ public class LocalStatDisplay : MonoBehaviour
             if (save.classObject.logo != null)
             { classimage.sprite = save.classObject.logo; }
         }
+
+        float healthX = 1;
+        float staminaX = 1;
+        float magicX = 1;
+        float strengthX = 1;
+        float intelligenceX = 1;
+        float speedX = 1;
+
+        foreach (PerkObject perk in save.perks)
+        {
+            healthX += perk.perk.healthMultiplier;
+            staminaX += perk.perk.staminaMultiplier;
+            magicX += perk.perk.magicMultiplier;
+            strengthX += perk.perk.strengthMultiplier;
+            intelligenceX += perk.perk.intelligenceMultiplier;
+            speedX += perk.perk.speedMultiplier;
+        }
         
-        int _bonusHealth = bonusHealth + save.baseHealth;
-        int _bonusStamina = bonusStamina + save.baseStamina;
-        int _bonusMagic = bonusMagic + save.baseMagic;
-        int _bonusStrength = bonusStrength + save.baseStrength;
-        int _bonusIntelligence = bonusIntelligence + save.baseIntelligence;
-        int _bonusSpeed = bonusSpeed + save.baseSpeed;
+        int _bonusHealth = Mathf.FloorToInt((bonusHealth + save.baseHealth) * healthX);
+        int _bonusStamina = Mathf.FloorToInt((bonusStamina + save.baseStamina) * staminaX);
+        int _bonusMagic = Mathf.FloorToInt((bonusMagic + save.baseMagic) * magicX);
+        int _bonusStrength = Mathf.FloorToInt((bonusStrength + save.baseStrength) * strengthX);
+        int _bonusIntelligence = Mathf.FloorToInt((bonusIntelligence + save.baseIntelligence) * intelligenceX);
+        int _bonusSpeed = Mathf.FloorToInt((bonusSpeed + save.baseSpeed) * speedX);
+
+        if (_bonusHealth < save.currentHealth) { save.currentHealth = _bonusHealth; }
+        if (_bonusStamina < save.currentStamina) { save.currentStamina = _bonusStamina; }
+        if (_bonusMagic < save.currentMagic) { save.currentMagic = _bonusMagic; }
 
         health.text = save.currentHealth + "/" + _bonusHealth;
         stamina.text = save.currentStamina + "/" + _bonusStamina;

@@ -17,5 +17,6 @@ public class Race : ScriptableObject
     public int strength;
     public int speed;
 
+    [SerializeField] public List<Perk> startingPerks = new List<Perk>();
 
 }

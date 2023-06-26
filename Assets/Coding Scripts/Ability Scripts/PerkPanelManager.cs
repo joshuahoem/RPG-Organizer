@@ -28,6 +28,8 @@ public class PerkPanelManager : MonoBehaviour
 
     [SerializeField] TextMeshProUGUI unlockCostTMP;
     [SerializeField] TextMeshProUGUI perkCountTMP;
+    [SerializeField] TextMeshProUGUI descriptionTMP;
+
 
     [SerializeField] GameObject perkButtonUnlock;
     #endregion
@@ -67,6 +69,8 @@ public class PerkPanelManager : MonoBehaviour
         {
             perkCountTMP.text = _perkObject.count.ToString();
         }
+
+        descriptionTMP.text = _perkObject.perk.description;
     }
 
     public void UnlockPerk()
