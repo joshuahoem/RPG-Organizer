@@ -202,7 +202,7 @@ public class AbilityPanelManager : MonoBehaviour
             return;
         }
         //check if its an upgrade or new ability
-        if (save.spellbookCapacity <= save.abilityInventory.Count)
+        if (save.spellbookCapacity <= save.abilityInventory.Count && !abilitySO.unlocked)
         {
             Debug.Log("not enough intelligence to get an ability");//error
             errorMessageHandler.ReceivingOnErrorOccured(ErrorMessageHandler.ErrorType.NoIntelligence);
