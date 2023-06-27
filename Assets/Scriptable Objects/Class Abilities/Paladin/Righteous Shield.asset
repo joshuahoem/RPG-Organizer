@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Righteous Shield
   m_EditorClassIdentifier: 
   abilityName: Righteous Shield
-  abilitySpriteIcon: {fileID: 0}
+  abilitySpriteIcon: {fileID: 21300000, guid: 9770cee9f41301a4e9552bedfb6bd523, type: 3}
   borderColor: {r: 0.8980393, g: 0.3137255, b: 0.22352943, a: 1}
   costType: 0
   unlockCost: 1

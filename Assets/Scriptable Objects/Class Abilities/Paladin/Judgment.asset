@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Judgment
   m_EditorClassIdentifier: 
   abilityName: Judgement
-  abilitySpriteIcon: {fileID: 0}
+  abilitySpriteIcon: {fileID: 21300000, guid: 9183ffc6f8f7d784f8bee12e4871cb07, type: 3}
   borderColor: {r: 0.21960786, g: 0.6784314, b: 0.6627451, a: 1}
   costType: 3
   unlockCost: 1

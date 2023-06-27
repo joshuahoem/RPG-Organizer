@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Hammer Drop
   m_EditorClassIdentifier: 
   abilityName: Hammer Drop
-  abilitySpriteIcon: {fileID: 0}
+  abilitySpriteIcon: {fileID: 21300000, guid: fea902a38895bb74c9d0da8771f3e901, type: 3}
   borderColor: {r: 0.8980393, g: 0.3137255, b: 0.22352943, a: 1}
   costType: 1
   unlockCost: 1
