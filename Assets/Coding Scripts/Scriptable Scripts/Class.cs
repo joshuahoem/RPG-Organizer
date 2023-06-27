@@ -17,5 +17,6 @@ public class Class : ScriptableObject
     public int strength;
     public int intelligence;
 
+    [SerializeField] public List<Perk> startingPerks = new List<Perk>();
 
 }

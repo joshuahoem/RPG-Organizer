@@ -21,6 +21,18 @@ public class Perk : ScriptableObject
     public int bonusStrength;
     public int bonusIntelligence;
     public int bonusSpeed;
+
+    [Header("Bonus Multipliers")]
+    public float healthMultiplier;
+    public float staminaMultiplier;
+    public float magicMultiplier;
+    public float strengthMultiplier;
+    public float intelligenceMultiplier;
+    public float speedMultiplier;
+
+    [Header("Description")]
+    [TextArea(5,10)] public string description;
+
 }
 
 [System.Serializable] public class PerkObject

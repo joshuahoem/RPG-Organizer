@@ -317,6 +317,19 @@ public class CharacterCreationManager : MonoBehaviour
 
         int _movement = Mathf.FloorToInt(_baseSpeed / movementModifer);
 
+        List<PerkObject> _startingPerks = new List<PerkObject>();
+        foreach (Perk _perk in _race.startingPerks)
+        {
+            PerkObject newPerk = new PerkObject(_perk, 1, true, default);
+            _startingPerks.Add(newPerk);
+        }  
+        foreach (Perk _perk in _class.startingPerks)
+        {
+            PerkObject newPerk = new PerkObject(_perk, 1, true, default);
+            _startingPerks.Add(newPerk);
+        }
+
+
         //Character Info
         SaveObject saveObject = new SaveObject
         {
@@ -358,7 +371,10 @@ public class CharacterCreationManager : MonoBehaviour
             levelPoints = 3,
             levelRolls = 3,    
             raceAbilityPoints = 1,
-            classAbilityPoints = 1                    
+            classAbilityPoints = 1,     
+
+            //starting info
+            perks = _startingPerks
 
         };
 
