@@ -70,6 +70,7 @@ public class AbilityInstanceObject : MonoBehaviour
             {
                 if (abilitySave.unlocked)
                 {
+                    Debug.Log("unlocking " + this.name);
                     foreach (GameObject ability in abilitiesThatUnlock)
                     {
                         ability.GetComponent<Button>().interactable = true;

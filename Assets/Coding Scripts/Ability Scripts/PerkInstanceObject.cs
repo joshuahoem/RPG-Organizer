@@ -60,7 +60,7 @@ public class PerkInstanceObject : MonoBehaviour
 
         foreach (PerkObject perkObject in save.perks)
         {
-            if (perkObject.ID == this.objectID)
+            if (perkObject.ID == this.objectID && perkObject.perk.perkName == this.perk.perkName)
             {
                 if (perkObject.unlockedBool)
                 {
@@ -100,7 +100,10 @@ public class PerkInstanceObject : MonoBehaviour
         {
             if (_perkObject.ID == this.objectID)
             {
-                return _perkObject;
+                if (_perkObject.perk.perkName == this.perk.perkName)
+                {
+                    return _perkObject;
+                }
             }
         }
 

@@ -95,7 +95,7 @@ public class PerkPanelManager : MonoBehaviour
 
         foreach (PerkObject _perkObject in save.perks)
         {
-            if (_perkObject.ID == perkObjectFromItem.ID)
+            if (_perkObject.ID == perkObjectFromItem.ID && _perkObject.perk.perkName == perkObjectFromItem.perk.perkName)
             {
                 _perkObject.count++;
                 NewSaveSystem.SaveChanges(save);
@@ -108,8 +108,8 @@ public class PerkPanelManager : MonoBehaviour
         foundPerkObject = perkObject;
         save.perks.Add(perkObject);
 
-        Debug.Log("class " + state.classAbilityBool);
-        Debug.Log("race " + state.raceAbilityBool);
+        // Debug.Log("class " + state.classAbilityBool);
+        // Debug.Log("race " + state.raceAbilityBool);
 
         if (state.classAbilityBool)
             { 
