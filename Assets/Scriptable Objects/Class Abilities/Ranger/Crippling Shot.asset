@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Crippling Shot
   m_EditorClassIdentifier: 
   abilityName: Crippling Shot
-  abilitySpriteIcon: {fileID: 21300000, guid: bd293dc32f4aaf94e8274f2fac2cdf89, type: 3}
+  abilitySpriteIcon: {fileID: 21300000, guid: 75d266b41967170469013323e94c3eba, type: 3}
   borderColor: {r: 0.8947375, g: 0.9433962, b: 0.09344962, a: 0.8862745}
   costType: 1
   unlockCost: 1

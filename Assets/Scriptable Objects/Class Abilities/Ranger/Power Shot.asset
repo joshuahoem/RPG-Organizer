@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Power Shot
   m_EditorClassIdentifier: 
   abilityName: Power Shot
-  abilitySpriteIcon: {fileID: 21300000, guid: 3d75cff6a89984540b0c62a3dc12ed55, type: 3}
+  abilitySpriteIcon: {fileID: 21300000, guid: 33bc94149962c7d4d892cf26d4fda367, type: 3}
   borderColor: {r: 0.254717, g: 0.0252314, b: 0.07702288, a: 0.9137255}
   costType: 0
   unlockCost: 1

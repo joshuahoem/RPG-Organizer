@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Focus Shot
   m_EditorClassIdentifier: 
   abilityName: Focus Shot
-  abilitySpriteIcon: {fileID: 21300000, guid: b2b74fd033b33b84c99a4ebd609992ba, type: 3}
+  abilitySpriteIcon: {fileID: 21300000, guid: c0499121421b440478aaa895c6b8e1a3, type: 3}
   borderColor: {r: 0.3501211, g: 0.9150943, b: 0.15970986, a: 0.92156863}
   costType: 1
   unlockCost: 1

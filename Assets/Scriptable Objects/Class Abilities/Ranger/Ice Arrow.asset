@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Ice Arrow
   m_EditorClassIdentifier: 
   abilityName: Ice Arrow
-  abilitySpriteIcon: {fileID: 21300000, guid: 4d0bf373db873394aa0c09cada91ca7c, type: 3}
+  abilitySpriteIcon: {fileID: 21300000, guid: d237bf8ee8ecb59468ed3fba6962b584, type: 3}
   borderColor: {r: 0.2951673, g: 0.9339623, b: 0.8444618, a: 0.89411765}
   costType: 0
   unlockCost: 1

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Electrical Volley
   m_EditorClassIdentifier: 
   abilityName: Electrical Volley
-  abilitySpriteIcon: {fileID: 21300000, guid: 3ec99a551fa1f504288c4b4b20dbd775, type: 3}
+  abilitySpriteIcon: {fileID: 21300000, guid: e337a540b1d421848992839dc46efef9, type: 3}
   borderColor: {r: 0.4015731, g: 0.4245283, b: 0.23429157, a: 0.9490196}
   costType: 0
   unlockCost: 2

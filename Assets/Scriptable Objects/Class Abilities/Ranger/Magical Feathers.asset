@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Magical Feathers
   m_EditorClassIdentifier: 
   abilityName: Magical Feathers
-  abilitySpriteIcon: {fileID: 21300000, guid: fd6806fd9c12e57478d79cbe44d73d0c, type: 3}
+  abilitySpriteIcon: {fileID: 21300000, guid: c9af654428772274f8d162637ee296af, type: 3}
   borderColor: {r: 0.37940356, g: 0.13697045, b: 0.509434, a: 0.8}
   costType: 0
   unlockCost: 1
