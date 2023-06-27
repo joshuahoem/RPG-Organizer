@@ -24,3 +24,4 @@ MonoBehaviour:
   speed: 2
   startingPerks:
   - {fileID: 11400000, guid: aaac6889963c1b442b7481dbc59dc22d, type: 2}
+  - {fileID: 11400000, guid: 3511b87a3a6230d418aa87546083b60f, type: 2}

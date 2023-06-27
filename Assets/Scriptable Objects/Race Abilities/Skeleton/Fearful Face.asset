@@ -10,24 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b3a5683874466c64da079d94c09f1a43, type: 3}
-  m_Name: Rooted
+  m_Name: Fearful Face
   m_EditorClassIdentifier: 
-  abilityName: Rooted
+  abilityName: Fearful Face
   abilitySpriteIcon: {fileID: 0}
-  borderColor: {r: 0, g: 0, b: 0, a: 0}
-  costType: 3
+  borderColor: {r: 0, g: 0, b: 0, a: 1}
+  costType: 0
   unlockCost: 5
   allAbilityLevels:
   - level: 1
     upgradeCost: 0
-    magicCost: 0
+    magicCost: 1
     staminaCost: 0
-    range: 
+    range: Eye contact
     damage: 
     magicDamage: 
-    description: 'At the start of the turn, this ability must be equipped. While
-      this ability is equipped, this player cannot move. At the start of your turn
-      while you are rooted, gain X dCustom health where X is your current strength.
-
-      When
-      unequipping this ability, you use your move action'
+    description: Send fear into the soul of an opponent wishing it were dead, giving
+      the opponent DECAY (At the start of your turn, take 1dCustom for each decay
+      counter)

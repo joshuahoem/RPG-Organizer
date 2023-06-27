@@ -22,3 +22,5 @@ MonoBehaviour:
   intelligence: 3
   strength: 6
   speed: 2
+  startingPerks:
+  - {fileID: 11400000, guid: 3c2a5fd4db100c043a170cbc09a3975a, type: 2}

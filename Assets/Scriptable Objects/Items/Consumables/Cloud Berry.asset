@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Cloud Berry
   m_EditorClassIdentifier: 
   itemName: Cloud Berry
-  description: When Consumed adds 3 to speed this turn
+  description: When Consumed move an additional 3 spaces this turn
   imageSprite: {fileID: 21300000, guid: e552685b3177e8740b7121672f5e0a89, type: 3}
   goldCost: 1
   sellCost: 0

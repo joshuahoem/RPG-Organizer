@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b3a5683874466c64da079d94c09f1a43, type: 3}
-  m_Name: Rooted
+  m_Name: Challenge
   m_EditorClassIdentifier: 
-  abilityName: Rooted
+  abilityName: Challenge
   abilitySpriteIcon: {fileID: 0}
-  borderColor: {r: 0, g: 0, b: 0, a: 0}
+  borderColor: {r: 0.6603774, g: 0.5974041, b: 0.07787468, a: 0.9647059}
   costType: 3
-  unlockCost: 5
+  unlockCost: 1
   allAbilityLevels:
   - level: 1
     upgradeCost: 0
@@ -25,9 +25,5 @@ MonoBehaviour:
     range: 
     damage: 
     magicDamage: 
-    description: 'At the start of the turn, this ability must be equipped. While
-      this ability is equipped, this player cannot move. At the start of your turn
-      while you are rooted, gain X dCustom health where X is your current strength.
-
-      When
-      unequipping this ability, you use your move action'
+    description: Roll a d20. If higher roll than target, you may entice the target
+      into a duel.

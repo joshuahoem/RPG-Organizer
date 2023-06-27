@@ -93,7 +93,7 @@ public class AbilityPanelManager : MonoBehaviour
         if (abilitySO.unlocked)
         {
             Debug.Log("unlocked");
-            abilityCostToUnlockTMP.text = ability.allAbilityLevels[abilitySO.currentLevel].upgradeCost.ToString();
+            abilityCostToUnlockTMP.text = ability.allAbilityLevels[_levelIndex].upgradeCost.ToString();
         }
         else
         {

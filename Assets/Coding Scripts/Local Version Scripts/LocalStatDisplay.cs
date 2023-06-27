@@ -147,6 +147,11 @@ public class LocalStatDisplay : MonoBehaviour
 
         foreach (PerkObject perk in save.perks)
         {
+            if (perk.perk == null) 
+            { 
+                Debug.Log("no perk here");
+                continue;
+            }
             healthX += perk.perk.healthMultiplier;
             staminaX += perk.perk.staminaMultiplier;
             magicX += perk.perk.magicMultiplier;
