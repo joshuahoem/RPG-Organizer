@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Zap
   m_EditorClassIdentifier: 
   abilityName: Zap
-  abilitySpriteIcon: {fileID: -2017328032291909308, guid: ec113a53ec5594b4eb61fe534af612fe, type: 3}
+  abilitySpriteIcon: {fileID: 21300000, guid: 9aa781b92e9f20a44ae1fd36b4b87aae, type: 3}
   borderColor: {r: 1, g: 0.99997807, b: 0.0047169924, a: 0.92941177}
   costType: 0
   unlockCost: 1

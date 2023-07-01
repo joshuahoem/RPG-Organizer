@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Lightning Surge
   m_EditorClassIdentifier: 
   abilityName: Lightning Surge
-  abilitySpriteIcon: {fileID: 21300000, guid: dcf0bc503da2e5344b624558ca3f0a1d, type: 3}
+  abilitySpriteIcon: {fileID: 21300000, guid: cb37c85a28f22ef40be62360b63a939c, type: 3}
   borderColor: {r: 0.9056604, g: 0.8408832, b: 0.18369527, a: 0.7647059}
   costType: 0
   unlockCost: 1

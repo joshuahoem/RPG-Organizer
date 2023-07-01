@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Power Zap
   m_EditorClassIdentifier: 
   abilityName: Power Zap
-  abilitySpriteIcon: {fileID: 21300000, guid: 5bc4256812f4f4c4795ce9c235cb0993, type: 3}
+  abilitySpriteIcon: {fileID: 21300000, guid: e74da7439c073194181dd55a99b6027f, type: 3}
   borderColor: {r: 0.5754717, g: 0.04071733, b: 0.04071733, a: 0.9490196}
   costType: 0
   unlockCost: 1

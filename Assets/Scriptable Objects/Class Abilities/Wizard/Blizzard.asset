@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Blizzard
   m_EditorClassIdentifier: 
   abilityName: Blizzard
-  abilitySpriteIcon: {fileID: 21300000, guid: 201385dc4e7024f4285740a6bbd34312, type: 3}
+  abilitySpriteIcon: {fileID: 21300000, guid: 68e379799ce558d4fac5761c5395ccbe, type: 3}
   borderColor: {r: 0.17007834, g: 0.8509804, b: 0.9245283, a: 0.9137255}
   costType: 0
   unlockCost: 1
