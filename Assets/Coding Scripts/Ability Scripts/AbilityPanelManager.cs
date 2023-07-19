@@ -36,6 +36,12 @@ public class AbilityPanelManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI strengthRequirementsTMP;
     [SerializeField] TextMeshProUGUI intelligenceRequirementsTMP;
     [SerializeField] TextMeshProUGUI speedRequirementsTMP;
+    [SerializeField] TextMeshProUGUI healthCurrentBaseTMP;
+    [SerializeField] TextMeshProUGUI staminaCurrentBaseTMP;
+    [SerializeField] TextMeshProUGUI magicCurrentBaseTMP;
+    [SerializeField] TextMeshProUGUI strengthCurrentBaseTMP;
+    [SerializeField] TextMeshProUGUI intelligenceCurrentBaseTMP;
+    [SerializeField] TextMeshProUGUI speedCurrentBaseTMP;
 
     [SerializeField] string freeString;
 
@@ -106,6 +112,14 @@ public class AbilityPanelManager : MonoBehaviour
             strengthRequirementsTMP.text = ability.unlockStrength.ToString();
             intelligenceRequirementsTMP.text = ability.unlockIntelligence.ToString();
             speedRequirementsTMP.text = ability.unlockSpeed.ToString();
+
+            SaveObject save = NewSaveSystem.FindCurrentSave();
+            healthCurrentBaseTMP.text = save.baseHealth.ToString();
+            staminaCurrentBaseTMP.text = save.baseStamina.ToString();
+            magicCurrentBaseTMP.text = save.baseMagic.ToString();
+            strengthCurrentBaseTMP.text = save.baseStrength.ToString();
+            intelligenceCurrentBaseTMP.text = save.baseIntelligence.ToString();
+            speedCurrentBaseTMP.text = save.baseSpeed.ToString();
         }
 
         if (abilitySO.unlocked)
