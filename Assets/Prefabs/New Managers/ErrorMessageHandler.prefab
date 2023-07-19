@@ -52,3 +52,9 @@ MonoBehaviour:
   errorNotEnoughRacePoints: Not enough race ability points to purchase this ability
   errorNoMagic: Not enough Magic to use this!
   errorNoStamina: Not enough Stamina to use this!
+  errorAbilityNoHealth: You need more Health to unlock this ability!
+  errorAbilityNoStamina: You need more Stamina to unlock this ability!
+  errorAbilityNoMagic: You need more Magic to unlock this ability!
+  errorAbilityNoStrength: You need more Strength to unlock this ability!
+  errorAbilityNoIntelligence: You need more Intelligence to unlock this ability!
+  errorAbilityNoSpeed: You need more Speed to unlock this ability!

@@ -18,6 +18,13 @@ public class Ability : ScriptableObject
     [SerializeField] public Color borderColor;
     public CostType costType;
     public int unlockCost;
+    public int unlockHealth = 1;
+    public int unlockStamina = 1;
+    public int unlockMagic = 1;
+    public int unlockStrength = 1;
+    public int unlockIntelligence = 1;
+    public int unlockSpeed = 1;
+
     public AbilityLevelObject[] allAbilityLevels;
 
 }

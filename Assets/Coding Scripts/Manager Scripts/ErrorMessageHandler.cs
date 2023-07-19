@@ -10,7 +10,8 @@ public class ErrorMessageHandler : MonoBehaviour
 
     [SerializeField] [TextArea(5,10)] string errorNotStrongEnough, errorNotSmartEnough, 
         errorNotEnoughGold, errorNotEnoughClassPoints, errorNotEnoughRacePoints, errorNoMagic,
-        errorNoStamina;
+        errorNoStamina, errorAbilityNoHealth, errorAbilityNoStamina, errorAbilityNoMagic,
+        errorAbilityNoStrength, errorAbilityNoIntelligence, errorAbilityNoSpeed;
 
     public enum ErrorType
     {
@@ -20,7 +21,13 @@ public class ErrorMessageHandler : MonoBehaviour
         NoRacePoints,
         NoClassPoints,
         NoMagic,
-        NoStamina
+        NoStamina,
+        AbilityNoHealth,
+        AbilityNoStamina,
+        AbilityNoMagic,
+        AbilityNoStrength,
+        AbilityNoIntelligence,
+        AbilityNoSpeed
     }
 
     private void Start() {
@@ -52,6 +59,24 @@ public class ErrorMessageHandler : MonoBehaviour
                 break;
             case ErrorType.NoStamina:
                 errorMessageTMP.text = errorNoStamina;
+                break;
+            case ErrorType.AbilityNoHealth:
+                errorMessageTMP.text = errorAbilityNoHealth;
+                break;
+            case ErrorType.AbilityNoStamina:
+                errorMessageTMP.text = errorAbilityNoStamina;
+                break;
+            case ErrorType.AbilityNoMagic:
+                errorMessageTMP.text = errorAbilityNoMagic;
+                break;
+            case ErrorType.AbilityNoStrength:
+                errorMessageTMP.text = errorAbilityNoStrength;
+                break;
+            case ErrorType.AbilityNoIntelligence:
+                errorMessageTMP.text = errorAbilityNoIntelligence;
+                break;
+            case ErrorType.AbilityNoSpeed:
+                errorMessageTMP.text = errorAbilityNoSpeed;
                 break;
         }
     }

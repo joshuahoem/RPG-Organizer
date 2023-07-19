@@ -30,6 +30,13 @@ public class AbilityPanelManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI descriptionTMP;
     [SerializeField] TextMeshProUGUI abilityCostToUnlockTMP;
     [SerializeField] TextMeshProUGUI buttonCostToUse;
+    [SerializeField] TextMeshProUGUI healthRequirementsTMP;
+    [SerializeField] TextMeshProUGUI staminaRequirementsTMP;
+    [SerializeField] TextMeshProUGUI magicRequirementsTMP;
+    [SerializeField] TextMeshProUGUI strengthRequirementsTMP;
+    [SerializeField] TextMeshProUGUI intelligenceRequirementsTMP;
+    [SerializeField] TextMeshProUGUI speedRequirementsTMP;
+
     [SerializeField] string freeString;
 
 
@@ -89,6 +96,17 @@ public class AbilityPanelManager : MonoBehaviour
         magicDamageTMP.text = ability.allAbilityLevels[_levelIndex].magicDamage.ToString();
         rangeTMP.text = ability.allAbilityLevels[_levelIndex].range.ToString();
         descriptionTMP.text = ability.allAbilityLevels[_levelIndex].description;
+        
+        //requirements
+        if (healthRequirementsTMP != null)
+        {
+            healthRequirementsTMP.text = ability.unlockHealth.ToString();
+            staminaRequirementsTMP.text = ability.unlockStamina.ToString();
+            magicRequirementsTMP.text = ability.unlockMagic.ToString();
+            strengthRequirementsTMP.text = ability.unlockStrength.ToString();
+            intelligenceRequirementsTMP.text = ability.unlockIntelligence.ToString();
+            speedRequirementsTMP.text = ability.unlockSpeed.ToString();
+        }
 
         if (abilitySO.unlocked)
         {
@@ -201,11 +219,48 @@ public class AbilityPanelManager : MonoBehaviour
             errorMessageHandler.ReceivingOnErrorOccured(ErrorMessageHandler.ErrorType.NoClassPoints);
             return;
         }
-        //check if its an upgrade or new ability
-        if (save.spellbookCapacity <= save.abilityInventory.Count && !abilitySO.unlocked)
+            //old way - spellbook capactiy based on intelligence
+                // if (save.spellbookCapacity <= save.abilityInventory.Count && !abilitySO.unlocked)
+                // {
+                //     Debug.Log("not enough intelligence to get an ability");//error
+                //     errorMessageHandler.ReceivingOnErrorOccured(ErrorMessageHandler.ErrorType.NoIntelligence);
+                //     return;
+                // }
+        //New Method- check for unlock stat benchmarks
+        if (abilitySO.ability.unlockHealth > save.baseHealth)
         {
-            Debug.Log("not enough intelligence to get an ability");//error
-            errorMessageHandler.ReceivingOnErrorOccured(ErrorMessageHandler.ErrorType.NoIntelligence);
+            Debug.Log("not enough health"); //error
+            errorMessageHandler.ReceivingOnErrorOccured(ErrorMessageHandler.ErrorType.AbilityNoHealth);
+            return;
+        }
+        if (abilitySO.ability.unlockStamina > save.baseStamina)
+        {
+            Debug.Log("not enough Stamina"); //error
+            errorMessageHandler.ReceivingOnErrorOccured(ErrorMessageHandler.ErrorType.AbilityNoStamina);
+            return;
+        }
+        if (abilitySO.ability.unlockMagic > save.baseMagic)
+        {
+            Debug.Log("not enough Magic"); //error
+            errorMessageHandler.ReceivingOnErrorOccured(ErrorMessageHandler.ErrorType.AbilityNoMagic);
+            return;
+        }
+        if (abilitySO.ability.unlockStrength > save.baseStrength)
+        {
+            Debug.Log("not enough Strength"); //error
+            errorMessageHandler.ReceivingOnErrorOccured(ErrorMessageHandler.ErrorType.AbilityNoStrength);
+            return;
+        }
+        if (abilitySO.ability.unlockIntelligence > save.baseIntelligence)
+        {
+            Debug.Log("not enough Intelligence"); //error
+            errorMessageHandler.ReceivingOnErrorOccured(ErrorMessageHandler.ErrorType.AbilityNoIntelligence);
+            return;
+        }
+        if (abilitySO.ability.unlockSpeed > save.baseSpeed)
+        {
+            Debug.Log("not enough Speed"); //error
+            errorMessageHandler.ReceivingOnErrorOccured(ErrorMessageHandler.ErrorType.AbilityNoSpeed);
             return;
         }
         unlockButtonObject.SetActive(false);
