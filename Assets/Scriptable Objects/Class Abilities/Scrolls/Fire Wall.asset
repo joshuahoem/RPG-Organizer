@@ -13,10 +13,16 @@ MonoBehaviour:
   m_Name: Fire Wall
   m_EditorClassIdentifier: 
   abilityName: Fire Wall
-  abilitySpriteIcon: {fileID: 0}
+  abilitySpriteIcon: {fileID: 21300000, guid: e455d37861f611540a1c798452fb563f, type: 3}
   borderColor: {r: 0.9215687, g: 0.18431373, b: 0.023529414, a: 1}
   costType: 0
   unlockCost: 1
+  unlockHealth: 1
+  unlockStamina: 1
+  unlockMagic: 1
+  unlockStrength: 1
+  unlockIntelligence: 1
+  unlockSpeed: 1
   allAbilityLevels:
   - level: 1
     upgradeCost: 0

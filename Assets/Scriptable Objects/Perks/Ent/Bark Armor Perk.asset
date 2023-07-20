@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unlockCost: 5
   perkName: Bark Armor
-  perkImageIcon: {fileID: 0}
+  perkImageIcon: {fileID: 21300000, guid: 89f7375252df3e547858cffc08e59ff3, type: 3}
   borderColor: {r: 0, g: 0, b: 0, a: 0}
   bonusHealth: 5
   bonusStamina: 0
@@ -22,3 +22,10 @@ MonoBehaviour:
   bonusStrength: 0
   bonusIntelligence: 0
   bonusSpeed: 0
+  healthMultiplier: 0
+  staminaMultiplier: 0
+  magicMultiplier: 0
+  strengthMultiplier: 0
+  intelligenceMultiplier: 0
+  speedMultiplier: 0
+  description: 

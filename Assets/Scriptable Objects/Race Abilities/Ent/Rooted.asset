@@ -13,10 +13,16 @@ MonoBehaviour:
   m_Name: Rooted
   m_EditorClassIdentifier: 
   abilityName: Rooted
-  abilitySpriteIcon: {fileID: 0}
+  abilitySpriteIcon: {fileID: 21300000, guid: 3037fc9729d5e9241bbfb3da29cf1452, type: 3}
   borderColor: {r: 0, g: 0, b: 0, a: 0}
   costType: 3
   unlockCost: 5
+  unlockHealth: 1
+  unlockStamina: 1
+  unlockMagic: 1
+  unlockStrength: 1
+  unlockIntelligence: 1
+  unlockSpeed: 1
   allAbilityLevels:
   - level: 1
     upgradeCost: 0

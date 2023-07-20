@@ -13,10 +13,16 @@ MonoBehaviour:
   m_Name: Rage
   m_EditorClassIdentifier: 
   abilityName: Rage
-  abilitySpriteIcon: {fileID: 0}
-  borderColor: {r: 0.8584906, g: 0.1579299, b: 0.1579299, a: 0.9372549}
+  abilitySpriteIcon: {fileID: 21300000, guid: 72c77fbd47aaadd498fdd449ee744bd1, type: 3}
+  borderColor: {r: 0, g: 0, b: 0, a: 1}
   costType: 1
   unlockCost: 1
+  unlockHealth: 1
+  unlockStamina: 1
+  unlockMagic: 1
+  unlockStrength: 1
+  unlockIntelligence: 1
+  unlockSpeed: 1
   allAbilityLevels:
   - level: 1
     upgradeCost: 0
