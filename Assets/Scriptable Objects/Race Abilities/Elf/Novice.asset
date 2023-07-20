@@ -13,10 +13,16 @@ MonoBehaviour:
   m_Name: Novice
   m_EditorClassIdentifier: 
   abilityName: Novice
-  abilitySpriteIcon: {fileID: 0}
+  abilitySpriteIcon: {fileID: 21300000, guid: d0c3834b77d216045876ad23acb7f139, type: 3}
   borderColor: {r: 0, g: 0, b: 0, a: 0}
   costType: 3
   unlockCost: 1
+  unlockHealth: 1
+  unlockStamina: 1
+  unlockMagic: 1
+  unlockStrength: 1
+  unlockIntelligence: 1
+  unlockSpeed: 1
   allAbilityLevels:
   - level: 0
     upgradeCost: 0

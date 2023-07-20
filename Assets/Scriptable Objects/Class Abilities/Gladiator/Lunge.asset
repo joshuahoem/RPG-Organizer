@@ -13,10 +13,16 @@ MonoBehaviour:
   m_Name: Lunge
   m_EditorClassIdentifier: 
   abilityName: Lunge
-  abilitySpriteIcon: {fileID: 0}
+  abilitySpriteIcon: {fileID: 21300000, guid: 201385dc4e7024f4285740a6bbd34312, type: 3}
   borderColor: {r: 0.9803922, g: 0.59607846, b: 0.227451, a: 1}
   costType: 1
   unlockCost: 1
+  unlockHealth: 1
+  unlockStamina: 1
+  unlockMagic: 1
+  unlockStrength: 1
+  unlockIntelligence: 1
+  unlockSpeed: 1
   allAbilityLevels:
   - level: 1
     upgradeCost: 0

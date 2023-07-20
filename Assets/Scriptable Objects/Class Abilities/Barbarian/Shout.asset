@@ -13,10 +13,16 @@ MonoBehaviour:
   m_Name: Shout
   m_EditorClassIdentifier: 
   abilityName: Shout
-  abilitySpriteIcon: {fileID: 0}
-  borderColor: {r: 0.105882354, g: 0.23116945, b: 0.68235296, a: 0.84313726}
+  abilitySpriteIcon: {fileID: 21300000, guid: 73beda78766d64842bd8e9ad2dfac442, type: 3}
+  borderColor: {r: 0, g: 0, b: 0, a: 1}
   costType: 1
   unlockCost: 1
+  unlockHealth: 1
+  unlockStamina: 1
+  unlockMagic: 1
+  unlockStrength: 1
+  unlockIntelligence: 1
+  unlockSpeed: 1
   allAbilityLevels:
   - level: 1
     upgradeCost: 0

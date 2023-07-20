@@ -13,10 +13,16 @@ MonoBehaviour:
   m_Name: 2-Handed Proficiency
   m_EditorClassIdentifier: 
   abilityName: 2-Handed Proficiency
-  abilitySpriteIcon: {fileID: 0}
+  abilitySpriteIcon: {fileID: 21300000, guid: 12097e6d6bb702a4cbd0bcf8557968cf, type: 3}
   borderColor: {r: 0, g: 0, b: 0, a: 0}
   costType: 3
   unlockCost: 1
+  unlockHealth: 1
+  unlockStamina: 1
+  unlockMagic: 1
+  unlockStrength: 1
+  unlockIntelligence: 1
+  unlockSpeed: 1
   allAbilityLevels:
   - level: 1
     upgradeCost: 0

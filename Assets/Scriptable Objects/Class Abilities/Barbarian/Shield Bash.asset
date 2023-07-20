@@ -13,10 +13,16 @@ MonoBehaviour:
   m_Name: Shield Bash
   m_EditorClassIdentifier: 
   abilityName: Shield Bash
-  abilitySpriteIcon: {fileID: 0}
-  borderColor: {r: 0.44413415, g: 0.42497328, b: 0.4716981, a: 0.94509804}
+  abilitySpriteIcon: {fileID: 21300000, guid: 9a7ce9b9497960d45a73cf3b10f6fc45, type: 3}
+  borderColor: {r: 0, g: 0, b: 0, a: 1}
   costType: 1
   unlockCost: 1
+  unlockHealth: 1
+  unlockStamina: 1
+  unlockMagic: 1
+  unlockStrength: 1
+  unlockIntelligence: 1
+  unlockSpeed: 1
   allAbilityLevels:
   - level: 1
     upgradeCost: 0

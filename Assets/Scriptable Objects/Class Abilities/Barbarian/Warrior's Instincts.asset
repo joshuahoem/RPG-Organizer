@@ -13,10 +13,16 @@ MonoBehaviour:
   m_Name: Warrior's Instincts
   m_EditorClassIdentifier: 
   abilityName: Warrior's Instincts
-  abilitySpriteIcon: {fileID: 0}
-  borderColor: {r: 0.7647059, g: 0.49307853, b: 0.1372549, a: 0.8862745}
+  abilitySpriteIcon: {fileID: 21300000, guid: c2021dd08c21b6a48bd7789dd0092e09, type: 3}
+  borderColor: {r: 0, g: 0, b: 0, a: 1}
   costType: 1
   unlockCost: 1
+  unlockHealth: 1
+  unlockStamina: 1
+  unlockMagic: 1
+  unlockStrength: 1
+  unlockIntelligence: 1
+  unlockSpeed: 1
   allAbilityLevels:
   - level: 1
     upgradeCost: 0

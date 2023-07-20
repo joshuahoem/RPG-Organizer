@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unlockCost: 0
   perkName: Weak
-  perkImageIcon: {fileID: 21300000, guid: 7a07a5c41c6f77b42a60daed30bb2842, type: 3}
+  perkImageIcon: {fileID: 21300000, guid: 146664c3d4c6ae2428ad8724d845aeb7, type: 3}
   borderColor: {r: 0.754717, g: 0.3737985, b: 0.3737985, a: 1}
   bonusHealth: 0
   bonusStamina: 0
