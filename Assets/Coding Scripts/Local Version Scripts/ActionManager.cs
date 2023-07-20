@@ -6,12 +6,16 @@ using TMPro;
 public class ActionManager : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI goldToAddTMP;
+    [SerializeField] TextMeshProUGUI currentGoldTMP;
     [SerializeField] LootManager lootManager;
     int goldToAdd;
     private void Start() 
     {
         goldToAdd = 5;
         goldToAddTMP.text = goldToAdd.ToString();
+
+        SaveObject save = NewSaveSystem.FindCurrentSave();
+        currentGoldTMP.text = save.gold.ToString();
     }
 
     public void FullRest()
@@ -41,6 +45,20 @@ public class ActionManager : MonoBehaviour
     public void AddGold()
     {
         lootManager.AddGold(0, goldToAdd);
+        goldToAdd = 5;
+        goldToAddTMP.text = goldToAdd.ToString();
+
+        SaveObject save = NewSaveSystem.FindCurrentSave();
+        currentGoldTMP.text = save.gold.ToString();
+    }
+
+    public void SpendGold()
+    {
+        SaveObject save = NewSaveSystem.FindCurrentSave();
+        save.gold -= goldToAdd;
+        NewSaveSystem.SaveChanges(save);
+        currentGoldTMP.text = save.gold.ToString();
+
         goldToAdd = 5;
         goldToAddTMP.text = goldToAdd.ToString();
     }

@@ -46,14 +46,17 @@ public class AbilityManager : MonoBehaviour
         NewSaveSystem.SaveStateOfGame(saveState);
         saveState = NewSaveSystem.FindSaveState();
 
-        UpdateSpellBook();
+        //UpdateSpellBook();
 
     }
 
+    //Old Method
+    /*
     public void UpdateSpellBook()
     {
         spellbookCapacityTextTMP.text = save.abilityInventory.Count + "/" + save.spellbookCapacity;
     }
+    */
 
     public void RaceAbilityTreeOption()
     {
