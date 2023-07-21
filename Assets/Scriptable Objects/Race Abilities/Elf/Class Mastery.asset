@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   abilityName: Class Mastery
   abilitySpriteIcon: {fileID: 21300000, guid: 5bc4256812f4f4c4795ce9c235cb0993, type: 3}
-  borderColor: {r: 0, g: 0, b: 0, a: 0}
+  borderColor: {r: 0, g: 0, b: 0, a: 1}
   costType: 0
   unlockCost: 5
   unlockHealth: 1

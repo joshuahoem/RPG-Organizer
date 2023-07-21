@@ -15,7 +15,7 @@ MonoBehaviour:
   unlockCost: 5
   perkName: Barkman
   perkImageIcon: {fileID: 21300000, guid: 54c40915067519143815498ae2bc0a89, type: 3}
-  borderColor: {r: 0, g: 0, b: 0, a: 0}
+  borderColor: {r: 0, g: 0, b: 0, a: 1}
   bonusHealth: 0
   bonusStamina: 0
   bonusMagic: 0

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   abilityName: Crafting Proficiency
   abilitySpriteIcon: {fileID: 21300000, guid: f300152bedeef6344be22d8655893256, type: 3}
-  borderColor: {r: 0, g: 0, b: 0, a: 0}
+  borderColor: {r: 0, g: 0, b: 0, a: 1}
   costType: 3
   unlockCost: 1
   unlockHealth: 1

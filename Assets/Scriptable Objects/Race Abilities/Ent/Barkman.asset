@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   abilityName: Barkman
   abilitySpriteIcon: {fileID: 21300000, guid: b2b74fd033b33b84c99a4ebd609992ba, type: 3}
-  borderColor: {r: 0, g: 0, b: 0, a: 0}
+  borderColor: {r: 0, g: 0, b: 0, a: 1}
   costType: 3
   unlockCost: 5
   unlockHealth: 1

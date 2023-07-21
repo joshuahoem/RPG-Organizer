@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   abilityName: Ent
   abilitySpriteIcon: {fileID: 21300000, guid: 73f162a901c77e749b44f883bcd7f7e0, type: 3}
-  borderColor: {r: 0, g: 0, b: 0, a: 0}
+  borderColor: {r: 0, g: 0, b: 0, a: 1}
   costType: 3
   unlockCost: 5
   unlockHealth: 1
