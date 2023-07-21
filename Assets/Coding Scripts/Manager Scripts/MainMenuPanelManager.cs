@@ -20,7 +20,6 @@ public class MainMenuPanelManager : MonoBehaviour
 
         if (hasStarted == 1)
         {
-            DeactivateAllPanels();
             SwitchToMainPanel();
         }
         else
@@ -32,22 +31,30 @@ public class MainMenuPanelManager : MonoBehaviour
 
     public void FirstSwitchToMainPanel()
     {
-        DeactivateAllPanels();
-        mainMenuPanel.SetActive(true);
-        touchToStartStringObject.SetActive(false);
+        SwitchToMainPanel();
+        if (touchToStartStringObject != null)
+        {
+            touchToStartStringObject.SetActive(false);
+        }
         PlayerPrefs.SetInt("hasStarted", 1);
     }
 
     public void SwitchToMainPanel()
     {
         DeactivateAllPanels();
-        mainMenuPanel.SetActive(true);
+        if (mainMenuPanel != null)
+        {
+            mainMenuPanel.SetActive(true);
+        }
     }
 
     public void SwitchToExtrasPanel()
     {
         DeactivateAllPanels();
-        extraPanel.SetActive(true);
+        if (extraPanel != null)
+        {
+            extraPanel.SetActive(true);
+        }
     }
 
     private void DeactivateAllPanels()
@@ -63,5 +70,10 @@ public class MainMenuPanelManager : MonoBehaviour
         {
             PlayerPrefs.SetInt("hasStarted", 0);
         }
+    }
+
+    public void ResetPlayerPrefs()
+    {
+        PlayerPrefs.SetInt("hasStarted", 0);
     }
 }

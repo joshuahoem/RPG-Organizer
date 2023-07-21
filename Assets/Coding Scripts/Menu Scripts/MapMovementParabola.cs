@@ -10,7 +10,7 @@ public class MapMovementParabola : MonoBehaviour
     [SerializeField] [Range(0.01f,1f)] float minSpeed; //cant be bigger than max
     [SerializeField] [Range(1.01f,10f)] float maxSpeed; //cant be smaller than min
     [SerializeField] int framesNeededToWait = 100;
-    int framesWaited;
+    float framesWaited;
     [SerializeField] float howCloseBeforeNewDestination;
 
 
@@ -30,7 +30,7 @@ public class MapMovementParabola : MonoBehaviour
 
         if (Vector2.Distance(transform.position, destinationPos) < howCloseBeforeNewDestination)
         {
-            framesWaited += 1;
+            framesWaited += Time.deltaTime;
             if (framesWaited>= framesNeededToWait)
             {
                 GetNewDestination();
