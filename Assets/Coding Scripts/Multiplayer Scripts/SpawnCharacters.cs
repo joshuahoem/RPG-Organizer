@@ -96,7 +96,7 @@ public class SpawnCharacters : MonoBehaviourPunCallbacks
         //     if (player.Value == PhotonNetwork.LocalPlayer)
         //     {
                     
-        //         // string SAVE_FOLDER = Application.dataPath + "/Saves/";
+        //         // string SAVE_FOLDER = Application.persistentDataPath + "/Saves/";
 
         //         // if (File.Exists(SAVE_FOLDER + "/character_manager.txt"))
         //         // {
@@ -155,7 +155,7 @@ public class SpawnCharacters : MonoBehaviourPunCallbacks
 
     private void CreateOwnCharacter(GameObject newCharacterInstance)
     {
-        string SAVE_FOLDER = Application.dataPath + "/Saves/";
+        string SAVE_FOLDER = Application.persistentDataPath + "/Saves/";
 
         if (File.Exists(SAVE_FOLDER + "/character_manager.txt"))
         {

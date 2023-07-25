@@ -72,7 +72,7 @@ public class GameObjectGameTime : MonoBehaviour
 
     // private void CreateOwnCharacter()
     // {
-    //     string SAVE_FOLDER = Application.dataPath + "/Saves/";
+    //     string SAVE_FOLDER = Application.persistentDataPath + "/Saves/";
 
     //     if (File.Exists(SAVE_FOLDER + "/character_manager.txt"))
     //     {

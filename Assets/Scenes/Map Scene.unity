@@ -1493,7 +1493,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minZoomSize: 0.5
   maxZoomSize: 8
-  zoomScalePercentage: 0.1
+  zoomScalePercentage: 0.3
   imageToZoom: {fileID: 720545797}
   contentSize: {fileID: 1343311007}
 --- !u!4 &1820143701

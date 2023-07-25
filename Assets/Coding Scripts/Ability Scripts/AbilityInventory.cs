@@ -86,7 +86,7 @@ public class AbilityInventory : MonoBehaviour
         {
             //Has it
 
-            AbilitySaveObject _abilitySaveObject = new AbilitySaveObject(e._ability.ability, AbilityType.classAblity, 1, 0, true);
+            AbilitySaveObject _abilitySaveObject = new AbilitySaveObject(e._ability.ability.abilityName, e._ability.ability, AbilityType.classAblity, 1, 0, true);
             foreach (AbilitySaveObject item in save.abilityInventory)
             {
                 if (item.ability == _abilitySaveObject.ability)
@@ -172,12 +172,12 @@ public class AbilityInventory : MonoBehaviour
         if (state.raceAbilityBool)
         {
             // Debug.Log("race ability");
-            _abilityToAdd = new AbilitySaveObject(_ability, AbilityType.raceAbility, 1, 0, true);
+            _abilityToAdd = new AbilitySaveObject(_ability.abilityName, _ability, AbilityType.raceAbility, 1, 0, true);
         }
         else if (state.classAbilityBool)
         {
             // Debug.Log("class ability");
-            _abilityToAdd = new AbilitySaveObject(_ability, AbilityType.classAblity, 1, 0, true);
+            _abilityToAdd = new AbilitySaveObject(_ability.abilityName, _ability, AbilityType.classAblity, 1, 0, true);
         }
         else
         {
@@ -198,7 +198,7 @@ public class AbilityInventory : MonoBehaviour
 
     private SaveObject FindCurrentSave()
     {
-        string SAVE_FOLDER = Application.dataPath + "/Saves/";
+        string SAVE_FOLDER = Application.persistentDataPath + "/Saves/";
 
         if (File.Exists(SAVE_FOLDER + "/character_manager.txt"))
         {
@@ -231,7 +231,7 @@ public class AbilityInventory : MonoBehaviour
     private void SaveChanges()
     {
         string newCharacterString = JsonUtility.ToJson(save);
-        File.WriteAllText(Application.dataPath + "/Saves/" + 
+        File.WriteAllText(Application.persistentDataPath + "/Saves/" + 
             "/save_" + charString + ".txt", newCharacterString);
     }
 

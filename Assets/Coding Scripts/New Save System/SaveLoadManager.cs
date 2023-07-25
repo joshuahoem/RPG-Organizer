@@ -48,7 +48,7 @@ public class SaveLoadManager : MonoBehaviour
 
     private void Start() 
     {
-        SAVE_FOLDER = Application.dataPath + "/Saves/";
+        SAVE_FOLDER = Application.persistentDataPath + "/Saves/";
         // charString = singletonManager.selectedCharacter;
     }
 
@@ -311,7 +311,7 @@ public class SaveLoadManager : MonoBehaviour
         save.classAbilityPoints = int.Parse(_playerData["classAbilityPoints"].ToString());
 
         string newCharacterString = JsonUtility.ToJson(save);
-        File.WriteAllText(Application.dataPath + "/Saves/" + 
+        File.WriteAllText(Application.persistentDataPath + "/Saves/" + 
             "/save_" + indexString + ".txt", newCharacterString);
 
         //TODO: inventory, abilities

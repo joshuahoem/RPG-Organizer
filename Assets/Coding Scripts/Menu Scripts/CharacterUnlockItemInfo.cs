@@ -4,12 +4,12 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System;
+using System.IO;
 
 public class CharacterUnlockItemInfo : MonoBehaviour
 {
     [SerializeField] public Race raceToUnlock;
     [SerializeField] public Class classToUnlock;
-
     
     private UnlockObject newUnlock;
     bool thisItemIsUnlocked = false;
@@ -72,8 +72,7 @@ public class CharacterUnlockItemInfo : MonoBehaviour
         {
             newUnlock = new UnlockObject(null, classToUnlock);
         }
-
-        if (newUnlock == null)
+        else //(newUnlock == null)
         {
             Debug.Log("error - no new unlock");
             return;
@@ -90,7 +89,7 @@ public class CharacterUnlockItemInfo : MonoBehaviour
 
         if (!thisItemIsUnlocked)
         {
-            Debug.Log("new one added");
+            Debug.Log("new one added " + newUnlock.unlockedClass + " " + newUnlock.unlockedRace);
             playerInfo.unlocks.Add(newUnlock);
             NewSaveSystem.SavePlayerInfo(playerInfo);
 

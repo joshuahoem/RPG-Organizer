@@ -123,4 +123,9 @@ public class ScreenManager : MonoBehaviour
     {
         Application.Quit();
     }
+
+    private void OnApplicationQuit() 
+    {
+        PlayerPrefs.SetInt("hasStarted", 0);
+    }
 }

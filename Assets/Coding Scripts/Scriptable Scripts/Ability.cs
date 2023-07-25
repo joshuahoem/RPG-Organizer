@@ -53,15 +53,17 @@ public enum AbilityType
 
 [System.Serializable] public class AbilitySaveObject
 {
+    public string stringID;
     public Ability ability;
     public AbilityType abilityType;
     public int currentLevel;
     public int viewingLevel;
     public bool unlocked;
     
-    public AbilitySaveObject(Ability _ability, AbilityType _abilityType, int _level,
+    public AbilitySaveObject(string _stringID, Ability _ability, AbilityType _abilityType, int _level,
         int _viewingLevel, bool _unlocked)
     {
+        stringID = _stringID;
         ability = _ability;
         abilityType = _abilityType;
         currentLevel = _level;

@@ -16,6 +16,9 @@ public class AbilityCardInstance : MonoBehaviour
     {
         abilitySO = _abilitySO;
 
+        Debug.Log(_abilitySO);
+        Debug.Log(_abilitySO.ability);
+
         abilityImage.sprite = abilitySO.ability.abilitySpriteIcon;
         borderImage.color = abilitySO.ability.borderColor;
         abilityNameTMP.text = abilitySO.ability.abilityName;

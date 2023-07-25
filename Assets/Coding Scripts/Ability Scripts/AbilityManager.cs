@@ -94,6 +94,10 @@ public class AbilityManager : MonoBehaviour
 
         foreach (AbilitySaveObject abilitySO in save.abilityInventory)
         {
+            if (abilitySO.ability == null)
+            {
+                Debug.Log(abilitySO.stringID);
+            }
             switch (abilitySO.abilityType)
             {
                 case AbilityType.raceAbility:

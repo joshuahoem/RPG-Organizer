@@ -25,7 +25,7 @@ public class DeleteManager : MonoBehaviour
         }
         deleteManager.deleteObjects.Clear();
 
-        string SAVE_FOLDER = Application.dataPath + "/Saves/";
+        string SAVE_FOLDER = Application.persistentDataPath + "/Saves/";
         DirectoryInfo directoryInfo = new DirectoryInfo(SAVE_FOLDER);
         FileInfo[] saveFiles = directoryInfo.GetFiles("*.txt");
 
@@ -44,7 +44,7 @@ public class DeleteManager : MonoBehaviour
     public void DeleteCharacter()
     {
         string selectedCharacter = EventSystem.current.currentSelectedGameObject.name;
-        string SAVE_FOLDER = Application.dataPath + "/Saves/";
+        string SAVE_FOLDER = Application.persistentDataPath + "/Saves/";
 
         // var path = AssetDatabase.GUIDToAssetPath(SAVE_FOLDER + "/save_" + selectedCharacter + ".txt");
 

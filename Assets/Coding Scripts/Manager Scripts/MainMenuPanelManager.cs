@@ -12,6 +12,7 @@ public class MainMenuPanelManager : MonoBehaviour
     private void Start() 
     {
         // Debug.Log(PlayerPrefs.GetInt("hasStarted"));
+        NewSaveSystem.Init();
 
         if (PlayerPrefs.HasKey("hasStarted"))
         {
@@ -25,7 +26,10 @@ public class MainMenuPanelManager : MonoBehaviour
         else
         {
             DeactivateAllPanels();
-            touchToStartStringObject.SetActive(true);
+            if (touchToStartStringObject != null)
+            {
+                touchToStartStringObject.SetActive(true);
+            }
         }        
     }
 
@@ -37,6 +41,10 @@ public class MainMenuPanelManager : MonoBehaviour
             touchToStartStringObject.SetActive(false);
         }
         PlayerPrefs.SetInt("hasStarted", 1);
+
+        // PlayerInfo playerInfo = NewSaveSystem.FindPlayerInfoFile();
+        // playerInfo.unlocks.Clear();
+        // NewSaveSystem.SavePlayerInfo(playerInfo);
     }
 
     public void SwitchToMainPanel()
@@ -75,5 +83,15 @@ public class MainMenuPanelManager : MonoBehaviour
     public void ResetPlayerPrefs()
     {
         PlayerPrefs.SetInt("hasStarted", 0);
+
+        PlayerInfo info = NewSaveSystem.FindPlayerInfoFile();
+        info.unlocks.Clear();
+        NewSaveSystem.SavePlayerInfo(info);
+
+        SaveObject save = NewSaveSystem.FindCurrentSave();
+        save.abilityInventory.Clear();
+        save.inventory.Clear();
+        save.perks.Clear();
+        NewSaveSystem.SaveChanges(save);
     }
 }

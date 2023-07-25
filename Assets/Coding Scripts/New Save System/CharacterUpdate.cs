@@ -19,12 +19,11 @@ public class CharacterUpdate : MonoBehaviour
 
     private void Awake() 
     {
-        SAVE_FOLDER = Application.dataPath + "/Saves/";     
+        SAVE_FOLDER = Application.persistentDataPath + "/Saves/";     
     }
 
     public void LoadCharacter(int characterFileNumber)
     {
-        //Debug.Log("Loading");
         if (File.Exists(SAVE_FOLDER + "/save_" + characterFileNumber + ".txt"))
         {
             //Debug.Log("Foud file: " + characterFileNumber);
@@ -38,6 +37,28 @@ public class CharacterUpdate : MonoBehaviour
             if (saveObject.raceObject != null)
             {
                 characterPicture.sprite = saveObject.raceObject.picture;
+            }
+            else
+            {
+                foreach (Race _race in FindObjectOfType<SaveLoadManager>().allRaces)
+                {
+                    if (saveObject.race == _race.name)
+                    {
+                        characterPicture.sprite = _race.picture;
+                        saveObject.raceObject = _race;
+                    }
+                }
+
+                foreach (Class _class in FindObjectOfType<SaveLoadManager>().allClasses)
+                {
+                    if (saveObject.characterClass == _class.name)
+                    {
+                        saveObject.classObject = _class;
+                        break;
+                    }
+                }
+
+                NewSaveSystem.SaveChanges(saveObject);
             }
 
             if (saveObject.hasLevelUp)

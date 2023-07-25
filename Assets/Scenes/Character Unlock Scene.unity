@@ -310,6 +310,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2216177683527153204, guid: ce55f491e6bda184ba77f6b7637b2128, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 7376443}
+    - target: {fileID: 2216177683527153204, guid: ce55f491e6bda184ba77f6b7637b2128, type: 3}
       propertyPath: raceToUnlock
       value: 
       objectReference: {fileID: 11400000, guid: 4284feb8ffd17d94b8b8c7afaf2ff57b, type: 2}
@@ -459,6 +463,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 738440997}
     m_Modifications:
+    - target: {fileID: 2216177683527153204, guid: ce55f491e6bda184ba77f6b7637b2128, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 7376443}
     - target: {fileID: 2216177683527153206, guid: ce55f491e6bda184ba77f6b7637b2128, type: 3}
       propertyPath: m_Name
       value: Character Unlock Display (19)
@@ -571,6 +579,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 738440997}
     m_Modifications:
+    - target: {fileID: 2216177683527153204, guid: ce55f491e6bda184ba77f6b7637b2128, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 7376443}
     - target: {fileID: 2216177683527153206, guid: ce55f491e6bda184ba77f6b7637b2128, type: 3}
       propertyPath: m_Name
       value: Character Unlock Display (23)
@@ -673,6 +685,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 738440997}
     m_Modifications:
+    - target: {fileID: 2216177683527153204, guid: ce55f491e6bda184ba77f6b7637b2128, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 7376443}
     - target: {fileID: 2216177683527153206, guid: ce55f491e6bda184ba77f6b7637b2128, type: 3}
       propertyPath: m_Name
       value: Character Unlock Display (16)
@@ -800,6 +816,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 738440997}
     m_Modifications:
+    - target: {fileID: 2216177683527153204, guid: ce55f491e6bda184ba77f6b7637b2128, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 7376443}
     - target: {fileID: 2216177683527153206, guid: ce55f491e6bda184ba77f6b7637b2128, type: 3}
       propertyPath: m_Name
       value: Character Unlock Display (20)
@@ -902,6 +922,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 738440997}
     m_Modifications:
+    - target: {fileID: 2216177683527153204, guid: ce55f491e6bda184ba77f6b7637b2128, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 7376443}
     - target: {fileID: 2216177683527153204, guid: ce55f491e6bda184ba77f6b7637b2128, type: 3}
       propertyPath: raceToUnlock
       value: 
@@ -1033,6 +1057,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 738440997}
     m_Modifications:
+    - target: {fileID: 2216177683527153204, guid: ce55f491e6bda184ba77f6b7637b2128, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 7376443}
     - target: {fileID: 2216177683527153206, guid: ce55f491e6bda184ba77f6b7637b2128, type: 3}
       propertyPath: m_Name
       value: Character Unlock Display (11)
@@ -1213,6 +1241,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 684021217}
     m_Modifications:
+    - target: {fileID: 2216177683527153204, guid: ce55f491e6bda184ba77f6b7637b2128, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 7376443}
     - target: {fileID: 2216177683527153206, guid: ce55f491e6bda184ba77f6b7637b2128, type: 3}
       propertyPath: m_Name
       value: Character Unlock Display (21)
@@ -1325,6 +1357,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 738440997}
     m_Modifications:
+    - target: {fileID: 2216177683527153204, guid: ce55f491e6bda184ba77f6b7637b2128, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 7376443}
     - target: {fileID: 2216177683527153206, guid: ce55f491e6bda184ba77f6b7637b2128, type: 3}
       propertyPath: m_Name
       value: Character Unlock Display (14)
@@ -1427,6 +1463,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 684021217}
     m_Modifications:
+    - target: {fileID: 2216177683527153204, guid: ce55f491e6bda184ba77f6b7637b2128, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 7376443}
     - target: {fileID: 2216177683527153206, guid: ce55f491e6bda184ba77f6b7637b2128, type: 3}
       propertyPath: m_Name
       value: Character Unlock Display (22)
@@ -1539,6 +1579,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 684021217}
     m_Modifications:
+    - target: {fileID: 2216177683527153204, guid: ce55f491e6bda184ba77f6b7637b2128, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 7376443}
     - target: {fileID: 2216177683527153206, guid: ce55f491e6bda184ba77f6b7637b2128, type: 3}
       propertyPath: m_Name
       value: Character Unlock Display (23)
@@ -1806,6 +1850,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 738440997}
     m_Modifications:
+    - target: {fileID: 2216177683527153204, guid: ce55f491e6bda184ba77f6b7637b2128, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 7376443}
     - target: {fileID: 2216177683527153206, guid: ce55f491e6bda184ba77f6b7637b2128, type: 3}
       propertyPath: m_Name
       value: Character Unlock Display (17)
@@ -1923,6 +1971,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 738440997}
     m_Modifications:
+    - target: {fileID: 2216177683527153204, guid: ce55f491e6bda184ba77f6b7637b2128, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 7376443}
     - target: {fileID: 2216177683527153206, guid: ce55f491e6bda184ba77f6b7637b2128, type: 3}
       propertyPath: m_Name
       value: Character Unlock Display (12)
@@ -2295,6 +2347,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2216177683527153204, guid: ce55f491e6bda184ba77f6b7637b2128, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 7376443}
+    - target: {fileID: 2216177683527153204, guid: ce55f491e6bda184ba77f6b7637b2128, type: 3}
       propertyPath: bgColor.b
       value: 0.57254905
       objectReference: {fileID: 0}
@@ -2561,6 +2617,10 @@ PrefabInstance:
       propertyPath: m_Interactable
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2216177683527153204, guid: ce55f491e6bda184ba77f6b7637b2128, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 7376443}
     - target: {fileID: 2216177683527153204, guid: ce55f491e6bda184ba77f6b7637b2128, type: 3}
       propertyPath: bgColor.b
       value: 0.3803922
@@ -2842,6 +2902,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 684021217}
     m_Modifications:
+    - target: {fileID: 2216177683527153204, guid: ce55f491e6bda184ba77f6b7637b2128, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 7376443}
     - target: {fileID: 2216177683527153206, guid: ce55f491e6bda184ba77f6b7637b2128, type: 3}
       propertyPath: m_Name
       value: Character Unlock Display (10)
@@ -2939,6 +3003,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 684021217}
     m_Modifications:
+    - target: {fileID: 2216177683527153204, guid: ce55f491e6bda184ba77f6b7637b2128, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 7376443}
     - target: {fileID: 2216177683527153204, guid: ce55f491e6bda184ba77f6b7637b2128, type: 3}
       propertyPath: bgColor.b
       value: 0.23137257
@@ -3060,6 +3128,10 @@ PrefabInstance:
       propertyPath: m_Interactable
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2216177683527153204, guid: ce55f491e6bda184ba77f6b7637b2128, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 7376443}
     - target: {fileID: 2216177683527153204, guid: ce55f491e6bda184ba77f6b7637b2128, type: 3}
       propertyPath: bgColor.b
       value: 0.22352943
@@ -3200,6 +3272,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 738440997}
     m_Modifications:
     - target: {fileID: 2216177683527153204, guid: ce55f491e6bda184ba77f6b7637b2128, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 7376443}
+    - target: {fileID: 2216177683527153204, guid: ce55f491e6bda184ba77f6b7637b2128, type: 3}
       propertyPath: bgColor.b
       value: 0.6627451
       objectReference: {fileID: 0}
@@ -3327,6 +3403,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 738440997}
     m_Modifications:
+    - target: {fileID: 2216177683527153204, guid: ce55f491e6bda184ba77f6b7637b2128, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 7376443}
     - target: {fileID: 2216177683527153204, guid: ce55f491e6bda184ba77f6b7637b2128, type: 3}
       propertyPath: raceToUnlock
       value: 
@@ -3523,6 +3603,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 684021217}
     m_Modifications:
+    - target: {fileID: 2216177683527153204, guid: ce55f491e6bda184ba77f6b7637b2128, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 7376443}
     - target: {fileID: 2216177683527153206, guid: ce55f491e6bda184ba77f6b7637b2128, type: 3}
       propertyPath: m_Name
       value: Character Unlock Display (17)
@@ -3620,6 +3704,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 738440997}
     m_Modifications:
+    - target: {fileID: 2216177683527153204, guid: ce55f491e6bda184ba77f6b7637b2128, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 7376443}
     - target: {fileID: 2216177683527153206, guid: ce55f491e6bda184ba77f6b7637b2128, type: 3}
       propertyPath: m_Name
       value: Character Unlock Display (18)
@@ -3722,6 +3810,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 684021217}
     m_Modifications:
+    - target: {fileID: 2216177683527153204, guid: ce55f491e6bda184ba77f6b7637b2128, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 7376443}
     - target: {fileID: 2216177683527153206, guid: ce55f491e6bda184ba77f6b7637b2128, type: 3}
       propertyPath: m_Name
       value: Character Unlock Display (13)
@@ -3819,6 +3911,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 738440997}
     m_Modifications:
+    - target: {fileID: 2216177683527153204, guid: ce55f491e6bda184ba77f6b7637b2128, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 7376443}
     - target: {fileID: 2216177683527153206, guid: ce55f491e6bda184ba77f6b7637b2128, type: 3}
       propertyPath: m_Name
       value: Character Unlock Display (15)
@@ -3926,6 +4022,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 684021217}
     m_Modifications:
+    - target: {fileID: 2216177683527153204, guid: ce55f491e6bda184ba77f6b7637b2128, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 7376443}
     - target: {fileID: 2216177683527153206, guid: ce55f491e6bda184ba77f6b7637b2128, type: 3}
       propertyPath: m_Name
       value: Character Unlock Display (19)
@@ -4099,7 +4199,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1703946126}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.56531
+  m_Size: 0.5356751
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -4149,6 +4249,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 684021217}
     m_Modifications:
+    - target: {fileID: 2216177683527153204, guid: ce55f491e6bda184ba77f6b7637b2128, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 7376443}
     - target: {fileID: 2216177683527153204, guid: ce55f491e6bda184ba77f6b7637b2128, type: 3}
       propertyPath: raceToUnlock
       value: 
@@ -4259,6 +4363,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 738440997}
     m_Modifications:
+    - target: {fileID: 2216177683527153204, guid: ce55f491e6bda184ba77f6b7637b2128, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 7376443}
     - target: {fileID: 2216177683527153204, guid: ce55f491e6bda184ba77f6b7637b2128, type: 3}
       propertyPath: raceToUnlock
       value: 
@@ -4374,6 +4482,10 @@ PrefabInstance:
       propertyPath: m_Interactable
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2216177683527153204, guid: ce55f491e6bda184ba77f6b7637b2128, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 7376443}
     - target: {fileID: 2216177683527153204, guid: ce55f491e6bda184ba77f6b7637b2128, type: 3}
       propertyPath: raceToUnlock
       value: 
@@ -4496,6 +4608,10 @@ PrefabInstance:
       propertyPath: m_Interactable
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2216177683527153204, guid: ce55f491e6bda184ba77f6b7637b2128, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 7376443}
     - target: {fileID: 2216177683527153204, guid: ce55f491e6bda184ba77f6b7637b2128, type: 3}
       propertyPath: bgColor.b
       value: 0.50980395
@@ -4631,6 +4747,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 684021217}
     m_Modifications:
+    - target: {fileID: 2216177683527153204, guid: ce55f491e6bda184ba77f6b7637b2128, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 7376443}
     - target: {fileID: 2216177683527153204, guid: ce55f491e6bda184ba77f6b7637b2128, type: 3}
       propertyPath: bgColor.b
       value: 0.6627451
@@ -4789,6 +4909,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 684021217}
     m_Modifications:
+    - target: {fileID: 2216177683527153204, guid: ce55f491e6bda184ba77f6b7637b2128, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 7376443}
     - target: {fileID: 2216177683527153206, guid: ce55f491e6bda184ba77f6b7637b2128, type: 3}
       propertyPath: m_Name
       value: Character Unlock Display (11)
@@ -5060,6 +5184,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 738440997}
     m_Modifications:
+    - target: {fileID: 2216177683527153204, guid: ce55f491e6bda184ba77f6b7637b2128, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 7376443}
     - target: {fileID: 2216177683527153206, guid: ce55f491e6bda184ba77f6b7637b2128, type: 3}
       propertyPath: m_Name
       value: Character Unlock Display (8)
@@ -5162,6 +5290,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 684021217}
     m_Modifications:
+    - target: {fileID: 2216177683527153204, guid: ce55f491e6bda184ba77f6b7637b2128, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 7376443}
     - target: {fileID: 2216177683527153206, guid: ce55f491e6bda184ba77f6b7637b2128, type: 3}
       propertyPath: m_Name
       value: Character Unlock Display (18)
@@ -5259,6 +5391,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 684021217}
     m_Modifications:
+    - target: {fileID: 2216177683527153204, guid: ce55f491e6bda184ba77f6b7637b2128, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 7376443}
     - target: {fileID: 2216177683527153204, guid: ce55f491e6bda184ba77f6b7637b2128, type: 3}
       propertyPath: raceToUnlock
       value: 
@@ -5369,6 +5505,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 738440997}
     m_Modifications:
+    - target: {fileID: 2216177683527153204, guid: ce55f491e6bda184ba77f6b7637b2128, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 7376443}
     - target: {fileID: 2216177683527153206, guid: ce55f491e6bda184ba77f6b7637b2128, type: 3}
       propertyPath: m_Name
       value: Character Unlock Display (13)
@@ -5471,6 +5611,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 684021217}
     m_Modifications:
+    - target: {fileID: 2216177683527153204, guid: ce55f491e6bda184ba77f6b7637b2128, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 7376443}
     - target: {fileID: 2216177683527153206, guid: ce55f491e6bda184ba77f6b7637b2128, type: 3}
       propertyPath: m_Name
       value: Character Unlock Display (12)
@@ -5676,6 +5820,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 738440997}
     m_Modifications:
+    - target: {fileID: 2216177683527153204, guid: ce55f491e6bda184ba77f6b7637b2128, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 7376443}
     - target: {fileID: 2216177683527153206, guid: ce55f491e6bda184ba77f6b7637b2128, type: 3}
       propertyPath: m_Name
       value: Character Unlock Display (10)
@@ -5778,6 +5926,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 684021217}
     m_Modifications:
+    - target: {fileID: 2216177683527153204, guid: ce55f491e6bda184ba77f6b7637b2128, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 7376443}
     - target: {fileID: 2216177683527153204, guid: ce55f491e6bda184ba77f6b7637b2128, type: 3}
       propertyPath: bgColor.b
       value: 0.7411765
@@ -5901,6 +6053,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 684021217}
     m_Modifications:
+    - target: {fileID: 2216177683527153204, guid: ce55f491e6bda184ba77f6b7637b2128, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 7376443}
     - target: {fileID: 2216177683527153206, guid: ce55f491e6bda184ba77f6b7637b2128, type: 3}
       propertyPath: m_Name
       value: Character Unlock Display (16)
@@ -6164,6 +6320,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 684021217}
     m_Modifications:
+    - target: {fileID: 2216177683527153204, guid: ce55f491e6bda184ba77f6b7637b2128, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 7376443}
     - target: {fileID: 2216177683527153206, guid: ce55f491e6bda184ba77f6b7637b2128, type: 3}
       propertyPath: m_Name
       value: Character Unlock Display (15)
@@ -6416,6 +6576,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 738440997}
     m_Modifications:
+    - target: {fileID: 2216177683527153204, guid: ce55f491e6bda184ba77f6b7637b2128, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 7376443}
     - target: {fileID: 2216177683527153206, guid: ce55f491e6bda184ba77f6b7637b2128, type: 3}
       propertyPath: m_Name
       value: Character Unlock Display (21)
@@ -6532,6 +6696,10 @@ PrefabInstance:
       propertyPath: m_Interactable
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2216177683527153204, guid: ce55f491e6bda184ba77f6b7637b2128, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 7376443}
     - target: {fileID: 2216177683527153204, guid: ce55f491e6bda184ba77f6b7637b2128, type: 3}
       propertyPath: bgColor.b
       value: 0.6627451
@@ -6726,6 +6894,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 738440997}
     m_Modifications:
+    - target: {fileID: 2216177683527153204, guid: ce55f491e6bda184ba77f6b7637b2128, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 7376443}
     - target: {fileID: 2216177683527153206, guid: ce55f491e6bda184ba77f6b7637b2128, type: 3}
       propertyPath: m_Name
       value: Character Unlock Display (9)
@@ -6828,6 +7000,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 738440997}
     m_Modifications:
+    - target: {fileID: 2216177683527153204, guid: ce55f491e6bda184ba77f6b7637b2128, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 7376443}
     - target: {fileID: 2216177683527153206, guid: ce55f491e6bda184ba77f6b7637b2128, type: 3}
       propertyPath: m_Name
       value: Character Unlock Display (22)
@@ -6934,6 +7110,10 @@ PrefabInstance:
       propertyPath: m_Interactable
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2216177683527153204, guid: ce55f491e6bda184ba77f6b7637b2128, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 7376443}
     - target: {fileID: 2216177683527153204, guid: ce55f491e6bda184ba77f6b7637b2128, type: 3}
       propertyPath: raceToUnlock
       value: 
@@ -7057,6 +7237,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 684021217}
     m_Modifications:
+    - target: {fileID: 2216177683527153204, guid: ce55f491e6bda184ba77f6b7637b2128, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 7376443}
     - target: {fileID: 2216177683527153206, guid: ce55f491e6bda184ba77f6b7637b2128, type: 3}
       propertyPath: m_Name
       value: Character Unlock Display (20)
@@ -7154,6 +7338,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 684021217}
     m_Modifications:
+    - target: {fileID: 2216177683527153204, guid: ce55f491e6bda184ba77f6b7637b2128, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 7376443}
     - target: {fileID: 2216177683527153206, guid: ce55f491e6bda184ba77f6b7637b2128, type: 3}
       propertyPath: m_Name
       value: Character Unlock Display (14)

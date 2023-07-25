@@ -49,28 +49,45 @@ public class ZoomManager : MonoBehaviour
 
             float difference = currentMagnitude - prevMagnitude;
 
-            zoom(difference * 0.01f);
+            zoom(difference * zoomScalePercentage * 0.01f);
+
+            Debug.Log("Josh difference " + difference);
 
         }
     }
 
     private void zoom(float increment)
     {
-        Camera.main.orthographicSize = Mathf.Clamp(Camera.main.orthographicSize - increment, minZoomSize, maxZoomSize);
+        if (imageToZoom.localScale.x + increment < minZoomSize || 
+            imageToZoom.localScale.x + increment > maxZoomSize) 
+            {
+                Debug.Log("Josh said its too big or too small " + (imageToZoom.localScale.x + increment));
+                return;
+            }
+
+        float newX = imageToZoom.localScale.x + increment;
+        float newY = imageToZoom.localScale.y + increment;
+        imageToZoom.localScale = new Vector2 (newX, newY);
+
+        float newWidth = imageToZoom.GetComponent<RectTransform>().sizeDelta.x * newX;
+        float newHeight = imageToZoom.GetComponent<RectTransform>().sizeDelta.y * newY;
+        contentSize.sizeDelta = new Vector2(newWidth, newHeight);
+        // Camera.main.orthographicSize = Mathf.Clamp(Camera.main.orthographicSize - increment, minZoomSize, maxZoomSize);
+
+        Debug.Log("Josh camera " + Camera.main.orthographicSize);
     }
 
     private void ChangePivotPosition()
     {
         float xPos = (contentSize.position.x) / contentSize.sizeDelta.x;
         float yPos = (contentSize.position.y) / contentSize.sizeDelta.y;
-        Debug.Log(xPos + "," + yPos);
+        // Debug.Log(xPos + "," + yPos);
         imageToZoom.pivot = new Vector2(xPos, yPos);
     }
 
     public void ZoomIn()
     {
         float zoomScaleAmount = zoomScalePercentage * imageToZoom.localScale.x;
-
 
         if (imageToZoom.localScale.x + zoomScaleAmount > maxZoomSize) {return;}
 
@@ -87,7 +104,6 @@ public class ZoomManager : MonoBehaviour
     public void ZoomOut()
     {
         float zoomScaleAmount = zoomScalePercentage * imageToZoom.localScale.x;
-
 
         if (imageToZoom.localScale.x - zoomScaleAmount < minZoomSize) {return;}
 

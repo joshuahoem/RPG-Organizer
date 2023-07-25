@@ -60,7 +60,7 @@ public class AbilityPanelManager : MonoBehaviour
 
     private void Start() 
     {
-        // abilityInfoPanel.SetActive(false);
+        abilityInfoPanel.SetActive(false);
     }
 
     public void DisableAbilityInfoPanl()

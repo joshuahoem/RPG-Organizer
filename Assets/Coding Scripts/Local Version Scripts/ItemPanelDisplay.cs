@@ -618,7 +618,7 @@ public class ItemPanelDisplay : MonoBehaviour
         }
 
         Debug.Log("does not have it");
-        AbilitySaveObject abilitySaveObject = new AbilitySaveObject(item.ability, AbilityType.learnedAbility, 0, 0, true);
+        AbilitySaveObject abilitySaveObject = new AbilitySaveObject(item.ability.abilityName, item.ability, AbilityType.learnedAbility, 0, 0, true);
         save.abilityInventory.Add(abilitySaveObject);
         ConsumeItem();
 

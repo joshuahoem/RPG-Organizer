@@ -146,7 +146,7 @@ public class LocalLevelUpManager : MonoBehaviour
         }
 
         string newCharacterString = JsonUtility.ToJson(save);
-        File.WriteAllText(Application.dataPath + "/Saves/" + 
+        File.WriteAllText(Application.persistentDataPath + "/Saves/" + 
             "/save_" + indexOfSave + ".txt", newCharacterString);
     }
 

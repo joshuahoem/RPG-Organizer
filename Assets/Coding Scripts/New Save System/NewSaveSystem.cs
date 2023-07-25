@@ -5,7 +5,7 @@ using System.IO;
 
 public static class NewSaveSystem
 {
-    public static readonly string SAVE_FOLDER = Application.dataPath + "/Saves/";
+    public static readonly string SAVE_FOLDER = Application.persistentDataPath + "/Saves/";
 
 
     public static void Init()
@@ -13,6 +13,7 @@ public static class NewSaveSystem
         if (!Directory.Exists(SAVE_FOLDER))
         {
             Directory.CreateDirectory(SAVE_FOLDER);
+            Debug.Log("Josh created a new directory");
         }
     }
 
@@ -161,13 +162,14 @@ public static class NewSaveSystem
         {
             //create File
             Debug.Log("new Player Info");
+            Init();
             PlayerInfo playerInfo = new PlayerInfo
             {
                 
             };
 
             string json = JsonUtility.ToJson(playerInfo);
-
+            
             File.WriteAllText(SAVE_FOLDER + "/PlayerInfo.txt", json);
 
             return playerInfo;

@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b3a5683874466c64da079d94c09f1a43, type: 3}
-  m_Name: Charge
+  m_Name: Charging Attack
   m_EditorClassIdentifier: 
-  abilityName: Charge
+  abilityName: Charging Attack
   abilitySpriteIcon: {fileID: 21300000, guid: 201385dc4e7024f4285740a6bbd34312, type: 3}
   borderColor: {r: 0, g: 0, b: 0, a: 1}
   costType: 1

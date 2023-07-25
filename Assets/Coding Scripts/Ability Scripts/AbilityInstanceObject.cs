@@ -7,7 +7,7 @@ using System;
 public class AbilityInstanceObject : MonoBehaviour
 {
     [Header("Ability Info")]
-    [SerializeField] Ability abilty;
+    [SerializeField] Ability ability;
 
     [Header("Set Up Info")]
     [SerializeField] Image borderImage;
@@ -24,13 +24,13 @@ public class AbilityInstanceObject : MonoBehaviour
 
     private void Start() 
     {
-        if (abilty.abilitySpriteIcon != null)
+        if (ability.abilitySpriteIcon != null)
         {
-            abilityImage.sprite = abilty.abilitySpriteIcon;
+            abilityImage.sprite = ability.abilitySpriteIcon;
         }
         if (abilityImage != null)
         {
-            borderImage.color = abilty.borderColor;
+            borderImage.color = ability.borderColor;
         }
 
         abilitySO = GetAbilitySaveObject();
@@ -66,7 +66,7 @@ public class AbilityInstanceObject : MonoBehaviour
 
         foreach (AbilitySaveObject abilitySave in save.abilityInventory)
         {
-            if (abilitySave.ability == this.abilty)
+            if (abilitySave.ability == this.ability)
             {
                 if (abilitySave.unlocked)
                 {
@@ -93,7 +93,7 @@ public class AbilityInstanceObject : MonoBehaviour
 
         foreach (AbilitySaveObject _abilitySO in save.abilityInventory)
         {
-            if (abilty == _abilitySO.ability)
+            if (ability == _abilitySO.ability)
             {
                 return _abilitySO;
             }
@@ -103,11 +103,11 @@ public class AbilityInstanceObject : MonoBehaviour
 
         if (state.raceAbilityBool)
         {
-            return new AbilitySaveObject(abilty, AbilityType.raceAbility, 0, 0, false);
+            return new AbilitySaveObject(ability.abilityName, ability, AbilityType.raceAbility, 0, 0, false);
         }
         else if (state.classAbilityBool)
         {
-            return new AbilitySaveObject(abilty, AbilityType.classAblity, 0, 0, false);
+            return new AbilitySaveObject(ability.abilityName, ability, AbilityType.classAblity, 0, 0, false);
         }
         else
         {
@@ -124,13 +124,13 @@ public class AbilityInstanceObject : MonoBehaviour
         manager.abilityInfoPanel.SetActive(true);
         manager.DisplayAbility(abilitySO);
         FindObjectOfType<EventHandler>().OnAbilityClickedFunction(abilitySO);
-        // onAbilityClicked?.Invoke(this, new AbilityPanelManager.UnlockAbilityEventArgs { _ability = abilty });
+        // onAbilityClicked?.Invoke(this, new AbilityPanelManager.UnlockAbilityEventArgs { _ability = ability });
     }
 
 
     private void Subscriber_UnlockAbility(object sender, AbilityPanelManager.UnlockAbilityEventArgs e)
     {
-        if (e._ability.ability == this.abilty)
+        if (e._ability.ability == this.ability)
         {
             foreach (GameObject ability in abilitiesThatUnlock)
             {

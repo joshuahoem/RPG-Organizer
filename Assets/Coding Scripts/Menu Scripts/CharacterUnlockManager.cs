@@ -30,6 +30,8 @@ public class CharacterUnlockManager : MonoBehaviour
     {
         PlayerInfo playerInfo = NewSaveSystem.FindPlayerInfoFile();
 
+        Debug.Log("josh " + playerInfo.unlocks.Count + " unlocked");
+
         if (playerInfo.unlocks.Count <= 1)
         {
             foreach (Race race in defaultRaces)
@@ -55,23 +57,31 @@ public class CharacterUnlockManager : MonoBehaviour
 
     private void LoadUnlocks()
     {
-        PlayerInfo playerInfo = NewSaveSystem.FindPlayerInfoFile();        
-        
+        PlayerInfo playerInfo = NewSaveSystem.FindPlayerInfoFile(); 
+
+        Debug.Log("Josh thinks in unlocks there are " + playerInfo.unlocks.Count);       
+
         foreach (GameObject unlockGO in unlockObjects)
         {
             CharacterUnlockItemInfo goItemInfo = unlockGO.GetComponent<CharacterUnlockItemInfo>();
             foreach (UnlockObject unlock in playerInfo.unlocks)
             {
-                if (unlock.unlockedClass == goItemInfo.classToUnlock && unlock.unlockedClass != null)
+                if (unlock.unlockedClass != null && goItemInfo.classToUnlock != null)
                 {
-                    goItemInfo.DisplayUnlocked();
-                    break;
+                    if (unlock.unlockedClass.name == goItemInfo.classToUnlock.name)
+                    {
+                        goItemInfo.DisplayUnlocked();
+                        break;
+                    }
                 }
 
-                if (unlock.unlockedRace == goItemInfo.raceToUnlock && unlock.unlockedRace != null)
+                if (unlock.unlockedRace != null && goItemInfo.raceToUnlock != null)
                 {
-                    goItemInfo.DisplayUnlocked();
-                    break;
+                    if (unlock.unlockedRace.name == goItemInfo.raceToUnlock.name)
+                    {
+                        goItemInfo.DisplayUnlocked();
+                        break;
+                    }
                 }
             }
         }
@@ -80,7 +90,6 @@ public class CharacterUnlockManager : MonoBehaviour
     public void SwitchPanels()
     {
         CharacterUnlockItemInfo[] unlockItemsInfo = FindObjectsOfType<CharacterUnlockItemInfo>();
-        Debug.Log(unlockItemsInfo.Length);
         foreach (CharacterUnlockItemInfo go in unlockItemsInfo)
         {
             go.OnNewRaceOrClassUnlocked += Subscriber_OnEventClicked;
@@ -89,7 +98,6 @@ public class CharacterUnlockManager : MonoBehaviour
 
     private void Subscriber_OnEventClicked(object sender, EventArgs e)
     {
-        Debug.Log("click");
         LoadUnlocks();
     }
 
