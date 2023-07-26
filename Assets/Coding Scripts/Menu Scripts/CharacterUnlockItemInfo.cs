@@ -66,11 +66,11 @@ public class CharacterUnlockItemInfo : MonoBehaviour
 
         if(raceToUnlock != null)
         {
-            newUnlock = new UnlockObject(raceToUnlock, null);
+            newUnlock = new UnlockObject(raceToUnlock, null, raceToUnlock.name, "");
         }
         else if (classToUnlock != null)
         {
-            newUnlock = new UnlockObject(null, classToUnlock);
+            newUnlock = new UnlockObject(null, classToUnlock, "", classToUnlock.name);
         }
         else //(newUnlock == null)
         {
@@ -82,14 +82,14 @@ public class CharacterUnlockItemInfo : MonoBehaviour
         {
             if (newUnlock.unlockedRace == unlock.unlockedRace && newUnlock.unlockedClass == unlock.unlockedClass)
             {
-                Debug.Log("found result");
+                // Debug.Log("found result");
                 thisItemIsUnlocked = true;
             }
         }
 
         if (!thisItemIsUnlocked)
         {
-            Debug.Log("new one added " + newUnlock.unlockedClass + " " + newUnlock.unlockedRace);
+            // Debug.Log("new one added " + newUnlock.unlockedClass + " " + newUnlock.unlockedRace);
             playerInfo.unlocks.Add(newUnlock);
             NewSaveSystem.SavePlayerInfo(playerInfo);
 

@@ -43,7 +43,7 @@ public class SpawnCharacters : MonoBehaviourPunCallbacks
 
         if (PhotonNetwork.CurrentRoom == null)
         {
-            Debug.Log("not in a room");
+            // Debug.Log("not in a room");
             return;
         }
 
@@ -58,7 +58,7 @@ public class SpawnCharacters : MonoBehaviourPunCallbacks
         PhotonView pv = newCharacterInstance.GetComponent<PhotonView>();
             if (pv.IsMine)
             {
-                Debug.Log("my own character");
+                // Debug.Log("my own character");
                 CreateOwnCharacter(newCharacterInstance);
             }
             else
@@ -176,7 +176,7 @@ public class SpawnCharacters : MonoBehaviourPunCallbacks
                 if (PhotonNetwork.LocalPlayer.NickName == "")
                 {
                     PhotonNetwork.LocalPlayer.NickName = saveObject.nameOfCharacter.ToString();
-                    Debug.Log("Current nickname " + PhotonNetwork.LocalPlayer.NickName);
+                    // Debug.Log("Current nickname " + PhotonNetwork.LocalPlayer.NickName);
                 }
 
                 // this.gameObject.name = saveObject.nameOfCharacter.ToString();
@@ -234,8 +234,8 @@ public class SpawnCharacters : MonoBehaviourPunCallbacks
         yield return new WaitForSeconds(1f);
         // Debug.Log("New player in the making");
         //not local player, need to get info from online
-        Debug.Log(player);
-        Debug.Log(player.NickName + " nick");
+        // Debug.Log(player);
+        // Debug.Log(player.NickName + " nick");
         playerData = FindObjectOfType<SelectManager>().dictionaryOfCharacters[player.NickName];
         _character.GetComponent<PlayerItem>().SetPlayerInfo(player, playerData);
         _character.GetComponent<GameObjectGameTime>().hasBeenSet = true;

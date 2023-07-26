@@ -99,3 +99,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d3c3b997b86a1fa48a0acb5aa5c60437, type: 2}
   - {fileID: 11400000, guid: 46a036bae519a884bbe7c446439fef79, type: 2}
   - {fileID: 11400000, guid: 7b2bc14e743928b498ea69b3dce76482, type: 2}
+  raceDatabase: {fileID: 11400000, guid: 5f92cb296e44e9f44a85eb27026c5878, type: 2}
+  classDatabase: {fileID: 11400000, guid: fa3c507ea4042164898a75a68593354b, type: 2}

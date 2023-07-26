@@ -20,7 +20,7 @@ public class DeleteManager : MonoBehaviour
         DeleteManager deleteManager = FindObjectOfType<DeleteManager>();
         foreach (GameObject go in deleteManager.deleteObjects)
         {
-            Debug.Log(go);
+            // Debug.Log(go);
             Destroy(go);
         }
         deleteManager.deleteObjects.Clear();
@@ -34,7 +34,7 @@ public class DeleteManager : MonoBehaviour
             if (File.Exists(SAVE_FOLDER + "/save_" + i + ".txt"))
             {
                 GameObject newDeleteObject = Instantiate(deletePrefab, transform.position, transform.rotation);
-                newDeleteObject.transform.SetParent(deleteManager.parentTransform);
+                newDeleteObject.transform.SetParent(deleteManager.parentTransform, false);
                 newDeleteObject.GetComponent<CharacterUpdate>().LoadCharacter(i);
                 deleteManager.deleteObjects.Add(newDeleteObject);
             }   

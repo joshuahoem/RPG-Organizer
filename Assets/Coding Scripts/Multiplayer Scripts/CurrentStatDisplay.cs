@@ -62,10 +62,8 @@ public class CurrentStatDisplay : MonoBehaviour
     public void DisplayCurrentStatFunction(ExitGames.Client.Photon.Hashtable playerDataSelected)
     {
         string statToDisplay = currentStatToDisplay.ToString();
-        Debug.Log(statToDisplay);
-        Debug.Log(playerDataSelected[currentStat].ToString());
+        // Debug.Log(statToDisplay);
+        // Debug.Log(playerDataSelected[currentStat].ToString());
         statNumber.text = playerDataSelected[currentStat].ToString();
-        Debug.Log("Here");
-
     }
 }

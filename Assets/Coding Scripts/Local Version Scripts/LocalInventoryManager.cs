@@ -69,11 +69,10 @@ public class LocalInventoryManager : MonoBehaviour
             }
             else
             {
-                Debug.Log("not empty, switching");
+                // Debug.Log("not empty, switching");
                 inventory.Add(UnequipNoSave(currentEquipment[slotIndex].item));
                 if (currentEquipment[slotIndex].item.numberOfHands == NumberOfHands.TwoHanded)
                 {
-                    Debug.Log("here");
                     if (slotIndex == (int) EquipmentSlot.MainHand)
                     {
                         currentEquipment[slotIndex + 1].item = null;
@@ -162,14 +161,14 @@ public class LocalInventoryManager : MonoBehaviour
         {
             if (save.equipment[5].item != null)
             {  
-                Debug.Log("main");
+                // Debug.Log("main");
                 save.equipment[5].equipmentSlotIndex = 0;
                 save.equipment[5].item = null;
 
             }
             if (save.equipment[6].item != null)
             {
-                Debug.Log("off");
+                // Debug.Log("off");
                 save.equipment[6].equipmentSlotIndex = 0;
                 save.equipment[6].item = null;
             }
@@ -242,7 +241,7 @@ public class LocalInventoryManager : MonoBehaviour
             if(save.equipment[i].item == newItem && !removed)
             {
                 save.inventory.Remove(_itemInfo);
-                Debug.Log("found and removed");
+                // Debug.Log("found and removed");
                 removed = true;
             }
         }
@@ -308,7 +307,7 @@ public class LocalInventoryManager : MonoBehaviour
             {
                 if (save.equipment[5].item.numberOfHands == NumberOfHands.TwoHanded)
                 {
-                    Debug.Log("removing 1");
+                    // Debug.Log("removing 1");
                     lootCheck -= 1;
                 }
 
@@ -378,13 +377,13 @@ public class LocalInventoryManager : MonoBehaviour
             }
             else
             {
-                Debug.Log("Could not find character folder!");
+                // Debug.Log("Could not find character folder!");
                 return null;
             }
         }
         else
         {
-            Debug.Log("Could not find character manager folder!");
+            // Debug.Log("Could not find character manager folder!");
             return null;
         }
     }

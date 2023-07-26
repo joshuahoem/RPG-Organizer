@@ -8,7 +8,8 @@ public class CharacterUnlockManager : MonoBehaviour
     [SerializeField] List<GameObject> unlockObjects = new List<GameObject>();
     [SerializeField] List<Race> defaultRaces = new List<Race>();
     [SerializeField] List<Class> defaultClasses = new List<Class>();
-
+    [SerializeField] RaceDatabase raceDatabase;
+    [SerializeField] ClassDatabase classDatabase;
 
     private void Start() 
     {
@@ -22,44 +23,71 @@ public class CharacterUnlockManager : MonoBehaviour
         LoadUnlocks();
     }
 
-    private void Update() {
-        ResetUnlocks();
-    }
+    // private void Update() {
+    //     ResetUnlocks();
+    // }
 
     private void LoadDefaults()
     {
         PlayerInfo playerInfo = NewSaveSystem.FindPlayerInfoFile();
 
-        Debug.Log("josh " + playerInfo.unlocks.Count + " unlocked");
+        // Debug.Log("josh " + playerInfo.unlocks.Count + " unlocked");
 
         if (playerInfo.unlocks.Count <= 1)
         {
             foreach (Race race in defaultRaces)
             {
-                UnlockObject unlockObject = new UnlockObject(race, null);
+                UnlockObject unlockObject = new UnlockObject(race, null, race.name, "");
                 playerInfo.unlocks.Add(unlockObject);
             }
 
             foreach (Class characterClass in defaultClasses)
             {
-                UnlockObject unlockObject = new UnlockObject(null, characterClass);
+                UnlockObject unlockObject = new UnlockObject(null, characterClass, "", characterClass.name);
                 playerInfo.unlocks.Add(unlockObject);
             }
-
-            NewSaveSystem.SavePlayerInfo(playerInfo);
-
-            // foreach (UnlockObject unlock in playerInfo.unlocks)
-            // {
-            //     Debug.Log(unlock.unlockedClass + " " + unlock.unlockedRace);
-            // }
+            
         }
+
+        //Load new instance between saves (close and reload app)
+        foreach (UnlockObject unlock in playerInfo.unlocks)
+        {
+            if (unlock.unlockedClass == null && unlock.classStringID != "" && unlock.raceStringID == "")
+            {
+                // Debug.Log("class Start");
+                // Debug.Log(unlock.unlockedClass + " class");
+                // Debug.Log(unlock.classStringID + " class string");
+                // Debug.Log(unlock.unlockedRace + " race");
+                // Debug.Log(unlock.raceStringID + " race string");
+                unlock.unlockedClass = classDatabase.GetClassID[unlock.classStringID];  
+                // Debug.Log(classDatabase.GetClassID[unlock.classStringID] + " set class");              
+            }
+            if (unlock.unlockedRace == null && unlock.raceStringID != "" && unlock.classStringID == "")
+            {
+                // Debug.Log("Race Start");
+                // Debug.Log(unlock.unlockedClass + " class");
+                // Debug.Log(unlock.classStringID + " class string");
+                // Debug.Log(unlock.unlockedRace + " race");
+                // Debug.Log(unlock.raceStringID + " race string");
+                unlock.unlockedRace = raceDatabase.GetRaceID[unlock.raceStringID];
+                // Debug.Log(raceDatabase.GetRaceID[unlock.raceStringID] + " set race");
+            }
+        }
+
+        NewSaveSystem.SavePlayerInfo(playerInfo);
+
     }
 
     private void LoadUnlocks()
     {
         PlayerInfo playerInfo = NewSaveSystem.FindPlayerInfoFile(); 
 
-        Debug.Log("Josh thinks in unlocks there are " + playerInfo.unlocks.Count);       
+        // foreach (UnlockObject unlock in playerInfo.unlocks)
+        // {
+        //     Debug.Log(" Josh unlocked " + unlock.unlockedClass + " " + unlock.unlockedRace);
+        // }
+
+        // Debug.Log("Josh thinks in unlocks there are " + playerInfo.unlocks.Count);       
 
         foreach (GameObject unlockGO in unlockObjects)
         {

@@ -10,11 +10,15 @@ public class PlayerInfo
 [System.Serializable] public class UnlockObject
 {
     public Race unlockedRace;
+    public string raceStringID;
     public Class unlockedClass;
+    public string classStringID;
 
-    public UnlockObject(Race _unlockRace, Class _unlockClass)
+    public UnlockObject(Race _unlockRace, Class _unlockClass, string _raceStringID, string _classStringID)
     {
         unlockedRace = _unlockRace;
         unlockedClass = _unlockClass;
+        raceStringID = _raceStringID;
+        classStringID = _classStringID;
     }
 }

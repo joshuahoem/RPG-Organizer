@@ -299,8 +299,8 @@ public class LocalLevelUpManager : MonoBehaviour
     public void ConfirmLevelRolls()
     {
         SaveObject _save = NewSaveSystem.FindCurrentSave();
-        Debug.Log(save.levelRolls);
-        Debug.Log(save.levelPoints);
+        // Debug.Log(save.levelRolls);
+        // Debug.Log(save.levelPoints);
         save.levelPoints += save.levelRolls;
         save.levelRolls = 0;
         NewSaveSystem.SaveChanges(_save);

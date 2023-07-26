@@ -19,7 +19,7 @@ public class CharacterManager : MonoBehaviour
         if (!File.Exists(SAVE_FOLDER + "/character_manager.txt"))
         {
             //create File
-            Debug.Log("new manager");
+            // Debug.Log("new manager");
             SaveState savestate = new SaveState
             {
                 numberOfCharacters = 0

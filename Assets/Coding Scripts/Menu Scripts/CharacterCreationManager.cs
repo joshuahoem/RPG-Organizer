@@ -286,7 +286,7 @@ public class CharacterCreationManager : MonoBehaviour
         Class _class = classDisplayObject.GetComponent<CharacterUnlockItemInfo>().classToUnlock;
         if (_race == null || _class == null)
         {
-            Debug.LogError("one not selected");
+            // Debug.LogError("one not selected");
             return;
         }
 
@@ -294,7 +294,7 @@ public class CharacterCreationManager : MonoBehaviour
 
         if (inputTextName.text == "")
         {
-            Debug.Log("Need a name");
+            // Debug.Log("Need a name");
             inputTextName.text = "I'm Silly Billy";
         }
 

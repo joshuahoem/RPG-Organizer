@@ -149,7 +149,7 @@ public class LocalStatDisplay : MonoBehaviour
         {
             if (perk.perk == null) 
             { 
-                Debug.Log("no perk here");
+                // Debug.Log("no perk here");
                 continue;
             }
             healthX += perk.perk.healthMultiplier;

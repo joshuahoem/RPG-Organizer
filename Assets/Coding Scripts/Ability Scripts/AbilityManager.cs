@@ -7,6 +7,7 @@ public class AbilityManager : MonoBehaviour
 {
     SaveState saveState;
     SaveObject save;
+    [SerializeField] AbilityDatabase abilityDatabase;
     [SerializeField] TextMeshProUGUI spellbookCapacityTextTMP;
     [SerializeField] GameObject abilityObjectPrefab;
     [SerializeField] GameObject perkPrefab;
@@ -96,7 +97,7 @@ public class AbilityManager : MonoBehaviour
         {
             if (abilitySO.ability == null)
             {
-                Debug.Log(abilitySO.stringID);
+                abilitySO.ability = abilityDatabase.GetStringID[abilitySO.stringID];
             }
             switch (abilitySO.abilityType)
             {

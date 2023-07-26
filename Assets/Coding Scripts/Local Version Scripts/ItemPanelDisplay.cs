@@ -88,25 +88,25 @@ public class ItemPanelDisplay : MonoBehaviour
     int lootCheck;
     int searchIndex;
 
-    private void Update() {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            Debug.Log("1");
-            SaveObject _save = NewSaveSystem.FindCurrentSave();
-            foreach (InventoryItem _item in _save.inventory)
-            {
-                Debug.Log(_item.item.itemName + " inventory");
-            }
+    // private void Update() {
+    //     if (Input.GetKeyDown(KeyCode.Alpha1))
+    //     {
+    //         // Debug.Log("1");
+    //         SaveObject _save = NewSaveSystem.FindCurrentSave();
+    //         foreach (InventoryItem _item in _save.inventory)
+    //         {
+    //             Debug.Log(_item.item.itemName + " inventory");
+    //         }
 
-            foreach (InventoryItem _item in _save.equipment)
-            {
-                if (_item.item != null)
-                {
-                    Debug.Log(_item.item.itemName + "equipment");
-                }
-            }
-        }
-    }
+    //         foreach (InventoryItem _item in _save.equipment)
+    //         {
+    //             if (_item.item != null)
+    //             {
+    //                 Debug.Log(_item.item.itemName + "equipment");
+    //             }
+    //         }
+    //     }
+    // }
 
 
     public void DeactivateAllButtons()
@@ -430,12 +430,12 @@ public class ItemPanelDisplay : MonoBehaviour
             if (inv.item == item && !removedBool)
             {
                 inv.amount -= 1;
-                Debug.Log(inv.amount);
+                // Debug.Log(inv.amount);
                 removedBool = true;
 
                 if (inv.amount <= 0)
                 {
-                    Debug.Log("need to delete");
+                    // Debug.Log("need to delete");
                     // inventoryManager.Consume(item, itemInfo);
                     searchResult = inv;
                 }
@@ -479,7 +479,7 @@ public class ItemPanelDisplay : MonoBehaviour
         {
             if (save.equipment[5].item.numberOfHands == NumberOfHands.TwoHanded)
             {
-                Debug.Log("removing 1");
+                // Debug.Log("removing 1");
                 lootCheck -= 1;
             }
 
@@ -487,7 +487,7 @@ public class ItemPanelDisplay : MonoBehaviour
 
         if (lootCheck >= save.holdingCapacity && item.GetItemType() != ItemType.Special)
         {
-            Debug.Log("not strong enough to carry"); //error
+            // Debug.Log("not strong enough to carry"); //error
             errorMessageHandler.ReceivingOnErrorOccured(ErrorMessageHandler.ErrorType.NoStrength);
             return;
         }
@@ -502,7 +502,7 @@ public class ItemPanelDisplay : MonoBehaviour
         }
         else
         {
-            Debug.Log("not enough gold"); //error
+            // Debug.Log("not enough gold"); //error
             errorMessageHandler.ReceivingOnErrorOccured(ErrorMessageHandler.ErrorType.NoGold);
         }
 
@@ -518,7 +518,7 @@ public class ItemPanelDisplay : MonoBehaviour
         {
             if(_item.item.itemName == item.itemName)
             {
-                Debug.Log("found in inventory");
+                // Debug.Log("found in inventory");
                 searchResult = _item;
             }
         }
@@ -531,7 +531,7 @@ public class ItemPanelDisplay : MonoBehaviour
                 {
                     if (_item.item.itemName == item.itemName)
                     {
-                        Debug.Log("found in equipment");
+                        // Debug.Log("found in equipment");
                         searchResult = _item;
                     }
                 }
@@ -571,7 +571,7 @@ public class ItemPanelDisplay : MonoBehaviour
             }
         }
 
-        Debug.Log(searchResult.item + " item");
+        // Debug.Log(searchResult.item + " item");
 
         if (searchResult.amount < searchResult.item.numberInStack)
         {
@@ -579,7 +579,7 @@ public class ItemPanelDisplay : MonoBehaviour
         }
         else
         {
-            Debug.Log("sold");
+            // Debug.Log("sold");
             _save.gold += item.sellCost;      
         }
 
@@ -599,11 +599,49 @@ public class ItemPanelDisplay : MonoBehaviour
     {
         SaveObject save = NewSaveSystem.FindCurrentSave();
 
-        //error 
-        if (save.spellbookCapacity <= save.abilityInventory.Count)
+        //old way
+        // if (save.spellbookCapacity <= save.abilityInventory.Count)
+        // {
+        //     // Debug.Log("not enough intelligence to get an ability");//error
+        //     errorMessageHandler.ReceivingOnErrorOccured(ErrorMessageHandler.ErrorType.NoIntelligence);
+        //     return;
+        // }
+
+        //#TODO
+        if (item.ability.unlockHealth > save.baseHealth)
         {
-            Debug.Log("not enough intelligence to get an ability");//error
-            errorMessageHandler.ReceivingOnErrorOccured(ErrorMessageHandler.ErrorType.NoIntelligence);
+            // Debug.Log("not enough health"); //error
+            errorMessageHandler.ReceivingOnErrorOccured(ErrorMessageHandler.ErrorType.AbilityNoHealth);
+            return;
+        }
+        if (item.ability.unlockStamina > save.baseStamina)
+        {
+            // Debug.Log("not enough Stamina"); //error
+            errorMessageHandler.ReceivingOnErrorOccured(ErrorMessageHandler.ErrorType.AbilityNoStamina);
+            return;
+        }
+        if (item.ability.unlockMagic > save.baseMagic)
+        {
+            // Debug.Log("not enough Magic"); //error
+            errorMessageHandler.ReceivingOnErrorOccured(ErrorMessageHandler.ErrorType.AbilityNoMagic);
+            return;
+        }
+        if (item.ability.unlockStrength > save.baseStrength)
+        {
+            // Debug.Log("not enough Strength"); //error
+            errorMessageHandler.ReceivingOnErrorOccured(ErrorMessageHandler.ErrorType.AbilityNoStrength);
+            return;
+        }
+        if (item.ability.unlockIntelligence > save.baseIntelligence)
+        {
+            // Debug.Log("not enough Intelligence"); //error
+            errorMessageHandler.ReceivingOnErrorOccured(ErrorMessageHandler.ErrorType.AbilityNoIntelligence);
+            return;
+        }
+        if (item.ability.unlockSpeed > save.baseSpeed)
+        {
+            // Debug.Log("not enough Speed"); //error
+            errorMessageHandler.ReceivingOnErrorOccured(ErrorMessageHandler.ErrorType.AbilityNoSpeed);
             return;
         }
 
@@ -612,12 +650,12 @@ public class ItemPanelDisplay : MonoBehaviour
             if (abilitySO.ability == item.ability)
             {
                 //already has it
-                Debug.Log("already has it");
+                // Debug.Log("already has it");
                 return;
             }
         }
 
-        Debug.Log("does not have it");
+        // Debug.Log("does not have it");
         AbilitySaveObject abilitySaveObject = new AbilitySaveObject(item.ability.abilityName, item.ability, AbilityType.learnedAbility, 0, 0, true);
         save.abilityInventory.Add(abilitySaveObject);
         ConsumeItem();

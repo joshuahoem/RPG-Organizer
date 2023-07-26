@@ -58,7 +58,7 @@ public class SaveLoadManager : MonoBehaviour
 
         if (characterName.text == "")
         {
-            Debug.Log("Need a name");
+            // Debug.Log("Need a name");
             characterName.text = "I'm Silly Billy";
         }
 
@@ -229,7 +229,7 @@ public class SaveLoadManager : MonoBehaviour
 
     private void UpdateSceneInformation(SaveObject saveObject)
     {
-        Debug.Log("specific character");
+        // Debug.Log("specific character");
         characterSelectedName.text = saveObject.nameOfCharacter.ToString();
         race.text = saveObject.race.ToString();
         characterSelectedClass.text = saveObject.characterClass.ToString();

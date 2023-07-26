@@ -50,16 +50,16 @@ public class AbilityInventory : MonoBehaviour
 
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            Debug.Log("cleared abilities");
-            save.abilityInventory.Clear();
-            save.perks.Clear();
-            SaveChanges();
-        }
-    }
+    // private void Update()
+    // {
+    //     if (Input.GetKeyDown(KeyCode.Alpha1))
+    //     {
+    //         Debug.Log("cleared abilities");
+    //         save.abilityInventory.Clear();
+    //         save.perks.Clear();
+    //         SaveChanges();
+    //     }
+    // }
     private void Subscriber_UnlockAbility(object sender, AbilityPanelManager.UnlockAbilityEventArgs e)
     {   
         AbilitySaveObject abilitySaveObject = ReturnNewAbilityObject(e._ability.ability);

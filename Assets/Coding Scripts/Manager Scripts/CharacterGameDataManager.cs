@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class CharacterGameDataManager : MonoBehaviour
 {
-    public void OnClickEvent()
-    {
-        Debug.Log("Click");
-    }
+    // public void OnClickEvent()
+    // {
+    //     // Debug.Log("Click");
+    // }
 }

@@ -73,12 +73,12 @@ public class MainMenuPanelManager : MonoBehaviour
         }
     }
 
-    private void Update() {
-        if(Input.GetKey("a"))
-        {
-            PlayerPrefs.SetInt("hasStarted", 0);
-        }
-    }
+    // private void Update() {
+    //     if(Input.GetKey("a"))
+    //     {
+    //         PlayerPrefs.SetInt("hasStarted", 0);
+    //     }
+    // }
 
     public void ResetPlayerPrefs()
     {

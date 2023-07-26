@@ -128,7 +128,7 @@ public class LootManager : MonoBehaviour
         {
             if (save.equipment[5].item.numberOfHands == NumberOfHands.TwoHanded)
             {
-                Debug.Log("removing 1");
+                // Debug.Log("removing 1");
                 lootCheck -= 1;
             }
 
@@ -136,7 +136,7 @@ public class LootManager : MonoBehaviour
 
         if (lootCheck >= save.holdingCapacity)
         {
-            Debug.Log("not strong enough to carry"); //error
+            // Debug.Log("not strong enough to carry"); //error
             errorMessageHandler.ReceivingOnErrorOccured(ErrorMessageHandler.ErrorType.NoStrength);
             return;
         }
@@ -239,14 +239,14 @@ public class LootManager : MonoBehaviour
         {
             for (int i = 0; i<_rolls; i++)
             {
-                Debug.Log("adding");
+                // Debug.Log("adding");
                 goldAmount += Random.Range(minGoldRange, maxGoldRange);
             }
             save.gold += goldAmount;
             NewSaveSystem.SaveChanges(save); 
 
             goldLoot.GetComponent<LootDisplay>().DisplayGoldLoot(goldAmount, goldImage);
-            Debug.Log(goldAmount);
+            // Debug.Log(goldAmount);
         }
         
     }

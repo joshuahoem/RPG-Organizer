@@ -35,15 +35,15 @@ public class ButtonManager : MonoBehaviour
             }
         }
 
-        Debug.Log(characterRace.name);
-        Debug.Log(characterClass.name);
+        // Debug.Log(characterRace.name);
+        // Debug.Log(characterClass.name);
 
-        Debug.Log("Health: " + (characterClass.health + characterRace.health));
-        Debug.Log("Stamina: " + (characterClass.stamina + characterRace.stamina));
-        Debug.Log("Magic: " + (characterClass.magic + characterRace.magic));
-        Debug.Log("Intelligence: " + (characterClass.intelligence + characterRace.intelligence));
-        Debug.Log("Strength: " + (characterClass.strength + characterRace.strength));
-        Debug.Log("Speed: " + (characterClass.speed + characterRace.speed));
+        // Debug.Log("Health: " + (characterClass.health + characterRace.health));
+        // Debug.Log("Stamina: " + (characterClass.stamina + characterRace.stamina));
+        // Debug.Log("Magic: " + (characterClass.magic + characterRace.magic));
+        // Debug.Log("Intelligence: " + (characterClass.intelligence + characterRace.intelligence));
+        // Debug.Log("Strength: " + (characterClass.strength + characterRace.strength));
+        // Debug.Log("Speed: " + (characterClass.speed + characterRace.speed));
 
     }
 }

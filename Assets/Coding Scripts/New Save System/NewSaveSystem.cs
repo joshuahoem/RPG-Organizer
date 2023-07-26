@@ -13,7 +13,6 @@ public static class NewSaveSystem
         if (!Directory.Exists(SAVE_FOLDER))
         {
             Directory.CreateDirectory(SAVE_FOLDER);
-            Debug.Log("Josh created a new directory");
         }
     }
 
@@ -26,7 +25,6 @@ public static class NewSaveSystem
         {
             if (fileInfo.FullName == SAVE_FOLDER + "/save_" + characterFileNumber + ".txt")
             {
-                Debug.Log("Match found!");
                 if (File.Exists(SAVE_FOLDER + "/save_" + characterFileNumber + ".txt"))
                 {
                     File.WriteAllText(SAVE_FOLDER + "/save_" + characterFileNumber + ".txt", saveString);
@@ -161,7 +159,6 @@ public static class NewSaveSystem
         else
         {
             //create File
-            Debug.Log("new Player Info");
             Init();
             PlayerInfo playerInfo = new PlayerInfo
             {

@@ -51,8 +51,6 @@ public class ZoomManager : MonoBehaviour
 
             zoom(difference * zoomScalePercentage * 0.01f);
 
-            Debug.Log("Josh difference " + difference);
-
         }
     }
 
@@ -61,7 +59,7 @@ public class ZoomManager : MonoBehaviour
         if (imageToZoom.localScale.x + increment < minZoomSize || 
             imageToZoom.localScale.x + increment > maxZoomSize) 
             {
-                Debug.Log("Josh said its too big or too small " + (imageToZoom.localScale.x + increment));
+                // Debug.Log("Josh said its too big or too small " + (imageToZoom.localScale.x + increment));
                 return;
             }
 
@@ -74,7 +72,6 @@ public class ZoomManager : MonoBehaviour
         contentSize.sizeDelta = new Vector2(newWidth, newHeight);
         // Camera.main.orthographicSize = Mathf.Clamp(Camera.main.orthographicSize - increment, minZoomSize, maxZoomSize);
 
-        Debug.Log("Josh camera " + Camera.main.orthographicSize);
     }
 
     private void ChangePivotPosition()

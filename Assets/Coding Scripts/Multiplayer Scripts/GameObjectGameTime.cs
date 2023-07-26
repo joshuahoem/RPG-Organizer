@@ -138,7 +138,7 @@ public class GameObjectGameTime : MonoBehaviour
     [PunRPC]
     void RPC_AddCharacter(ExitGames.Client.Photon.Hashtable _playerData, Photon.Realtime.Player player)
     {
-        Debug.Log(player.NickName + " this is being added");
+        // Debug.Log(player.NickName + " this is being added");
         FindObjectOfType<SelectManager>().dictionaryOfCharacters.Add(player.NickName, _playerData);
         
         foreach (GameObjectGameTime gm in FindObjectsOfType<GameObjectGameTime>())
@@ -151,7 +151,7 @@ public class GameObjectGameTime : MonoBehaviour
 
         foreach (KeyValuePair<string, ExitGames.Client.Photon.Hashtable> character in FindObjectOfType<SelectManager>().dictionaryOfCharacters)
         {
-            Debug.Log(character + " dictionary");
+            // Debug.Log(character + " dictionary");
         }
     }
 
@@ -159,14 +159,14 @@ public class GameObjectGameTime : MonoBehaviour
     protected virtual void RPC_RemoveCharacter(string playerNickname)
     {
         // Debug.Log("RPC Remove");
-        Debug.Log(playerNickname +" this is being removed");
+        // Debug.Log(playerNickname +" this is being removed");
         FindObjectOfType<SelectManager>().dictionaryOfCharacters.Remove(playerNickname);
     }
 
     [PunRPC]
     void RPC_SetCharacter()
     {
-        Debug.Log("Instantiated");
+        // Debug.Log("Instantiated");
         this.transform.SetParent(FindObjectOfType<SpawnCharacters>().content.transform, false); 
     }
 

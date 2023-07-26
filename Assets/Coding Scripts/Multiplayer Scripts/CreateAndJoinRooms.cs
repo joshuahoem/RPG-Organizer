@@ -15,7 +15,7 @@ public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
     {
         if (createInput.text.Length < 1) 
         {
-            Debug.Log("too short"); 
+            // Debug.Log("too short"); 
             return;
         }
 
@@ -28,7 +28,7 @@ public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
 
         if ( selectedCharacterString == "" || selectedCharacterString == null)
         {
-            Debug.Log("no character Selected");
+            // Debug.Log("no character Selected");
             return;
         }
 
@@ -50,7 +50,7 @@ public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
     {
         if (joinInput.text.Length < 1) 
         {
-            Debug.Log("too short"); 
+            // Debug.Log("too short"); 
             return;
         }
 
@@ -60,11 +60,11 @@ public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
 
         if ( selectedCharacterString == "" || selectedCharacterString == "0")
         {
-            Debug.Log("no character Selected");
+            // Debug.Log("no character Selected");
             return;
         }
 
-        Debug.Log(selectedCharacterString);
+        // Debug.Log(selectedCharacterString);
 
         PhotonNetwork.LocalPlayer.NickName = selectedCharacterString;
 
@@ -75,7 +75,7 @@ public class CreateAndJoinRooms : MonoBehaviourPunCallbacks
 
     public override void OnPlayerLeftRoom(Photon.Realtime.Player player)
     {
-        Debug.Log("player left room");
+        // Debug.Log("player left room");
         string playerNickname = player.NickName;
 
         PhotonView view = FindObjectsOfType<GameObjectGameTime>()[0].GetComponent<PhotonView>();

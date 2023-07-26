@@ -17,6 +17,7 @@ public class MapMovementParabola : MonoBehaviour
     private void Start() 
     {
         GetNewDestination();
+        framesWaited = framesNeededToWait;
     }
 
     private void Update() 

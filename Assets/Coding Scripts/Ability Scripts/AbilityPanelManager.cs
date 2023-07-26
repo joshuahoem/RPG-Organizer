@@ -124,12 +124,12 @@ public class AbilityPanelManager : MonoBehaviour
 
         if (abilitySO.unlocked)
         {
-            Debug.Log("unlocked");
+            // Debug.Log("unlocked");
             abilityCostToUnlockTMP.text = ability.allAbilityLevels[_levelIndex].upgradeCost.ToString();
         }
         else
         {
-            Debug.Log("not unlocked");
+            // Debug.Log("not unlocked");
             abilityCostToUnlockTMP.text = ability.unlockCost.ToString();
         }
 
@@ -223,13 +223,13 @@ public class AbilityPanelManager : MonoBehaviour
 
         if (state.raceAbilityBool && save.raceAbilityPoints < abilitySO.ability.unlockCost)
         {
-            Debug.Log("not enough points");//error
+            // Debug.Log("not enough points");//error
             errorMessageHandler.ReceivingOnErrorOccured(ErrorMessageHandler.ErrorType.NoRacePoints);
             return;
         }
         if (state.classAbilityBool && save.classAbilityPoints < abilitySO.ability.unlockCost)
         {
-            Debug.Log("not enough points"); //error
+            // Debug.Log("not enough points"); //error
             errorMessageHandler.ReceivingOnErrorOccured(ErrorMessageHandler.ErrorType.NoClassPoints);
             return;
         }
@@ -243,37 +243,37 @@ public class AbilityPanelManager : MonoBehaviour
         //New Method- check for unlock stat benchmarks
         if (abilitySO.ability.unlockHealth > save.baseHealth)
         {
-            Debug.Log("not enough health"); //error
+            // Debug.Log("not enough health"); //error
             errorMessageHandler.ReceivingOnErrorOccured(ErrorMessageHandler.ErrorType.AbilityNoHealth);
             return;
         }
         if (abilitySO.ability.unlockStamina > save.baseStamina)
         {
-            Debug.Log("not enough Stamina"); //error
+            // Debug.Log("not enough Stamina"); //error
             errorMessageHandler.ReceivingOnErrorOccured(ErrorMessageHandler.ErrorType.AbilityNoStamina);
             return;
         }
         if (abilitySO.ability.unlockMagic > save.baseMagic)
         {
-            Debug.Log("not enough Magic"); //error
+            // Debug.Log("not enough Magic"); //error
             errorMessageHandler.ReceivingOnErrorOccured(ErrorMessageHandler.ErrorType.AbilityNoMagic);
             return;
         }
         if (abilitySO.ability.unlockStrength > save.baseStrength)
         {
-            Debug.Log("not enough Strength"); //error
+            // Debug.Log("not enough Strength"); //error
             errorMessageHandler.ReceivingOnErrorOccured(ErrorMessageHandler.ErrorType.AbilityNoStrength);
             return;
         }
         if (abilitySO.ability.unlockIntelligence > save.baseIntelligence)
         {
-            Debug.Log("not enough Intelligence"); //error
+            // Debug.Log("not enough Intelligence"); //error
             errorMessageHandler.ReceivingOnErrorOccured(ErrorMessageHandler.ErrorType.AbilityNoIntelligence);
             return;
         }
         if (abilitySO.ability.unlockSpeed > save.baseSpeed)
         {
-            Debug.Log("not enough Speed"); //error
+            // Debug.Log("not enough Speed"); //error
             errorMessageHandler.ReceivingOnErrorOccured(ErrorMessageHandler.ErrorType.AbilityNoSpeed);
             return;
         }
@@ -301,7 +301,7 @@ public class AbilityPanelManager : MonoBehaviour
             else
             {
                 errorMessageHandler.ReceivingOnErrorOccured(ErrorMessageHandler.ErrorType.NoMagic);
-                Debug.Log("not enough magic");
+                // Debug.Log("not enough magic");
             }
         }
         if (ability.costType == CostType.Stamina)
@@ -314,7 +314,7 @@ public class AbilityPanelManager : MonoBehaviour
             else
             {
                 errorMessageHandler.ReceivingOnErrorOccured(ErrorMessageHandler.ErrorType.NoStamina);
-                Debug.Log("not enough stamina");
+                // Debug.Log("not enough stamina");
             }
         }
         if (ability.costType == CostType.Both)

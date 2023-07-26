@@ -26,6 +26,6 @@ public class SingletonManager : MonoBehaviour
     {  
         test++;
         this.selectedCharacter = EventSystem.current.currentSelectedGameObject.name;
-        Debug.Log("test");
+        // Debug.Log("test");
     }
 }

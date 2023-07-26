@@ -4,7 +4,7 @@ using UnityEngine;
 using System;
 using System.Linq;
 
-[CreateAssetMenu(fileName = "ItemDatabase", menuName = "ScriptableObject/ItemDatabase")]
+[CreateAssetMenu(fileName = "ItemDatabase", menuName = "ScriptableObject/Database/Item")]
 public class ItemDatabase : ScriptableObject, ISerializationCallbackReceiver
 {
     public Item[] allItems;
