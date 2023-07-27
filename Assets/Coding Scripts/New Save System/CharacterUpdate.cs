@@ -16,6 +16,9 @@ public class CharacterUpdate : MonoBehaviour
     [SerializeField] TextMeshProUGUI levelPoints;
 
     [SerializeField] Image characterPicture;
+    [SerializeField] RaceDatabase raceDatabase;
+    [SerializeField] ClassDatabase classDatabase;
+
 
     private void Awake() 
     {
@@ -40,7 +43,7 @@ public class CharacterUpdate : MonoBehaviour
             }
             else
             {
-                foreach (Race _race in FindObjectOfType<SaveLoadManager>().allRaces)
+                foreach (Race _race in raceDatabase.allRaces)
                 {
                     if (saveObject.race == _race.name)
                     {
@@ -49,7 +52,7 @@ public class CharacterUpdate : MonoBehaviour
                     }
                 }
 
-                foreach (Class _class in FindObjectOfType<SaveLoadManager>().allClasses)
+                foreach (Class _class in classDatabase.allClasses)
                 {
                     if (saveObject.characterClass == _class.name)
                     {

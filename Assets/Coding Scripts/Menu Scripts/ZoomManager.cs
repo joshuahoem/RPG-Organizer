@@ -15,24 +15,24 @@ public class ZoomManager : MonoBehaviour
     private void Update() 
     {
         CheckFingerScroll();
-        CheckScrollWheel();
+        // CheckScrollWheel();
         // ChangePivotPosition();
     }
 
-    private void CheckScrollWheel()
-    {
-        if (Input.GetAxis("Mouse ScrollWheel") != 0)
-        {
-            if (Input.GetAxis("Mouse ScrollWheel") > 0)
-            {
-                ZoomIn();
-            }
-            else if (Input.GetAxis("Mouse ScrollWheel") < 0)
-            {
-                ZoomOut();
-            }
-        }
-    }
+    // private void CheckScrollWheel()
+    // {
+    //     if (Input.GetAxis("Mouse ScrollWheel") != 0)
+    //     {
+    //         if (Input.GetAxis("Mouse ScrollWheel") > 0)
+    //         {
+    //             ZoomIn();
+    //         }
+    //         else if (Input.GetAxis("Mouse ScrollWheel") < 0)
+    //         {
+    //             ZoomOut();
+    //         }
+    //     }
+    // }
 
     private void CheckFingerScroll()
     {

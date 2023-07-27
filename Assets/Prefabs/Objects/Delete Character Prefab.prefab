@@ -439,6 +439,8 @@ MonoBehaviour:
   levelAlert: {fileID: 0}
   levelPoints: {fileID: 0}
   characterPicture: {fileID: 9140838132432948673}
+  raceDatabase: {fileID: 11400000, guid: 5f92cb296e44e9f44a85eb27026c5878, type: 2}
+  classDatabase: {fileID: 11400000, guid: fa3c507ea4042164898a75a68593354b, type: 2}
 --- !u!1 &5190570754602518778
 GameObject:
   m_ObjectHideFlags: 0

@@ -45,10 +45,7 @@ public class RectTransformHandler : MonoBehaviour
 
         float width = canvas.GetComponent<RectTransform>().rect.width;
         float height = canvas.GetComponent<RectTransform>().rect.height;
-        Debug.Log(min_x);
-        Debug.Log(max_x);
-        Debug.Log( min_y);
-        Debug.Log( max_y);
+        
         float newX = max_x - min_x + bufferX;
         float newY = max_y - min_y + bufferY;
 
