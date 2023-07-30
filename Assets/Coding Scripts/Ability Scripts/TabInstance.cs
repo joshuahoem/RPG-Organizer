@@ -12,7 +12,7 @@ public class TabInstance : MonoBehaviour
         AbilitySaveObject _ability = panelManager.abilitySO;
         _ability.viewingLevel = levelIndex;
 
-        panelManager.DisplayAbility(_ability);
+        panelManager.DisplayAbility(_ability, true);
 
     }
 }

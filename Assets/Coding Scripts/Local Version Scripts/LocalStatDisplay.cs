@@ -71,55 +71,25 @@ public class LocalStatDisplay : MonoBehaviour
     int bonusSpeed = 0;
     #endregion
 
-    public SaveObject save;
+    [Header("Abilities")]
+    [SerializeField] Ability dualWieldAbility;
     public string charString;
 
     private void Awake() 
     {
-        FindCurrentSave();
         LoadCurrentSave();
     }
 
     public void UpdateUI()
     {
-        FindCurrentSave();
         LoadBaseStatBonus();
         LoadCurrentSave();
         UpdateBonusUI();
     }
 
-    private void FindCurrentSave()
-    {
-        string SAVE_FOLDER = Application.persistentDataPath + "/Saves/";
-
-        if (File.Exists(SAVE_FOLDER + "/character_manager.txt"))
-        {
-            string saveString = File.ReadAllText(SAVE_FOLDER + "/character_manager.txt");
-
-            SaveState saveState = JsonUtility.FromJson<SaveState>(saveString);
-
-            charString = saveState.fileIndexString;
-
-            if (File.Exists(SAVE_FOLDER + "/save_" + charString + ".txt"))
-            {
-                string newSaveString = File.ReadAllText(SAVE_FOLDER + "/save_" + charString + ".txt");
-
-                save = JsonUtility.FromJson<SaveObject>(newSaveString);
-
-            }
-            else
-            {
-                Debug.Log("Could not find character folder!");
-            }
-        }
-        else
-        {
-            Debug.Log("Could not find character manager folder!");
-        }
-    }
-
     private void LoadCurrentSave()
     {
+        SaveObject save = NewSaveSystem.FindCurrentSave();
         nameOfCharacter.text = save.nameOfCharacter;
         race.text = save.race;
         characterSelectedClass.text = save.characterClass;
@@ -195,7 +165,7 @@ public class LocalStatDisplay : MonoBehaviour
 
     private void UpdateBonusUI()
     {
-        SaveObject _save = NewSaveSystem.FindCurrentSave();
+        SaveObject save = NewSaveSystem.FindCurrentSave();
         int _bonusAttack = 0;
         int _totalAttack = save.bonusAttack;
         int _bonusDefense = 0;
@@ -216,8 +186,16 @@ public class LocalStatDisplay : MonoBehaviour
                 }
                 else if (item.equipmentSlotIndex == (int) EquipmentSlot.OffHand)
                 {
-                    _bonusAttack += item.item.offDamage;
-                    _bonusMagicAttack += item.item.offMagicDamage;
+                    if (NewSaveSystem.DoesPlayerHaveThisAbility(dualWieldAbility))
+                    {
+                        _bonusAttack += item.item.mainDamage;
+                        _bonusMagicAttack += item.item.mainMagicDamage;
+                    }
+                    else
+                    {
+                        _bonusAttack += item.item.offDamage;
+                        _bonusMagicAttack += item.item.offMagicDamage;
+                    }
                 }
 
                 _bonusDefense += item.item.defense;
@@ -250,6 +228,7 @@ public class LocalStatDisplay : MonoBehaviour
 
     private void LoadBaseStatBonus()
     {
+        SaveObject save = NewSaveSystem.FindCurrentSave();
         bonusHealth = 0;
         bonusStamina = 0;
         bonusMagic = 0;

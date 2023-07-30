@@ -58,3 +58,4 @@ MonoBehaviour:
   errorAbilityNoStrength: You need more Strength to unlock this ability!
   errorAbilityNoIntelligence: You need more Intelligence to unlock this ability!
   errorAbilityNoSpeed: You need more Speed to unlock this ability!
+  errorTooHeavy: This item is too heavy to equip!

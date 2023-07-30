@@ -11,6 +11,10 @@ public class AbilityInventory : MonoBehaviour
     [SerializeField] TextMeshProUGUI abilityPointsText;
     [SerializeField] string classAbilityText;
     [SerializeField] string raceAbilityText;
+    [SerializeField] public Color lockedColor;
+    [SerializeField] public Color unlockedColor;
+    [SerializeField] public Color clickableColor;
+
 
     SaveObject save;
     string charString;

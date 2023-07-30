@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RectTransformHandler : MonoBehaviour
 {
-    [SerializeField] RectTransform startingFocusObject;
+    [SerializeField] public RectTransform startingFocusObject;
     [SerializeField] Canvas canvas;
     [SerializeField] float bufferX;
     [SerializeField] float bufferY;
@@ -49,8 +49,8 @@ public class RectTransformHandler : MonoBehaviour
         float newX = max_x - min_x + bufferX;
         float newY = max_y - min_y + bufferY;
 
-        if (newX < width) { newX = width; Debug.Log("width");}
-        if (newY < height) { newY = height; Debug.Log("height");}
+        if (newX < width) { newX = width;}
+        if (newY < height) { newY = height;}
 
         GetComponent<RectTransform>().sizeDelta = new Vector2(newX, newY);
     }

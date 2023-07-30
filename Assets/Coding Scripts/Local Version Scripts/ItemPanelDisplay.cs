@@ -88,6 +88,9 @@ public class ItemPanelDisplay : MonoBehaviour
     int lootCheck;
     int searchIndex;
 
+    [Header("Abilities")]
+    [SerializeField] Perk weakPerk;
+
     // private void Update() {
     //     if (Input.GetKeyDown(KeyCode.Alpha1))
     //     {
@@ -384,9 +387,17 @@ public class ItemPanelDisplay : MonoBehaviour
     public void EquipWeapon()
     {
         //for two-handed weapons
-        inventoryManager.Equip(item,5);
-        inventoryManager.Equip(item,6);
-        inventoryManager.DisplayInventoryUI();
+        if (NewSaveSystem.DoesPlayerHaveThisPerk(weakPerk))
+        {
+            errorMessageHandler.ReceivingOnErrorOccured(ErrorMessageHandler.ErrorType.TooHeavy);
+        }
+        else
+        {
+            inventoryManager.Equip(item,5);
+            inventoryManager.Equip(item,6);
+            inventoryManager.DisplayInventoryUI();
+        }
+        
         // SaveChanges();
 
     }

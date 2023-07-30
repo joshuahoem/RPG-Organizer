@@ -38,7 +38,7 @@ public class PerkPanelManager : MonoBehaviour
         perkPanelObject.SetActive(false);
     }
 
-    public void DisplayPerkPanel(PerkObject _perkObject)
+    public void DisplayPerkPanel(PerkObject _perkObject, bool canUnlock)
     {
         perk = _perkObject.perk;
         perkObjectFromItem = _perkObject;
@@ -50,6 +50,11 @@ public class PerkPanelManager : MonoBehaviour
         else
         {
             perkButtonUnlock.SetActive(true);
+        }
+
+        if (!canUnlock)
+        {
+            perkButtonUnlock.SetActive(false);
         }
 
         perkImageIcon.sprite = perk.perkImageIcon;

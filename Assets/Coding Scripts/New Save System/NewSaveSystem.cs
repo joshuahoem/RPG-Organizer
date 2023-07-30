@@ -187,4 +187,34 @@ public static class NewSaveSystem
         }
 
     }
+
+    public static bool DoesPlayerHaveThisAbility(Ability ability)
+    {
+        SaveObject save = FindCurrentSave();
+        foreach (AbilitySaveObject _ability in save.abilityInventory)
+        {
+            if (_ability.ability.abilityName == ability.abilityName)
+            {
+                return true;
+            }
+        }
+
+        return false;
+
+    }
+
+    public static bool DoesPlayerHaveThisPerk(Perk perk)
+    {
+        SaveObject save = FindCurrentSave();
+        foreach (PerkObject _perk in save.perks)
+        {
+            if (_perk.perk.perkName == perk.perkName)
+            {
+                return true;
+            }
+        }
+
+        return false;
+
+    }
 }

@@ -29,7 +29,7 @@ public class AbilityManager : MonoBehaviour
 
 
 
-    private void Start() 
+    private void Start()
     {
         save = NewSaveSystem.FindCurrentSave();
         saveState = NewSaveSystem.FindSaveState();
@@ -41,7 +41,7 @@ public class AbilityManager : MonoBehaviour
         abilityPanelObject.SetActive(false);
 
         saveState.screenState = ScreenState.CharacterInfo;
-        
+
         saveState.raceAbilityBool = true;
 
         NewSaveSystem.SaveStateOfGame(saveState);
@@ -49,6 +49,29 @@ public class AbilityManager : MonoBehaviour
 
         //UpdateSpellBook();
 
+        UpdateAbilities();
+
+    }
+
+    private void UpdateAbilities()
+    {
+        foreach (AbilitySaveObject _ability in save.abilityInventory)
+        {
+            if (_ability.ability == null)
+            {
+                for (int i = 0; i < abilityDatabase.allAbilities.Length; i++)
+                {
+                    if (_ability.stringID == abilityDatabase.allAbilities[i].abilityName)
+                    {
+                        _ability.ability = abilityDatabase.allAbilities[i];
+                        Debug.Log("replaced");
+                    }
+                }
+            }
+        }
+
+        NewSaveSystem.SaveChanges(save);
+        save = NewSaveSystem.FindCurrentSave();
     }
 
     //Old Method
@@ -136,7 +159,7 @@ public class AbilityManager : MonoBehaviour
     public void LoadAbilityPanel(AbilitySaveObject _abilitySO)
     {
         abilityPanelObject.SetActive(true);
-        abilityPanelObject.GetComponent<AbilityPanelManager>().DisplayAbility(_abilitySO);
+        abilityPanelObject.GetComponent<AbilityPanelManager>().DisplayAbility(_abilitySO, true);
     }
 
     public void LoadPerks()
@@ -158,14 +181,14 @@ public class AbilityManager : MonoBehaviour
                     GO.GetComponent<PerkInstanceObject>().perkCountTMP.text = displayNumber.ToString();
                     return;
                 }
-                
+
             }
 
             GameObject _perk = Instantiate(perkPrefab, transform.position, transform.rotation);
             _perk.transform.SetParent(perkContent, false);
             _perk.GetComponent<PerkInstanceObject>().DisplayPerk(perk);
             perkPrefabList.Add(_perk);
-            
+
         }
     }
 }

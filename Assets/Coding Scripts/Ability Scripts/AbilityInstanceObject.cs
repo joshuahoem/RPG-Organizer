@@ -7,42 +7,52 @@ using System;
 public class AbilityInstanceObject : MonoBehaviour
 {
     [Header("Ability Info")]
-    [SerializeField] Ability ability;
+    [SerializeField] public Ability ability;
+    [SerializeField] public Perk perk;
 
     [Header("Set Up Info")]
-    [SerializeField] Image borderImage;
+    [SerializeField] public Image borderImage;
+    [SerializeField] Image backgroundImage;
     [SerializeField] Image abilityImage;
+    [SerializeField] int objectID;
     
     [Header("To View Only")]
     public AbilitySaveObject abilitySO;
+    public PerkObject perkObject;
     
     [Space(20)] [Header("Unlocked Info")]
-    [SerializeField] GameObject[] abilitiesThatUnlock;
-    List<GameObject> arrows = new List<GameObject>();
-    [SerializeField] Transform parentTransformForArrows;
+    [SerializeField] public GameObject[] abilitiesThatUnlock;
+    public List<GameObject> arrows = new List<GameObject>();
+    Transform parentTransformForArrows;
 
 
-    private void Start() 
+    private void Awake() 
     {
-        if (ability.abilitySpriteIcon != null)
+        if (ability != null)
         {
-            abilityImage.sprite = ability.abilitySpriteIcon;
+            if (ability.abilitySpriteIcon != null)
+            {
+                abilityImage.sprite = ability.abilitySpriteIcon;
+            }
+            
+            backgroundImage.color = ability.borderColor;
+
+            abilitySO = GetAbilitySaveObject();
+
         }
-        if (abilityImage != null)
+
+        if (perk != null)
         {
-            borderImage.color = ability.borderColor;
+            if (perk.perkImageIcon != null)
+            {
+                abilityImage.sprite = perk.perkImageIcon;
+            }
+    
+            backgroundImage.color = perk.borderColor;
+
+            perkObject = FindPerkObject();
+
         }
-
-        abilitySO = GetAbilitySaveObject();
-
-        SetupAbilityTree();
-
-    }
-
-    private void SetupAbilityTree()
-    {
-        AbilityPanelManager panelManager = FindObjectOfType<AbilityPanelManager>();
-        panelManager.onAbilityUnlocked += Subscriber_UnlockAbility;
 
         foreach (GameObject ability in abilitiesThatUnlock)
         {
@@ -52,39 +62,8 @@ public class AbilityInstanceObject : MonoBehaviour
             arrows.Add(ability.GetComponent<ArrowDirectionTest>().arrowInstance);
         }
 
-        foreach (GameObject arrow in arrows)
-        {
-            arrow.SetActive(false);
-        }
+        parentTransformForArrows = this.transform.parent.transform;
 
-        foreach (GameObject ability in abilitiesThatUnlock)
-        {
-            ability.GetComponent<Button>().interactable = false;
-        }
-
-        SaveObject save = NewSaveSystem.FindCurrentSave();
-
-        foreach (AbilitySaveObject abilitySave in save.abilityInventory)
-        {
-            if (abilitySave.ability == this.ability)
-            {
-                if (abilitySave.unlocked)
-                {
-                    // Debug.Log("unlocking " + this.name);
-                    foreach (GameObject ability in abilitiesThatUnlock)
-                    {
-                        ability.GetComponent<Button>().interactable = true;
-                    }
-                    foreach (GameObject arrow in arrows)
-                    {
-                        arrow.SetActive(true);
-                    }
-                }
-            }
-        }
-
-
-        
     }
 
     private AbilitySaveObject GetAbilitySaveObject()
@@ -117,30 +96,52 @@ public class AbilityInstanceObject : MonoBehaviour
 
     }
 
+    private PerkObject FindPerkObject()
+    {
+        SaveObject save = NewSaveSystem.FindCurrentSave();
+
+        foreach (PerkObject _perkObject in save.perks)
+        {
+            if (_perkObject.ID == this.objectID)
+            {
+                if (_perkObject.perk.perkName == this.perk.perkName)
+                {
+                    return _perkObject;
+                }
+            }
+        }
+
+        return new PerkObject(perk, 0, false, objectID);
+    }
+
     public void DisplayAbilityPanel()
     {
         //When Clicked on!
-        AbilityPanelManager manager = FindObjectOfType<AbilityPanelManager>();
-        manager.abilityInfoPanel.SetActive(true);
-        manager.DisplayAbility(abilitySO);
-        FindObjectOfType<EventHandler>().OnAbilityClickedFunction(abilitySO);
-        // onAbilityClicked?.Invoke(this, new AbilityPanelManager.UnlockAbilityEventArgs { _ability = ability });
-    }
-
-
-    private void Subscriber_UnlockAbility(object sender, AbilityPanelManager.UnlockAbilityEventArgs e)
-    {
-        if (e._ability.ability == this.ability)
+        if (perk != null)
         {
-            foreach (GameObject ability in abilitiesThatUnlock)
-            {
-                ability.GetComponent<Button>().interactable = true;
-            }
-            foreach (GameObject arrow in arrows)
-            {
-                arrow.SetActive(true);
-            }
+            FindObjectOfType<PerkPanelManager>().perkPanelObject.SetActive(true);
+            FindObjectOfType<PerkPanelManager>().DisplayPerkPanel(perkObject, CanUnlockBool());
         }
-        
+        else if (ability != null)
+        {
+            FindObjectOfType<AbilityPanelManager>().abilityInfoPanel.SetActive(true);
+            FindObjectOfType<AbilityPanelManager>().DisplayAbility(abilitySO, CanUnlockBool());
+        }
+        else
+        {
+            Debug.Log("Error - No perk or ability assigned");
+        }
     }
+
+    private bool CanUnlockBool()
+    {
+        NewAbilityManager newAbilityManager = FindObjectOfType<NewAbilityManager>();
+        if (borderImage.color == newAbilityManager.clickableColor)
+        {
+            return true;
+        }
+
+        return false;
+    }
+
 }

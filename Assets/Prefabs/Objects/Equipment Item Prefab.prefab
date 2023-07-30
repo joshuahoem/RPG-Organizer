@@ -127,6 +127,7 @@ MonoBehaviour:
   ArmorColor: {r: 0.96470594, g: 0.7254902, b: 0.23137257, a: 1}
   ConsumableColor: {r: 0.96470594, g: 0.7254902, b: 0.23137257, a: 1}
   SpecialColor: {r: 0.96470594, g: 0.7254902, b: 0.23137257, a: 1}
+  dualWieldAbility: {fileID: 11400000, guid: 5b9eb45cd3bf1c145a47b936973366f8, type: 2}
 --- !u!1 &1748487756850388591
 GameObject:
   m_ObjectHideFlags: 0

@@ -22,13 +22,6 @@ public class ScreenManager : MonoBehaviour
     [SerializeField] int enemySceneIndex = 11;
     [SerializeField] int charactersUnlockSceneIndex = 12;
 
-    private void Start() {
-        Debug.Log("Screen height: " + Screen.height);
-        Debug.Log("Screen width: " + Screen.width);
-    }
-
-
-
     public void LoadMainMenu ()
     {
         scene = mainMenuSceneIndex;

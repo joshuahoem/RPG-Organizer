@@ -68,7 +68,7 @@ public class AbilityPanelManager : MonoBehaviour
         abilityInfoPanel.SetActive(false);
     }
 
-    public void DisplayAbility(AbilitySaveObject _ability)
+    public void DisplayAbility(AbilitySaveObject _ability, bool canUnlock)
     {
         abilitySO = _ability;
         ability = _ability.ability;
@@ -92,7 +92,11 @@ public class AbilityPanelManager : MonoBehaviour
         {
             unlockButtonObject.SetActive(false);
         }
-        
+
+        if (!canUnlock)
+        {
+            unlockButtonObject.SetActive(false);
+        }
 
         abilityNameTMP.text = ability.abilityName;
         abilityIcon.sprite = ability.abilitySpriteIcon;

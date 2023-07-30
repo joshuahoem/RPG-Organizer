@@ -31,5 +31,5 @@ MonoBehaviour:
     range: 
     damage: 
     magicDamage: 
-    description: When upgrading the strength stat, this character receives 3 points
-      added to their strength instead of 2
+    description: When upgrading the strength stat, this character receives 2 points
+      added to their strength instead of 1

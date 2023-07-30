@@ -15,14 +15,14 @@ public class AbilityTreeManager : MonoBehaviour
     string[] raceKeys;
     string[] classKeys;
 
-    Dictionary<string, GameObject> raceAbilityDictionary = new Dictionary<string, GameObject>();
-    Dictionary<string, GameObject> classAbilityDictionary = new Dictionary<string, GameObject>();
+    public Dictionary<string, GameObject> raceAbilityDictionary = new Dictionary<string, GameObject>();
+    public Dictionary<string, GameObject> classAbilityDictionary = new Dictionary<string, GameObject>();
 
     [SerializeField] TextMeshProUGUI titleTMP;
 
 
     
-    private void Start()
+    private void Awake()
     {
         save = NewSaveSystem.FindCurrentSave();
         SetUpDictionary();

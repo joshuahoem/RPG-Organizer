@@ -40,16 +40,15 @@ public class LocalInventoryManager : MonoBehaviour
     {
         itemInfoPanel.SetActive(false);
 
-        save = FindObjectOfType<LocalStatDisplay>().save;
+        SaveObject save = NewSaveSystem.FindCurrentSave();
         if (save.equipment.Length <= 1)
         {
             int numSlots = System.Enum.GetNames(typeof(EquipmentSlot)).Length - 1;
             save.equipment = new InventoryItem[numSlots];
         }
 
-        SaveChanges();
+        NewSaveSystem.SaveChanges(save);
 
-        save = FindObjectOfType<LocalStatDisplay>().save;
         currentEquipment = save.equipment;
         
     }
@@ -136,7 +135,7 @@ public class LocalInventoryManager : MonoBehaviour
         }
         inventory.Remove(searchResult);
         save.inventory = inventory;
-        SaveChanges();
+        NewSaveSystem.SaveChanges(save);
         LoadInventory();
     }
 
@@ -181,7 +180,7 @@ public class LocalInventoryManager : MonoBehaviour
         save.equipment[searchIndex].equipped = false;
         save.equipment[searchIndex].item = null;
 
-        SaveChanges();
+        NewSaveSystem.SaveChanges(save);
 
         // for (int i=0; i< _save.equipment.Length; i++)
         // {
@@ -233,7 +232,7 @@ public class LocalInventoryManager : MonoBehaviour
 
     public void Consume(Item newItem, InventoryItem _itemInfo)
     {
-        save = FindCurrentSave();
+        SaveObject save = NewSaveSystem.FindCurrentSave();
         bool removed = false;
 
         for (int i=0; i< save.equipment.Length; i++)
@@ -247,11 +246,11 @@ public class LocalInventoryManager : MonoBehaviour
         }
 
         LoadInventory();
-        SaveChanges();
+        NewSaveSystem.SaveChanges(save);
     }
     public void LoadInventory()
     {
-        save = FindCurrentSave();
+        SaveObject save = NewSaveSystem.FindCurrentSave();
         inventory = save.inventory;
 
         foreach (GameObject item in displayedItems)
@@ -282,7 +281,7 @@ public class LocalInventoryManager : MonoBehaviour
 
     public void DisplayInventoryUI()
     {
-        save = NewSaveSystem.FindCurrentSave();
+        SaveObject save = NewSaveSystem.FindCurrentSave();
         int lootCheck = 0;
         foreach (InventoryItem item in save.inventory)
         {
@@ -323,7 +322,7 @@ public class LocalInventoryManager : MonoBehaviour
 
     public void LoadEquipment()
     {
-        save = NewSaveSystem.FindCurrentSave();
+        SaveObject save = NewSaveSystem.FindCurrentSave();
         currentEquipment = save.equipment;
 
         foreach (GameObject equipInstance in equipmentDisplayItems)
@@ -354,51 +353,6 @@ public class LocalInventoryManager : MonoBehaviour
                 equipmentDisplayItems.Add(equipInstance);
             }
         }
-    }
-
-    private SaveObject FindCurrentSave()
-    {
-        string SAVE_FOLDER = Application.persistentDataPath + "/Saves/";
-
-        if (File.Exists(SAVE_FOLDER + "/character_manager.txt"))
-        {
-            string saveString = File.ReadAllText(SAVE_FOLDER + "/character_manager.txt");
-
-            SaveState saveState = JsonUtility.FromJson<SaveState>(saveString);
-
-            charString = saveState.fileIndexString;
-
-            if (File.Exists(SAVE_FOLDER + "/save_" + charString + ".txt"))
-            {
-                string newSaveString = File.ReadAllText(SAVE_FOLDER + "/save_" + charString + ".txt");
-
-                return JsonUtility.FromJson<SaveObject>(newSaveString);
-
-            }
-            else
-            {
-                // Debug.Log("Could not find character folder!");
-                return null;
-            }
-        }
-        else
-        {
-            // Debug.Log("Could not find character manager folder!");
-            return null;
-        }
-    }
-    
-    private void SaveChanges()
-    {
-        string newCharacterString = JsonUtility.ToJson(save);
-        string indexOfSave = FindObjectOfType<LocalStatDisplay>().charString;
-        File.WriteAllText(Application.persistentDataPath + "/Saves/" + 
-            "/save_" + indexOfSave + ".txt", newCharacterString);
-                    
-        string newSaveString = File.ReadAllText(Application.persistentDataPath + 
-            "/Saves/" + "/save_" + indexOfSave + ".txt");
-        SaveObject newSave = JsonUtility.FromJson<SaveObject>(newSaveString);
-        FindObjectOfType<LocalStatDisplay>().save = newSave;
     }
 
 }

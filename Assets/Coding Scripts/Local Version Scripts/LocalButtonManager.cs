@@ -84,7 +84,7 @@ public class LocalButtonManager : MonoBehaviour
                 break;
         }
 
-        SaveChanges();
+        NewSaveSystem.SaveChanges(save);
 
     }
 
@@ -128,7 +128,7 @@ public class LocalButtonManager : MonoBehaviour
                 break;
         }
 
-        SaveChanges();
+        NewSaveSystem.SaveChanges(save);
     }
 
     private SaveObject FindCurrentSave()
@@ -161,20 +161,6 @@ public class LocalButtonManager : MonoBehaviour
             Debug.Log("Could not find character manager folder!");
             return null;
         }
-    }
-
-    private void SaveChanges()
-    {
-        string newCharacterString = JsonUtility.ToJson(save);
-        string indexOfSave = FindObjectOfType<LocalStatDisplay>().charString;
-        File.WriteAllText(Application.persistentDataPath + "/Saves/" + 
-            "/save_" + indexOfSave + ".txt", newCharacterString);
-                    
-        string newSaveString = File.ReadAllText(Application.persistentDataPath + 
-            "/Saves/" + "/save_" + indexOfSave + ".txt");
-        SaveObject newSave = JsonUtility.FromJson<SaveObject>(newSaveString);
-        FindObjectOfType<LocalStatDisplay>().save = newSave;
-
     }
 
     private void LoadBaseStatBonus()

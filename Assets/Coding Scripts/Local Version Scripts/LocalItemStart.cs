@@ -8,7 +8,8 @@ public class LocalItemStart : MonoBehaviour
 {
     Item item;
     InventoryItem itemInfo;
-    #region Display
+    #region Display 
+    [Header("Item Info")]
     [SerializeField] TextMeshProUGUI itemName;
     [SerializeField] TextMeshProUGUI statStringOne;
     [SerializeField] TextMeshProUGUI statStringTwo;
@@ -33,6 +34,9 @@ public class LocalItemStart : MonoBehaviour
     [SerializeField] Color ConsumableColor;
     [SerializeField] Color SpecialColor;
     #endregion
+    
+    [Header("Abilities")]
+    [SerializeField] Ability dualWieldAbility;
 
     public void DisplayItemInfo(Item _item, InventoryItem _itemInfo)
     {
@@ -53,23 +57,28 @@ public class LocalItemStart : MonoBehaviour
                 backgroundSprite.color = ArmorColor;
                 break;
             case ItemType.Weapon:
+                statStringOne.text = attackString;
+                statStringTwo.text = rangeString;
+                backgroundSprite.color = WeaponColor;
                 if (_itemInfo.equipmentSlotIndex == 6)
                 {
                     //offhand
-                    statStringOne.text = attackString;
-                    statStringTwo.text = rangeString;
-                    statNumberOne.text = _item.offDamage.ToString();
-                    statNumberTwo.text = _item.offAttackRange.ToString();
-                    backgroundSprite.color = WeaponColor;
+                    if (NewSaveSystem.DoesPlayerHaveThisAbility(dualWieldAbility))
+                    {
+                        statNumberOne.text = _item.mainDamage.ToString();
+                        statNumberTwo.text = _item.mainAttackRange.ToString();
+                    }
+                    else
+                    {
+                        statNumberOne.text = _item.offDamage.ToString();
+                        statNumberTwo.text = _item.offAttackRange.ToString();
+                    }
                 }
                 else
                 {
                     //main hand
-                    statStringOne.text = attackString;
-                    statStringTwo.text = rangeString;
                     statNumberOne.text = _item.mainDamage.ToString();
                     statNumberTwo.text = _item.mainAttackRange.ToString();
-                    backgroundSprite.color = WeaponColor;
                 }
 
                 break;
