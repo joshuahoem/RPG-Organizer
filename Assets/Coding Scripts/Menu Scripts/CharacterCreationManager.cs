@@ -306,17 +306,6 @@ public class CharacterCreationManager : MonoBehaviour
         int _baseStrength = _class.strength + _race.strength;
         int _baseSpeed = _class.speed + _race.speed;
 
-        //Bonus Stats
-        int _bonusAttack = Mathf.FloorToInt(_baseStrength / bonusAttackModifer);
-        int _bonusDefense = Mathf.FloorToInt(_baseStrength / bonusDefenseModifer);
-        int _holdingCapacity = Mathf.FloorToInt(_baseStrength / holdingCapacityModifer);
-
-        int _bonusMagicAttack = Mathf.FloorToInt(_baseIntelligence / bonusMagicAttackModifer);
-        int _bonusMagicDefense = Mathf.FloorToInt(_baseIntelligence / bonusMagicDefenseModifer);
-        int _spellbookCapacity = Mathf.FloorToInt(_baseIntelligence / spellbookCapacityModifer);
-
-        int _movement = Mathf.FloorToInt(_baseSpeed / movementModifer);
-
         List<PerkObject> _startingPerks = new List<PerkObject>();
         foreach (Perk _perk in _race.startingPerks)
         {
@@ -329,6 +318,28 @@ public class CharacterCreationManager : MonoBehaviour
             _startingPerks.Add(newPerk);
         }
 
+        float strengthX = 1;
+        float intelligenceX = 1;
+        float speedX = 1;
+
+        foreach (PerkObject perk in _startingPerks)
+        {
+            if (perk.perk == null) { continue; }
+            strengthX += perk.perk.strengthMultiplier;
+            intelligenceX += perk.perk.intelligenceMultiplier;
+            speedX += perk.perk.speedMultiplier;
+        }
+
+        //Bonus Stats
+        int _bonusAttack = Mathf.FloorToInt((_baseStrength * strengthX) / bonusAttackModifer);
+        int _bonusDefense = Mathf.FloorToInt((_baseStrength * strengthX) / bonusDefenseModifer);
+        int _holdingCapacity = Mathf.FloorToInt((_baseStrength * strengthX) / holdingCapacityModifer);
+
+        int _bonusMagicAttack = Mathf.FloorToInt((_baseIntelligence * intelligenceX) / bonusMagicAttackModifer);
+        int _bonusMagicDefense = Mathf.FloorToInt((_baseIntelligence * intelligenceX) / bonusMagicDefenseModifer);
+        int _spellbookCapacity = Mathf.FloorToInt((_baseIntelligence * intelligenceX) / spellbookCapacityModifer);
+
+        int _movement = Mathf.FloorToInt((_baseSpeed * speedX) / movementModifer);
 
         //Character Info
         SaveObject saveObject = new SaveObject

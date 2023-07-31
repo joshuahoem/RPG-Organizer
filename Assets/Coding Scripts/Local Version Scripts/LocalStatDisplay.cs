@@ -144,6 +144,7 @@ public class LocalStatDisplay : MonoBehaviour
         health.text = save.currentHealth + "/" + _bonusHealth;
         stamina.text = save.currentStamina + "/" + _bonusStamina;
         magic.text = save.currentMagic + "/" + _bonusMagic;
+        NewSaveSystem.SaveChanges(save);
 
         strength.text = _bonusStrength.ToString();
         intelligence.text = _bonusIntelligence.ToString();

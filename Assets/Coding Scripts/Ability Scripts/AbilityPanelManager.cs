@@ -58,11 +58,6 @@ public class AbilityPanelManager : MonoBehaviour
 
     int _levelIndex;
 
-    private void Start() 
-    {
-        abilityInfoPanel.SetActive(false);
-    }
-
     public void DisableAbilityInfoPanl()
     {
         abilityInfoPanel.SetActive(false);

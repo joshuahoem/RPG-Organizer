@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ShopContentFitter : MonoBehaviour
 {
-    [SerializeField] GameObject parent;
+    [SerializeField] public GameObject GOParent;
     [SerializeField] int minItemsWithoutChange;
     [SerializeField] float sizePerItem;
     [SerializeField] float constantSizeVariable;

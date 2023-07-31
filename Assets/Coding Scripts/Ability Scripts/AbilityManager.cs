@@ -5,9 +5,8 @@ using TMPro;
 
 public class AbilityManager : MonoBehaviour
 {
-    SaveState saveState;
-    SaveObject save;
     [SerializeField] AbilityDatabase abilityDatabase;
+    [SerializeField] ShopContentFitter contentFitter;
     [SerializeField] TextMeshProUGUI spellbookCapacityTextTMP;
     [SerializeField] GameObject abilityObjectPrefab;
     [SerializeField] GameObject perkPrefab;
@@ -31,8 +30,8 @@ public class AbilityManager : MonoBehaviour
 
     private void Start()
     {
-        save = NewSaveSystem.FindCurrentSave();
-        saveState = NewSaveSystem.FindSaveState();
+        SaveObject save = NewSaveSystem.FindCurrentSave();
+        SaveState saveState = NewSaveSystem.FindSaveState();
 
         raceAbilityTab.SetActive(true);
         classAbilityTab.SetActive(false);
@@ -40,12 +39,13 @@ public class AbilityManager : MonoBehaviour
         learnedAbilityTab.SetActive(false);
         abilityPanelObject.SetActive(false);
 
+        contentFitter.GOParent = raceAbilityContent.gameObject;
+
         saveState.screenState = ScreenState.CharacterInfo;
 
         saveState.raceAbilityBool = true;
 
         NewSaveSystem.SaveStateOfGame(saveState);
-        saveState = NewSaveSystem.FindSaveState();
 
         //UpdateSpellBook();
 
@@ -55,6 +55,7 @@ public class AbilityManager : MonoBehaviour
 
     private void UpdateAbilities()
     {
+        SaveObject save = NewSaveSystem.FindCurrentSave();
         foreach (AbilitySaveObject _ability in save.abilityInventory)
         {
             if (_ability.ability == null)
@@ -71,7 +72,6 @@ public class AbilityManager : MonoBehaviour
         }
 
         NewSaveSystem.SaveChanges(save);
-        save = NewSaveSystem.FindCurrentSave();
     }
 
     //Old Method
@@ -84,31 +84,38 @@ public class AbilityManager : MonoBehaviour
 
     public void RaceAbilityTreeOption()
     {
+        SaveState saveState = NewSaveSystem.FindSaveState();
         saveState.learnedAbilityBool = false;
         saveState.classAbilityBool = false;
         saveState.raceAbilityBool = true;
+        contentFitter.GOParent = raceAbilityContent.gameObject;
         NewSaveSystem.SaveStateOfGame(saveState);
     }
 
     public void ClassAbilityTreeOption()
     {
+        SaveState saveState = NewSaveSystem.FindSaveState();
         saveState.learnedAbilityBool = false;
         saveState.raceAbilityBool = false;
         saveState.classAbilityBool = true;
+        contentFitter.GOParent = classAbilityContent.gameObject;
         NewSaveSystem.SaveStateOfGame(saveState);
     }
 
     public void LearnedAbilityOption()
     {
+        SaveState saveState = NewSaveSystem.FindSaveState();
         saveState.learnedAbilityBool = true;
         saveState.raceAbilityBool = false;
         saveState.classAbilityBool = false;
+        contentFitter.GOParent = learnedAbilityContent.gameObject;
         NewSaveSystem.SaveStateOfGame(saveState);
     }
 
     public void LoadAbilities()
     {
-        save = NewSaveSystem.FindCurrentSave();
+        SaveState saveState = NewSaveSystem.FindSaveState();
+        SaveObject save = NewSaveSystem.FindCurrentSave();
 
         foreach (GameObject card in abilityCardPrefabs)
         {
@@ -154,6 +161,8 @@ public class AbilityManager : MonoBehaviour
             }
         }
 
+        contentFitter.FitContent(abilityCardPrefabs.Count);
+
     }
 
     public void LoadAbilityPanel(AbilitySaveObject _abilitySO)
@@ -164,6 +173,8 @@ public class AbilityManager : MonoBehaviour
 
     public void LoadPerks()
     {
+        SaveObject save = NewSaveSystem.FindCurrentSave();
+
         foreach (GameObject perkObject in perkPrefabList)
         {
             Destroy(perkObject);
@@ -190,5 +201,10 @@ public class AbilityManager : MonoBehaviour
             perkPrefabList.Add(_perk);
 
         }
+
+        contentFitter.GOParent = perkContent.gameObject;
+        contentFitter.FitContent(perkPrefabList.Count);
+
+
     }
 }

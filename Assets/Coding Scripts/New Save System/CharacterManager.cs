@@ -67,5 +67,7 @@ public class CharacterManager : MonoBehaviour
         {
             Debug.LogError("Something is wrong");
         }
+
+        FindObjectOfType<ShopContentFitter>().FitContent(numberOfCharacters);
     }
 }
