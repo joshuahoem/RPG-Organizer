@@ -13,10 +13,16 @@ MonoBehaviour:
   m_Name: Teleport
   m_EditorClassIdentifier: 
   abilityName: Teleport
-  abilitySpriteIcon: {fileID: 21300000, guid: b5f65808787d7cb47aeb5a1297b113f2, type: 3}
+  abilitySpriteIcon: {fileID: 21300000, guid: 37b6859e4138d0245a73053028655129, type: 3}
   borderColor: {r: 0.7169812, g: 0.21306516, b: 0.48784792, a: 0.92156863}
   costType: 0
   unlockCost: 1
+  unlockHealth: 1
+  unlockStamina: 1
+  unlockMagic: 1
+  unlockStrength: 1
+  unlockIntelligence: 1
+  unlockSpeed: 1
   allAbilityLevels:
   - level: 1
     upgradeCost: 0

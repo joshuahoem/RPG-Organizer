@@ -13,10 +13,16 @@ MonoBehaviour:
   m_Name: Think
   m_EditorClassIdentifier: 
   abilityName: Think
-  abilitySpriteIcon: {fileID: 21300000, guid: dcf0bc503da2e5344b624558ca3f0a1d, type: 3}
-  borderColor: {r: 0.7830189, g: 0.7807344, b: 0.14404595, a: 0.7529412}
+  abilitySpriteIcon: {fileID: 21300000, guid: 75f2e7c1dfe5af141a45d01154afb624, type: 3}
+  borderColor: {r: 0.9215687, g: 0.18431373, b: 0.023529414, a: 1}
   costType: 3
   unlockCost: 1
+  unlockHealth: 1
+  unlockStamina: 1
+  unlockMagic: 1
+  unlockStrength: 1
+  unlockIntelligence: 1
+  unlockSpeed: 1
   allAbilityLevels:
   - level: 1
     upgradeCost: 0

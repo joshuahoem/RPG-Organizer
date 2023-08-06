@@ -13,10 +13,16 @@ MonoBehaviour:
   m_Name: Foresight
   m_EditorClassIdentifier: 
   abilityName: Foresight
-  abilitySpriteIcon: {fileID: 21300000, guid: dcf0bc503da2e5344b624558ca3f0a1d, type: 3}
+  abilitySpriteIcon: {fileID: 21300000, guid: 0e52fa162cb970e4fa0e7d9eadcfc84c, type: 3}
   borderColor: {r: 0.6893017, g: 0.17443931, b: 0.754717, a: 0.89411765}
   costType: 0
   unlockCost: 1
+  unlockHealth: 1
+  unlockStamina: 1
+  unlockMagic: 1
+  unlockStrength: 1
+  unlockIntelligence: 1
+  unlockSpeed: 1
   allAbilityLevels:
   - level: 1
     upgradeCost: 0
