@@ -13,10 +13,16 @@ MonoBehaviour:
   m_Name: Earth Wall
   m_EditorClassIdentifier: 
   abilityName: Earth Wall
-  abilitySpriteIcon: {fileID: 21300000, guid: 3d75cff6a89984540b0c62a3dc12ed55, type: 3}
+  abilitySpriteIcon: {fileID: 21300000, guid: 069fbdcd7ed1d9c45a3c295439e4712c, type: 3}
   borderColor: {r: 0.42745098, g: 0.08254716, b: 0.08254716, a: 0.69411767}
   costType: 0
   unlockCost: 1
+  unlockHealth: 1
+  unlockStamina: 1
+  unlockMagic: 1
+  unlockStrength: 1
+  unlockIntelligence: 1
+  unlockSpeed: 1
   allAbilityLevels:
   - level: 1
     upgradeCost: 0
