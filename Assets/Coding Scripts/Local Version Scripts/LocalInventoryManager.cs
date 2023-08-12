@@ -55,6 +55,7 @@ public class LocalInventoryManager : MonoBehaviour
 
     public void Equip(Item newItem, int chosenSlotIndex)
     {
+        SaveObject save = NewSaveSystem.FindCurrentSave();
         if (chosenSlotIndex == 0)
         {
             //0 is default and so none was chosen
@@ -154,6 +155,7 @@ public class LocalInventoryManager : MonoBehaviour
         searchIndex = newItem.equipmentSlotIndex;
         searchResult = _save.equipment[searchIndex];
 
+        SaveObject save = NewSaveSystem.FindCurrentSave();
         save.equipment[searchIndex].equipmentSlotIndex = 0;
 
         if (save.equipment[searchIndex].item.numberOfHands == NumberOfHands.TwoHanded)
@@ -207,6 +209,8 @@ public class LocalInventoryManager : MonoBehaviour
     private InventoryItem UnequipNoSave(Item newItem)
     {
         bool removed = false;
+        SaveObject save = NewSaveSystem.FindCurrentSave();
+
         for (int i=0; i< save.equipment.Length; i++)
         {
             if(save.equipment[i].item == newItem && !removed)
