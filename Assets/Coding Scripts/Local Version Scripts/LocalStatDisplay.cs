@@ -75,9 +75,9 @@ public class LocalStatDisplay : MonoBehaviour
     [SerializeField] Ability dualWieldAbility;
     public string charString;
 
-    private void Awake() 
+    private void Start() 
     {
-        LoadCurrentSave();
+        UpdateUI();
     }
 
     public void UpdateUI()
@@ -90,22 +90,22 @@ public class LocalStatDisplay : MonoBehaviour
     private void LoadCurrentSave()
     {
         SaveObject save = NewSaveSystem.FindCurrentSave();
-        nameOfCharacter.text = save.nameOfCharacter;
-        race.text = save.race;
-        characterSelectedClass.text = save.characterClass;
-        levelText.text = save.level.ToString();
-        racePointsTMP.text = save.raceAbilityPoints.ToString();
-        classPointsTMP.text = save.classAbilityPoints.ToString();
-        goldTMP.text = save.gold.ToString();
+        if (nameOfCharacter != null) { nameOfCharacter.text = save.nameOfCharacter; }
+        if (race != null) { race.text = save.race; }
+        if (characterSelectedClass != null) { characterSelectedClass.text = save.characterClass; }
+        if (levelText != null) { levelText.text = save.level.ToString(); }
+        if (racePointsTMP != null) { racePointsTMP.text = save.raceAbilityPoints.ToString(); }
+        if (classPointsTMP != null) { classPointsTMP.text = save.classAbilityPoints.ToString(); }
+        if (goldTMP != null) { goldTMP.text = save.gold.ToString(); }
         if (save.raceObject != null)
         {
             if (save.raceObject.picture != null)
-            { imageReference.sprite = save.raceObject.picture; }
+            { if (imageReference != null) { imageReference.sprite = save.raceObject.picture; } }
         }
         if (save.classObject != null)
         {
             if (save.classObject.logo != null)
-            { classimage.sprite = save.classObject.logo; }
+            { if (classimage != null) { classimage.sprite = save.classObject.logo; } }
         }
 
         float healthX = 1;
@@ -141,27 +141,28 @@ public class LocalStatDisplay : MonoBehaviour
         if (_bonusStamina < save.currentStamina) { save.currentStamina = _bonusStamina; }
         if (_bonusMagic < save.currentMagic) { save.currentMagic = _bonusMagic; }
 
-        health.text = save.currentHealth + "/" + _bonusHealth;
-        stamina.text = save.currentStamina + "/" + _bonusStamina;
-        magic.text = save.currentMagic + "/" + _bonusMagic;
+        if (health != null) { health.text = save.currentHealth + "/" + _bonusHealth; }
+        if (stamina != null) { stamina.text = save.currentStamina + "/" + _bonusStamina; }
+        if (magic != null) { magic.text = save.currentMagic + "/" + _bonusMagic; }
         NewSaveSystem.SaveChanges(save);
 
-        strength.text = _bonusStrength.ToString();
-        intelligence.text = _bonusIntelligence.ToString();
-        speed.text = _bonusSpeed.ToString();
+        if (strength != null) { strength.text = _bonusStrength.ToString(); }
+        if (intelligence != null) { intelligence.text = _bonusIntelligence.ToString(); }
+        if (speed != null) { speed.text = _bonusSpeed.ToString(); }
 
         //Bonus Stats
-        bonusAttack.text = save.bonusAttack.ToString();
-        bonusDefense.text = save.bonusDefense.ToString();
-        holdingCapacity.text = save.holdingCapacity.ToString();
+        if (bonusAttack != null) { bonusAttack.text = save.bonusAttack.ToString(); }
+        if (bonusDefense != null) { bonusDefense.text = save.bonusDefense.ToString(); }
+        if (holdingCapacity != null) { holdingCapacity.text = save.holdingCapacity.ToString(); }
 
-        bonusMagicAttack.text = save.bonusMagicAttack.ToString();
-        bonusMagicDefense.text = save.bonusMagicDefense.ToString();
-        spellbookCapacity.text = save.spellbookCapacity.ToString();
+        if (bonusMagicAttack != null) { bonusMagicAttack.text = save.bonusMagicAttack.ToString(); }
+        if (bonusMagicDefense != null) { bonusMagicDefense.text = save.bonusMagicDefense.ToString(); }
+        if (spellbookCapacity != null) { spellbookCapacity.text = save.spellbookCapacity.ToString(); }
 
-        movement.text = save.movement.ToString();
+        if (movement != null) { movement.text = save.movement.ToString(); }
 
-        FindObjectOfType<CharacterPanelManager>().characterNameString = save.nameOfCharacter;
+        CharacterPanelManager characterPanelManager = FindObjectOfType<CharacterPanelManager>();
+        if (characterPanelManager != null) { characterPanelManager.characterNameString = save.nameOfCharacter; }
     }
 
     private void UpdateBonusUI()
@@ -204,25 +205,25 @@ public class LocalStatDisplay : MonoBehaviour
             }
         }
 
-        bonusAttackEquipment.text = _bonusAttack.ToString();
-        bonusDefenseEquipment.text = _bonusDefense.ToString();
-        bonusMagicAttackEquipment.text = _bonusMagicAttack.ToString();
-        bonusMagicDefenseEquipment.text = _bonusMagicDefense.ToString();
+        if (bonusAttackEquipment != null) { bonusAttackEquipment.text = _bonusAttack.ToString(); }
+        if (bonusDefenseEquipment != null) { bonusDefenseEquipment.text = _bonusDefense.ToString(); }
+        if (bonusMagicAttackEquipment != null) { bonusMagicAttackEquipment.text = _bonusMagicAttack.ToString(); }
+        if (bonusMagicDefenseEquipment != null) { bonusMagicDefenseEquipment.text = _bonusMagicDefense.ToString(); }
 
         _totalAttack += _bonusAttack;
         _totalDefense += _bonusDefense;
         _totalMagicAttack += _bonusMagicAttack;
         _totalMagicDefense += _bonusMagicDefense;
 
-        bonusAttackStatTMP.text = save.bonusAttack.ToString();
-        bonusArmorStatTMP.text = save.bonusDefense.ToString();
-        bonusArcaneStatTMP.text = save.bonusMagicAttack.ToString();
-        bonusWardStatTMP.text = save.bonusMagicDefense.ToString();
+        if (bonusAttackStatTMP != null) { bonusAttackStatTMP.text = save.bonusAttack.ToString(); }
+        if (bonusArmorStatTMP != null) { bonusArmorStatTMP.text = save.bonusDefense.ToString(); }
+        if (bonusArcaneStatTMP != null) { bonusArcaneStatTMP.text = save.bonusMagicAttack.ToString(); }
+        if (bonusWardStatTMP != null) { bonusWardStatTMP.text = save.bonusMagicDefense.ToString(); }
 
-        totalAttackEquipment.text = _totalAttack.ToString();
-        totalDefenseEquipment.text = _totalDefense.ToString();
-        totalMagicAttackEquipment.text = _totalMagicAttack.ToString();
-        totalMagicDefenseEquipment.text = _totalMagicDefense.ToString();
+        if (totalAttackEquipment != null) { totalAttackEquipment.text = _totalAttack.ToString(); }
+        if (totalDefenseEquipment != null) { totalDefenseEquipment.text = _totalDefense.ToString(); }
+        if (totalMagicAttackEquipment != null) { totalMagicAttackEquipment.text = _totalMagicAttack.ToString(); }
+        if (totalMagicDefenseEquipment != null) { totalMagicDefenseEquipment.text = _totalMagicDefense.ToString(); }
 
 
     }
@@ -247,12 +248,12 @@ public class LocalStatDisplay : MonoBehaviour
             bonusSpeed += perkObject.perk.bonusSpeed * perkObject.count;
         }
 
-        bonusHealthTMP.text = bonusHealth.ToString();
-        bonusStaminaTMP.text = bonusStamina.ToString();
-        bonusMagicTMP.text = bonusMagic.ToString();
-        bonusStrengthTMP.text = bonusStrength.ToString();
-        bonusIntelligenceTMP.text = bonusIntelligence.ToString();
-        bonusSpeedTMP.text = bonusSpeed.ToString();
+        if (bonusHealthTMP != null) { bonusHealthTMP.text = bonusHealth.ToString(); }
+        if (bonusStaminaTMP != null) { bonusStaminaTMP.text = bonusStamina.ToString(); }
+        if (bonusMagicTMP != null) { bonusMagicTMP.text = bonusMagic.ToString(); }
+        if (bonusStrengthTMP != null) { bonusStrengthTMP.text = bonusStrength.ToString(); }
+        if (bonusIntelligenceTMP != null) { bonusIntelligenceTMP.text = bonusIntelligence.ToString(); }
+        if (bonusSpeedTMP != null) { bonusSpeedTMP.text = bonusSpeed.ToString(); }
 
     }
 }
