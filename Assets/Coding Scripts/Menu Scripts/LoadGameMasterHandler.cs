@@ -37,9 +37,10 @@ public class LoadGameMasterHandler : MonoBehaviour
 
         //SUMMARY// Finds each save and makes sure they have correct items, abilities, and perks
         int numberOfCharacters = saveState.numberOfCharacters;
-        for (int i = 0; i < numberOfCharacters; i++)
+        for (int i = 0; i <= numberOfCharacters; i++)
         {
             SaveObject save = NewSaveSystem.Load(i);
+
             if (save == null) { continue; }
 
             foreach (AbilitySaveObject abilitySO in save.abilityInventory)

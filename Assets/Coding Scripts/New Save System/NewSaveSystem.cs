@@ -57,14 +57,16 @@ public static class NewSaveSystem
     {
         DirectoryInfo directoryInfo = new DirectoryInfo(SAVE_FOLDER);
         FileInfo[] saveFiles = directoryInfo.GetFiles("*.txt");
-
+        string path = Path.Combine(SAVE_FOLDER, "save_" + characterFileNumber.ToString() + ".txt");
+        //If UNITY WINDOWS
+        path = path.Replace("/", @"\");
         foreach (FileInfo fileInfo in saveFiles)
         {
-            if (fileInfo.FullName == SAVE_FOLDER + "/save_" + characterFileNumber + ".txt")
+            if (fileInfo.FullName == path)
             {
-                if (File.Exists(SAVE_FOLDER + "/save_" + characterFileNumber + ".txt"))
+                if (File.Exists(path))
                 {
-                    string saveString = File.ReadAllText(SAVE_FOLDER + "/save_" + characterFileNumber + ".txt");
+                    string saveString = File.ReadAllText(path);
                     return JsonUtility.FromJson<SaveObject>(saveString);
                 }
             }
