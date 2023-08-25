@@ -404,18 +404,19 @@ public class ItemPanelDisplay : MonoBehaviour
 
     public void EquipSpecial()
     {
+        Debug.Log("special");
         inventoryManager.Equip(item, 0);
         inventoryManager.DisplayInventoryUI();
     }
 
     public void EquipRingOne()
     {
-        inventoryManager.Equip(item, 9);
+        inventoryManager.Equip(item, 7);
         inventoryManager.DisplayInventoryUI();
     }
     public void EquipRingTwo()
     {
-        inventoryManager.Equip(item, 10);
+        inventoryManager.Equip(item, 8);
         inventoryManager.DisplayInventoryUI();
     }
 
