@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 724256d0cb2aec04589f1b693ea5e50a
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - classDatabase: {fileID: 11400000, guid: fa3c507ea4042164898a75a68593354b, type: 2}
+  - raceDatabase: {fileID: 11400000, guid: 5f92cb296e44e9f44a85eb27026c5878, type: 2}
+  - abilityDatabase: {fileID: 11400000, guid: 3bccb5716fddfe1439294a8c6d7eac36, type: 2}
+  - perkDatabase: {instanceID: 0}
+  - itemDatabase: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

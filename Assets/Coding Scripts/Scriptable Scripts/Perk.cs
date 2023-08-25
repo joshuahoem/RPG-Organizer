@@ -41,9 +41,11 @@ public class Perk : ScriptableObject
     public int count;
     public bool unlockedBool;
     public int ID;
+    public string stringID;
 
-    public PerkObject(Perk _perk, int _count, bool _unlockedBool, int _ID)
+    public PerkObject(string _stringID, Perk _perk, int _count, bool _unlockedBool, int _ID)
     {
+        stringID = _stringID;
         perk = _perk;
         count = _count;
         unlockedBool = _unlockedBool;

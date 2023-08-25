@@ -309,12 +309,12 @@ public class CharacterCreationManager : MonoBehaviour
         List<PerkObject> _startingPerks = new List<PerkObject>();
         foreach (Perk _perk in _race.startingPerks)
         {
-            PerkObject newPerk = new PerkObject(_perk, 1, true, default);
+            PerkObject newPerk = new PerkObject(_perk.perkName, _perk, 1, true, default);
             _startingPerks.Add(newPerk);
         }  
         foreach (Perk _perk in _class.startingPerks)
         {
-            PerkObject newPerk = new PerkObject(_perk, 1, true, default);
+            PerkObject newPerk = new PerkObject(_perk.perkName, _perk, 1, true, default);
             _startingPerks.Add(newPerk);
         }
 

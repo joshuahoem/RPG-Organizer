@@ -109,7 +109,7 @@ public class PerkPanelManager : MonoBehaviour
             }
         }
 
-        PerkObject perkObject = new PerkObject(perk, 1, true, perkObjectFromItem.ID);
+        PerkObject perkObject = new PerkObject(perk.perkName, perk, 1, true, perkObjectFromItem.ID);
         foundPerkObject = perkObject;
         save.perks.Add(perkObject);
 

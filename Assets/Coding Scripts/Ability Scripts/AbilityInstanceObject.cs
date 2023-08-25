@@ -111,7 +111,7 @@ public class AbilityInstanceObject : MonoBehaviour
             }
         }
 
-        return new PerkObject(perk, 0, false, objectID);
+        return new PerkObject(perk.perkName, perk, 0, false, objectID);
     }
 
     public void DisplayAbilityPanel()

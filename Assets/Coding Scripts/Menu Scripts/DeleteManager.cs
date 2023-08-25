@@ -25,13 +25,12 @@ public class DeleteManager : MonoBehaviour
         }
         deleteManager.deleteObjects.Clear();
 
-        string SAVE_FOLDER = Application.persistentDataPath + "/Saves/";
-        DirectoryInfo directoryInfo = new DirectoryInfo(SAVE_FOLDER);
+        DirectoryInfo directoryInfo = new DirectoryInfo(NewSaveSystem.SAVE_FOLDER);
         FileInfo[] saveFiles = directoryInfo.GetFiles("*.txt");
 
         for (int i=0; i < saveFiles.Length+2; i++)
         {
-            if (File.Exists(SAVE_FOLDER + "/save_" + i + ".txt"))
+            if (File.Exists(NewSaveSystem.SAVE_FOLDER + "/save_" + i + ".txt"))
             {
                 GameObject newDeleteObject = Instantiate(deletePrefab, transform.position, transform.rotation);
                 newDeleteObject.transform.SetParent(deleteManager.parentTransform, false);
@@ -44,12 +43,9 @@ public class DeleteManager : MonoBehaviour
     public void DeleteCharacter()
     {
         string selectedCharacter = EventSystem.current.currentSelectedGameObject.name;
-        string SAVE_FOLDER = Application.persistentDataPath + "/Saves/";
 
-        // var path = AssetDatabase.GUIDToAssetPath(SAVE_FOLDER + "/save_" + selectedCharacter + ".txt");
-
-        File.Delete(SAVE_FOLDER + "/save_" + selectedCharacter + ".txt");
-        File.Delete(SAVE_FOLDER + "/save_" + selectedCharacter + ".txt.meta");
+        File.Delete(NewSaveSystem.SAVE_FOLDER + "/save_" + selectedCharacter + ".txt");
+        File.Delete(NewSaveSystem.SAVE_FOLDER + "/save_" + selectedCharacter + ".txt.meta");
 
         #if UNITY_EDITOR
             UnityEditor.AssetDatabase.Refresh();
@@ -63,5 +59,10 @@ public class DeleteManager : MonoBehaviour
 
         NewSaveSystem.SaveStateOfGame(saveState);
          
+    }
+
+    private void Test()
+    {
+        // SceneManager
     }
 }

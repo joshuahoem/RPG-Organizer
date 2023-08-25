@@ -53,7 +53,7 @@ public static class NewSaveSystem
         }
     }
 
-    public static string Load(int characterFileNumber)
+    public static SaveObject Load(int characterFileNumber)
     {
         DirectoryInfo directoryInfo = new DirectoryInfo(SAVE_FOLDER);
         FileInfo[] saveFiles = directoryInfo.GetFiles("*.txt");
@@ -65,7 +65,7 @@ public static class NewSaveSystem
                 if (File.Exists(SAVE_FOLDER + "/save_" + characterFileNumber + ".txt"))
                 {
                     string saveString = File.ReadAllText(SAVE_FOLDER + "/save_" + characterFileNumber + ".txt");
-                    return saveString;
+                    return JsonUtility.FromJson<SaveObject>(saveString);
                 }
             }
         }
@@ -99,8 +99,22 @@ public static class NewSaveSystem
 
             return JsonUtility.FromJson<SaveState>(saveString);
         }
+        else
+        {
+            Init();
+            SaveState saveState = new SaveState
+            {
 
-        return null;
+            };
+
+            string json = JsonUtility.ToJson(saveState);
+            
+            File.WriteAllText(SAVE_FOLDER + "/character_manager.txt", json);
+
+            return saveState;
+        }
+
+        
     }
 
     public static SaveObject FindCurrentSave()
