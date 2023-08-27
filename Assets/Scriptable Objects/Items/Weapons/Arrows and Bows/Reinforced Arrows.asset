@@ -20,7 +20,7 @@ MonoBehaviour:
   numberInStack: 1
   itemType: 0
   itemRarity: 1
-  equipmentSlot: 6
+  equipmentSlot: 9
   enchanted: 0
   mainDamage: 0
   mainMagicDamage: 0

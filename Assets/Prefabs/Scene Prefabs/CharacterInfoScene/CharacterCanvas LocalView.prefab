@@ -1934,6 +1934,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goldToAddTMP: {fileID: 385197980}
+  currentGoldTMP: {fileID: 0}
+  lootManager: {fileID: 0}
 --- !u!1 &294269230
 GameObject:
   m_ObjectHideFlags: 0
@@ -10260,6 +10262,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdfe5fb6665c4cb4d9d25a4478d96457, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  errorMessageHandler: {fileID: 0}
   perkPanelObject: {fileID: 4762376241709114808}
   perkImageIcon: {fileID: 4762376241612868031}
   borderIcon: {fileID: 4960340027896429167}
@@ -10272,6 +10275,7 @@ MonoBehaviour:
   bonusSpeedTMP: {fileID: 6410436708425113202}
   unlockCostTMP: {fileID: 287675627836942846}
   perkCountTMP: {fileID: 6293685365043436476}
+  descriptionTMP: {fileID: 0}
   perkButtonUnlock: {fileID: 0}
 --- !u!1 &1563205359
 GameObject:
@@ -26378,8 +26382,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.000015258789, y: 0}
-  m_SizeDelta: {x: 335.7151, y: 80}
+  m_AnchoredPosition: {x: -82.94, y: 0.48612}
+  m_SizeDelta: {x: 252.1202, y: 80}
   m_Pivot: {x: 1, y: 1}
 --- !u!222 &1196202993437589225
 CanvasRenderer:
@@ -26444,7 +26448,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
+  m_VerticalAlignment: 4096
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 24
@@ -30342,6 +30346,7 @@ MonoBehaviour:
   inventoryManager: {fileID: 0}
   itemInfoPanel: {fileID: 2374067276284693456}
   equipmentPanel: {fileID: 0}
+  scrollbar: {fileID: 0}
 --- !u!1 &2211937663333705657
 GameObject:
   m_ObjectHideFlags: 0
@@ -30804,6 +30809,8 @@ MonoBehaviour:
   descriptionText: {fileID: 2374067276992748598}
   database: {fileID: 11400000, guid: e7c7b6f88af1efb4fbac925e29419d0f, type: 2}
   inventoryManager: {fileID: 2904308379220390057}
+  errorMessageHandler: {fileID: 0}
+  weakPerk: {fileID: 0}
 --- !u!1 &2492074498807743350
 GameObject:
   m_ObjectHideFlags: 0
@@ -31238,6 +31245,7 @@ MonoBehaviour:
   currentLootTable: {fileID: 0}
   dropdown: {fileID: 8770298379531507204}
   database: {fileID: 11400000, guid: e7c7b6f88af1efb4fbac925e29419d0f, type: 2}
+  errorMessageHandler: {fileID: 0}
   lootPanel: {fileID: 1676486990}
   lootItemPrefab: {fileID: 922380589271814278, guid: 785a1c7e8a6377f43857df41f7d719f2, type: 3}
   parentLootTransform: {fileID: 1613991931}
@@ -33448,6 +33456,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0e241a84efe5f04eaad6d7521c0b0cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  abilityDatabase: {fileID: 0}
+  contentFitter: {fileID: 0}
+  spellbookCapacityTextTMP: {fileID: 0}
   abilityObjectPrefab: {fileID: 3814493520226187057, guid: a8255bd6057e13a45bbf4c98a2521036, type: 3}
   perkPrefab: {fileID: 571662316030222034, guid: 6abc2c2acde015e4b9066cff99a99f8f, type: 3}
   abilityPanelObject: {fileID: 4749051898195703768}
@@ -36212,9 +36223,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae7af6e7d250c784ea6f48f5d986380a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  errorMessageHandler: {fileID: 0}
   abilityInfoPanel: {fileID: 4749051898195703768}
   ability: {fileID: 0}
   abilitySO:
+    stringID: 
     ability: {fileID: 0}
     abilityType: 0
     currentLevel: 0
@@ -36235,9 +36248,25 @@ MonoBehaviour:
   descriptionTMP: {fileID: 4749051897390879417}
   abilityCostToUnlockTMP: {fileID: 379374625864606}
   buttonCostToUse: {fileID: 1230002503}
+  healthRequirementsTMP: {fileID: 0}
+  staminaRequirementsTMP: {fileID: 0}
+  magicRequirementsTMP: {fileID: 0}
+  strengthRequirementsTMP: {fileID: 0}
+  intelligenceRequirementsTMP: {fileID: 0}
+  speedRequirementsTMP: {fileID: 0}
+  healthCurrentBaseTMP: {fileID: 0}
+  staminaCurrentBaseTMP: {fileID: 0}
+  magicCurrentBaseTMP: {fileID: 0}
+  strengthCurrentBaseTMP: {fileID: 0}
+  intelligenceCurrentBaseTMP: {fileID: 0}
+  speedCurrentBaseTMP: {fileID: 0}
   freeString: Free
   unlockButtonObject: {fileID: 4216463398657027512}
   useButtonObject: {fileID: 1699963638}
+  buttonIcon: []
+  magicSprite: {fileID: 0}
+  staminaSprite: {fileID: 0}
+  experienceSprite: {fileID: 0}
 --- !u!1 &4749051898233215965
 GameObject:
   m_ObjectHideFlags: 0
@@ -43383,6 +43412,7 @@ MonoBehaviour:
   inventoryManager: {fileID: 2904308379220390057}
   itemInfoPanel: {fileID: 2374067276284693456}
   equipmentPanel: {fileID: 2904308378574455745}
+  scrollbar: {fileID: 0}
 --- !u!1 &8120282025379640890
 GameObject:
   m_ObjectHideFlags: 0
