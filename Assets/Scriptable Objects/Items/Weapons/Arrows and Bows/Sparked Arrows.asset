@@ -22,7 +22,7 @@ MonoBehaviour:
   numberInStack: 1
   itemType: 0
   itemRarity: 0
-  equipmentSlot: 6
+  equipmentSlot: 9
   enchanted: 0
   mainDamage: 0
   mainMagicDamage: 0
@@ -31,6 +31,7 @@ MonoBehaviour:
   offMagicDamage: 0
   offAttackRange: 0
   numberOfHands: 0
+  weaponType: 1
   defense: 0
   magicDefense: 0
   healthModifier: 0
@@ -39,4 +40,8 @@ MonoBehaviour:
   strengthModifier: 0
   intelligenceModifier: 0
   speedModifier: 0
+  attackModifier: 0
+  defenseModifier: 0
+  arcaneModifier: 0
+  wardModifier: 0
   ability: {fileID: 0}
