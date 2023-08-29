@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Energizer
   m_EditorClassIdentifier: 
   abilityName: Energizer
-  abilitySpriteIcon: {fileID: 21300000, guid: c2021dd08c21b6a48bd7789dd0092e09, type: 3}
-  borderColor: {r: 0, g: 0, b: 0, a: 1}
+  abilitySpriteIcon: {fileID: 21300000, guid: a7e8a0e01f38a4f42b7674e474b2b342, type: 3}
+  borderColor: {r: 0.8980393, g: 0.5568628, b: 0.14901961, a: 1}
   costType: 3
   unlockCost: 1
   unlockHealth: 1

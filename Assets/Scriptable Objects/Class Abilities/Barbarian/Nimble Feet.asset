@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Nimble Feet
   m_EditorClassIdentifier: 
   abilityName: Nimble Feet
-  abilitySpriteIcon: {fileID: 21300000, guid: 201385dc4e7024f4285740a6bbd34312, type: 3}
-  borderColor: {r: 0, g: 0, b: 0, a: 1}
+  abilitySpriteIcon: {fileID: 21300000, guid: 28fd1086d1694f34bba579c916e57ed5, type: 3}
+  borderColor: {r: 0.7176471, g: 0.08235294, b: 0.2509804, a: 1}
   costType: 1
   unlockCost: 1
   unlockHealth: 1

@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Whirlwind
   m_EditorClassIdentifier: 
   abilityName: Whirlwind
-  abilitySpriteIcon: {fileID: 21300000, guid: 12097e6d6bb702a4cbd0bcf8557968cf, type: 3}
-  borderColor: {r: 0, g: 0, b: 0, a: 1}
+  abilitySpriteIcon: {fileID: 21300000, guid: e488d0abe25ccd34e8d8e8ef931978a1, type: 3}
+  borderColor: {r: 0.21960786, g: 0.6784314, b: 0.6627451, a: 1}
   costType: 1
   unlockCost: 1
   unlockHealth: 1

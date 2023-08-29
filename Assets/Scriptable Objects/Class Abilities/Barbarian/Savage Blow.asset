@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Savage Blow
   m_EditorClassIdentifier: 
   abilityName: Savage Blow
-  abilitySpriteIcon: {fileID: 21300000, guid: c65c58bffc253924a82b7775471b904f, type: 3}
-  borderColor: {r: 0, g: 0, b: 0, a: 1}
+  abilitySpriteIcon: {fileID: 21300000, guid: 5b0df3531fa74754da74f50195279bb5, type: 3}
+  borderColor: {r: 0.50980395, g: 0.8000001, b: 0.86666673, a: 1}
   costType: 1
   unlockCost: 1
   unlockHealth: 1

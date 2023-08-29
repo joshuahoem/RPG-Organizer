@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Charging Attack
   m_EditorClassIdentifier: 
   abilityName: Charging Attack
-  abilitySpriteIcon: {fileID: 21300000, guid: 201385dc4e7024f4285740a6bbd34312, type: 3}
-  borderColor: {r: 0, g: 0, b: 0, a: 1}
+  abilitySpriteIcon: {fileID: 21300000, guid: cbb49375fd42dfd48936263b0b8e0d34, type: 3}
+  borderColor: {r: 0.96470594, g: 0.7254902, b: 0.23137257, a: 1}
   costType: 1
   unlockCost: 1
   unlockHealth: 1
