@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Weapon Mastery
   m_EditorClassIdentifier: 
   abilityName: Weapon Mastery
-  abilitySpriteIcon: {fileID: 21300000, guid: 6bea5f031d4ad5145ba032ab5ba435d4, type: 3}
+  abilitySpriteIcon: {fileID: 21300000, guid: ae55eb3de2f06ba469212d4cf88b7039, type: 3}
   borderColor: {r: 0.4156863, g: 0.5372549, b: 0.8000001, a: 1}
   costType: 1
   unlockCost: 1

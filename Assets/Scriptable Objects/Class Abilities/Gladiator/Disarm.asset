@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Disarm
   m_EditorClassIdentifier: 
   abilityName: Disarm
-  abilitySpriteIcon: {fileID: 21300000, guid: 8084f44cbca57394e930549d58dbf40c, type: 3}
+  abilitySpriteIcon: {fileID: 21300000, guid: 8c81db4bf42a6494cb0f53a36f2984f8, type: 3}
   borderColor: {r: 0.7176471, g: 0.08235294, b: 0.2509804, a: 1}
   costType: 1
   unlockCost: 1

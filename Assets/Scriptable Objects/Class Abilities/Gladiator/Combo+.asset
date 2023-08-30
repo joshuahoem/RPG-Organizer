@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3a5683874466c64da079d94c09f1a43, type: 3}
   m_Name: Combo+
   m_EditorClassIdentifier: 
-  abilityName: Combo
-  abilitySpriteIcon: {fileID: 21300000, guid: c65c58bffc253924a82b7775471b904f, type: 3}
+  abilityName: Combo+
+  abilitySpriteIcon: {fileID: 21300000, guid: a8bbaff10524a944c8f253e5d2d46123, type: 3}
   borderColor: {r: 0.9725491, g: 0.7607844, b: 0.5686275, a: 1}
   costType: 3
   unlockCost: 1

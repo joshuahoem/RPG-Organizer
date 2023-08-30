@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Quick Strike
   m_EditorClassIdentifier: 
   abilityName: Quick Strike
-  abilitySpriteIcon: {fileID: 21300000, guid: 89658cb7e8139e04a8988b0109104822, type: 3}
+  abilitySpriteIcon: {fileID: 21300000, guid: 85aa9cf8d87e7cf498ecf0b38413cc6a, type: 3}
   borderColor: {r: 0.50980395, g: 0.8000001, b: 0.86666673, a: 1}
   costType: 1
   unlockCost: 1
