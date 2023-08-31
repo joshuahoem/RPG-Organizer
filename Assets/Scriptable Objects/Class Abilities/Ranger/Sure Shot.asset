@@ -17,12 +17,18 @@ MonoBehaviour:
   borderColor: {r: 0.16078432, g: 0.6431373, b: 0.40932977, a: 0.8}
   costType: 1
   unlockCost: 1
+  unlockHealth: 6
+  unlockStamina: 8
+  unlockMagic: 0
+  unlockStrength: 0
+  unlockIntelligence: 8
+  unlockSpeed: 4
   allAbilityLevels:
   - level: 1
     upgradeCost: 0
     magicCost: 0
-    staminaCost: 1
-    range: 0
-    damage: 0
+    staminaCost: 3
+    range: 10
+    damage: 6
     magicDamage: 0
     description: Target Cannot dodge or avoid this attack

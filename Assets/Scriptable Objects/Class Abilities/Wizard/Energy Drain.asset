@@ -17,6 +17,12 @@ MonoBehaviour:
   borderColor: {r: 0.032751877, g: 0.3018868, b: 0.04967432, a: 0.89411765}
   costType: 0
   unlockCost: 1
+  unlockHealth: 0
+  unlockStamina: 0
+  unlockMagic: 10
+  unlockStrength: 0
+  unlockIntelligence: 10
+  unlockSpeed: 7
   allAbilityLevels:
   - level: 1
     upgradeCost: 0

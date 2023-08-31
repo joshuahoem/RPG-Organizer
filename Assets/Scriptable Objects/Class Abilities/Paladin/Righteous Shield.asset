@@ -17,6 +17,12 @@ MonoBehaviour:
   borderColor: {r: 0.8980393, g: 0.3137255, b: 0.22352943, a: 1}
   costType: 0
   unlockCost: 1
+  unlockHealth: 0
+  unlockStamina: 0
+  unlockMagic: 10
+  unlockStrength: 10
+  unlockIntelligence: 10
+  unlockSpeed: 0
   allAbilityLevels:
   - level: 1
     upgradeCost: 0
@@ -29,7 +35,7 @@ MonoBehaviour:
       negating the first 3 damage.
   - level: 2
     upgradeCost: 0
-    magicCost: 1
+    magicCost: 3
     staminaCost: 0
     range: 3
     damage: 0
@@ -38,7 +44,7 @@ MonoBehaviour:
       negating the first 5 damage.
   - level: 3
     upgradeCost: 0
-    magicCost: 1
+    magicCost: 5
     staminaCost: 0
     range: 3
     damage: 0

@@ -17,12 +17,12 @@ MonoBehaviour:
   borderColor: {r: 0.7735849, g: 0.12041653, b: 0.74496347, a: 0.89411765}
   costType: 3
   unlockCost: 1
-  unlockHealth: 1
-  unlockStamina: 1
-  unlockMagic: 1
-  unlockStrength: 1
-  unlockIntelligence: 1
-  unlockSpeed: 1
+  unlockHealth: 20
+  unlockStamina: 0
+  unlockMagic: 15
+  unlockStrength: 0
+  unlockIntelligence: 15
+  unlockSpeed: 0
   allAbilityLevels:
   - level: 1
     upgradeCost: 0
@@ -32,3 +32,11 @@ MonoBehaviour:
     damage: 0
     magicDamage: 0
     description: Spend all actions this turn to meditate. Regain half of total magic
+  - level: 1
+    upgradeCost: 0
+    magicCost: 0
+    staminaCost: 0
+    range: 0
+    damage: 0
+    magicDamage: 0
+    description: Spend all actions this turn to meditate. Regain total magic

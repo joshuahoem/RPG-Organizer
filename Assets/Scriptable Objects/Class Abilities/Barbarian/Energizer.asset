@@ -17,12 +17,12 @@ MonoBehaviour:
   borderColor: {r: 0.8980393, g: 0.5568628, b: 0.14901961, a: 1}
   costType: 3
   unlockCost: 1
-  unlockHealth: 1
-  unlockStamina: 1
-  unlockMagic: 1
-  unlockStrength: 1
-  unlockIntelligence: 1
-  unlockSpeed: 1
+  unlockHealth: 20
+  unlockStamina: 20
+  unlockMagic: 0
+  unlockStrength: 0
+  unlockIntelligence: 0
+  unlockSpeed: 0
   allAbilityLevels:
   - level: 1
     upgradeCost: 0
@@ -36,3 +36,12 @@ MonoBehaviour:
 
       When this character recovers stamina, they
       can add those points to health instead.'
+  - level: 1
+    upgradeCost: 0
+    magicCost: 0
+    staminaCost: 0
+    range: 0
+    damage: 0
+    magicDamage: 0
+    description: When recovering health recover stamina as well. When recovering
+      stamina recover health as well

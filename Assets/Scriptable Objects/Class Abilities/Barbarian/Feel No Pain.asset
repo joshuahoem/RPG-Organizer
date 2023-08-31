@@ -17,12 +17,12 @@ MonoBehaviour:
   borderColor: {r: 0.9725491, g: 0.7607844, b: 0.5686275, a: 1}
   costType: 3
   unlockCost: 1
-  unlockHealth: 1
-  unlockStamina: 1
-  unlockMagic: 1
-  unlockStrength: 1
-  unlockIntelligence: 1
-  unlockSpeed: 1
+  unlockHealth: 15
+  unlockStamina: 0
+  unlockMagic: 0
+  unlockStrength: 15
+  unlockIntelligence: 8
+  unlockSpeed: 0
   allAbilityLevels:
   - level: 1
     upgradeCost: 0
@@ -31,5 +31,4 @@ MonoBehaviour:
     range: 0
     damage: 0
     magicDamage: 0
-    description: If receiving 8 or more damage, you may roll to negate all damage
-      (19+)
+    description: If receiving 8 or more damage, Chance to nullify all damage.

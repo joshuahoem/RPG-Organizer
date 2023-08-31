@@ -17,6 +17,12 @@ MonoBehaviour:
   borderColor: {r: 0.37940356, g: 0.13697045, b: 0.509434, a: 0.8}
   costType: 0
   unlockCost: 1
+  unlockHealth: 5
+  unlockStamina: 0
+  unlockMagic: 5
+  unlockStrength: 0
+  unlockIntelligence: 3
+  unlockSpeed: 0
   allAbilityLevels:
   - level: 1
     upgradeCost: 0
@@ -25,5 +31,5 @@ MonoBehaviour:
     range: 0
     damage: 0
     magicDamage: 0
-    description: Increase the range of your ranged weapon by 3 and increase the damage
-      by 1
+    description: Increase the range of your next basic ranged attack by 3 and increase
+      the damage by 1 Arcane

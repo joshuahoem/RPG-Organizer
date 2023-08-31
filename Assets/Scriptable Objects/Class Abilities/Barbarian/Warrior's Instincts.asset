@@ -17,12 +17,12 @@ MonoBehaviour:
   borderColor: {r: 0.47058827, g: 0.87843144, b: 0.56078434, a: 1}
   costType: 1
   unlockCost: 1
-  unlockHealth: 1
-  unlockStamina: 1
-  unlockMagic: 1
-  unlockStrength: 1
-  unlockIntelligence: 1
-  unlockSpeed: 1
+  unlockHealth: 8
+  unlockStamina: 8
+  unlockMagic: 0
+  unlockStrength: 8
+  unlockIntelligence: 8
+  unlockSpeed: 0
   allAbilityLevels:
   - level: 1
     upgradeCost: 0
@@ -32,3 +32,19 @@ MonoBehaviour:
     damage: 0
     magicDamage: 0
     description: On your next attack, you have a chance to disarm target. (15+)
+  - level: 1
+    upgradeCost: 1
+    magicCost: 0
+    staminaCost: 2
+    range: 0
+    damage: 0
+    magicDamage: 0
+    description: On your next 2 attacks, you have a chance to disarm target. (15+)
+  - level: 1
+    upgradeCost: 1
+    magicCost: 0
+    staminaCost: 3
+    range: 0
+    damage: 0
+    magicDamage: 0
+    description: On your next 3 attacks, you have a chance to disarm target. (15+)

@@ -12,43 +12,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3a5683874466c64da079d94c09f1a43, type: 3}
   m_Name: Shield Smash
   m_EditorClassIdentifier: 
-  abilityName: Shield Bash
-  abilitySpriteIcon: {fileID: 21300000, guid: f78d6d6a71c291047b236bf4c6614a6b, type: 3}
-  borderColor: {r: 0.21960786, g: 0.6784314, b: 0.6627451, a: 1}
+  abilityName: Shield Smash
+  abilitySpriteIcon: {fileID: 21300000, guid: 76074cbe15253e14a8ffcb866b873f9a, type: 3}
+  borderColor: {r: 0.96470594, g: 0.7254902, b: 0.23137257, a: 1}
   costType: 1
   unlockCost: 1
-  unlockHealth: 1
-  unlockStamina: 1
-  unlockMagic: 1
-  unlockStrength: 1
-  unlockIntelligence: 1
-  unlockSpeed: 1
+  unlockHealth: 20
+  unlockStamina: 10
+  unlockMagic: 0
+  unlockStrength: 10
+  unlockIntelligence: 4
+  unlockSpeed: 8
   allAbilityLevels:
   - level: 1
     upgradeCost: 0
     magicCost: 0
-    staminaCost: 1
+    staminaCost: 2
     range: 1
-    damage: 1
+    damage: 5
     magicDamage: 0
-    description: Push Enemy back 3 spaces. Chance to disarm.
+    description: Knocks enemy backwards 5 spaces. Chance to disarm.
   - level: 2
-    upgradeCost: 0
+    upgradeCost: 1
     magicCost: 0
-    staminaCost: 1
+    staminaCost: 2
     range: 1
-    damage: 2
+    damage: 6
     magicDamage: 0
-    description: 'Push Enemy back 3 spaces.
-
-      Chance to disarm (18+)'
+    description: Knocks enemy backwards 6 spaces. Chance to disarm +1
   - level: 3
-    upgradeCost: 0
+    upgradeCost: 1
     magicCost: 0
-    staminaCost: 1
+    staminaCost: 2
     range: 1
-    damage: 3
+    damage: 7
     magicDamage: 0
-    description: 'Push Enemy back 3 spaces.
-
-      Chance to disarm (18+)'
+    description: Knocks enemy backwards 7 spaces. Chance to disarm +2

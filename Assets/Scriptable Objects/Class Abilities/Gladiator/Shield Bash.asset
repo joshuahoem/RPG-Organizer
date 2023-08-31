@@ -17,6 +17,12 @@ MonoBehaviour:
   borderColor: {r: 0.21960786, g: 0.6784314, b: 0.6627451, a: 1}
   costType: 1
   unlockCost: 1
+  unlockHealth: 15
+  unlockStamina: 6
+  unlockMagic: 0
+  unlockStrength: 8
+  unlockIntelligence: 4
+  unlockSpeed: 4
   allAbilityLevels:
   - level: 1
     upgradeCost: 0
@@ -25,24 +31,20 @@ MonoBehaviour:
     range: 1
     damage: 1
     magicDamage: 0
-    description: Push Enemy back 3 spaces. Chance to disarm.
+    description: Push Enemy back 2 spaces. Chance to disarm.
   - level: 2
-    upgradeCost: 0
+    upgradeCost: 1
     magicCost: 0
     staminaCost: 1
     range: 1
     damage: 2
     magicDamage: 0
-    description: 'Push Enemy back 3 spaces.
-
-      Chance to disarm (18+)'
+    description: Push Enemy back 3 spaces. Chance to disarm +1
   - level: 3
-    upgradeCost: 0
+    upgradeCost: 1
     magicCost: 0
     staminaCost: 1
     range: 1
     damage: 3
     magicDamage: 0
-    description: 'Push Enemy back 3 spaces.
-
-      Chance to disarm (18+)'
+    description: Push Enemy back 4 spaces. Chance to disarm +2

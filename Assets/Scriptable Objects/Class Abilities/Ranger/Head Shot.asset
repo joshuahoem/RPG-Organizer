@@ -17,13 +17,18 @@ MonoBehaviour:
   borderColor: {r: 0.46390587, g: 0.6132076, b: 0.10702208, a: 0.8235294}
   costType: 1
   unlockCost: 1
+  unlockHealth: 10
+  unlockStamina: 14
+  unlockMagic: 0
+  unlockStrength: 0
+  unlockIntelligence: 12
+  unlockSpeed: 6
   allAbilityLevels:
   - level: 1
     upgradeCost: 0
     magicCost: 0
-    staminaCost: 3
+    staminaCost: 5
     range: 0
-    damage: 0
+    damage: 10
     magicDamage: 0
-    description: Range of your ranged weapon is 3 less (minimum of 1 range). Deal
-      double damage to target
+    description: Range of your ranged weapon. Chance to one hit kill target.
