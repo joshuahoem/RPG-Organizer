@@ -175,7 +175,7 @@ MonoBehaviour:
   mixer: {fileID: 24100000, guid: ab1a1c8a4a368d54798d17fa5a1b2b15, type: 2}
   musicSource: {fileID: 4285972333902739646}
   effectSource: {fileID: 4285972334588628947}
-  buttonSFX: {fileID: 0}
+  buttonSFX: {fileID: 8300000, guid: cc8f5861043158a478656647bab167fb, type: 3}
   music: {fileID: 8300000, guid: 27c0e8ba3b0be70489ce45d5ab923d22, type: 3}
 --- !u!1 &4285972334588628946
 GameObject:
