@@ -9,8 +9,8 @@ public class MusicSoundHandler : MonoBehaviour
     [SerializeField] private AudioSource musicSource, effectSource;
 
     [Header("Audio Clips")]
-    [SerializeField] AudioClip buttonSFX;
-    [SerializeField] AudioClip music;
+    [SerializeField] AudioClip[] buttonSFX;
+    [SerializeField] AudioClip[] music;
 
     public const string MASTER_KEY = "masterVolume";
     public const string MUSIC_KEY = "musicVolume";

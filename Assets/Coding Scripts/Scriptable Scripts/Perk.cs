@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Newtonsoft.Json;
 
 [CreateAssetMenu(fileName = "New Perk", menuName = "ScriptableObject/Perk")]
 public class Perk : ScriptableObject
@@ -11,8 +12,9 @@ public class Perk : ScriptableObject
     public string perkName;
     
     [Header("Icon Info")]
-    public Sprite perkImageIcon;
-    public Color borderColor;
+    [JsonIgnore] public Sprite perkImageIcon;
+    [JsonIgnore] public Color borderColor;
+    public string pathToPicture;
     
     [Header("Bonus Stats")]
     public int bonusHealth;

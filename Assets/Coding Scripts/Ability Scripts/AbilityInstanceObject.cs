@@ -43,10 +43,7 @@ public class AbilityInstanceObject : MonoBehaviour
 
         if (perk != null)
         {
-            if (perk.perkImageIcon != null)
-            {
-                abilityImage.sprite = perk.perkImageIcon;
-            }
+            abilityImage.sprite = SaveManagerVersion3.LoadSprite(perk.pathToPicture);
     
             backgroundImage.color = perk.borderColor;
 

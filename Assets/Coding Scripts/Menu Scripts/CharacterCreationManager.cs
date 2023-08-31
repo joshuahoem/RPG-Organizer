@@ -389,6 +389,8 @@ public class CharacterCreationManager : MonoBehaviour
 
         };
 
+        CharacterRegistry.Instance.AddCharacter(saveObject);
+
         SaveState saveState = new SaveState { numberOfCharacters = numberofCharactersPrior+1 };
 
         string character = JsonUtility.ToJson(saveObject);

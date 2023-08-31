@@ -39,7 +39,7 @@ public class CharacterUpdate : MonoBehaviour
             
             if (saveObject.raceObject != null)
             {
-                characterPicture.sprite = saveObject.raceObject.picture;
+                characterPicture.sprite = SaveManagerVersion3.LoadSprite(saveObject.raceObject.pathToPicture);
             }
             else
             {
@@ -47,7 +47,7 @@ public class CharacterUpdate : MonoBehaviour
                 {
                     if (saveObject.race == _race.name)
                     {
-                        characterPicture.sprite = _race.picture;
+                        characterPicture.sprite = SaveManagerVersion3.LoadSprite(_race.pathToPicture);
                         saveObject.raceObject = _race;
                     }
                 }

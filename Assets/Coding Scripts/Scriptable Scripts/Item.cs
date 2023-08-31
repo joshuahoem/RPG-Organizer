@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Newtonsoft.Json;
 
 public enum NumberOfHands
 {
@@ -58,7 +59,7 @@ public class Item : ScriptableObject
     public string itemName;
     [TextArea(5,10)]
     public string description;
-    public Sprite imageSprite;
+    [JsonIgnore] public Sprite imageSprite;
     public int goldCost;
     public int sellCost;
     public int numberInStack = 1;
@@ -66,6 +67,7 @@ public class Item : ScriptableObject
     public ItemRarity itemRarity;
     public EquipmentSlot equipmentSlot;
     public bool enchanted = false;
+    public string pathToPicture;
 
     [Header("Weapon Info")]
     public int mainDamage;

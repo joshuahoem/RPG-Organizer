@@ -48,12 +48,12 @@ public class CharacterUnlockItemInfo : MonoBehaviour
         lockImage.SetActive(false);
         if (raceToUnlock != null)
         {
-            characterImage.sprite = raceToUnlock.picture;
+            characterImage.sprite = SaveManagerVersion3.LoadSprite(raceToUnlock.pathToPicture);
             bgOject.color = raceToUnlock.imageColor;
         }
         if (classToUnlock != null)
         {
-            characterImage.sprite = classToUnlock.logo;
+            characterImage.sprite = SaveManagerVersion3.LoadSprite(classToUnlock.pathToPicture);
             bgOject.color = classToUnlock.imageColor;
         }
     }

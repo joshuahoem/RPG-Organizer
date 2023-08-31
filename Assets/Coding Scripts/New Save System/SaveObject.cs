@@ -1,13 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
+[Serializable]
 public class SaveObject
 {
     public int numberOfCharacters;
     public int characterFileNumber;
 
     public string nameOfCharacter;
+    public string characterID;
 
     public int baseHealth;
     public int baseStamina;
@@ -55,4 +58,10 @@ public class SaveObject
     public Race raceObject;
     public Class classObject;
     //hat/ item for each class to overlay on picture of race?
+
+    public SaveObject()
+    {
+        characterID = Guid.NewGuid().ToString();
+    }
+
 }
