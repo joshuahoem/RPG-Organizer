@@ -22,6 +22,7 @@ public class ScreenManager : MonoBehaviour
     [SerializeField] int enemySceneIndex = 11;
     [SerializeField] int charactersUnlockSceneIndex = 12;
     [SerializeField] int diceSceneIndex = 13;
+    [SerializeField] int jukeboxIndex = 14;
 
 
     public void LoadMainMenu ()
@@ -103,6 +104,12 @@ public class ScreenManager : MonoBehaviour
     public void LoadDiceScene()
     {
         scene = diceSceneIndex;
+        Invoke("LoadNextScene", sceneLoadTime);
+    }
+
+    public void LoadJukeBoxScene()
+    {
+        scene = jukeboxIndex;
         Invoke("LoadNextScene", sceneLoadTime);
     }
 

@@ -41,9 +41,10 @@ public class MusicSoundHandler : MonoBehaviour
         effectSource.PlayOneShot(clip);
     }
 
-    public void PlayMusic(AudioClip clip)
+    public void PlayMusic(AudioClip _clip)
     {
-        musicSource.PlayOneShot(clip);
+        musicSource.clip = _clip;
+        musicSource.Play();
     }
 
     private void LoadVolume() //volume saved in volumeSettings.cs

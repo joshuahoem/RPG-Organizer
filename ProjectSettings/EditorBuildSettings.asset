@@ -47,4 +47,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Dice Scene.unity
     guid: 076c0069c398eb84f96cc1141ecc7148
+  - enabled: 1
+    path: Assets/Scenes/Juke Box Scene.unity
+    guid: 1d58bc8932f18aa42b0d071f9f8d9b57
   m_configObjects: {}

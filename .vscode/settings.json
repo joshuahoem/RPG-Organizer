@@ -1,3 +1,5 @@
 {
-    "csharp.semanticHighlighting.enabled": false
+    "csharp.semanticHighlighting.enabled": false,
+    "javascript.format.placeOpenBraceOnNewLineForControlBlocks": true,
+    "typescript.format.placeOpenBraceOnNewLineForFunctions": true
 }
