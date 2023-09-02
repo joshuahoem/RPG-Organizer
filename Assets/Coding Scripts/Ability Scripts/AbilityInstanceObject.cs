@@ -30,9 +30,9 @@ public class AbilityInstanceObject : MonoBehaviour
     {
         if (ability != null)
         {
-            if (ability.abilitySpriteIcon != null)
+            if (ability.picture != null)
             {
-                abilityImage.sprite = ability.abilitySpriteIcon;
+                abilityImage.sprite = ability.picture;
             }
             
             backgroundImage.color = ability.borderColor;

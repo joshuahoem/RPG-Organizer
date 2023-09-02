@@ -110,7 +110,7 @@ public class LocalItemStart : MonoBehaviour
 
     public void DisplayAbilityInfo(AbilitySaveObject ability)
     {
-        imageSprite.sprite = ability.ability.abilitySpriteIcon;
+        imageSprite.sprite = ability.ability.picture;
         itemName.text = ability.ability.abilityName;
         statStringOne.text = string.Empty;
         statStringTwo.text = string.Empty;

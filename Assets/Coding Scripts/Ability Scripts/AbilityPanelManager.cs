@@ -94,7 +94,7 @@ public class AbilityPanelManager : MonoBehaviour
         }
 
         abilityNameTMP.text = ability.abilityName;
-        abilityIcon.sprite = ability.abilitySpriteIcon;
+        abilityIcon.sprite = ability.picture;
         abilityIconBorder.color = ability.borderColor;
         abilityLevelTMP.text = ability.allAbilityLevels[_levelIndex].level.ToString();
         damageTMP.text = ability.allAbilityLevels[_levelIndex].damage.ToString();
