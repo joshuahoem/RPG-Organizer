@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Charge
   m_EditorClassIdentifier: 
   abilityName: Charge
-  abilitySpriteIcon: {fileID: 21300000, guid: 201385dc4e7024f4285740a6bbd34312, type: 3}
+  picture: {fileID: 21300000, guid: a5534e4f43ca60e4685d7b151926c3a3, type: 3}
+  pathToPicture: 
   borderColor: {r: 0, g: 0, b: 0, a: 1}
   costType: 3
   unlockCost: 5

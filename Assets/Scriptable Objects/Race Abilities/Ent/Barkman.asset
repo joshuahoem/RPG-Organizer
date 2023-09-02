@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Barkman
   m_EditorClassIdentifier: 
   abilityName: Barkman
-  abilitySpriteIcon: {fileID: 21300000, guid: b2b74fd033b33b84c99a4ebd609992ba, type: 3}
+  picture: {fileID: 21300000, guid: 0fce34716ef27644198ad90f84190fc4, type: 3}
+  pathToPicture: Assets/Visuals/Sprites/Class Ability/Ent/Barkman.png
   borderColor: {r: 0, g: 0, b: 0, a: 1}
   costType: 3
   unlockCost: 5

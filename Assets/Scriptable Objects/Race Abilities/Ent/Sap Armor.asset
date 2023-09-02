@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Sap Armor
   m_EditorClassIdentifier: 
   abilityName: Sap Armor
-  abilitySpriteIcon: {fileID: 21300000, guid: 9a7ce9b9497960d45a73cf3b10f6fc45, type: 3}
+  picture: {fileID: 21300000, guid: 4527c6b0f7dc18f49bab642a9a190114, type: 3}
+  pathToPicture: Assets/Visuals/Sprites/Class Ability/Ent/Sap Armor.png
   borderColor: {r: 0, g: 0, b: 0, a: 1}
   costType: 3
   unlockCost: 5

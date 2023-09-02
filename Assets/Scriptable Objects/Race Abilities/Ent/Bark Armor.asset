@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Bark Armor
   m_EditorClassIdentifier: 
   abilityName: Bark Armor
-  abilitySpriteIcon: {fileID: 21300000, guid: 2ec7181a5e3a55a4f97bdeebd51afb8b, type: 3}
+  picture: {fileID: 21300000, guid: 1c4f29c1f4b39204ca044ac41ef4b621, type: 3}
+  pathToPicture: Assets/Visuals/Sprites/Class Ability/Ent/Bark Armor.png
   borderColor: {r: 0, g: 0, b: 0, a: 1}
   costType: 0
   unlockCost: 5
