@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Sapling
   m_EditorClassIdentifier: 
   abilityName: Sapling
-  abilitySpriteIcon: {fileID: 21300000, guid: dcf0bc503da2e5344b624558ca3f0a1d, type: 3}
+  picture: {fileID: 21300000, guid: a45cfef2440b2fd4eb278edf2bf6b698, type: 3}
+  pathToPicture: Assets/Visuals/Sprites/Class Ability/Ent/Sapling.png
   borderColor: {r: 0, g: 0, b: 0, a: 1}
   costType: 3
   unlockCost: 0

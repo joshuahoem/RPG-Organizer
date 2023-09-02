@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Rooted
   m_EditorClassIdentifier: 
   abilityName: Rooted
-  abilitySpriteIcon: {fileID: 21300000, guid: 3037fc9729d5e9241bbfb3da29cf1452, type: 3}
+  picture: {fileID: 21300000, guid: 02154e487b858724bbb1a602703aa398, type: 3}
+  pathToPicture: Assets/Visuals/Sprites/Class Ability/Ent/Rooted.png
   borderColor: {r: 0, g: 0, b: 0, a: 1}
   costType: 3
   unlockCost: 5

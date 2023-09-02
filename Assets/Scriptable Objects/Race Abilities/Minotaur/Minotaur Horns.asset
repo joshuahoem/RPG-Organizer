@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Minotaur Horns
   m_EditorClassIdentifier: 
   abilityName: Minotaur Horns
-  abilitySpriteIcon: {fileID: 21300000, guid: 72c77fbd47aaadd498fdd449ee744bd1, type: 3}
+  picture: {fileID: 21300000, guid: 04ae44e2a691736488e9953cd55cab16, type: 3}
+  pathToPicture: 
   borderColor: {r: 0, g: 0, b: 0, a: 1}
   costType: 1
   unlockCost: 5
