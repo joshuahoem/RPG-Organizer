@@ -20,14 +20,14 @@ public class MusicSoundHandler : MonoBehaviour
 
     private void Awake() 
     {    
-        if (Instance == null && Instance != this)
+        if (Instance != null && Instance != this)
         {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
+            Destroy(gameObject);
         }
         else
         {
-            Destroy(gameObject);
+            DontDestroyOnLoad(gameObject);
+            Instance = this;
         }
 
     }
@@ -51,7 +51,6 @@ public class MusicSoundHandler : MonoBehaviour
     public void PlayButtonSFX()
     {
         int value = Random.Range(0,buttonSFX.Length);
-        Debug.Log(value);
         effectSource.clip = buttonSFX[value];
         effectSource.Play();
     }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,9 +10,25 @@ public class LoadGameMasterHandler : MonoBehaviour
     [SerializeField] private AbilityDatabase abilityDatabase; 
     [SerializeField] private PerkDatabase perkDatabase;
     [SerializeField] private ItemDatabase itemDatabase;
+    public static LoadGameMasterHandler Instance { get; private set; }
+
+    private void Awake() 
+    {    
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            DontDestroyOnLoad(gameObject);
+            Instance = this;
+        }
+
+    }
 
     private void Start() 
     {
+        StartMusic();
         NewSaveSystem.Init();
         PlayerInfo playerInfo = NewSaveSystem.FindPlayerInfoFile();
         SaveState saveState = NewSaveSystem.FindSaveState();
@@ -55,6 +72,16 @@ public class LoadGameMasterHandler : MonoBehaviour
 
         }
 
+    }
+
+    private void StartMusic()
+    {
+        JukeBoxHandler jukeBoxHandler = FindObjectOfType<JukeBoxHandler>();
+        string defaultMusic = jukeBoxHandler.GetDefualtSong();
+        string musicToPlay = PlayerPrefs.GetString(JukeBoxHandler.MUSIC_SAVED_KEY, defaultMusic);
+
+        Debug.Log("Start new song");
+        jukeBoxHandler.PlaySong(musicToPlay);
     }
 
 }

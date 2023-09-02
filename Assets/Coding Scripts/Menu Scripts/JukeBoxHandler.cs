@@ -10,9 +10,25 @@ public class JukeBoxHandler : MonoBehaviour
     List<string> musicNames = new List<string>();
     Dictionary<string, AudioClip> dictionaryForMusic = new Dictionary<string, AudioClip>();
 
+    public const string MUSIC_SAVED_KEY = "savedMusic";
+
+    public string GetDefualtSong()
+    {
+        return music[0].ToString();
+    }
+
+    public void PlaySong(string key)
+    {
+        MusicSoundHandler.Instance.PlayMusic(dictionaryForMusic[key]);
+    }
+
     private void Start() 
     {
-        musicDropdown.ClearOptions();
+        if (musicDropdown != null)
+        {
+            musicDropdown.ClearOptions();
+        }
+
         for(int i = 0; i< music.Length; i++)
         {
             string songName = music[i].name;
@@ -20,12 +36,17 @@ public class JukeBoxHandler : MonoBehaviour
             dictionaryForMusic.Add(songName, music[i]);
         }
 
-        musicDropdown.AddOptions(musicNames);
-        musicDropdown.RefreshShownValue();
+        if (musicDropdown != null)
+        {
+            musicDropdown.AddOptions(musicNames);
+            musicDropdown.RefreshShownValue();
+        }
     }
 
     public void SongChange()
     {
-        MusicSoundHandler.Instance.PlayMusic(dictionaryForMusic[musicDropdown.options[musicDropdown.value].text]);
+        string key = musicDropdown.options[musicDropdown.value].text;
+        MusicSoundHandler.Instance.PlayMusic(dictionaryForMusic[key]);
+        PlayerPrefs.SetString(MUSIC_SAVED_KEY, key);
     }
 }

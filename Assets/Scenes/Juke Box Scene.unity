@@ -2160,51 +2160,75 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2007521027}
   m_CullTransparentMesh: 1
---- !u!1 &2074062483
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2074062485}
-  - component: {fileID: 2074062484}
-  m_Layer: 0
-  m_Name: JukeBox Handler
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2074062484
+--- !u!114 &2074062484 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 8133198624180199235, guid: 7159fe03c5e1a074c912d39063ddc8e3, type: 3}
+  m_PrefabInstance: {fileID: 8133198625127494103}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2074062483}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bdbf9ecbd6fde474eb2375d1249ed2ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicDropdown: {fileID: 510957901}
-  music:
-  - {fileID: 8300000, guid: ca7af1ed1a3545249a8ca20da0612dab, type: 3}
-  - {fileID: 8300000, guid: 27c0e8ba3b0be70489ce45d5ab923d22, type: 3}
-  - {fileID: 8300000, guid: 32bfd94ed3d97814ca0b971b7d7d44b2, type: 3}
---- !u!4 &2074062485
-Transform:
+--- !u!1001 &8133198625127494103
+PrefabInstance:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2074062483}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8133198624180199234, guid: 7159fe03c5e1a074c912d39063ddc8e3, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8133198624180199234, guid: 7159fe03c5e1a074c912d39063ddc8e3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8133198624180199234, guid: 7159fe03c5e1a074c912d39063ddc8e3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8133198624180199234, guid: 7159fe03c5e1a074c912d39063ddc8e3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8133198624180199234, guid: 7159fe03c5e1a074c912d39063ddc8e3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8133198624180199234, guid: 7159fe03c5e1a074c912d39063ddc8e3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8133198624180199234, guid: 7159fe03c5e1a074c912d39063ddc8e3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8133198624180199234, guid: 7159fe03c5e1a074c912d39063ddc8e3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8133198624180199234, guid: 7159fe03c5e1a074c912d39063ddc8e3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8133198624180199234, guid: 7159fe03c5e1a074c912d39063ddc8e3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8133198624180199234, guid: 7159fe03c5e1a074c912d39063ddc8e3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8133198624180199235, guid: 7159fe03c5e1a074c912d39063ddc8e3, type: 3}
+      propertyPath: musicDropdown
+      value: 
+      objectReference: {fileID: 510957901}
+    - target: {fileID: 8133198624180199236, guid: 7159fe03c5e1a074c912d39063ddc8e3, type: 3}
+      propertyPath: m_Name
+      value: JukeBox Handler
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7159fe03c5e1a074c912d39063ddc8e3, type: 3}
