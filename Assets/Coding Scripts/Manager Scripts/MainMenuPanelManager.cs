@@ -21,7 +21,11 @@ public class MainMenuPanelManager : MonoBehaviour
 
         if (hasStarted == 1)
         {
-            SwitchToMainPanel();
+            DeactivateAllPanels();
+            if (mainMenuPanel != null)
+            {
+                mainMenuPanel.SetActive(true);
+            }
         }
         else
         {
@@ -41,10 +45,6 @@ public class MainMenuPanelManager : MonoBehaviour
             touchToStartStringObject.SetActive(false);
         }
         PlayerPrefs.SetInt("hasStarted", 1);
-
-        // PlayerInfo playerInfo = NewSaveSystem.FindPlayerInfoFile();
-        // playerInfo.unlocks.Clear();
-        // NewSaveSystem.SavePlayerInfo(playerInfo);
     }
 
     public void SwitchToMainPanel()
@@ -54,6 +54,8 @@ public class MainMenuPanelManager : MonoBehaviour
         {
             mainMenuPanel.SetActive(true);
         }
+
+        PlaySound();
     }
 
     public void SwitchToExtrasPanel()
@@ -63,6 +65,8 @@ public class MainMenuPanelManager : MonoBehaviour
         {
             extraPanel.SetActive(true);
         }
+
+        PlaySound();
     }
 
     private void DeactivateAllPanels()
@@ -93,5 +97,14 @@ public class MainMenuPanelManager : MonoBehaviour
         save.inventory.Clear();
         save.perks.Clear();
         NewSaveSystem.SaveChanges(save);
+    }
+
+    private void PlaySound()
+    {
+        MusicSoundHandler musicSoundHandler = FindObjectOfType<MusicSoundHandler>();
+        if (musicSoundHandler != null)
+        {
+            musicSoundHandler.PlayButtonSFX();
+        }
     }
 }

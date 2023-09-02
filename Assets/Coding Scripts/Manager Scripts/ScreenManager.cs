@@ -28,88 +28,103 @@ public class ScreenManager : MonoBehaviour
     public void LoadMainMenu ()
     {
         scene = mainMenuSceneIndex;
+        PlaySound();
         Invoke("LoadNextScene", sceneLoadTime);
     }
 
     public void LoadCharactersMenu()
     {
         scene = characterSceneIndex;
+        PlaySound();
         Invoke("LoadNextScene", sceneLoadTime);
     }
 
     public void LoadCharacterCreationMenu()
     {
         scene = characterCreationSceneIndex;
+        PlaySound();
         Invoke("LoadNextScene", sceneLoadTime);
     }
 
     public void LoadOnline()
     {
         scene = onlineSceneIndex;
+        PlaySound();
         Invoke("LoadNextScene", sceneLoadTime);
     }
 
     public void LoadCharacterInfoScene()
     {
         scene = CharacterInfoSceneIndex;
+        PlaySound();
         Invoke("LoadNextScene", sceneLoadTime);
     }
 
     public void LoadGameScene()
     {
         scene = GameSceneIndex;
+        PlaySound();
         Invoke("LoadNextScene", sceneLoadTime);
     }
 
     public void LoadOnlineLoadingScene()
     {
         scene = onlineLoadingSceneIndex;
+        PlaySound();
         Invoke("LoadNextScene", sceneLoadTime);
     }
     public void LoadMapScene()
     {
         scene = mapSceneIndex;
+        PlaySound();
         Invoke("LoadNextScene", sceneLoadTime);
     }
     public void LoadOptionScene()
     {
         scene = optionSceneIndex;
+        PlaySound();
         Invoke("LoadNextScene", sceneLoadTime);
     }
 
     public void LoadAbilitieScene()
     {
         scene = abilitieScene;
+        PlaySound();
         Invoke("LoadNextScene", sceneLoadTime);
     }
 
     public void LoadGlossaryScene()
     {
         scene = glossarySceneIndex;
+        PlaySound();
         Invoke("LoadNextScene", sceneLoadTime);
     }
 
     public void LoadEnemyScene()
     {
         scene = enemySceneIndex;
+        PlaySound();
         Invoke("LoadNextScene", sceneLoadTime);
     }
 
     public void LoadCharacterUnlockScene()
     {
         scene = charactersUnlockSceneIndex;
+        PlaySound();
         Invoke("LoadNextScene", sceneLoadTime);
     }
 
     public void LoadDiceScene()
     {
         scene = diceSceneIndex;
+        PlaySound();
         Invoke("LoadNextScene", sceneLoadTime);
     }
 
     public void LoadJukeBoxScene()
     {
         scene = jukeboxIndex;
+        PlaySound();
         Invoke("LoadNextScene", sceneLoadTime);
     }
 
@@ -118,6 +133,16 @@ public class ScreenManager : MonoBehaviour
     {
         SceneManager.LoadScene(scene);
     }
+
+    public void PlaySound()
+    {
+        MusicSoundHandler musicSoundHandler = FindObjectOfType<MusicSoundHandler>();
+        if (musicSoundHandler != null)
+        {
+            musicSoundHandler.PlayButtonSFX();
+        }
+    }
+     
 
 
 

@@ -45,7 +45,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -175,8 +175,19 @@ MonoBehaviour:
   mixer: {fileID: 24100000, guid: ab1a1c8a4a368d54798d17fa5a1b2b15, type: 2}
   musicSource: {fileID: 4285972333902739646}
   effectSource: {fileID: 4285972334588628947}
-  buttonSFX: []
-  music: []
+  buttonSFX:
+  - {fileID: 8300000, guid: bab3400e45b03724d8dba032c46eb1a4, type: 3}
+  - {fileID: 8300000, guid: d0e62c73ab726024681e10c171b1f174, type: 3}
+  - {fileID: 8300000, guid: cc8f5861043158a478656647bab167fb, type: 3}
+  - {fileID: 8300000, guid: d8471cea0d9e5ac4c896f8d8213b8450, type: 3}
+  - {fileID: 8300000, guid: d40603fb1d0be224abdec4d9fa36c4a1, type: 3}
+  - {fileID: 8300000, guid: 5d1d34e1b5e9f834a8e3cae3df99bcd8, type: 3}
+  - {fileID: 8300000, guid: 37eba861915b4b0459bc3b233ff8204d, type: 3}
+  otherSFX: []
+  music:
+  - {fileID: 8300000, guid: 32bfd94ed3d97814ca0b971b7d7d44b2, type: 3}
+  - {fileID: 8300000, guid: 27c0e8ba3b0be70489ce45d5ab923d22, type: 3}
+  - {fileID: 8300000, guid: ca7af1ed1a3545249a8ca20da0612dab, type: 3}
 --- !u!1 &4285972334588628946
 GameObject:
   m_ObjectHideFlags: 0
@@ -218,7 +229,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -1721214106970048594, guid: ab1a1c8a4a368d54798d17fa5a1b2b15, type: 2}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: d40603fb1d0be224abdec4d9fa36c4a1, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

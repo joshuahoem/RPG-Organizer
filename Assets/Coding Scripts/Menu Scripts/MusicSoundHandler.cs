@@ -10,6 +10,7 @@ public class MusicSoundHandler : MonoBehaviour
 
     [Header("Audio Clips")]
     [SerializeField] AudioClip[] buttonSFX;
+    [SerializeField] AudioClip[] otherSFX;
     [SerializeField] AudioClip[] music;
 
     public const string MASTER_KEY = "masterVolume";
@@ -45,6 +46,14 @@ public class MusicSoundHandler : MonoBehaviour
     {
         musicSource.clip = _clip;
         musicSource.Play();
+    }
+
+    public void PlayButtonSFX()
+    {
+        int value = Random.Range(0,buttonSFX.Length);
+        Debug.Log(value);
+        effectSource.clip = buttonSFX[value];
+        effectSource.Play();
     }
 
     private void LoadVolume() //volume saved in volumeSettings.cs
