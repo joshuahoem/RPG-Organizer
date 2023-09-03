@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using Newtonsoft.Json;
 
 [Serializable]
 public class SaveObject
@@ -55,8 +56,8 @@ public class SaveObject
 
     
     //picture - based on race?
-    public Race raceObject;
-    public Class classObject;
+    [JsonIgnore] public Race raceObject;
+    [JsonIgnore] public Class classObject;
     //hat/ item for each class to overlay on picture of race?
 
     public SaveObject()

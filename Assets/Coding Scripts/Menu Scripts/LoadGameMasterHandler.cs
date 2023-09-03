@@ -80,7 +80,6 @@ public class LoadGameMasterHandler : MonoBehaviour
         string defaultMusic = jukeBoxHandler.GetDefualtSong();
         string musicToPlay = PlayerPrefs.GetString(JukeBoxHandler.MUSIC_SAVED_KEY, defaultMusic);
 
-        Debug.Log("Start new song");
         jukeBoxHandler.PlaySong(musicToPlay);
     }
 

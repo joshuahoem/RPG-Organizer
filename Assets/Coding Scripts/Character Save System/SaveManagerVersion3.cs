@@ -19,7 +19,6 @@ public static class SaveManagerVersion3
 
     public static void LoadGame(CharacterRegistry registry)
     {
-        Debug.Log(registry);
         string savePath = Path.Combine(SAVE_FOLDER, "Saves", "Registry.txt");
         if (File.Exists(savePath))
         {
@@ -30,7 +29,6 @@ public static class SaveManagerVersion3
 
             foreach (KeyValuePair<string, SaveObject> kvp in characterDictionary)
             {
-                Debug.Log("added");
                 registry.AddCharacter(kvp.Value);
             }
         }

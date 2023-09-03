@@ -21,7 +21,7 @@ public class Race : ScriptableObject
 
     public string pathToPicture;
 
-    [SerializeField] public List<Perk> startingPerks = new List<Perk>();
+    [JsonIgnore] [SerializeField] public List<Perk> startingPerks = new List<Perk>();
 
     
     public void OnEnable()

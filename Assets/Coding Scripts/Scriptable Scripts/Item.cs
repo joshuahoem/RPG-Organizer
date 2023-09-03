@@ -139,7 +139,7 @@ public class Item : ScriptableObject
 [System.Serializable]
 public class InventoryItem
 {
-    public Item item;
+    [JsonIgnore] public Item item;
     public int ID;
     public int amount;
     public bool equipped;

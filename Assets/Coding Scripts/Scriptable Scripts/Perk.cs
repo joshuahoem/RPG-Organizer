@@ -59,7 +59,7 @@ public class Perk : ScriptableObject
 
 [System.Serializable] public class PerkObject
 {
-    public Perk perk;
+    [JsonIgnore] public Perk perk;
     public int count;
     public bool unlockedBool;
     public int ID;
