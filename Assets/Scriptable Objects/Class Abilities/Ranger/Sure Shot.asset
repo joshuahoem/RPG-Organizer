@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Sure Shot
   m_EditorClassIdentifier: 
   abilityName: Sure Shot
-  abilitySpriteIcon: {fileID: 21300000, guid: 1ea63e469aa77824bbb5d82304c7b53a, type: 3}
+  picture: {fileID: 21300000, guid: 1ea63e469aa77824bbb5d82304c7b53a, type: 3}
+  pathToPicture: Assets/Visuals/Sprites/Ability Icons/Ranger/Sure Shot.png
   borderColor: {r: 0.16078432, g: 0.6431373, b: 0.40932977, a: 0.8}
   costType: 1
   unlockCost: 1

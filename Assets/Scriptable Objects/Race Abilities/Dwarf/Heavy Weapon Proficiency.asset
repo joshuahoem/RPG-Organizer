@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Heavy Weapon Proficiency
   m_EditorClassIdentifier: 
   abilityName: Heavy Weapon Proficiency
-  abilitySpriteIcon: {fileID: 21300000, guid: c65c58bffc253924a82b7775471b904f, type: 3}
+  picture: {fileID: 21300000, guid: 8797f68d48648fc458066885454941dc, type: 3}
+  pathToPicture: Assets/Visuals/Sprites/Class Ability/Dwarf/Heavy Weapon Proficiency.png
   borderColor: {r: 0, g: 0, b: 0, a: 1}
   costType: 3
   unlockCost: 1

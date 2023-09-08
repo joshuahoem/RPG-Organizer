@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Dwarven Strength
   m_EditorClassIdentifier: 
   abilityName: Dwarven Strength
-  abilitySpriteIcon: {fileID: 21300000, guid: aea80dbfd903d104cb241c8faa057304, type: 3}
+  picture: {fileID: 21300000, guid: f886ce3b7d4b41a4283967a0195a0412, type: 3}
+  pathToPicture: Assets/Visuals/Sprites/Class Ability/Dwarf/Dwarven Strength.png
   borderColor: {r: 0, g: 0, b: 0, a: 1}
   costType: 3
   unlockCost: 1

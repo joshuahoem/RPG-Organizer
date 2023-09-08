@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Arrow Harvest
   m_EditorClassIdentifier: 
   abilityName: Arrow Sharpen
-  abilitySpriteIcon: {fileID: 21300000, guid: 7e44fb6dc5c76084d83c3e559d7748ca, type: 3}
+  picture: {fileID: 21300000, guid: 7e44fb6dc5c76084d83c3e559d7748ca, type: 3}
+  pathToPicture: Assets/Visuals/Sprites/Ability Icons/Ranger/Arrow Harvest.png
   borderColor: {r: 0.090334624, g: 0.5471698, b: 0.14681602, a: 0.87058824}
   costType: 1
   unlockCost: 1

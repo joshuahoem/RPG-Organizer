@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Upgrade
   m_EditorClassIdentifier: 
   abilityName: Upgrade
-  abilitySpriteIcon: {fileID: 21300000, guid: 89658cb7e8139e04a8988b0109104822, type: 3}
+  picture: {fileID: 21300000, guid: 86873bc661c660b4b8f05616046755e1, type: 3}
+  pathToPicture: Assets/Visuals/Sprites/Class Ability/Dwarf/Upgrade.png
   borderColor: {r: 0, g: 0, b: 0, a: 1}
   costType: 3
   unlockCost: 1

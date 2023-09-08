@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Lightning Arrow
   m_EditorClassIdentifier: 
   abilityName: Lightning Arrow
-  abilitySpriteIcon: {fileID: 21300000, guid: 08747c1d79a72de4ca8d949a151ed9e7, type: 3}
+  picture: {fileID: 21300000, guid: 08747c1d79a72de4ca8d949a151ed9e7, type: 3}
+  pathToPicture: Assets/Visuals/Sprites/Ability Icons/Ranger/Lightning Arrows.png
   borderColor: {r: 0.842074, g: 0.9150943, b: 0.07338022, a: 0.9647059}
   costType: 0
   unlockCost: 1

@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Magical Feathers
   m_EditorClassIdentifier: 
   abilityName: Magical Feathers
-  abilitySpriteIcon: {fileID: 21300000, guid: c9af654428772274f8d162637ee296af, type: 3}
+  picture: {fileID: 21300000, guid: c9af654428772274f8d162637ee296af, type: 3}
+  pathToPicture: Assets/Visuals/Sprites/Ability Icons/Ranger/Magical Feathers.png
   borderColor: {r: 0.37940356, g: 0.13697045, b: 0.509434, a: 0.8}
   costType: 0
   unlockCost: 1

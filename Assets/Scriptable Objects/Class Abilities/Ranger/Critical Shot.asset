@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Critical Shot
   m_EditorClassIdentifier: 
   abilityName: Critical Shot
-  abilitySpriteIcon: {fileID: 21300000, guid: b5a507375db096d4881e424948256569, type: 3}
+  picture: {fileID: 21300000, guid: b5a507375db096d4881e424948256569, type: 3}
+  pathToPicture: Assets/Visuals/Sprites/Ability Icons/Ranger/Critical Shot.png
   borderColor: {r: 0.7924528, g: 0.26329145, b: 0.08597367, a: 0.87058824}
   costType: 1
   unlockCost: 1
