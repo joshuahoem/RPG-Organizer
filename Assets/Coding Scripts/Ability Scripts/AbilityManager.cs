@@ -30,8 +30,8 @@ public class AbilityManager : MonoBehaviour
 
     private void Start()
     {
-        SaveObject save = NewSaveSystem.FindCurrentSave();
-        SaveState saveState = NewSaveSystem.FindSaveState();
+        SaveObject save = SaveManagerVersion3.FindCurrentSave();
+        SaveState saveState = SaveManagerVersion3.FindSaveState();
 
         raceAbilityTab.SetActive(true);
         classAbilityTab.SetActive(false);
@@ -45,7 +45,7 @@ public class AbilityManager : MonoBehaviour
 
         saveState.raceAbilityBool = true;
 
-        NewSaveSystem.SaveStateOfGame(saveState);
+        SaveManagerVersion3.SaveStateOfGame(saveState);
 
         //UpdateSpellBook();
 
@@ -55,7 +55,7 @@ public class AbilityManager : MonoBehaviour
 
     private void UpdateAbilities()
     {
-        SaveObject save = NewSaveSystem.FindCurrentSave();
+        SaveObject save = SaveManagerVersion3.FindCurrentSave();
         foreach (AbilitySaveObject _ability in save.abilityInventory)
         {
             if (_ability.ability == null)
@@ -70,8 +70,6 @@ public class AbilityManager : MonoBehaviour
                 }
             }
         }
-
-        NewSaveSystem.SaveChanges(save);
     }
 
     //Old Method
@@ -84,38 +82,38 @@ public class AbilityManager : MonoBehaviour
 
     public void RaceAbilityTreeOption()
     {
-        SaveState saveState = NewSaveSystem.FindSaveState();
+        SaveState saveState = SaveManagerVersion3.FindSaveState();
         saveState.learnedAbilityBool = false;
         saveState.classAbilityBool = false;
         saveState.raceAbilityBool = true;
         contentFitter.GOParent = raceAbilityContent.gameObject;
-        NewSaveSystem.SaveStateOfGame(saveState);
+        SaveManagerVersion3.SaveStateOfGame(saveState);
     }
 
     public void ClassAbilityTreeOption()
     {
-        SaveState saveState = NewSaveSystem.FindSaveState();
+        SaveState saveState = SaveManagerVersion3.FindSaveState();
         saveState.learnedAbilityBool = false;
         saveState.raceAbilityBool = false;
         saveState.classAbilityBool = true;
         contentFitter.GOParent = classAbilityContent.gameObject;
-        NewSaveSystem.SaveStateOfGame(saveState);
+        SaveManagerVersion3.SaveStateOfGame(saveState);
     }
 
     public void LearnedAbilityOption()
     {
-        SaveState saveState = NewSaveSystem.FindSaveState();
+        SaveState saveState = SaveManagerVersion3.FindSaveState();
         saveState.learnedAbilityBool = true;
         saveState.raceAbilityBool = false;
         saveState.classAbilityBool = false;
         contentFitter.GOParent = learnedAbilityContent.gameObject;
-        NewSaveSystem.SaveStateOfGame(saveState);
+        SaveManagerVersion3.SaveStateOfGame(saveState);
     }
 
     public void LoadAbilities()
     {
-        SaveState saveState = NewSaveSystem.FindSaveState();
-        SaveObject save = NewSaveSystem.FindCurrentSave();
+        SaveState saveState = SaveManagerVersion3.FindSaveState();
+        SaveObject save = SaveManagerVersion3.FindCurrentSave();
 
         foreach (GameObject card in abilityCardPrefabs)
         {
@@ -173,7 +171,7 @@ public class AbilityManager : MonoBehaviour
 
     public void LoadPerks()
     {
-        SaveObject save = NewSaveSystem.FindCurrentSave();
+        SaveObject save = SaveManagerVersion3.FindCurrentSave();
 
         foreach (GameObject perkObject in perkPrefabList)
         {

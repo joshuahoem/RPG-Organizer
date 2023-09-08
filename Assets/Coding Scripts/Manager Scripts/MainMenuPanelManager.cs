@@ -12,7 +12,7 @@ public class MainMenuPanelManager : MonoBehaviour
     private void Start() 
     {
         // Debug.Log(PlayerPrefs.GetInt("hasStarted"));
-        NewSaveSystem.Init();
+        SaveManagerVersion3.Init();
 
         if (PlayerPrefs.HasKey("hasStarted"))
         {
@@ -88,15 +88,14 @@ public class MainMenuPanelManager : MonoBehaviour
     {
         PlayerPrefs.SetInt("hasStarted", 0);
 
-        PlayerInfo info = NewSaveSystem.FindPlayerInfoFile();
+        PlayerInfo info = SaveManagerVersion3.FindPlayerInfoFile();
         info.unlocks.Clear();
-        NewSaveSystem.SavePlayerInfo(info);
+        SaveManagerVersion3.SavePlayerInfo(info);
 
-        SaveObject save = NewSaveSystem.FindCurrentSave();
+        SaveObject save = SaveManagerVersion3.FindCurrentSave();
         save.abilityInventory.Clear();
         save.inventory.Clear();
         save.perks.Clear();
-        NewSaveSystem.SaveChanges(save);
     }
 
     private void PlaySound()

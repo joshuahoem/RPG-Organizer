@@ -99,7 +99,9 @@ public class CharacterPanelManager : MonoBehaviour
 
     private void SwitchAllFunction()
     {
-        //shouldnt be everytime - can refactor
+        SaveManagerVersion3.SaveGame(CharacterRegistry.Instance);
+
+        //shouldnt be everytime - can refactor #TODO
         foreach (GameObject name in characterNameObjects)
         {
             name.GetComponent<TMP_Text>().text = characterNameString;

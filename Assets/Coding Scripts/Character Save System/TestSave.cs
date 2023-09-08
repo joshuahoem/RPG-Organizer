@@ -6,7 +6,7 @@ public class TestSave : MonoBehaviour
 {
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Alpha7))
         {
             Test();
         }
@@ -19,12 +19,9 @@ public class TestSave : MonoBehaviour
 
     public void Test()
     {
-        Debug.Log("Running");
         foreach (var kvp in CharacterRegistry.Instance.GetDictionary())
         {
-            Debug.Log("here");
             Debug.Log(kvp.Value.nameOfCharacter);
-            Debug.Log(kvp.Value.characterID);
 
         }
     }

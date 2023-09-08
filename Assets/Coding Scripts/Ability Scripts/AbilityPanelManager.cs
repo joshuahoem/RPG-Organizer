@@ -68,7 +68,7 @@ public class AbilityPanelManager : MonoBehaviour
         abilitySO = _ability;
         ability = _ability.ability;
         
-        SaveState saveState = NewSaveSystem.FindSaveState();
+        SaveState saveState = SaveManagerVersion3.FindSaveState();
         if (saveState.screenState == ScreenState.CharacterInfo)
         {
             _levelIndex = (_ability.currentLevel -1);
@@ -112,7 +112,7 @@ public class AbilityPanelManager : MonoBehaviour
             intelligenceRequirementsTMP.text = ability.unlockIntelligence.ToString();
             speedRequirementsTMP.text = ability.unlockSpeed.ToString();
 
-            SaveObject save = NewSaveSystem.FindCurrentSave();
+            SaveObject save = SaveManagerVersion3.FindCurrentSave();
             healthCurrentBaseTMP.text = save.baseHealth.ToString();
             staminaCurrentBaseTMP.text = save.baseStamina.ToString();
             magicCurrentBaseTMP.text = save.baseMagic.ToString();
@@ -170,7 +170,7 @@ public class AbilityPanelManager : MonoBehaviour
             useButtonObject.SetActive(false);
         }
 
-        switch (NewSaveSystem.FindSaveState().screenState)
+        switch (SaveManagerVersion3.FindSaveState().screenState)
         {
             case ScreenState.CharacterInfo:
                 unlockButtonObject.SetActive(false);
@@ -217,8 +217,8 @@ public class AbilityPanelManager : MonoBehaviour
     public void UnlockAbility()
     {
         //button clicked
-        SaveObject save = NewSaveSystem.FindCurrentSave();
-        SaveState state = NewSaveSystem.FindSaveState();
+        SaveObject save = SaveManagerVersion3.FindCurrentSave();
+        SaveState state = SaveManagerVersion3.FindSaveState();
 
         if (state.raceAbilityBool && save.raceAbilityPoints < abilitySO.ability.unlockCost)
         {
@@ -288,14 +288,13 @@ public class AbilityPanelManager : MonoBehaviour
     public void UseAbility()
     {
         int _levelIndex = abilitySO.currentLevel -1;
-        SaveObject save = NewSaveSystem.FindCurrentSave();
+        SaveObject save = SaveManagerVersion3.FindCurrentSave();
 
         if (ability.costType == CostType.Magic)
         {
             if (save.currentMagic >= ability.allAbilityLevels[_levelIndex].magicCost)
             {
                 save.currentMagic -= ability.allAbilityLevels[_levelIndex].magicCost;
-                NewSaveSystem.SaveChanges(save);
             }
             else
             {
@@ -308,7 +307,6 @@ public class AbilityPanelManager : MonoBehaviour
             if (save.currentStamina >= ability.allAbilityLevels[_levelIndex].staminaCost)
             {
                 save.currentStamina -= ability.allAbilityLevels[_levelIndex].staminaCost;
-                NewSaveSystem.SaveChanges(save);
             }
             else
             {

@@ -104,8 +104,6 @@ public class DiceManager : MonoBehaviour
             }
         }
 
-        Debug.Log(attack + " attack");
-
     }
 
     IEnumerator DiceTimer()

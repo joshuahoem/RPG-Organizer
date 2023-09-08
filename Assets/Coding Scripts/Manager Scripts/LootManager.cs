@@ -58,12 +58,12 @@ public class LootManager : MonoBehaviour
     // {
     //     if (Input.GetKeyDown(KeyCode.Alpha1))
     //     {
-    //         foreach (InventoryItem item in NewSaveSystem.FindCurrentSave().inventory)
+    //         foreach (InventoryItem item in SaveManagerVersion3.FindCurrentSave().inventory)
     //         {
     //             Debug.Log(item.item);
     //         }
 
-    //         if (NewSaveSystem.FindCurrentSave().inventory.Count <= 0)
+    //         if (SaveManagerVersion3.FindCurrentSave().inventory.Count <= 0)
     //         {
     //             Debug.Log("none");
     //         }
@@ -103,7 +103,7 @@ public class LootManager : MonoBehaviour
 
     public void GetLoot()
     {
-        SaveObject save = NewSaveSystem.FindCurrentSave();
+        SaveObject save = SaveManagerVersion3.FindCurrentSave();
 
         //check if can hold first
         lootCheck = 0;
@@ -117,6 +117,7 @@ public class LootManager : MonoBehaviour
 
         foreach (InventoryItem item in save.equipment)
         {
+            if (item == null) { continue; }
             if (item.item == null) { continue; }
             if (item.item.GetItemType() != ItemType.Special && item.item.GetItemType() != ItemType.Scroll)
             {
@@ -199,7 +200,6 @@ public class LootManager : MonoBehaviour
 
         }
         //Save Loot
-        NewSaveSystem.SaveChanges(save);       
         rolls = 3;  
         rollsTMP.text = rolls.ToString();
 
@@ -209,7 +209,7 @@ public class LootManager : MonoBehaviour
 
     public void AddGold(int _rolls, int _amount)
     {
-        SaveObject save = NewSaveSystem.FindCurrentSave();
+        SaveObject save = SaveManagerVersion3.FindCurrentSave();
 
         if (_rolls ==0)
         {
@@ -231,7 +231,6 @@ public class LootManager : MonoBehaviour
         if (_rolls == 0)
         {
             save.gold += _amount;
-            NewSaveSystem.SaveChanges(save);   
             goldLoot.GetComponent<LootDisplay>().DisplayGoldLoot(_amount, goldImage);
 
         }
@@ -243,7 +242,6 @@ public class LootManager : MonoBehaviour
                 goldAmount += Random.Range(minGoldRange, maxGoldRange);
             }
             save.gold += goldAmount;
-            NewSaveSystem.SaveChanges(save); 
 
             goldLoot.GetComponent<LootDisplay>().DisplayGoldLoot(goldAmount, goldImage);
             // Debug.Log(goldAmount);

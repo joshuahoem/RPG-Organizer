@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System.IO;
+using Unity.VisualScripting;
 
 public class LocalInventoryManager : MonoBehaviour
 {
@@ -40,14 +41,13 @@ public class LocalInventoryManager : MonoBehaviour
     {
         itemInfoPanel.SetActive(false);
 
-        SaveObject save = NewSaveSystem.FindCurrentSave();
+        SaveObject save = SaveManagerVersion3.FindCurrentSave();
         if (save.equipment.Length <= 1)
         {
             int numSlots = System.Enum.GetNames(typeof(EquipmentSlot)).Length - 1;
             save.equipment = new InventoryItem[numSlots];
         }
 
-        NewSaveSystem.SaveChanges(save);
 
         currentEquipment = save.equipment;
         
@@ -55,7 +55,7 @@ public class LocalInventoryManager : MonoBehaviour
 
     public void Equip(Item newItem, int chosenSlotIndex)
     {
-        SaveObject save = NewSaveSystem.FindCurrentSave();
+        SaveObject save = SaveManagerVersion3.FindCurrentSave();
         if (chosenSlotIndex == 0)
         {
             //0 is default and so none was chosen
@@ -136,7 +136,6 @@ public class LocalInventoryManager : MonoBehaviour
         }
         inventory.Remove(searchResult);
         save.inventory = inventory;
-        NewSaveSystem.SaveChanges(save);
         LoadInventory();
     }
 
@@ -155,7 +154,7 @@ public class LocalInventoryManager : MonoBehaviour
         searchIndex = newItem.equipmentSlotIndex;
         searchResult = _save.equipment[searchIndex];
 
-        SaveObject save = NewSaveSystem.FindCurrentSave();
+        SaveObject save = SaveManagerVersion3.FindCurrentSave();
         save.equipment[searchIndex].equipmentSlotIndex = 0;
 
         if (save.equipment[searchIndex].item.numberOfHands == NumberOfHands.TwoHanded)
@@ -182,7 +181,6 @@ public class LocalInventoryManager : MonoBehaviour
         save.equipment[searchIndex].equipped = false;
         save.equipment[searchIndex].item = null;
 
-        NewSaveSystem.SaveChanges(save);
 
         // for (int i=0; i< _save.equipment.Length; i++)
         // {
@@ -202,14 +200,13 @@ public class LocalInventoryManager : MonoBehaviour
         // }
 
         //     save.equipment[searchIndex].item = null;
-        //     SaveChanges();
         
     }
 
     private InventoryItem UnequipNoSave(Item newItem)
     {
         bool removed = false;
-        SaveObject save = NewSaveSystem.FindCurrentSave();
+        SaveObject save = SaveManagerVersion3.FindCurrentSave();
 
         for (int i=0; i< save.equipment.Length; i++)
         {
@@ -236,7 +233,7 @@ public class LocalInventoryManager : MonoBehaviour
 
     public void Consume(Item newItem, InventoryItem _itemInfo)
     {
-        SaveObject save = NewSaveSystem.FindCurrentSave();
+        SaveObject save = SaveManagerVersion3.FindCurrentSave();
         bool removed = false;
 
         for (int i=0; i< save.equipment.Length; i++)
@@ -250,11 +247,10 @@ public class LocalInventoryManager : MonoBehaviour
         }
 
         LoadInventory();
-        NewSaveSystem.SaveChanges(save);
     }
     public void LoadInventory()
     {
-        SaveObject save = NewSaveSystem.FindCurrentSave();
+        SaveObject save = SaveManagerVersion3.FindCurrentSave();
         inventory = save.inventory;
 
         foreach (GameObject item in displayedItems)
@@ -285,7 +281,7 @@ public class LocalInventoryManager : MonoBehaviour
 
     public void DisplayInventoryUI()
     {
-        SaveObject save = NewSaveSystem.FindCurrentSave();
+        SaveObject save = SaveManagerVersion3.FindCurrentSave();
         int lootCheck = 0;
         foreach (InventoryItem item in save.inventory)
         {
@@ -297,6 +293,7 @@ public class LocalInventoryManager : MonoBehaviour
 
         foreach (InventoryItem item in save.equipment)
         {
+            if (item == null) { continue; }
             if (item.item == null) { continue; }
             if (item.item.GetItemType() != ItemType.Special && item.item.GetItemType() != ItemType.Scroll)
             {
@@ -306,12 +303,15 @@ public class LocalInventoryManager : MonoBehaviour
 
         if (save.equipment.Length > 1)
         {
-            if (save.equipment[5].item != null)
+            if (save.equipment[5] != null)
             {
-                if (save.equipment[5].item.numberOfHands == NumberOfHands.TwoHanded)
+                if (save.equipment[5].item != null)
                 {
-                    // Debug.Log("removing 1");
-                    lootCheck -= 1;
+                    if (save.equipment[5].item.numberOfHands == NumberOfHands.TwoHanded)
+                    {
+                        // Debug.Log("removing 1");
+                        lootCheck -= 1;
+                    }
                 }
 
             }    
@@ -326,7 +326,7 @@ public class LocalInventoryManager : MonoBehaviour
 
     public void LoadEquipment()
     {
-        SaveObject save = NewSaveSystem.FindCurrentSave();
+        SaveObject save = SaveManagerVersion3.FindCurrentSave();
         currentEquipment = save.equipment;
 
         foreach (GameObject equipInstance in equipmentDisplayItems)
@@ -337,12 +337,15 @@ public class LocalInventoryManager : MonoBehaviour
 
         for (int i=0; i<save.equipment.Length; i++)
         {
-            if (save.equipment[i].item == null)
+            if (save.equipment[i] == null)
             {
                 GameObject equipInstance = Instantiate(emptyEquipmentPrefab, new Vector2(0,0), transform.rotation);
-                equipInstance.transform.SetParent(parentObjectTransforms[i].transform);
+                equipInstance.transform.SetParent(parentObjectTransforms[i].transform, false);
                 equipmentDisplayItems.Add(equipInstance);
+                continue;
             }
+
+            if (save.equipment[i].item == null) { continue; }
             else if (save.equipment[i].item.numberOfHands == NumberOfHands.TwoHanded && i == (int)EquipmentSlot.OffHand)
             {
                 GameObject equipInstance = Instantiate(inUseEquipmentPrefab, new Vector2(0,0), transform.rotation);

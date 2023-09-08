@@ -1625,6 +1625,7 @@ GameObject:
   - component: {fileID: 486207820}
   - component: {fileID: 486207819}
   - component: {fileID: 486207818}
+  - component: {fileID: 486207821}
   m_Layer: 0
   m_Name: Test
   m_TagString: Untagged
@@ -1670,6 +1671,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &486207821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 486207817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 724256d0cb2aec04589f1b693ea5e50a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  classDatabase: {fileID: 11400000, guid: fa3c507ea4042164898a75a68593354b, type: 2}
+  raceDatabase: {fileID: 11400000, guid: 5f92cb296e44e9f44a85eb27026c5878, type: 2}
+  abilityDatabase: {fileID: 11400000, guid: 3bccb5716fddfe1439294a8c6d7eac36, type: 2}
+  perkDatabase: {fileID: 0}
+  itemDatabase: {fileID: 11400000, guid: e7c7b6f88af1efb4fbac925e29419d0f, type: 2}
 --- !u!1 &493825581
 GameObject:
   m_ObjectHideFlags: 0
@@ -2844,8 +2862,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1577917709}
   m_HandleRect: {fileID: 1577917708}
   m_Direction: 2
-  m_Value: 1.0000002
-  m_Size: 0.84703684
+  m_Value: 0.99999976
+  m_Size: 0.816383
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -4899,6 +4917,10 @@ PrefabInstance:
     - target: {fileID: 6002339775600104597, guid: be55137abaad0d242adc9b77b2e909a0, type: 3}
       propertyPath: m_Name
       value: CharacterUnlockManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 6002339775600104597, guid: be55137abaad0d242adc9b77b2e909a0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6002339775600104599, guid: be55137abaad0d242adc9b77b2e909a0, type: 3}
       propertyPath: unlockObjects.Array.size

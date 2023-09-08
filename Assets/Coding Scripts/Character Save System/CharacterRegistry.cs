@@ -18,11 +18,9 @@ public class CharacterRegistry : MonoBehaviour
             Destroy(gameObject);
         }
 
-    }
-
-    public void Start()
-    {
         SaveManagerVersion3.LoadGame(this);
+
+
     }
 
     public void AddCharacter(SaveObject save)
@@ -33,6 +31,11 @@ public class CharacterRegistry : MonoBehaviour
     public void RemoveCharacter(SaveObject save)
     {
         characterDictionary.Remove(save.characterID);
+    }
+
+    public void RemoveCharacter(string _characterID)
+    {
+        characterDictionary.Remove(_characterID);
     }
 
     public SaveObject GetCharacter(string _characterID)
@@ -59,14 +62,15 @@ public class CharacterRegistry : MonoBehaviour
 
     private void OnDisable()
     {
-        //Debug.Log("game disable save");
+        // Debug.Log("game disable save");
         //SaveManagerVersion3.SaveGame(this);
     }
 
     private void OnApplicationPause()
     {
-        //Debug.Log("game pause save");
+        #if UNITY_ANDROID
+        // Debug.Log("game pause save");
         //SaveManagerVersion3.SaveGame(this);
-
+        #endif
     }
 }

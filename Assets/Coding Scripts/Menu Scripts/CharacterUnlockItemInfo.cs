@@ -60,7 +60,7 @@ public class CharacterUnlockItemInfo : MonoBehaviour
 
     public void ClickToUnlock()
     {
-        PlayerInfo playerInfo = NewSaveSystem.FindPlayerInfoFile();
+        PlayerInfo playerInfo = SaveManagerVersion3.FindPlayerInfoFile();
         thisItemIsUnlocked = false;
         newUnlock = null;
 
@@ -91,7 +91,7 @@ public class CharacterUnlockItemInfo : MonoBehaviour
         {
             // Debug.Log("new one added " + newUnlock.unlockedClass + " " + newUnlock.unlockedRace);
             playerInfo.unlocks.Add(newUnlock);
-            NewSaveSystem.SavePlayerInfo(playerInfo);
+            SaveManagerVersion3.SavePlayerInfo(playerInfo);
 
             OnNewRaceOrClassUnlocked?.Invoke(this, EventArgs.Empty);
 

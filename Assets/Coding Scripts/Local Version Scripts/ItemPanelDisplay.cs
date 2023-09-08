@@ -95,7 +95,7 @@ public class ItemPanelDisplay : MonoBehaviour
     //     if (Input.GetKeyDown(KeyCode.Alpha1))
     //     {
     //         // Debug.Log("1");
-    //         SaveObject _save = NewSaveSystem.FindCurrentSave();
+    //         SaveObject _save = SaveManagerVersion3.FindCurrentSave();
     //         foreach (InventoryItem _item in _save.inventory)
     //         {
     //             Debug.Log(_item.item.itemName + " inventory");
@@ -121,7 +121,7 @@ public class ItemPanelDisplay : MonoBehaviour
     }
     public void DisplayItemInfo(Item _item, InventoryItem _itemInfo)
     {
-        SaveObject save = NewSaveSystem.FindCurrentSave();
+        SaveObject save = SaveManagerVersion3.FindCurrentSave();
         DeactivateAllButtons();
         inShop = FindObjectOfType<LocalShop>().inShop;
         ItemType type = _item.GetItemType();
@@ -363,7 +363,6 @@ public class ItemPanelDisplay : MonoBehaviour
     {
         inventoryManager.Equip(item,0);
         inventoryManager.DisplayInventoryUI();
-        // SaveChanges();
     }
 
     public void EquipMainHand()
@@ -371,7 +370,6 @@ public class ItemPanelDisplay : MonoBehaviour
         //5 equips to main hand
         inventoryManager.Equip(item,5);
         inventoryManager.DisplayInventoryUI();
-        // SaveChanges();
 
     }
 
@@ -380,14 +378,13 @@ public class ItemPanelDisplay : MonoBehaviour
         //6 equips to off hand
         inventoryManager.Equip(item,6);
         inventoryManager.DisplayInventoryUI();
-        // SaveChanges();
 
     }
 
     public void EquipWeapon()
     {
         //for two-handed weapons
-        if (NewSaveSystem.DoesPlayerHaveThisPerk(weakPerk))
+        if (SaveManagerVersion3.DoesPlayerHaveThisPerk(weakPerk))
         {
             errorMessageHandler.ReceivingOnErrorOccured(ErrorMessageHandler.ErrorType.TooHeavy);
         }
@@ -398,7 +395,6 @@ public class ItemPanelDisplay : MonoBehaviour
             inventoryManager.DisplayInventoryUI();
         }
         
-        // SaveChanges();
 
     }
 
@@ -422,7 +418,7 @@ public class ItemPanelDisplay : MonoBehaviour
 
     public void Unequip()
     {
-        SaveObject save = NewSaveSystem.FindCurrentSave();
+        SaveObject save = SaveManagerVersion3.FindCurrentSave();
 
         inventoryManager.Unequip(itemInfo, save);
         inventoryManager.LoadEquipment();
@@ -434,7 +430,7 @@ public class ItemPanelDisplay : MonoBehaviour
     public void ConsumeItem()
     {
         //consume item
-        SaveObject save = NewSaveSystem.FindCurrentSave();
+        SaveObject save = SaveManagerVersion3.FindCurrentSave();
         bool removedBool = false;
 
         foreach (InventoryItem inv in save.inventory)
@@ -456,7 +452,6 @@ public class ItemPanelDisplay : MonoBehaviour
 
         save.inventory.Remove(searchResult);
 
-        NewSaveSystem.SaveChanges(save);        
 
         inventoryManager.LoadInventory();
         inventoryManager.DisplayInventoryUI();
@@ -466,7 +461,7 @@ public class ItemPanelDisplay : MonoBehaviour
     public void PurchaseItem()
     {
         //need to check gold
-        SaveObject save = NewSaveSystem.FindCurrentSave();
+        SaveObject save = SaveManagerVersion3.FindCurrentSave();
 
         //Check if can hold
         lootCheck = 0;
@@ -518,13 +513,12 @@ public class ItemPanelDisplay : MonoBehaviour
             errorMessageHandler.ReceivingOnErrorOccured(ErrorMessageHandler.ErrorType.NoGold);
         }
 
-        NewSaveSystem.SaveChanges(save);
         FindObjectOfType<LocalShop>().LoadShop();
     }
 
     public void SellItem()
     {
-        SaveObject _save = NewSaveSystem.FindCurrentSave();
+        SaveObject _save = SaveManagerVersion3.FindCurrentSave();
         searchResult = null;
         foreach (InventoryItem _item in _save.inventory)
         {
@@ -569,12 +563,11 @@ public class ItemPanelDisplay : MonoBehaviour
             _save.equipment[searchIndex].equipped = false;
             _save.equipment[searchIndex].item = null;
 
-            NewSaveSystem.SaveChanges(_save);
 
             // inventoryManager.LoadEquipment();
         }
 
-        _save = NewSaveSystem.FindCurrentSave();
+        _save = SaveManagerVersion3.FindCurrentSave();
         foreach (InventoryItem _item in _save.inventory)
         {
             if(_item.ID == database.GetID[item])
@@ -596,8 +589,7 @@ public class ItemPanelDisplay : MonoBehaviour
         }
 
         _save.inventory.Remove(searchResult);
-        NewSaveSystem.SaveChanges(_save); 
-        _save = NewSaveSystem.FindCurrentSave();        
+        _save = SaveManagerVersion3.FindCurrentSave();        
 
         // Debug.Log(_save.inventory.Count + " inv count");
 
@@ -609,7 +601,7 @@ public class ItemPanelDisplay : MonoBehaviour
 
     public void LearnAbilityAction()
     {
-        SaveObject save = NewSaveSystem.FindCurrentSave();
+        SaveObject save = SaveManagerVersion3.FindCurrentSave();
 
         //old way
         // if (save.spellbookCapacity <= save.abilityInventory.Count)
@@ -672,7 +664,6 @@ public class ItemPanelDisplay : MonoBehaviour
         save.abilityInventory.Add(abilitySaveObject);
         ConsumeItem();
 
-        NewSaveSystem.SaveChanges(save);        
 
     }
 }

@@ -80,8 +80,8 @@ public class PerkPanelManager : MonoBehaviour
 
     public void UnlockPerk()
     {
-        SaveObject save = NewSaveSystem.FindCurrentSave();
-        SaveState state = NewSaveSystem.FindSaveState();
+        SaveObject save = SaveManagerVersion3.FindCurrentSave();
+        SaveState state = SaveManagerVersion3.FindSaveState();
         PerkObject foundPerkObject;
 
         if (state.raceAbilityBool && save.raceAbilityPoints < perk.unlockCost)
@@ -103,7 +103,6 @@ public class PerkPanelManager : MonoBehaviour
             if (_perkObject.ID == perkObjectFromItem.ID && _perkObject.perk.perkName == perkObjectFromItem.perk.perkName)
             {
                 _perkObject.count++;
-                NewSaveSystem.SaveChanges(save);
                 foundPerkObject = _perkObject;
                 return;
             }
@@ -125,7 +124,6 @@ public class PerkPanelManager : MonoBehaviour
         else if (state.raceAbilityBool)
             { save.raceAbilityPoints -= perk.unlockCost; }
 
-        NewSaveSystem.SaveChanges(save);
         onPerkUnlocked?.Invoke(this, new UnlockPerkEventArgs { eventPerkObject = foundPerkObject });
 
         perkButtonUnlock.SetActive(false);

@@ -14,13 +14,13 @@ public class ActionManager : MonoBehaviour
         goldToAdd = 5;
         goldToAddTMP.text = goldToAdd.ToString();
 
-        SaveObject save = NewSaveSystem.FindCurrentSave();
+        SaveObject save = SaveManagerVersion3.FindCurrentSave();
         currentGoldTMP.text = save.gold.ToString();
     }
 
     public void FullRest()
     {
-        SaveObject save = NewSaveSystem.FindCurrentSave();
+        SaveObject save = SaveManagerVersion3.FindCurrentSave();
 
         float healthX = 1;
         float staminaX = 1;
@@ -50,7 +50,6 @@ public class ActionManager : MonoBehaviour
         save.currentStamina = Mathf.FloorToInt((bonusStamina + save.baseStamina) * staminaX);
         save.currentMagic = Mathf.FloorToInt((bonusMagic + save.baseMagic) * magicX);
 
-        NewSaveSystem.SaveChanges(save);
     }
 
     public void IncreaseGold()
@@ -72,15 +71,14 @@ public class ActionManager : MonoBehaviour
         goldToAdd = 5;
         goldToAddTMP.text = goldToAdd.ToString();
 
-        SaveObject save = NewSaveSystem.FindCurrentSave();
+        SaveObject save = SaveManagerVersion3.FindCurrentSave();
         currentGoldTMP.text = save.gold.ToString();
     }
 
     public void SpendGold()
     {
-        SaveObject save = NewSaveSystem.FindCurrentSave();
+        SaveObject save = SaveManagerVersion3.FindCurrentSave();
         save.gold -= goldToAdd;
-        NewSaveSystem.SaveChanges(save);
         currentGoldTMP.text = save.gold.ToString();
 
         goldToAdd = 5;

@@ -37,7 +37,7 @@ public class NewAbilityManager : MonoBehaviour
     private void SetUpTree()
     {
         SetUpList();      
-        SaveObject save = NewSaveSystem.FindCurrentSave();  
+        SaveObject save = SaveManagerVersion3.FindCurrentSave();  
 
         //set all to locked color border
         foreach (Transform obj in abilityListManager)
@@ -48,7 +48,7 @@ public class NewAbilityManager : MonoBehaviour
         }
 
         //set starting ability border
-        SaveState saveState = NewSaveSystem.FindSaveState();
+        SaveState saveState = SaveManagerVersion3.FindSaveState();
         if (saveState.raceAbilityBool)
         {
             FindObjectOfType<AbilityTreeManager>().raceAbilityDictionary[save.race].
@@ -69,7 +69,7 @@ public class NewAbilityManager : MonoBehaviour
             if (instance == null) { continue; }
             if (instance.ability != null)
             {
-                if (NewSaveSystem.DoesPlayerHaveThisAbility(instance.ability))
+                if (SaveManagerVersion3.DoesPlayerHaveThisAbility(instance.ability))
                 {
                     for (int i = 0; i < instance.abilitiesThatUnlock.Length; i++)
                     {
@@ -91,7 +91,7 @@ public class NewAbilityManager : MonoBehaviour
 
             if (instance.perk != null)
             {
-                if (NewSaveSystem.DoesPlayerHaveThisPerk(instance.perk))
+                if (SaveManagerVersion3.DoesPlayerHaveThisPerk(instance.perk))
                 {
                     for (int i = 0; i < instance.abilitiesThatUnlock.Length; i++)
                     {
@@ -150,8 +150,8 @@ public class NewAbilityManager : MonoBehaviour
     private void SetUpList()
     {
         abilityListManager.Clear();
-        SaveState saveState = NewSaveSystem.FindSaveState();
-        SaveObject save = NewSaveSystem.FindCurrentSave();
+        SaveState saveState = SaveManagerVersion3.FindSaveState();
+        SaveObject save = SaveManagerVersion3.FindCurrentSave();
         if (saveState.raceAbilityBool)
         {
             foreach (Transform child in FindObjectOfType<AbilityTreeManager>().raceAbilityDictionary[save.race].transform)

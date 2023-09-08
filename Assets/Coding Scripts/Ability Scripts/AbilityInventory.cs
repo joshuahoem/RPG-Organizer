@@ -33,9 +33,9 @@ public class AbilityInventory : MonoBehaviour
         AbilityPanelManager panelManager = FindObjectOfType<AbilityPanelManager>();
         panelManager.onAbilityUnlocked += Subscriber_UnlockAbility;
 
-        SaveState saveState = NewSaveSystem.FindSaveState();
+        SaveState saveState = SaveManagerVersion3.FindSaveState();
         saveState.screenState = ScreenState.AbilityScreen;
-        NewSaveSystem.SaveStateOfGame(saveState);
+        SaveManagerVersion3.SaveStateOfGame(saveState);
 
         if(saveState.classAbilityBool)
         {
@@ -54,20 +54,10 @@ public class AbilityInventory : MonoBehaviour
 
     }
 
-    // private void Update()
-    // {
-    //     if (Input.GetKeyDown(KeyCode.Alpha1))
-    //     {
-    //         Debug.Log("cleared abilities");
-    //         save.abilityInventory.Clear();
-    //         save.perks.Clear();
-    //         SaveChanges();
-    //     }
-    // }
     private void Subscriber_UnlockAbility(object sender, AbilityPanelManager.UnlockAbilityEventArgs e)
     {   
         AbilitySaveObject abilitySaveObject = ReturnNewAbilityObject(e._ability.ability);
-        SaveState state = NewSaveSystem.FindSaveState();
+        SaveState state = SaveManagerVersion3.FindSaveState();
 
         if (abilitySaveObject != null)
         {
@@ -153,9 +143,6 @@ public class AbilityInventory : MonoBehaviour
 
         }
 
-
-        SaveChanges();
-
         FindObjectOfType<AbilityTabManager>().UpdateTabs(e._ability.ability); //change to an event to update instead
 
         foreach (AbilityInstanceObject instance in FindObjectsOfType<AbilityInstanceObject>())
@@ -171,7 +158,7 @@ public class AbilityInventory : MonoBehaviour
     public AbilitySaveObject ReturnNewAbilityObject(Ability _ability)
     {
         save = FindCurrentSave(); 
-        SaveState state = NewSaveSystem.FindSaveState();
+        SaveState state = SaveManagerVersion3.FindSaveState();
 
         if (state.raceAbilityBool)
         {
@@ -230,13 +217,6 @@ public class AbilityInventory : MonoBehaviour
             Debug.Log("Could not find character manager folder!");
             return null;
         }
-    }
-
-    private void SaveChanges()
-    {
-        string newCharacterString = JsonUtility.ToJson(save);
-        File.WriteAllText(Application.persistentDataPath + "/Saves/" + 
-            "/save_" + charString + ".txt", newCharacterString);
     }
 
 }

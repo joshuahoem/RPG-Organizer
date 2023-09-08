@@ -54,7 +54,7 @@ public class SaveLoadManager : MonoBehaviour
 
     public void SaveNewCharacter()
     {
-        int numberofCharactersPrior = NewSaveSystem.NumberOfCharacters();
+        int numberofCharactersPrior = SaveManagerVersion3.FindSaveState().numberOfCharacters;
 
         if (characterName.text == "")
         {
@@ -145,11 +145,8 @@ public class SaveLoadManager : MonoBehaviour
 
         SaveState saveState = new SaveState { numberOfCharacters = numberofCharactersPrior+1 };
 
-        string character = JsonUtility.ToJson(saveObject);
-
-        // Debug.Log(numberofCharactersPrior+1 + " number of characters now");
-        NewSaveSystem.SaveCharacter(character, numberofCharactersPrior+1);
-        NewSaveSystem.SaveStateOfGame(saveState);
+        CharacterRegistry.Instance.AddCharacter(saveObject);
+        SaveManagerVersion3.SaveStateOfGame(saveState);
     }
 
     public void LoadCharacter()

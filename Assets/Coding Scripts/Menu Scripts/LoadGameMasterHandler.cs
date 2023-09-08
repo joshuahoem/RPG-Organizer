@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 
 public class LoadGameMasterHandler : MonoBehaviour
@@ -26,12 +27,42 @@ public class LoadGameMasterHandler : MonoBehaviour
 
     }
 
+    public PlayerInfo GetPlayerInfo()
+    {
+        PlayerInfo playerInfo = SaveManagerVersion3.FindPlayerInfoFile();
+
+        foreach (UnlockObject unlock in playerInfo.unlocks)
+        {
+            if (unlock.raceStringID != string.Empty && unlock.classStringID == string.Empty)
+            {
+                //has a race
+                unlock.unlockedRace = raceDatabase.GetRaceID[unlock.raceStringID];
+            }
+            else if (unlock.raceStringID == string.Empty && unlock.classStringID != string.Empty)
+            {
+                //has a class
+                unlock.unlockedClass = classDatabase.GetClassID[unlock.classStringID];
+            }
+            else
+            {
+                Debug.Log("Error with race or class");
+            }
+        }
+
+        return playerInfo;
+    }
+
+    public Perk GetPerk(string _perkID)
+    {
+        return perkDatabase.GetStringID[_perkID];
+    }
+
     private void Start() 
     {
         StartMusic();
-        NewSaveSystem.Init();
-        PlayerInfo playerInfo = NewSaveSystem.FindPlayerInfoFile();
-        SaveState saveState = NewSaveSystem.FindSaveState();
+        SaveManagerVersion3.Init();
+        PlayerInfo playerInfo = SaveManagerVersion3.FindPlayerInfoFile();
+        SaveState saveState = SaveManagerVersion3.FindSaveState();
 
         //SUMMARY// Make sure player has correct Classes and Races
         foreach (UnlockObject unlock in playerInfo.unlocks)
@@ -52,11 +83,12 @@ public class LoadGameMasterHandler : MonoBehaviour
             }
         }
 
+        SaveManagerVersion3.SavePlayerInfo(playerInfo);
+
         //SUMMARY// Finds each save and makes sure they have correct items, abilities, and perks
-        int numberOfCharacters = saveState.numberOfCharacters;
-        for (int i = 0; i <= numberOfCharacters; i++)
+        foreach (var kvp in CharacterRegistry.Instance.GetDictionary())
         {
-            SaveObject save = NewSaveSystem.Load(i);
+            SaveObject save = kvp.Value;
 
             if (save == null) { continue; }
 
@@ -69,9 +101,7 @@ public class LoadGameMasterHandler : MonoBehaviour
                     abilitySO.ability = abilityDatabase.GetStringID[abilitySO.stringID];
                 }
             }
-
         }
-
     }
 
     private void StartMusic()

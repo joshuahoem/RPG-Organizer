@@ -3207,6 +3207,83 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 706897117}
   m_CullTransparentMesh: 1
+--- !u!1 &777851733
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 777851736}
+  - component: {fileID: 777851735}
+  - component: {fileID: 777851734}
+  - component: {fileID: 777851737}
+  m_Layer: 0
+  m_Name: Test
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &777851734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 777851733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 724256d0cb2aec04589f1b693ea5e50a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  classDatabase: {fileID: 11400000, guid: fa3c507ea4042164898a75a68593354b, type: 2}
+  raceDatabase: {fileID: 11400000, guid: 5f92cb296e44e9f44a85eb27026c5878, type: 2}
+  abilityDatabase: {fileID: 11400000, guid: 3bccb5716fddfe1439294a8c6d7eac36, type: 2}
+  perkDatabase: {fileID: 11400000, guid: 71216f665e8ceea408660173c6e204ef, type: 2}
+  itemDatabase: {fileID: 11400000, guid: e7c7b6f88af1efb4fbac925e29419d0f, type: 2}
+--- !u!114 &777851735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 777851733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af59f0a8a1d2e0940a6939ca01d303e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &777851736
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 777851733}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 263, y: 452.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &777851737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 777851733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdbf9ecbd6fde474eb2375d1249ed2ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musicDropdown: {fileID: 0}
+  music:
+  - {fileID: 8300000, guid: 32bfd94ed3d97814ca0b971b7d7d44b2, type: 3}
 --- !u!1 &799732618
 GameObject:
   m_ObjectHideFlags: 0
@@ -66127,6 +66204,7 @@ MonoBehaviour:
   enemySceneIndex: 11
   charactersUnlockSceneIndex: 12
   diceSceneIndex: 13
+  jukeboxIndex: 14
 --- !u!114 &7963427250145781483
 MonoBehaviour:
   m_ObjectHideFlags: 0

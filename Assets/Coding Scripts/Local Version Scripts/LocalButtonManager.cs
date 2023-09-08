@@ -18,7 +18,6 @@ public class LocalButtonManager : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI statDisplayObject;
     [SerializeField] int amountToChange;
-    SaveObject save;
     public string charString;
 
     [SerializeField] StatEnum statChanging;
@@ -46,7 +45,7 @@ public class LocalButtonManager : MonoBehaviour
 
     public void AddAmount()
     {
-        save = FindCurrentSave();
+        SaveObject save = SaveManagerVersion3.FindCurrentSave();
         LoadBaseStatBonus();
         LoadMultipliers();
 
@@ -84,13 +83,12 @@ public class LocalButtonManager : MonoBehaviour
                 break;
         }
 
-        NewSaveSystem.SaveChanges(save);
 
     }
 
     public void SubtractAmount()
     {
-        save = FindCurrentSave();
+        SaveObject save = SaveManagerVersion3.FindCurrentSave();
         LoadBaseStatBonus();
         LoadMultipliers();
 
@@ -128,39 +126,6 @@ public class LocalButtonManager : MonoBehaviour
                 break;
         }
 
-        NewSaveSystem.SaveChanges(save);
-    }
-
-    private SaveObject FindCurrentSave()
-    {
-        string SAVE_FOLDER = Application.persistentDataPath + "/Saves/";
-
-        if (File.Exists(SAVE_FOLDER + "/character_manager.txt"))
-        {
-            string saveString = File.ReadAllText(SAVE_FOLDER + "/character_manager.txt");
-
-            SaveState saveState = JsonUtility.FromJson<SaveState>(saveString);
-
-            charString = saveState.fileIndexString;
-
-            if (File.Exists(SAVE_FOLDER + "/save_" + charString + ".txt"))
-            {
-                string newSaveString = File.ReadAllText(SAVE_FOLDER + "/save_" + charString + ".txt");
-
-                return JsonUtility.FromJson<SaveObject>(newSaveString);
-
-            }
-            else
-            {
-                Debug.Log("Could not find character folder!");
-                return null;
-            }
-        }
-        else
-        {
-            Debug.Log("Could not find character manager folder!");
-            return null;
-        }
     }
 
     private void LoadBaseStatBonus()
@@ -172,8 +137,14 @@ public class LocalButtonManager : MonoBehaviour
         bonusIntelligence = 0;
         bonusSpeed = 0;
 
+        SaveObject save = SaveManagerVersion3.FindCurrentSave();
+
         foreach (PerkObject perkObject in save.perks)
         {
+            if (perkObject.perk == null)
+            {
+                perkObject.perk = LoadGameMasterHandler.Instance.GetPerk(perkObject.stringID);
+            }
             bonusHealth += perkObject.perk.bonusHealth * perkObject.count;
             bonusStamina += perkObject.perk.bonusStamina * perkObject.count;
             bonusMagic += perkObject.perk.bonusMagic * perkObject.count;
@@ -191,6 +162,8 @@ public class LocalButtonManager : MonoBehaviour
         float strengthX = 1;
         float intelligenceX = 1;
         float speedX = 1;
+
+        SaveObject save = SaveManagerVersion3.FindCurrentSave();
 
         foreach (PerkObject perk in save.perks)
         {

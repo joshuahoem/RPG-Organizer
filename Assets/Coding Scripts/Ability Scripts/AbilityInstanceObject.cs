@@ -65,7 +65,7 @@ public class AbilityInstanceObject : MonoBehaviour
 
     private AbilitySaveObject GetAbilitySaveObject()
     {
-        SaveObject save = NewSaveSystem.FindCurrentSave();
+        SaveObject save = SaveManagerVersion3.FindCurrentSave();
 
         foreach (AbilitySaveObject _abilitySO in save.abilityInventory)
         {
@@ -75,7 +75,7 @@ public class AbilityInstanceObject : MonoBehaviour
             }
         }
 
-        SaveState state = NewSaveSystem.FindSaveState();
+        SaveState state = SaveManagerVersion3.FindSaveState();
 
         if (state.raceAbilityBool)
         {
@@ -95,7 +95,7 @@ public class AbilityInstanceObject : MonoBehaviour
 
     private PerkObject FindPerkObject()
     {
-        SaveObject save = NewSaveSystem.FindCurrentSave();
+        SaveObject save = SaveManagerVersion3.FindCurrentSave();
 
         foreach (PerkObject _perkObject in save.perks)
         {

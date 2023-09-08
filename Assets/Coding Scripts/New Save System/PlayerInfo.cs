@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Newtonsoft.Json;
 using UnityEngine;
 
 public class PlayerInfo
@@ -9,9 +10,9 @@ public class PlayerInfo
 
 [System.Serializable] public class UnlockObject
 {
-    public Race unlockedRace;
+    [JsonIgnore] public Race unlockedRace;
     public string raceStringID;
-    public Class unlockedClass;
+    [JsonIgnore] public Class unlockedClass;
     public string classStringID;
 
     public UnlockObject(Race _unlockRace, Class _unlockClass, string _raceStringID, string _classStringID)

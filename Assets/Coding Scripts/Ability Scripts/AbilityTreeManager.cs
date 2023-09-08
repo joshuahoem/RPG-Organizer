@@ -24,7 +24,7 @@ public class AbilityTreeManager : MonoBehaviour
     
     private void Awake()
     {
-        save = NewSaveSystem.FindCurrentSave();
+        save = SaveManagerVersion3.FindCurrentSave();
         SetUpDictionary();
         LoadAbilityTree();
     }
@@ -60,7 +60,7 @@ public class AbilityTreeManager : MonoBehaviour
             raceAbilityTrees[i].SetActive(false);
         }
 
-        SaveState saveState = NewSaveSystem.FindSaveState();
+        SaveState saveState = SaveManagerVersion3.FindSaveState();
         if (saveState.raceAbilityBool)
         {
             raceAbilityDictionary[save.race].SetActive(true);

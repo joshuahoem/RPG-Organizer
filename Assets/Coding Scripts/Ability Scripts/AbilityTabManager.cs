@@ -34,7 +34,7 @@ public class AbilityTabManager : MonoBehaviour
             Destroy(tab);
         }
         tabs.Clear();
-        save = NewSaveSystem.FindCurrentSave();
+        save = SaveManagerVersion3.FindCurrentSave();
         for (int i=0; i < e._ability.ability.allAbilityLevels.Length; i++)
         {
             GameObject newTab = Instantiate(tabPrefab, transform.position, transform.rotation);
@@ -57,7 +57,7 @@ public class AbilityTabManager : MonoBehaviour
 
     public void UpdateTabs(Ability _ability)
     {
-        save = NewSaveSystem.FindCurrentSave();
+        save = SaveManagerVersion3.FindCurrentSave();
         int checkInt = 0;
         foreach (AbilitySaveObject saveObject in save.abilityInventory)
         {

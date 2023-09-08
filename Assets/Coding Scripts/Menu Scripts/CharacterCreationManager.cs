@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System;
 
 public class CharacterCreationManager : MonoBehaviour
 {
@@ -56,8 +57,8 @@ public class CharacterCreationManager : MonoBehaviour
     [SerializeField] string creationMainText;
     [SerializeField] string raceSelectText;
     [SerializeField] string classSelectText;
-    bool loadingRacesBool;
-    bool loadingClassesBool;
+    public bool loadingRacesBool;
+    public bool loadingClassesBool;
 
     #region //Bonus stat modifiers
     [SerializeField] public int bonusAttackModifer;
@@ -86,10 +87,11 @@ public class CharacterCreationManager : MonoBehaviour
         }
         prefabs.Clear();
 
-        PlayerInfo playerInfo = NewSaveSystem.FindPlayerInfoFile();
+        PlayerInfo playerInfo = LoadGameMasterHandler.Instance.GetPlayerInfo();
+
         foreach (UnlockObject unlock in playerInfo.unlocks)
         {
-            if (loadingRacesBool && unlock.unlockedRace != null)
+            if (loadingRacesBool && unlock.raceStringID != String.Empty)
             {
                 GameObject _raceObject = Instantiate(raceClassPrefabObject, transform.position, transform.rotation);
                 _raceObject.transform.SetParent(parentRace);
@@ -102,7 +104,7 @@ public class CharacterCreationManager : MonoBehaviour
                 _raceObject.transform.localScale = new Vector3(x,y,1);
 
             }
-            else if (loadingClassesBool && unlock.unlockedClass != null)
+            else if (loadingClassesBool && unlock.classStringID != String.Empty)
             {
                 GameObject _classObject = Instantiate(raceClassPrefabObject, transform.position, transform.rotation);
                 _classObject.transform.SetParent(parentClass);
@@ -290,8 +292,6 @@ public class CharacterCreationManager : MonoBehaviour
             return;
         }
 
-        int numberofCharactersPrior = NewSaveSystem.NumberOfCharacters();
-
         if (inputTextName.text == "")
         {
             // Debug.Log("Need a name");
@@ -346,7 +346,6 @@ public class CharacterCreationManager : MonoBehaviour
         {
             //Basic Info
             nameOfCharacter = inputTextName.text.ToString(), //does it need to be converted? #TODO
-            characterFileNumber = numberofCharactersPrior + 1,
             characterClass = _class.name,
             race = _race.name,
             raceObject = _race,
@@ -385,18 +384,14 @@ public class CharacterCreationManager : MonoBehaviour
             classAbilityPoints = 1,     
 
             //starting info
-            perks = _startingPerks
+            perks = _startingPerks,
+            // equipment = new InventoryItem[10]
+            
 
         };
 
         CharacterRegistry.Instance.AddCharacter(saveObject);
 
-        SaveState saveState = new SaveState { numberOfCharacters = numberofCharactersPrior+1 };
-
-        string character = JsonUtility.ToJson(saveObject);
-
-        // Debug.Log(numberofCharactersPrior+1 + " number of characters now");
-        NewSaveSystem.SaveCharacter(character, numberofCharactersPrior+1);
-        NewSaveSystem.SaveStateOfGame(saveState);
+        SaveManagerVersion3.SaveGame(CharacterRegistry.Instance);
     }
 }

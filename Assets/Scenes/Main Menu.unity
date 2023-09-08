@@ -2409,7 +2409,7 @@ MonoBehaviour:
   classDatabase: {fileID: 11400000, guid: fa3c507ea4042164898a75a68593354b, type: 2}
   raceDatabase: {fileID: 11400000, guid: 5f92cb296e44e9f44a85eb27026c5878, type: 2}
   abilityDatabase: {fileID: 11400000, guid: 3bccb5716fddfe1439294a8c6d7eac36, type: 2}
-  perkDatabase: {fileID: 0}
+  perkDatabase: {fileID: 11400000, guid: 71216f665e8ceea408660173c6e204ef, type: 2}
   itemDatabase: {fileID: 11400000, guid: e7c7b6f88af1efb4fbac925e29419d0f, type: 2}
 --- !u!4 &645138114
 Transform:

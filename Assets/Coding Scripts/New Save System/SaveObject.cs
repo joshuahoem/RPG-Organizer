@@ -63,6 +63,7 @@ public class SaveObject
     public SaveObject()
     {
         characterID = Guid.NewGuid().ToString();
+        equipment = new InventoryItem[10];
     }
 
 }

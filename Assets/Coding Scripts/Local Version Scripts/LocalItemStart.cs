@@ -63,7 +63,7 @@ public class LocalItemStart : MonoBehaviour
                 if (_itemInfo.equipmentSlotIndex == 6)
                 {
                     //offhand
-                    if (NewSaveSystem.DoesPlayerHaveThisAbility(dualWieldAbility))
+                    if (SaveManagerVersion3.DoesPlayerHaveThisAbility(dualWieldAbility))
                     {
                         statNumberOne.text = _item.mainDamage.ToString();
                         statNumberTwo.text = _item.mainAttackRange.ToString();

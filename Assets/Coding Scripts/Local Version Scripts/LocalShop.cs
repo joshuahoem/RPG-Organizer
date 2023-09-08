@@ -59,7 +59,7 @@ public class LocalShop : MonoBehaviour
             
         }
 
-        SaveObject save = NewSaveSystem.FindCurrentSave();
+        SaveObject save = SaveManagerVersion3.FindCurrentSave();
         goldText.text = save.gold.ToString();
 
         itemInfoPanel.GetComponent<ItemPanelDisplay>().DeactivateAllButtons();

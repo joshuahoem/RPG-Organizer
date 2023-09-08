@@ -29,7 +29,7 @@ public class CharacterUnlockManager : MonoBehaviour
 
     private void LoadDefaults()
     {
-        PlayerInfo playerInfo = NewSaveSystem.FindPlayerInfoFile();
+        PlayerInfo playerInfo = SaveManagerVersion3.FindPlayerInfoFile();
 
         // Debug.Log("josh " + playerInfo.unlocks.Count + " unlocked");
 
@@ -54,58 +54,45 @@ public class CharacterUnlockManager : MonoBehaviour
         {
             if (unlock.unlockedClass == null && unlock.classStringID != "" && unlock.raceStringID == "")
             {
-                // Debug.Log("class Start");
-                // Debug.Log(unlock.unlockedClass + " class");
-                // Debug.Log(unlock.classStringID + " class string");
-                // Debug.Log(unlock.unlockedRace + " race");
-                // Debug.Log(unlock.raceStringID + " race string");
                 unlock.unlockedClass = classDatabase.GetClassID[unlock.classStringID];  
-                // Debug.Log(classDatabase.GetClassID[unlock.classStringID] + " set class");              
             }
             if (unlock.unlockedRace == null && unlock.raceStringID != "" && unlock.classStringID == "")
             {
-                // Debug.Log("Race Start");
-                // Debug.Log(unlock.unlockedClass + " class");
-                // Debug.Log(unlock.classStringID + " class string");
-                // Debug.Log(unlock.unlockedRace + " race");
-                // Debug.Log(unlock.raceStringID + " race string");
                 unlock.unlockedRace = raceDatabase.GetRaceID[unlock.raceStringID];
-                // Debug.Log(raceDatabase.GetRaceID[unlock.raceStringID] + " set race");
             }
         }
 
-        NewSaveSystem.SavePlayerInfo(playerInfo);
+        SaveManagerVersion3.SavePlayerInfo(playerInfo);
 
     }
 
     private void LoadUnlocks()
     {
-        PlayerInfo playerInfo = NewSaveSystem.FindPlayerInfoFile(); 
+        PlayerInfo playerInfo = SaveManagerVersion3.FindPlayerInfoFile(); 
 
         // foreach (UnlockObject unlock in playerInfo.unlocks)
         // {
         //     Debug.Log(" Josh unlocked " + unlock.unlockedClass + " " + unlock.unlockedRace);
         // }
 
-        // Debug.Log("Josh thinks in unlocks there are " + playerInfo.unlocks.Count);       
-
         foreach (GameObject unlockGO in unlockObjects)
         {
             CharacterUnlockItemInfo goItemInfo = unlockGO.GetComponent<CharacterUnlockItemInfo>();
             foreach (UnlockObject unlock in playerInfo.unlocks)
             {
-                if (unlock.unlockedClass != null && goItemInfo.classToUnlock != null)
+                if (unlock.classStringID != null && goItemInfo.classToUnlock != null)
                 {
-                    if (unlock.unlockedClass.name == goItemInfo.classToUnlock.name)
+
+                    if (unlock.classStringID == goItemInfo.classToUnlock.name)
                     {
                         goItemInfo.DisplayUnlocked();
                         break;
                     }
                 }
 
-                if (unlock.unlockedRace != null && goItemInfo.raceToUnlock != null)
+                if (unlock.raceStringID != null && goItemInfo.raceToUnlock != null)
                 {
-                    if (unlock.unlockedRace.name == goItemInfo.raceToUnlock.name)
+                    if (unlock.raceStringID == goItemInfo.raceToUnlock.name)
                     {
                         goItemInfo.DisplayUnlocked();
                         break;
@@ -134,16 +121,16 @@ public class CharacterUnlockManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
             Debug.Log("Clear Unlocks");
-            PlayerInfo playerInfo = NewSaveSystem.FindPlayerInfoFile();
+            PlayerInfo playerInfo = SaveManagerVersion3.FindPlayerInfoFile();
             playerInfo.unlocks.Clear();
-            NewSaveSystem.SavePlayerInfo(playerInfo);
+            SaveManagerVersion3.SavePlayerInfo(playerInfo);
             LoadDefaults();
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             Debug.Log("check unlocks");
-            PlayerInfo playerInfo = NewSaveSystem.FindPlayerInfoFile();
+            PlayerInfo playerInfo = SaveManagerVersion3.FindPlayerInfoFile();
             foreach (UnlockObject unlock in playerInfo.unlocks)
             {
                 if(unlock.unlockedRace != null)

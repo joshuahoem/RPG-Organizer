@@ -16,7 +16,7 @@ public class ListManager : MonoBehaviour
 
         dropdown.options.Clear();
 
-        PlayerInfo playerInfo = NewSaveSystem.FindPlayerInfoFile();
+        PlayerInfo playerInfo = SaveManagerVersion3.FindPlayerInfoFile();
 
         foreach (UnlockObject unlock in playerInfo.unlocks)
         {

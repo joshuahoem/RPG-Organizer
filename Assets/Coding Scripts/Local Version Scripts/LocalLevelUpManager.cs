@@ -56,7 +56,7 @@ public class LocalLevelUpManager : MonoBehaviour
 
     public void CheckChanges()
     {
-        SaveObject save = NewSaveSystem.FindCurrentSave();
+        SaveObject save = SaveManagerVersion3.FindCurrentSave();
         indexOfSave = FindObjectOfType<LocalStatDisplay>().charString;
 
         SetStats();
@@ -65,7 +65,7 @@ public class LocalLevelUpManager : MonoBehaviour
 
     private void SetStats()
     {
-        SaveObject save = NewSaveSystem.FindCurrentSave();
+        SaveObject save = SaveManagerVersion3.FindCurrentSave();
         level = save.level;
         points = save.levelPoints;
         rolls = save.levelRolls;
@@ -95,7 +95,7 @@ public class LocalLevelUpManager : MonoBehaviour
 
     public void AddLevel()
     {
-        SaveObject save = NewSaveSystem.FindCurrentSave();
+        SaveObject save = SaveManagerVersion3.FindCurrentSave();
         save.level++;
         save.levelPoints += 2;
         save.levelRolls += 2;
@@ -108,12 +108,11 @@ public class LocalLevelUpManager : MonoBehaviour
         save.classAbilityPoints += 1;
 
         save.hasLevelUp = true;
-        NewSaveSystem.SaveChanges(save);
     }
 
     public void ConfirmLevelChanges()
     {
-        SaveObject save = NewSaveSystem.FindCurrentSave();
+        SaveObject save = SaveManagerVersion3.FindCurrentSave();
 
         save.level = level;
         save.levelPoints = points;
@@ -155,12 +154,13 @@ public class LocalLevelUpManager : MonoBehaviour
             save.hasLevelUp = false;
         }
 
-        NewSaveSystem.SaveChanges(save);
+        SaveManagerVersion3.SaveGame(CharacterRegistry.Instance);
+
     }
 
     public void CheckIfLevelUp()
     {
-        SaveObject save = NewSaveSystem.FindCurrentSave();
+        SaveObject save = SaveManagerVersion3.FindCurrentSave();
 
         if (save.hasLevelUp == false)
         {
@@ -208,7 +208,7 @@ public class LocalLevelUpManager : MonoBehaviour
     public void AddStrength()
     {
         if (points < 1) { return; }
-        if (NewSaveSystem.DoesPlayerHaveThisAbility(dwarvenStrengthAbility))
+        if (SaveManagerVersion3.DoesPlayerHaveThisAbility(dwarvenStrengthAbility))
         {
             currentStrength++;
         }
@@ -235,7 +235,7 @@ public class LocalLevelUpManager : MonoBehaviour
 
     public void SubtractHealth()
     {
-        SaveObject save = NewSaveSystem.FindCurrentSave();
+        SaveObject save = SaveManagerVersion3.FindCurrentSave();
 
         if ( currentHealth == save.baseHealth) {return;}
         currentHealth--;
@@ -245,7 +245,7 @@ public class LocalLevelUpManager : MonoBehaviour
 
     public void SubtractStamina()
     {
-        SaveObject save = NewSaveSystem.FindCurrentSave();
+        SaveObject save = SaveManagerVersion3.FindCurrentSave();
 
         if ( currentStamina == save.baseStamina) {return;}
         currentStamina--;
@@ -255,7 +255,7 @@ public class LocalLevelUpManager : MonoBehaviour
 
     public void SubtractMagic()
     {
-        SaveObject save = NewSaveSystem.FindCurrentSave();
+        SaveObject save = SaveManagerVersion3.FindCurrentSave();
 
         if ( currentMagic == save.baseMagic) {return;}
         currentMagic--;
@@ -265,10 +265,10 @@ public class LocalLevelUpManager : MonoBehaviour
 
     public void SubtractStrength()
     {
-        SaveObject save = NewSaveSystem.FindCurrentSave();
+        SaveObject save = SaveManagerVersion3.FindCurrentSave();
 
         if ( currentStrength == save.baseStrength) {return;}
-        if (NewSaveSystem.DoesPlayerHaveThisAbility(dwarvenStrengthAbility))
+        if (SaveManagerVersion3.DoesPlayerHaveThisAbility(dwarvenStrengthAbility))
         {
             currentStrength--;
         }
@@ -279,7 +279,7 @@ public class LocalLevelUpManager : MonoBehaviour
 
     public void SubtractIntelligence()
     {
-        SaveObject save = NewSaveSystem.FindCurrentSave();
+        SaveObject save = SaveManagerVersion3.FindCurrentSave();
 
         if ( currentIntelligence == save.baseIntelligence) {return;}
         currentIntelligence--;
@@ -289,7 +289,7 @@ public class LocalLevelUpManager : MonoBehaviour
 
     public void SubtractSpeed()
     {
-        SaveObject save = NewSaveSystem.FindCurrentSave();
+        SaveObject save = SaveManagerVersion3.FindCurrentSave();
 
         if ( currentSpeed == save.baseSpeed) {return;}
         currentSpeed--;
@@ -299,45 +299,41 @@ public class LocalLevelUpManager : MonoBehaviour
 
     public void LoadRolls()
     {
-        SaveObject save = NewSaveSystem.FindCurrentSave();
+        SaveObject save = SaveManagerVersion3.FindCurrentSave();
         if (save.levelRolls <= 0) {return;}
         levelupPanel.SetActive(true);
         maxRolls = save.levelRolls;
         save.levelRolls = 0;
         numberOfRollsTMP.text = save.levelRolls.ToString();
-        NewSaveSystem.SaveChanges(save);
     }
 
     public void AddLevelRolls()
     {
-        SaveObject save = NewSaveSystem.FindCurrentSave();
+        SaveObject save = SaveManagerVersion3.FindCurrentSave();
         if (save.levelRolls + 1 > maxRolls) {return;}
         save.levelRolls++;
         numberOfRollsTMP.text = save.levelRolls.ToString();
-        NewSaveSystem.SaveChanges(save);
     }
 
     public void SubtractLevelRolls()
     {
-        SaveObject save = NewSaveSystem.FindCurrentSave();
+        SaveObject save = SaveManagerVersion3.FindCurrentSave();
         if (save.levelRolls - 1 < 0) {return;}
         save.levelRolls--;
         numberOfRollsTMP.text = save.levelRolls.ToString();
-        NewSaveSystem.SaveChanges(save);
     }
 
     public void ConfirmLevelRolls()
     {
-        SaveObject save = NewSaveSystem.FindCurrentSave();
+        SaveObject save = SaveManagerVersion3.FindCurrentSave();
         // Debug.Log(save.levelRolls);
         // Debug.Log(save.levelPoints);
         save.levelPoints += save.levelRolls;
-        if (NewSaveSystem.DoesPlayerHaveThisAbility(noviceAbility))
+        if (SaveManagerVersion3.DoesPlayerHaveThisAbility(noviceAbility))
         {
             save.levelPoints += 2;
         }
         save.levelRolls = 0;
-        NewSaveSystem.SaveChanges(save);
 
         levelupPanel.SetActive(false);
         SetStats();
