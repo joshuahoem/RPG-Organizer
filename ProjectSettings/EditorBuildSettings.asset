@@ -50,4 +50,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Juke Box Scene.unity
     guid: 1d58bc8932f18aa42b0d071f9f8d9b57
+  - enabled: 1
+    path: Assets/Scenes/Notes Scene.unity
+    guid: 20706f88b10b59447bf1a50895699803
   m_configObjects: {}

@@ -28,6 +28,8 @@ public class LocalItemStart : MonoBehaviour
 
     [SerializeField] Image imageSprite;
     [SerializeField] Image backgroundSprite;
+    [SerializeField] Image borderImage;
+
     [SerializeField] Color WeaponColor;
     [SerializeField] Color ArmorColor;
 
@@ -44,8 +46,9 @@ public class LocalItemStart : MonoBehaviour
         itemInfo = _itemInfo;
         imageSprite.sprite = SaveManagerVersion3.LoadSprite(item.pathToPicture);
         itemName.text = _item.itemName.ToString();
-        if (goldCostNumber != null)
-            goldCostNumber.text = _item.goldCost.ToString();
+        if (goldCostNumber != null) { goldCostNumber.text = _item.goldCost.ToString(); }
+
+        borderImage.color = FindObjectOfType<GameHandler>().GetRarityColor(_itemInfo.item.GetRarity());
 
         switch (item.itemType)
         {

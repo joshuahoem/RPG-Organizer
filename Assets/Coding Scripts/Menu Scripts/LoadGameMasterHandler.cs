@@ -112,8 +112,8 @@ public class LoadGameMasterHandler : MonoBehaviour
                 if (abilitySO.ability == null)
                 {
                     abilitySO.ability = abilityDatabase.GetStringID[abilitySO.stringID];
-                    Debug.Log(abilitySO.ability.abilityName + " name");
-                    Debug.Log("chosen : " + abilityDatabase.GetStringID[abilitySO.stringID].abilityName);
+                    // Debug.Log(abilitySO.ability.abilityName + " name");
+                    // Debug.Log("chosen : " + abilityDatabase.GetStringID[abilitySO.stringID].abilityName);
                 }
             }
         }

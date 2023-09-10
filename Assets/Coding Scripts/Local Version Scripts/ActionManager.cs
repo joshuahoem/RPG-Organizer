@@ -12,8 +12,11 @@ public class ActionManager : MonoBehaviour
     private void Start() 
     {
         goldToAdd = 5;
-        goldToAddTMP.text = goldToAdd.ToString();
+        goldToAddTMP.text = goldToAdd.ToString();        
+    }
 
+    public void LoadGold()
+    {
         SaveObject save = SaveManagerVersion3.FindCurrentSave();
         currentGoldTMP.text = save.gold.ToString();
     }

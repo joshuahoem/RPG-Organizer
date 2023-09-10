@@ -53,12 +53,10 @@ public class SaveObject
     public List<InventoryItem> inventory = new List<InventoryItem>();
     public List<PerkObject> perks = new List<PerkObject>();
     public InventoryItem[] equipment;
+    public List<string> notes = new List<string>();
 
-    
-    //picture - based on race?
     [JsonIgnore] public Race raceObject;
     [JsonIgnore] public Class classObject;
-    //hat/ item for each class to overlay on picture of race?
 
     public SaveObject()
     {
