@@ -50,27 +50,67 @@ public class LocalInventoryManager : MonoBehaviour
 
 
         currentEquipment = save.equipment;
+
+        CheckInventory();
         
     }
 
-    public void Equip(Item newItem, int chosenSlotIndex)
+    private void CheckInventory()
     {
         SaveObject save = SaveManagerVersion3.FindCurrentSave();
+
+        foreach (InventoryItem item in save.inventory)
+        {
+            if (item == null)
+            {
+                continue;
+            }
+            if (item.item == null)
+            {
+                item.item = LoadGameMasterHandler.Instance.GetItem(item.stringID);
+
+            }
+        }
+
+        for (int i = 0; i < save.equipment.Length; i++)
+        {
+            if (save.equipment[i] == null) 
+            {
+                continue;
+            }
+
+            if (save.equipment[i].item == null && save.equipment[i].equipped)
+            {
+                save.equipment[i].item = LoadGameMasterHandler.Instance.GetItem(save.equipment[i].stringID);
+            }
+        }
+    }
+
+    public void Equip(InventoryItem newItem, int chosenSlotIndex)
+    {
+        SaveObject save = SaveManagerVersion3.FindCurrentSave();
+        if (newItem.item == null)
+        {
+            LoadGameMasterHandler.Instance.GetItem(newItem.stringID);
+        }
         if (chosenSlotIndex == 0)
         {
             //0 is default and so none was chosen
-            int slotIndex = (int)newItem.equipmentSlot;
+            int slotIndex = (int)newItem.item.equipmentSlot;
 
-            if(currentEquipment[slotIndex].item == null)
+            if(currentEquipment[slotIndex] == null) 
             {
-                currentEquipment[slotIndex].item = newItem;
-                currentEquipment[slotIndex].equipped = true;
-                currentEquipment[slotIndex].equipmentSlotIndex = slotIndex;
+                InventoryItem newInstance = new InventoryItem(newItem.item, 1, true, slotIndex); //GOOD TO GO #TODO
+                currentEquipment[slotIndex] = newInstance;
+            }
+            else if (currentEquipment[slotIndex].item == null)
+            {
+                InventoryItem newInstance = new InventoryItem(newItem.item, 1, true, slotIndex); //GOOD TO GO #TODO
+                currentEquipment[slotIndex] = newInstance;
             }
             else
             {
                 // Debug.Log("not empty, switching");
-                inventory.Add(UnequipNoSave(currentEquipment[slotIndex].item));
                 if (currentEquipment[slotIndex].item.numberOfHands == NumberOfHands.TwoHanded)
                 {
                     if (slotIndex == (int) EquipmentSlot.MainHand)
@@ -85,9 +125,10 @@ public class LocalInventoryManager : MonoBehaviour
                     }
                     
                 }
-                currentEquipment[slotIndex].item = newItem;
-                currentEquipment[slotIndex].equipped = true;
-                currentEquipment[slotIndex].equipmentSlotIndex = slotIndex;
+                inventory.Add(UnequipNoSave(currentEquipment[slotIndex].item));
+
+                InventoryItem newInstance = new InventoryItem(newItem.item, 1, true, slotIndex); //GOOD TO GO #TODO
+                currentEquipment[slotIndex] = newInstance;
 
             }
 
@@ -95,11 +136,13 @@ public class LocalInventoryManager : MonoBehaviour
         }
         else
         {
-            if(currentEquipment[chosenSlotIndex].item == null)
+            if (currentEquipment[chosenSlotIndex] == null)
             {
-                currentEquipment[chosenSlotIndex].item = newItem;
-                currentEquipment[chosenSlotIndex].equipped = true;
-                currentEquipment[chosenSlotIndex].equipmentSlotIndex = chosenSlotIndex;
+                currentEquipment[chosenSlotIndex] = new InventoryItem(newItem.item, 1, true, chosenSlotIndex); //GOOD TO GO #TODO
+            }
+            else if(currentEquipment[chosenSlotIndex].item == null)
+            {
+                currentEquipment[chosenSlotIndex] = new InventoryItem(newItem.item, 1, true, chosenSlotIndex); //GOOD TO GO #TODO
             }
             else
             {
@@ -117,7 +160,7 @@ public class LocalInventoryManager : MonoBehaviour
                         currentEquipment[chosenSlotIndex - 1].equipped = false;
                     }
                 }
-                currentEquipment[chosenSlotIndex].item = newItem;
+                currentEquipment[chosenSlotIndex].item = newItem.item;
                 currentEquipment[chosenSlotIndex].equipped = true;
                 currentEquipment[chosenSlotIndex].equipmentSlotIndex = chosenSlotIndex;
 
@@ -129,7 +172,7 @@ public class LocalInventoryManager : MonoBehaviour
 
         foreach (InventoryItem invItem in inventory)
         {
-            if (invItem.item == newItem)
+            if (invItem.item.itemName == newItem.item.itemName)
             {
                 searchResult = invItem;
             }
@@ -162,44 +205,28 @@ public class LocalInventoryManager : MonoBehaviour
             if (save.equipment[5].item != null)
             {  
                 // Debug.Log("main");
-                save.equipment[5].equipmentSlotIndex = 0;
-                save.equipment[5].item = null;
+                save.equipment[5] = null;
 
             }
             if (save.equipment[6].item != null)
             {
                 // Debug.Log("off");
-                save.equipment[6].equipmentSlotIndex = 0;
-                save.equipment[6].item = null;
+                save.equipment[6] = null;
             }
         }
+        else
+        {
+            save.equipment[searchIndex] = null;
+        }
+
+        if (newItem.item == null)
+        { newItem.item = LoadGameMasterHandler.Instance.GetItem(newItem.stringID); }
 
         InventoryItem _newItem = new InventoryItem
-                    (newItem.item, database.GetID[newItem.item], newItem.item.numberInStack, false, 0);
+                    (newItem.item, newItem.item.numberInStack, false, 0); //GOOD TO GO #TODO
         save.inventory.Add(_newItem);
 
-        save.equipment[searchIndex].equipped = false;
-        save.equipment[searchIndex].item = null;
-
-
-        // for (int i=0; i< _save.equipment.Length; i++)
-        // {
-        //     if(_save.equipment[i].item == newItem && !removed) 
-        //     {
-        //         if (_save.equipment[i].equipmentSlotIndex)
-        //         Debug.Log(_save.equipment[i].item);
-        //         save.equipment[i].equipped = false;
-        //         InventoryItem _newItem = new InventoryItem
-        //             (_save.equipment[i].item, database.GetID[newItem], 1, false, 0);
-        //         save.inventory.Add(_newItem);
-        //         Debug.Log(_newItem.item);
-        //         removed = true;
-        //         searchIndex = i;
-                
-        //     }
-        // }
-
-        //     save.equipment[searchIndex].item = null;
+        SaveManagerVersion3.SaveGame(CharacterRegistry.Instance);
         
     }
 
@@ -210,19 +237,14 @@ public class LocalInventoryManager : MonoBehaviour
 
         for (int i=0; i< save.equipment.Length; i++)
         {
+            if (save.equipment[i] == null) { continue; }
             if(save.equipment[i].item == newItem && !removed)
             {
                 save.equipment[i].equipped = false;
-                InventoryItem _newItem = new InventoryItem
-                    (save.equipment[i].item, database.GetID[newItem], 1, false, 0);
+                InventoryItem _newItem = new InventoryItem //GOOD TO GO #TODO
+                    (save.equipment[i].item, 1, false, 0);
 
-                    return _newItem;
-                
-                // save.inventory.Add(_newItem);
-                // Debug.Log(_newItem.item);
-                // removed = true;
-                // searchIndex = i;
-                
+                    return _newItem;                
             }
         }
 
@@ -261,9 +283,14 @@ public class LocalInventoryManager : MonoBehaviour
 
         foreach (InventoryItem item in inventory)
         {
-            if (item.item.GetItemType().ToString() == tabManager.tabState.ToString() ||
-                (item.item.GetItemType().ToString() == ItemType.Scroll.ToString() && 
-                tabManager.tabState.ToString() == TabManagerState.Special.ToString()))
+            if (item == null) { continue; }
+            if (item.item == null)
+            {
+                item.item = LoadGameMasterHandler.Instance.GetItem(item.stringID);
+            }
+            if (item.item.GetItemType().ToString() == tabManager.tabState.ToString() 
+                || (item.item.GetItemType().ToString() == ItemType.Scroll.ToString() && tabManager.tabState.ToString() == TabManagerState.Special.ToString())
+                || (item.item.GetItemType().ToString() == ItemType.Arrows.ToString() && tabManager.tabState.ToString() == TabManagerState.Weapon.ToString()))
             {
                 GameObject _item = Instantiate(inventoryObject, 
                     transform.position, transform.rotation);
@@ -344,18 +371,29 @@ public class LocalInventoryManager : MonoBehaviour
                 equipmentDisplayItems.Add(equipInstance);
                 continue;
             }
+            else if (save.equipment[i].item == null)
+            {
+                save.equipment[i].item = LoadGameMasterHandler.Instance.GetItem(save.equipment[i].stringID);
 
-            if (save.equipment[i].item == null) { continue; }
+                GameObject equipInstance = Instantiate(equipmentObjectPrefab, new Vector2(0,0), transform.rotation);
+                equipInstance.transform.SetParent(parentObjectTransforms[i].transform, false);
+                equipInstance.GetComponent<LocalItemStart>().DisplayItemInfo(save.equipment[i].item, save.equipment[i]);
+                equipmentDisplayItems.Add(equipInstance);
+                // GameObject equipInstance = Instantiate(emptyEquipmentPrefab, new Vector2(0,0), transform.rotation);
+                // equipInstance.transform.SetParent(parentObjectTransforms[i].transform, false);
+                // equipmentDisplayItems.Add(equipInstance);
+                // continue;
+            }
             else if (save.equipment[i].item.numberOfHands == NumberOfHands.TwoHanded && i == (int)EquipmentSlot.OffHand)
             {
                 GameObject equipInstance = Instantiate(inUseEquipmentPrefab, new Vector2(0,0), transform.rotation);
-                equipInstance.transform.SetParent(parentObjectTransforms[i].transform);
+                equipInstance.transform.SetParent(parentObjectTransforms[i].transform, false);
                 equipmentDisplayItems.Add(equipInstance);
             }
             else
             {
                 GameObject equipInstance = Instantiate(equipmentObjectPrefab, new Vector2(0,0), transform.rotation);
-                equipInstance.transform.SetParent(parentObjectTransforms[i].transform);
+                equipInstance.transform.SetParent(parentObjectTransforms[i].transform, false);
                 equipInstance.GetComponent<LocalItemStart>().DisplayItemInfo(save.equipment[i].item, save.equipment[i]);
                 equipmentDisplayItems.Add(equipInstance);
             }

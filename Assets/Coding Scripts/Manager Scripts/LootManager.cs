@@ -174,7 +174,7 @@ public class LootManager : MonoBehaviour
 
             if (!added)
             {
-                InventoryItem newItem = new InventoryItem(item, database.GetID[item], numberBeingAdded, false, 0);
+                InventoryItem newItem = new InventoryItem(item, numberBeingAdded, false, 0);
                 save.inventory.Add(newItem);  
             }
 

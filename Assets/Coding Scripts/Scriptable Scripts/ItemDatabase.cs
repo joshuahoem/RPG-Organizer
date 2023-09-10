@@ -8,8 +8,8 @@ using System.Linq;
 public class ItemDatabase : ScriptableObject, ISerializationCallbackReceiver
 {
     public Item[] allItems;
-    public Dictionary<Item, int> GetID = new Dictionary<Item, int>();
-    // public Dictionary<int, Item> GetItem = new Dictionary<int, Item>();
+    // public Dictionary<Item, int> GetID = new Dictionary<Item, int>();
+    public Dictionary<string, Item> GetItem = new Dictionary<string, Item>();
 
     public void OnAfterDeserialize()
     {
@@ -21,13 +21,13 @@ public class ItemDatabase : ScriptableObject, ISerializationCallbackReceiver
     private void OnEnable() 
     {
 
-        GetID = new Dictionary<Item, int>();
-        // GetItem = new Dictionary<int, Item>();
+        // GetID = new Dictionary<Item, int>();
+        GetItem = new Dictionary<string, Item>();
         for (int i = 0; i < allItems.Length; i++)
         {
-            if (!GetID.ContainsKey(allItems[i]))
+            if (!GetItem.ContainsKey(allItems[i].itemName))
             {
-                GetID.Add(allItems[i], i);
+                GetItem.Add(allItems[i].itemName, allItems[i]);
             }
             // GetItem.Add(i, allItems[i]);
         }

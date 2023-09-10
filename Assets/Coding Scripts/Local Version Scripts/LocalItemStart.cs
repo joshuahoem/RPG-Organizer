@@ -103,7 +103,13 @@ public class LocalItemStart : MonoBehaviour
                 statNumberTwo.text = string.Empty;
                 backgroundSprite.color = SpecialColor;
                 break;
-
+            case ItemType.Arrows:
+                statStringOne.text = attackString;
+                statStringTwo.text = string.Empty;
+                statNumberOne.text = _item.offDamage.ToString();
+                statNumberTwo.text = string.Empty;
+                backgroundSprite.color = WeaponColor;
+                break;
         }
         
     }

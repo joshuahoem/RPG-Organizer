@@ -33,13 +33,19 @@ public enum ItemType
     Armor,
     Consumable,
     Special,
-    Scroll
+    Scroll,
+    Arrows
 }
 
 public enum WeaponType
 {
     None,
     Bow,
+    Arrow,
+    Hammer,
+    Axe,
+    Sword,
+    Dagger,
     Other
 }
 
@@ -140,15 +146,20 @@ public class Item : ScriptableObject
 public class InventoryItem
 {
     [JsonIgnore] public Item item;
-    public int ID;
+    public string stringID;
     public int amount;
     public bool equipped;
     //public bool unlocked;
     public int equipmentSlotIndex;
-    public InventoryItem(Item _item, int _ID, int _amount, bool _equipped, int _equipmentSlotIndex)
+    public InventoryItem(Item _item, int _amount, bool _equipped, int _equipmentSlotIndex)
     {
+        if (_item == null) 
+        { 
+            // Debug.Log("Skipped");
+            return; 
+        }
         item = _item;
-        ID = _ID;
+        stringID = _item.itemName;
         amount = _amount;
         equipped = _equipped;
         equipmentSlotIndex = _equipmentSlotIndex;

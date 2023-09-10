@@ -77,14 +77,14 @@ public class NewAbilityManager : MonoBehaviour
                     }
                     foreach (GameObject arrow in instance.arrows)
                     {
-                        arrow.SetActive(true);
+                        arrow.GetComponentInChildren<Image>().color = unlockedColor;
                     }
                 }
                 else
                 {
                     foreach (GameObject arrow in instance.arrows)
                     {
-                        arrow.SetActive(false);
+                        arrow.GetComponentInChildren<Image>().color = lockedColor;
                     }
                 }
             }
@@ -99,14 +99,14 @@ public class NewAbilityManager : MonoBehaviour
                     }
                     foreach (GameObject arrow in instance.arrows)
                     {
-                        arrow.SetActive(true);
+                        arrow.GetComponentInChildren<Image>().color = unlockedColor;
                     }
                 }
                 else
                 {
                     foreach (GameObject arrow in instance.arrows)
                     {
-                        arrow.SetActive(false);
+                        arrow.GetComponentInChildren<Image>().color = lockedColor;
                     }
                 }
             }

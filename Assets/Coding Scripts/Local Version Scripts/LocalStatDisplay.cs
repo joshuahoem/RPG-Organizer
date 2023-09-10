@@ -173,6 +173,8 @@ public class LocalStatDisplay : MonoBehaviour
         int _totalMagicAttack = save.bonusMagicAttack;
         int _bonusMagicDefense = 0;
         int _totalMagicDefense = save.bonusMagicDefense;
+        
+        bool hasBow = false;
 
         foreach (InventoryItem item in save.equipment)
         {
@@ -196,6 +198,13 @@ public class LocalStatDisplay : MonoBehaviour
                         _bonusAttack += item.item.offDamage;
                         _bonusMagicAttack += item.item.offMagicDamage;
                     }
+                }
+
+                if (item.item.GetWeaponType().ToString() == WeaponType.Bow.ToString()) { hasBow = true; } 
+
+                if (item.item.GetItemType().ToString() == ItemType.Arrows.ToString())
+                {
+                    if (hasBow) { _bonusAttack += item.item.offDamage; }
                 }
 
                 _bonusDefense += item.item.defense;

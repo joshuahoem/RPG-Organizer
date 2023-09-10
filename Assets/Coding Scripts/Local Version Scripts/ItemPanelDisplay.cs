@@ -54,6 +54,8 @@ public class ItemPanelDisplay : MonoBehaviour
     [SerializeField] GameObject equipSpecial;
     [SerializeField] GameObject equipRingOne;
     [SerializeField] GameObject equipRingTwo;
+    [SerializeField] GameObject equipArrowButton;
+
 
 
     [SerializeField] GameObject consumeItemButton;
@@ -204,6 +206,9 @@ public class ItemPanelDisplay : MonoBehaviour
                 break;
             case ItemType.Scroll:
                 DisplaySpecialInfo(_item, _itemInfo);
+                break;
+            case ItemType.Arrows:
+                DisplayArrowInfo(_itemInfo);
                 break;
         }
         
@@ -359,16 +364,48 @@ public class ItemPanelDisplay : MonoBehaviour
         
     }
 
+    private void DisplayArrowInfo(InventoryItem _itemInfo)
+    {
+        mainTextDisplay.text = mainTextDisplayString;
+        offTextDisplay.text = offTextDisplayString;
+
+        statTextOne.text = damageString;
+        statTextTwo.text = magicDamageString;
+        statTextThree.text = rangeString;
+        statTextFour.text = handsString;
+
+        statNumberOne.text = _itemInfo.item.mainDamage.ToString();
+        statNumberTwo.text = _itemInfo.item.mainMagicDamage.ToString();
+        statNumberThree.text = _itemInfo.item.mainAttackRange.ToString();
+        statNumberFour.text = _itemInfo.item.numberOfHands.ToString();
+
+        offStatNumberOne.text = _itemInfo.item.offDamage.ToString();
+        offStatNumberTwo.text = _itemInfo.item.offMagicDamage.ToString();
+        offStatNumberThree.text = _itemInfo.item.offAttackRange.ToString();
+        offStatNumberFour.text = string.Empty;
+
+        if (FindObjectOfType<LocalShop>().inShop) {return;}
+        if (_itemInfo.equipped)
+        {
+            unequipButton.SetActive(true);
+        }
+        else
+        {
+            if (this.equipArrowButton == null) {return;}
+            equipArrowButton.SetActive(true);
+        }
+    }
+
     public void EquipArmor()
     {
-        inventoryManager.Equip(item,0);
+        inventoryManager.Equip(itemInfo,0);
         inventoryManager.DisplayInventoryUI();
     }
 
     public void EquipMainHand()
     {
         //5 equips to main hand
-        inventoryManager.Equip(item,5);
+        inventoryManager.Equip(itemInfo,5);
         inventoryManager.DisplayInventoryUI();
 
     }
@@ -376,7 +413,7 @@ public class ItemPanelDisplay : MonoBehaviour
     public void EquipOffHand()
     {
         //6 equips to off hand
-        inventoryManager.Equip(item,6);
+        inventoryManager.Equip(itemInfo,6);
         inventoryManager.DisplayInventoryUI();
 
     }
@@ -390,8 +427,8 @@ public class ItemPanelDisplay : MonoBehaviour
         }
         else
         {
-            inventoryManager.Equip(item,5);
-            inventoryManager.Equip(item,6);
+            inventoryManager.Equip(itemInfo,5);
+            inventoryManager.Equip(itemInfo,6);
             inventoryManager.DisplayInventoryUI();
         }
         
@@ -401,18 +438,24 @@ public class ItemPanelDisplay : MonoBehaviour
     public void EquipSpecial()
     {
         Debug.Log("special");
-        inventoryManager.Equip(item, 0);
+        inventoryManager.Equip(itemInfo, 0);
         inventoryManager.DisplayInventoryUI();
     }
 
     public void EquipRingOne()
     {
-        inventoryManager.Equip(item, 7);
+        inventoryManager.Equip(itemInfo, 7);
         inventoryManager.DisplayInventoryUI();
     }
     public void EquipRingTwo()
     {
-        inventoryManager.Equip(item, 8);
+        inventoryManager.Equip(itemInfo, 8);
+        inventoryManager.DisplayInventoryUI();
+    }
+
+    public void EquipQuiver()
+    {
+        inventoryManager.Equip(itemInfo, 9);
         inventoryManager.DisplayInventoryUI();
     }
 
@@ -467,6 +510,12 @@ public class ItemPanelDisplay : MonoBehaviour
         lootCheck = 0;
         foreach (InventoryItem item in save.inventory)
         {
+            if (item == null) { continue; }
+            if (item.item == null)
+            {
+                item.item = LoadGameMasterHandler.Instance.GetItem(item.stringID);
+            }
+
             if (item.item.GetItemType() != ItemType.Special && item.item.GetItemType() != ItemType.Scroll)
             {
                 lootCheck += 1;
@@ -475,6 +524,7 @@ public class ItemPanelDisplay : MonoBehaviour
 
         foreach (InventoryItem item in save.equipment)
         {
+            if (item == null) { continue; }
             if (item.item == null) { continue; }
             if (item.item.GetItemType() != ItemType.Special && item.item.GetItemType() != ItemType.Scroll)
             {
@@ -482,12 +532,16 @@ public class ItemPanelDisplay : MonoBehaviour
             }
         }
 
-        if (save.equipment[5].item != null)
+
+        if (save.equipment[5] != null)
         {
-            if (save.equipment[5].item.numberOfHands == NumberOfHands.TwoHanded)
+            if (save.equipment[5].item != null)
             {
-                // Debug.Log("removing 1");
-                lootCheck -= 1;
+                if (save.equipment[5].item.numberOfHands == NumberOfHands.TwoHanded)
+                {
+                    // Debug.Log("removing 1");
+                    lootCheck -= 1;
+                }
             }
 
         }
@@ -502,7 +556,7 @@ public class ItemPanelDisplay : MonoBehaviour
         if(save.gold >= item.goldCost)
         {
             InventoryItem newItem = new InventoryItem
-                (item, database.GetID[item], item.numberInStack, false, 0);
+                (item, item.numberInStack, false, 0);
             save.inventory.Add(newItem);
 
             save.gold -= item.goldCost;
@@ -533,6 +587,7 @@ public class ItemPanelDisplay : MonoBehaviour
         {
             foreach (InventoryItem _item in _save.equipment)
             {
+                if (_item == null) { continue; }
                 if (_item.item != null)
                 {
                     if (_item.item.itemName == item.itemName)
@@ -549,28 +604,25 @@ public class ItemPanelDisplay : MonoBehaviour
         {
             foreach (InventoryItem inv in _save.equipment)
             {
+                if (inv == null) { continue; }
                 if (inv.item == searchResult.item)
                 {
                     searchIndex = inv.equipmentSlotIndex;
                 }
             }
 
-            _save.equipment[searchIndex].equipmentSlotIndex = 0;
+            _save.equipment[searchIndex] = null;
             InventoryItem _newItem = new InventoryItem
-                        (searchResult.item, database.GetID[searchResult.item], searchResult.item.numberInStack, false, 0);
+                        (searchResult.item, searchResult.item.numberInStack, false, 0);
             _save.inventory.Add(_newItem);
 
-            _save.equipment[searchIndex].equipped = false;
-            _save.equipment[searchIndex].item = null;
-
-
-            // inventoryManager.LoadEquipment();
+            SaveManagerVersion3.SaveGame(CharacterRegistry.Instance);
         }
 
         _save = SaveManagerVersion3.FindCurrentSave();
         foreach (InventoryItem _item in _save.inventory)
         {
-            if(_item.ID == database.GetID[item])
+            if(_item.stringID == item.itemName)
             {
                 searchResult = _item;
             }
@@ -589,7 +641,7 @@ public class ItemPanelDisplay : MonoBehaviour
         }
 
         _save.inventory.Remove(searchResult);
-        _save = SaveManagerVersion3.FindCurrentSave();        
+        SaveManagerVersion3.SaveGame(CharacterRegistry.Instance);
 
         // Debug.Log(_save.inventory.Count + " inv count");
 

@@ -16,14 +16,15 @@ MonoBehaviour:
   description: These basic arrows are tipped with cold stones. The quiver allows
     for the insulation in low temeratures. Chance for Ice arrows to melt when drawn
     depending on enviroments temperature. Chance to Freeze.
-  imageSprite: {fileID: 21300000, guid: 4d1818bb45b4c4e418eb86098ff0df27, type: 3}
+  picture: {fileID: 0}
   goldCost: 5
   sellCost: 3
   numberInStack: 1
-  itemType: 0
+  itemType: 5
   itemRarity: 0
   equipmentSlot: 9
   enchanted: 0
+  pathToPicture: 
   mainDamage: 0
   mainMagicDamage: 0
   mainAttackRange: 0
@@ -31,7 +32,7 @@ MonoBehaviour:
   offMagicDamage: 0
   offAttackRange: 0
   numberOfHands: 0
-  weaponType: 1
+  weaponType: 2
   defense: 0
   magicDefense: 0
   healthModifier: 0

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 using Newtonsoft.Json;
+using System;
 
 public static class SaveManagerVersion3
 {
@@ -133,6 +134,7 @@ public static class SaveManagerVersion3
 
     public static Sprite LoadSprite(string path)
     {
+        if (path == String.Empty) { return null; }
         byte[] imageData = File.ReadAllBytes(path);
         Texture2D tex = new Texture2D(2, 2);
         bool success = tex.LoadImage(imageData);

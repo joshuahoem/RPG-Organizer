@@ -45,16 +45,16 @@ public class LocalShop : MonoBehaviour
 
         foreach (Item item in database.allItems)
         {
-            if (item.GetItemType().ToString() == tabManager.tabState.ToString()
-                || (item.GetItemType().ToString() == ItemType.Scroll.ToString() && 
-                tabManager.tabState.ToString() == TabManagerState.Special.ToString()))
+            if (item.GetItemType().ToString() == tabManager.tabState.ToString() 
+                || (item.GetItemType().ToString() == ItemType.Scroll.ToString() && tabManager.tabState.ToString() == TabManagerState.Special.ToString())
+                || (item.GetItemType().ToString() == ItemType.Arrows.ToString() && tabManager.tabState.ToString() == TabManagerState.Weapon.ToString()))
             {
                 GameObject _item = Instantiate(itemPrefab, transform.position, 
                     transform.rotation);
                 _item.transform.SetParent(parentObject.transform, false);
 
                 displayedItems.Add(_item);
-                _item.GetComponent<LocalItemStart>().DisplayItemInfo(item, new InventoryItem(item, database.GetID[item], item.numberInStack, false, 0));
+                _item.GetComponent<LocalItemStart>().DisplayItemInfo(item, new InventoryItem(item, item.numberInStack, false, 0));
             }
             
         }

@@ -25,7 +25,7 @@ public class AbilityInventory : MonoBehaviour
 
     private void Start() 
     {
-        save = FindCurrentSave();
+        SaveObject save = SaveManagerVersion3.FindCurrentSave();
 
         abilities = save.abilityInventory;
 
@@ -58,6 +58,7 @@ public class AbilityInventory : MonoBehaviour
     {   
         AbilitySaveObject abilitySaveObject = ReturnNewAbilityObject(e._ability.ability);
         SaveState state = SaveManagerVersion3.FindSaveState();
+        SaveObject save = SaveManagerVersion3.FindCurrentSave();
 
         if (abilitySaveObject != null)
         {
@@ -108,7 +109,7 @@ public class AbilityInventory : MonoBehaviour
 
             }
 
-        if (state.classAbilityBool)
+            if (state.classAbilityBool)
             { 
                 if (e._ability.unlocked)
                 {
@@ -139,7 +140,9 @@ public class AbilityInventory : MonoBehaviour
                     abilityPointsTextNumber.text = save.raceAbilityPoints.ToString(); 
                 }
                 
-            }        
+            }  
+
+            SaveManagerVersion3.SaveGame(CharacterRegistry.Instance);      
 
         }
 
@@ -157,7 +160,7 @@ public class AbilityInventory : MonoBehaviour
 
     public AbilitySaveObject ReturnNewAbilityObject(Ability _ability)
     {
-        save = FindCurrentSave(); 
+        SaveObject save = SaveManagerVersion3.FindCurrentSave();
         SaveState state = SaveManagerVersion3.FindSaveState();
 
         if (state.raceAbilityBool)
@@ -185,38 +188,6 @@ public class AbilityInventory : MonoBehaviour
         }
 
         return _abilityToAdd;
-    }
-
-    private SaveObject FindCurrentSave()
-    {
-        string SAVE_FOLDER = Application.persistentDataPath + "/Saves/";
-
-        if (File.Exists(SAVE_FOLDER + "/character_manager.txt"))
-        {
-            string saveString = File.ReadAllText(SAVE_FOLDER + "/character_manager.txt");
-
-            SaveState saveState = JsonUtility.FromJson<SaveState>(saveString);
-
-            charString = saveState.fileIndexString;
-
-            if (File.Exists(SAVE_FOLDER + "/save_" + charString + ".txt"))
-            {
-                string newSaveString = File.ReadAllText(SAVE_FOLDER + "/save_" + charString + ".txt");
-
-                return JsonUtility.FromJson<SaveObject>(newSaveString);
-
-            }
-            else
-            {
-                Debug.Log("Could not find character folder!");
-                return null;
-            }
-        }
-        else
-        {
-            Debug.Log("Could not find character manager folder!");
-            return null;
-        }
     }
 
 }

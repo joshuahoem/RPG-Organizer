@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
+using Newtonsoft.Json;
 
 public enum CostType
 {
@@ -15,9 +16,9 @@ public enum CostType
 public class Ability : ScriptableObject
 {
     public string abilityName;
-    public Sprite picture;
+    [JsonIgnore] public Sprite picture;
     public string pathToPicture;
-    [SerializeField] public Color borderColor;
+    [JsonIgnore] [SerializeField] public Color borderColor;
     public CostType costType;
     public int unlockCost;
     public int unlockHealth = 1;
@@ -75,7 +76,7 @@ public enum AbilityType
 [System.Serializable] public class AbilitySaveObject
 {
     public string stringID;
-    public Ability ability;
+    [JsonIgnore] public Ability ability;
     public AbilityType abilityType;
     public int currentLevel;
     public int viewingLevel;

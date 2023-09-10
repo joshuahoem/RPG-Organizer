@@ -1031,6 +1031,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock:
   - {fileID: 349875272}
   - {fileID: 3066882012283554796}
@@ -1349,6 +1350,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock: []
   arrows: []
 --- !u!114 &83883991
@@ -2452,6 +2454,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock: []
   arrows: []
 --- !u!114 &148242390
@@ -3051,6 +3054,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock:
   - {fileID: 999548107}
   - {fileID: 835384402}
@@ -3431,6 +3435,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock:
   - {fileID: 1907139964}
   - {fileID: 682909309}
@@ -4689,6 +4694,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock: []
   arrows: []
 --- !u!114 &261751145
@@ -5232,7 +5238,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.000061035156}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &299679691
@@ -6012,6 +6018,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock:
   - {fileID: 735214018}
   arrows: []
@@ -6147,6 +6154,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock:
   - {fileID: 2032742301}
   arrows: []
@@ -6442,6 +6450,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock: []
   arrows: []
 --- !u!114 &350885936
@@ -7370,6 +7379,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock:
   - {fileID: 1125925816}
   - {fileID: 1062635685}
@@ -7942,6 +7952,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock:
   - {fileID: 1290267803}
   arrows: []
@@ -8326,6 +8337,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock: []
   arrows: []
 --- !u!114 &419712297
@@ -9273,6 +9285,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock: []
   arrows: []
 --- !u!114 &462347112
@@ -9601,6 +9614,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock: []
   arrows: []
 --- !u!114 &487320557
@@ -10041,6 +10055,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock:
   - {fileID: 742844095}
   - {fileID: 1758542391}
@@ -10408,6 +10423,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock: []
   arrows: []
 --- !u!114 &533172685
@@ -10813,6 +10829,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock:
   - {fileID: 1988296792}
   - {fileID: 186492649}
@@ -10967,6 +10984,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock:
   - {fileID: 69565509}
   arrows: []
@@ -12036,6 +12054,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock: []
   arrows: []
 --- !u!114 &612900920
@@ -13086,6 +13105,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock:
   - {fileID: 1262087672}
   arrows: []
@@ -13806,6 +13826,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock:
   - {fileID: 6009744162254263861}
   arrows: []
@@ -14288,6 +14309,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock:
   - {fileID: 1978063087}
   arrows: []
@@ -14595,6 +14617,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock:
   - {fileID: 1422329734}
   arrows: []
@@ -14827,6 +14850,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock: []
   arrows: []
 --- !u!114 &763508954
@@ -15828,6 +15852,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock: []
   arrows: []
 --- !u!114 &835384405
@@ -16054,6 +16079,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock: []
   arrows: []
 --- !u!114 &844820035
@@ -18284,6 +18310,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock: []
   arrows: []
 --- !u!114 &999548110
@@ -18440,6 +18467,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock: []
   arrows: []
 --- !u!114 &1012913908
@@ -18964,6 +18992,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock: []
   arrows: []
 --- !u!114 &1062635689
@@ -20269,6 +20298,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock: []
   arrows: []
 --- !u!114 &1125925820
@@ -21026,6 +21056,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock:
   - {fileID: 1699421858}
   arrows: []
@@ -21258,6 +21289,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock:
   - {fileID: 1656401661}
   arrows: []
@@ -21397,6 +21429,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock:
   - {fileID: 350885933}
   arrows: []
@@ -22149,6 +22182,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock:
   - {fileID: 1591452843}
   arrows: []
@@ -22709,6 +22743,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock: []
   arrows: []
 --- !u!114 &1262087675
@@ -23190,6 +23225,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock:
   - {fileID: 558694482}
   arrows: []
@@ -23303,8 +23339,8 @@ MonoBehaviour:
   lockedColor: {r: 0, g: 0, b: 0, a: 1}
   unlockedColor: {r: 1, g: 1, b: 1, a: 1}
   clickableColor: {r: 1, g: 0.9830017, b: 0.08018869, a: 1}
-  arrowUnlockColor: {r: 0, g: 0, b: 0, a: 0}
-  arrowLockedColor: {r: 0, g: 0, b: 0, a: 0}
+  arrowUnlockColor: {r: 0, g: 0, b: 0, a: 1}
+  arrowLockedColor: {r: 0, g: 0, b: 0, a: 0.5254902}
 --- !u!1 &1290267803
 GameObject:
   m_ObjectHideFlags: 0
@@ -23373,6 +23409,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock: []
   arrows: []
 --- !u!114 &1290267806
@@ -24976,6 +25013,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock: []
   arrows: []
 --- !u!114 &1358234243
@@ -25675,6 +25713,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock:
   - {fileID: 1610554615}
   - {fileID: 725909489}
@@ -26248,6 +26287,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock: []
   arrows: []
 --- !u!114 &1422329738
@@ -27439,6 +27479,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock:
   - {fileID: 3066882011025933810}
   - {fileID: 3066882012511879767}
@@ -27826,6 +27867,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock:
   - {fileID: 1751226109}
   arrows: []
@@ -28136,6 +28178,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock: []
   arrows: []
 --- !u!114 &1591452846
@@ -28495,6 +28538,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock:
   - {fileID: 6009744162254263861}
   arrows: []
@@ -29415,6 +29459,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock: []
   arrows: []
 --- !u!114 &1656401665
@@ -30394,6 +30439,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock:
   - {fileID: 1012913905}
   arrows: []
@@ -30643,6 +30689,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock: []
   arrows: []
 --- !u!114 &1704749508
@@ -30803,6 +30850,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock: []
   arrows: []
 --- !u!114 &1705051938
@@ -31382,7 +31430,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.2735849, g: 0.2735849, b: 0.2735849, a: 0}
+  m_BackGroundColor: {r: 0.50980395, g: 0.8000001, b: 0.86666673, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -31652,6 +31700,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock:
   - {fileID: 1237893520}
   - {fileID: 1176081671}
@@ -31806,6 +31855,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock: []
   arrows: []
 --- !u!114 &1751226111
@@ -32227,6 +32277,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock:
   - {fileID: 1189945745}
   arrows: []
@@ -33178,6 +33229,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock:
   - {fileID: 462347109}
   - {fileID: 188938836}
@@ -33735,6 +33787,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock:
   - {fileID: 419712294}
   arrows: []
@@ -33967,6 +34020,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock:
   - {fileID: 148242387}
   - {fileID: 1191596972}
@@ -35002,6 +35056,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock:
   - {fileID: 533172681}
   arrows: []
@@ -35385,6 +35440,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock:
   - {fileID: 844820032}
   - {fileID: 1358234240}
@@ -35920,6 +35976,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock:
   - {fileID: 388876673}
   arrows: []
@@ -36055,6 +36112,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock: []
   arrows: []
 --- !u!114 &2032742304
@@ -36892,6 +36950,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock: []
   arrows: []
 --- !u!114 &2077608138
@@ -37087,8 +37146,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -17, y: 0}
+  m_AnchoredPosition: {x: 0, y: -34.8497}
+  m_SizeDelta: {x: 0, y: -34.8499}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &2085898662
 MonoBehaviour:
@@ -40121,6 +40180,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock: []
   arrows: []
 --- !u!224 &3066882010435532999
@@ -40197,6 +40257,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock:
   - {fileID: 1739340680}
   arrows: []
@@ -40599,6 +40660,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock:
   - {fileID: 3066882012486812237}
   arrows: []
@@ -40718,6 +40780,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock:
   - {fileID: 3066882011661927240}
   - {fileID: 506761716}
@@ -41004,6 +41067,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock: []
   arrows: []
 --- !u!224 &3066882010548883121
@@ -41332,6 +41396,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock: []
   arrows: []
 --- !u!222 &3066882010563572720
@@ -41803,6 +41868,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock:
   - {fileID: 3066882012479842137}
   - {fileID: 3066882011102896617}
@@ -42027,6 +42093,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock:
   - {fileID: 3066882012260556188}
   arrows: []
@@ -42317,6 +42384,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock: []
   arrows: []
 --- !u!1 &3066882010619676874
@@ -42613,6 +42681,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock:
   - {fileID: 338293115}
   arrows: []
@@ -43039,6 +43108,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock:
   - {fileID: 3066882011236128607}
   arrows: []
@@ -43253,6 +43323,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock:
   - {fileID: 3066882011809440646}
   arrows: []
@@ -43350,6 +43421,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock:
   - {fileID: 3066882012391675110}
   arrows: []
@@ -43562,6 +43634,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock:
   - {fileID: 3066882011166029191}
   - {fileID: 763508950}
@@ -43805,6 +43878,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock: []
   arrows: []
 --- !u!224 &3066882010768162560
@@ -44318,6 +44392,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock:
   - {fileID: 3066882011236128607}
   arrows: []
@@ -44415,6 +44490,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock: []
   arrows: []
 --- !u!224 &3066882010879062469
@@ -44818,6 +44894,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock:
   - {fileID: 3066882011958483998}
   - {fileID: 3066882012430500004}
@@ -45024,6 +45101,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock:
   - {fileID: 3066882011543033096}
   arrows: []
@@ -45386,6 +45464,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock:
   - {fileID: 3066882012042109049}
   arrows: []
@@ -45609,6 +45688,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock: []
   arrows: []
 --- !u!222 &3066882010951271971
@@ -46401,6 +46481,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock: []
   arrows: []
 --- !u!1 &3066882011009982302
@@ -46688,6 +46769,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock:
   - {fileID: 3066882010506922030}
   arrows: []
@@ -47293,6 +47375,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock: []
   arrows: []
 --- !u!224 &3066882011098391251
@@ -47431,6 +47514,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock:
   - {fileID: 3066882010548883123}
   arrows: []
@@ -47561,6 +47645,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock: []
   arrows: []
 --- !u!224 &3066882011161550353
@@ -47697,6 +47782,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock: []
   arrows: []
 --- !u!224 &3066882011166029189
@@ -48270,6 +48356,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock:
   - {fileID: 3066882010601010615}
   - {fileID: 3066882012111925330}
@@ -48583,6 +48670,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock: []
   arrows: []
 --- !u!224 &3066882011236128605
@@ -48754,6 +48842,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock: []
   arrows: []
 --- !u!1 &3066882011276902826
@@ -48967,6 +49056,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock:
   - {fileID: 3066882011276902826}
   arrows: []
@@ -49415,6 +49505,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock:
   - {fileID: 3066882012470065833}
   arrows: []
@@ -50187,6 +50278,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock: []
   arrows: []
 --- !u!224 &3066882011397900113
@@ -50325,6 +50417,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock:
   - {fileID: 2027642861}
   arrows: []
@@ -50782,6 +50875,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock:
   - {fileID: 3066882011813588656}
   arrows: []
@@ -51252,6 +51346,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock:
   - {fileID: 409564483}
   arrows: []
@@ -51409,6 +51504,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock:
   - {fileID: 3066882010494327716}
   arrows: []
@@ -51645,6 +51741,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock:
   - {fileID: 3066882010435532997}
   arrows: []
@@ -51839,6 +51936,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock:
   - {fileID: 3066882011236128607}
   arrows: []
@@ -52020,6 +52118,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock:
   - {fileID: 3066882011298679210}
   arrows: []
@@ -52179,6 +52278,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock:
   - {fileID: 3066882011652628667}
   arrows: []
@@ -52424,6 +52524,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock: []
   arrows: []
 --- !u!222 &3066882011605720172
@@ -52540,6 +52641,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock:
   - {fileID: 3066882011809440646}
   arrows: []
@@ -52699,6 +52801,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock: []
   arrows: []
 --- !u!222 &3066882011618909424
@@ -53178,6 +53281,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock: []
   arrows: []
 --- !u!224 &3066882011640052327
@@ -53306,6 +53410,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock: []
   arrows: []
 --- !u!224 &3066882011652628665
@@ -53643,6 +53748,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock: []
   arrows: []
 --- !u!1 &3066882011663367992
@@ -53865,6 +53971,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock: []
   arrows: []
 --- !u!222 &3066882011673853932
@@ -54325,6 +54432,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock:
   - {fileID: 3066882011783154322}
   arrows: []
@@ -54947,6 +55055,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock:
   - {fileID: 3066882012567024895}
   arrows: []
@@ -55084,6 +55193,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock:
   - {fileID: 3066882012389653409}
   arrows: []
@@ -55267,6 +55377,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock: []
   arrows: []
 --- !u!224 &3066882011799815273
@@ -55575,6 +55686,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock:
   - {fileID: 3066882011711873267}
   - {fileID: 3066882011861665931}
@@ -55653,6 +55765,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock: []
   arrows: []
 --- !u!1 &3066882011809440646
@@ -55811,6 +55924,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock: []
   arrows: []
 --- !u!222 &3066882011813588684
@@ -56238,6 +56352,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock:
   - {fileID: 3066882011397900115}
   arrows: []
@@ -56346,6 +56461,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock:
   - {fileID: 3066882010751866038}
   arrows: []
@@ -56882,6 +56998,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock:
   - {fileID: 3066882011502645301}
   - {fileID: 3066882011443465831}
@@ -57376,6 +57493,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock:
   - {fileID: 3066882011577622345}
   arrows: []
@@ -57974,6 +58092,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock: []
   arrows: []
 --- !u!224 &3066882012042109051
@@ -58357,6 +58476,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock:
   - {fileID: 3066882010563572620}
   arrows: []
@@ -58711,6 +58831,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock: []
   arrows: []
 --- !u!1 &3066882012107245246
@@ -58912,6 +59033,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock:
   - {fileID: 3066882011999810487}
   - {fileID: 3066882011567715687}
@@ -59361,6 +59483,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock:
   - {fileID: 3066882012298277308}
   - {fileID: 3066882011847774020}
@@ -59727,6 +59850,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock: []
   arrows: []
 --- !u!224 &3066882012209941779
@@ -60036,6 +60160,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock:
   - {fileID: 3066882011786428805}
   arrows: []
@@ -60303,6 +60428,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock:
   - {fileID: 3066882011236128607}
   arrows: []
@@ -60621,6 +60747,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock: []
   arrows: []
 --- !u!1 &3066882012298277308
@@ -60695,6 +60822,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock: []
   arrows: []
 --- !u!222 &3066882012298277312
@@ -60855,6 +60983,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock:
   - {fileID: 3066882010862712020}
   - {fileID: 3066882011563955618}
@@ -61028,6 +61157,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock: []
   arrows: []
 --- !u!224 &3066882012316618419
@@ -61241,6 +61371,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock: []
   arrows: []
 --- !u!1 &3066882012332276526
@@ -61676,6 +61807,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock: []
   arrows: []
 --- !u!224 &3066882012389653411
@@ -61880,6 +62012,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock: []
   arrows: []
 --- !u!1 &3066882012391675110
@@ -62274,6 +62407,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock:
   - {fileID: 3066882012455464021}
   - {fileID: 3066882011614085897}
@@ -62758,6 +62892,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock:
   - {fileID: 3066882012530479649}
   arrows: []
@@ -62908,6 +63043,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock:
   - {fileID: 3066882011799815275}
   arrows: []
@@ -63111,6 +63247,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock:
   - {fileID: 3066882010548883123}
   arrows: []
@@ -63250,6 +63387,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock:
   - {fileID: 3066882012389653409}
   arrows: []
@@ -63444,6 +63582,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock:
   - {fileID: 1705051935}
   - {fileID: 1912295427}
@@ -63622,6 +63761,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock:
   - {fileID: 2077608135}
   - {fileID: 3066882010444753954}
@@ -63793,6 +63933,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock: []
   arrows: []
 --- !u!224 &3066882012530479651
@@ -64050,6 +64191,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock:
   - {fileID: 3066882011098391249}
   arrows: []
@@ -64556,6 +64698,7 @@ MonoBehaviour:
     count: 0
     unlockedBool: 0
     ID: 0
+    stringID: 
   abilitiesThatUnlock:
   - {fileID: 3066882011501114261}
   - {fileID: 83883989}
@@ -64598,7 +64741,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -0.000030517578, y: 33.999977}
+  m_AnchoredPosition: {x: 0, y: 34}
   m_SizeDelta: {x: -200, y: 80}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!222 &6197357197747323671

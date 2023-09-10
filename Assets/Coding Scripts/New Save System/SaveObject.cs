@@ -63,7 +63,9 @@ public class SaveObject
     public SaveObject()
     {
         characterID = Guid.NewGuid().ToString();
-        equipment = new InventoryItem[10];
+        int numSlots = System.Enum.GetNames(typeof(EquipmentSlot)).Length - 1;
+
+        equipment = new InventoryItem[numSlots];
     }
 
 }

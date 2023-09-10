@@ -57,9 +57,14 @@ public class LoadGameMasterHandler : MonoBehaviour
         return perkDatabase.GetStringID[_perkID];
     }
 
+    public Item GetItem(string _itemID)
+    {
+        return itemDatabase.GetItem[_itemID];
+    }
+
     private void Start() 
     {
-        StartMusic();
+        // StartMusic();
         SaveManagerVersion3.Init();
         PlayerInfo playerInfo = SaveManagerVersion3.FindPlayerInfoFile();
         SaveState saveState = SaveManagerVersion3.FindSaveState();
@@ -76,6 +81,7 @@ public class LoadGameMasterHandler : MonoBehaviour
             {
                 //has a class
                 unlock.unlockedClass = classDatabase.GetClassID[unlock.classStringID];
+                unlock.unlockedClass.picture = SaveManagerVersion3.LoadSprite(unlock.unlockedClass.pathToPicture);
             }
             else
             {
@@ -92,13 +98,22 @@ public class LoadGameMasterHandler : MonoBehaviour
 
             if (save == null) { continue; }
 
+            if (save.raceObject == null)
+            {
+                save.raceObject = raceDatabase.GetRaceID[save.race];
+            }
+            if (save.classObject == null)
+            {
+                save.classObject = classDatabase.GetClassID[save.characterClass];
+            }
+
             foreach (AbilitySaveObject abilitySO in save.abilityInventory)
             {
                 if (abilitySO.ability == null)
                 {
+                    abilitySO.ability = abilityDatabase.GetStringID[abilitySO.stringID];
                     Debug.Log(abilitySO.ability.abilityName + " name");
                     Debug.Log("chosen : " + abilityDatabase.GetStringID[abilitySO.stringID].abilityName);
-                    abilitySO.ability = abilityDatabase.GetStringID[abilitySO.stringID];
                 }
             }
         }
