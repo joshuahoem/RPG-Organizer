@@ -179,6 +179,9 @@ public class LocalStatDisplay : MonoBehaviour
         foreach (InventoryItem item in save.equipment)
         {
             if (item == null) { continue; }
+            if (item.item == null)
+            { item.item = LoadGameMasterHandler.Instance.GetItem(item.stringID); }
+
             if (item.item != null)
             {
                 if (item.equipmentSlotIndex == (int) EquipmentSlot.MainHand)
@@ -257,6 +260,23 @@ public class LocalStatDisplay : MonoBehaviour
             bonusStrength += perkObject.perk.bonusStrength * perkObject.count;
             bonusIntelligence += perkObject.perk.bonusIntelligence * perkObject.count;
             bonusSpeed += perkObject.perk.bonusSpeed * perkObject.count;
+        }
+
+        foreach (InventoryItem item in save.equipment)
+        {
+            if (item == null) { continue; }
+            if (item.item == null)
+            { item.item = LoadGameMasterHandler.Instance.GetItem(item.stringID); }
+
+            if (item.item != null)
+            {
+                bonusHealth += item.item.healthModifier;
+                bonusStamina += item.item.staminaModifier;
+                bonusMagic += item.item.magicModifier;
+                bonusStrength += item.item.strengthModifier;
+                bonusIntelligence += item.item.intelligenceModifier;
+                bonusSpeed += item.item.speedModifier;
+            }
         }
 
         if (bonusHealthTMP != null) { bonusHealthTMP.text = bonusHealth.ToString(); }

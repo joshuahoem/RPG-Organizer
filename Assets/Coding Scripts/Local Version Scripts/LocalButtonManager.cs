@@ -29,13 +29,6 @@ public class LocalButtonManager : MonoBehaviour
     int bonusIntelligence = 0;
     int bonusSpeed = 0;
 
-    float healthX;
-    float staminaX;
-    float magicX;
-    float strengthX;
-    float intelligenceX;
-    float speedX;
-
     int totalHealth;
     int totalStamina;
     int totalMagic;
@@ -173,6 +166,23 @@ public class LocalButtonManager : MonoBehaviour
             strengthX += perk.perk.strengthMultiplier;
             intelligenceX += perk.perk.intelligenceMultiplier;
             speedX += perk.perk.speedMultiplier;
+        }
+
+        foreach (InventoryItem item in save.equipment)
+        {
+            if (item == null) { continue; }
+            if (item.item == null)
+            { item.item = LoadGameMasterHandler.Instance.GetItem(item.stringID); }
+
+            if (item.item != null)
+            {
+                bonusHealth += item.item.healthModifier;
+                bonusStamina += item.item.staminaModifier;
+                bonusMagic += item.item.magicModifier;
+                bonusStrength += item.item.strengthModifier;
+                bonusIntelligence += item.item.intelligenceModifier;
+                bonusSpeed += item.item.speedModifier;
+            }
         }
 
         totalHealth = Mathf.FloorToInt((bonusHealth + save.baseHealth) * healthX);

@@ -135,6 +135,7 @@ public static class SaveManagerVersion3
     public static Sprite LoadSprite(string path)
     {
         if (path == String.Empty) { return null; }
+        Debug.Log(path);
         byte[] imageData = File.ReadAllBytes(path);
         Texture2D tex = new Texture2D(2, 2);
         bool success = tex.LoadImage(imageData);

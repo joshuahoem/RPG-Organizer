@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class NoteManager : MonoBehaviour
 {
@@ -24,6 +25,8 @@ public class NoteManager : MonoBehaviour
         }
 
         FindObjectOfType<ShopContentFitter>().FitContent(noteObjects.Count + 1);
+
+        LayoutRebuilder.ForceRebuildLayoutImmediate(parentForNotes.GetComponent<RectTransform>());
     }
 
     public void NewNote()

@@ -227,12 +227,36 @@ public class CharacterCreationManager : MonoBehaviour
             classSpeedTMP.text = emptyNumberString;
         }
 
-        totalHealthTMP.text = totalHealthNumber.ToString();
-        totalStaminaTMP.text = totalStaminaNumber.ToString();
-        totalMagicTMP.text = totalMagicNumber.ToString();
-        totalStregthTMP.text = totalStrengthNumber.ToString();
-        totalIntelligenceTMP.text = totalIntelligenceNumber.ToString();
-        totalSpeedTMP.text = totalSpeedNumber.ToString();
+        float healthX = 1;
+        float staminaX = 1;
+        float magicX = 1;
+        float strengthX = 1;
+        float intelligenceX = 1;
+        float speedX = 1;
+
+        foreach (Perk perk in _race.startingPerks)
+        {
+            totalHealthNumber += perk.bonusHealth;
+            totalStaminaNumber += perk.bonusStamina;
+            totalMagicNumber += perk.bonusMagic;
+            totalStrengthNumber += perk.bonusStrength;
+            totalIntelligenceNumber += perk.bonusIntelligence;
+            totalSpeedNumber += perk.bonusSpeed;
+
+            healthX += perk.healthMultiplier;
+            staminaX += perk.staminaMultiplier;
+            magicX += perk.magicMultiplier;
+            strengthX += perk.strengthMultiplier;
+            intelligenceX += perk.intelligenceMultiplier;
+            speedX += perk.speedMultiplier;
+        }
+
+        totalHealthTMP.text = (totalHealthNumber * healthX).ToString();
+        totalStaminaTMP.text = (totalStaminaNumber * staminaX).ToString();
+        totalMagicTMP.text = (totalMagicNumber * magicX).ToString();
+        totalStregthTMP.text = (totalStrengthNumber * strengthX).ToString();
+        totalIntelligenceTMP.text = (totalIntelligenceNumber * intelligenceX).ToString();
+        totalSpeedTMP.text = (totalSpeedNumber * speedX).ToString();
 
         if (totalHealthNumber == 0)
         {
