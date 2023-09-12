@@ -7145,7 +7145,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5482361247021462726, guid: f6d54363e7aaa8d4b87b43bd6a051a72, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5482361247021462726, guid: f6d54363e7aaa8d4b87b43bd6a051a72, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
@@ -7154,7 +7154,7 @@ PrefabInstance:
     - target: {fileID: 5482361247021462726, guid: f6d54363e7aaa8d4b87b43bd6a051a72, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1838513423}
+      objectReference: {fileID: 7933478515231872363}
     - target: {fileID: 5482361247021462726, guid: f6d54363e7aaa8d4b87b43bd6a051a72, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -7165,7 +7165,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5482361247021462726, guid: f6d54363e7aaa8d4b87b43bd6a051a72, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: CheckIfLevelUp
+      value: LoadCharactersMenu
       objectReference: {fileID: 0}
     - target: {fileID: 5482361247021462726, guid: f6d54363e7aaa8d4b87b43bd6a051a72, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
@@ -7173,7 +7173,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5482361247021462726, guid: f6d54363e7aaa8d4b87b43bd6a051a72, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: LocalLevelUpManager, Assembly-CSharp
+      value: ScreenManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 5482361247021462726, guid: f6d54363e7aaa8d4b87b43bd6a051a72, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
@@ -10563,6 +10563,7 @@ MonoBehaviour:
   - {fileID: 1248596947}
   - {fileID: 503240030}
   - {fileID: 5046785330997241483}
+  strengthAbility: {fileID: 11400000, guid: 85a0ddc6f2c2ba142b47f74fb564a471, type: 2}
 --- !u!114 &11246306958668915
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18387,6 +18388,7 @@ MonoBehaviour:
   databases:
   - {fileID: 11400000, guid: 470bc335762fbde4a8afa710c513a6d7, type: 2}
   - {fileID: 11400000, guid: e7c7b6f88af1efb4fbac925e29419d0f, type: 2}
+  - {fileID: 11400000, guid: 893300ae4e6261642bd896a95fb0ce84, type: 2}
   locationInputField: {fileID: 2904308378098661402}
 --- !u!224 &2904308378098661476
 RectTransform:
@@ -54957,6 +54959,7 @@ MonoBehaviour:
   inventoryManager: {fileID: 2139941746}
   errorMessageHandler: {fileID: 386175170}
   weakPerk: {fileID: 11400000, guid: 3511b87a3a6230d418aa87546083b60f, type: 2}
+  strengthAbility: {fileID: 11400000, guid: 85a0ddc6f2c2ba142b47f74fb564a471, type: 2}
 --- !u!1 &6412884456792801033
 GameObject:
   m_ObjectHideFlags: 0
@@ -60864,7 +60867,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   errorMessageHandler: {fileID: 386175170}
   abilityInfoPanel: {fileID: 7612816883511372803}
-  ability: {fileID: 0}
+  ability: {fileID: 11400000, guid: 85a0ddc6f2c2ba142b47f74fb564a471, type: 2}
   abilitySO:
     stringID: 
     ability: {fileID: 0}

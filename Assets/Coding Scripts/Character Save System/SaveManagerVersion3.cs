@@ -135,7 +135,6 @@ public static class SaveManagerVersion3
     public static Sprite LoadSprite(string path)
     {
         if (path == String.Empty) { return null; }
-        Debug.Log(path);
         byte[] imageData = File.ReadAllBytes(path);
         Texture2D tex = new Texture2D(2, 2);
         bool success = tex.LoadImage(imageData);
@@ -148,6 +147,10 @@ public static class SaveManagerVersion3
         SaveObject save = FindCurrentSave();
         foreach (AbilitySaveObject _ability in save.abilityInventory)
         {
+            if (_ability.ability == null)
+            {
+                _ability.ability = LoadGameMasterHandler.Instance.GetAbility(_ability.stringID);
+            }
             if (_ability.ability.abilityName == ability.abilityName)
             {
                 return true;

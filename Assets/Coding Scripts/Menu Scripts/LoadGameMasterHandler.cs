@@ -59,7 +59,26 @@ public class LoadGameMasterHandler : MonoBehaviour
 
     public Item GetItem(string _itemID)
     {
-        return itemDatabase.GetItem[_itemID];
+        if (_itemID == null)
+        {
+            return null;
+        }
+        else
+        {
+            return itemDatabase.GetItem[_itemID];
+        }
+    }
+
+    public Ability GetAbility(string _abilityID)
+    {
+        if (_abilityID == null) 
+        { 
+            return null;
+        }
+        else
+        {
+            return abilityDatabase.GetStringID[_abilityID];
+        }
     }
 
     private void Start() 

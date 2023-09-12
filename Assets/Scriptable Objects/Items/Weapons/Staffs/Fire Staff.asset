@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Fire Staff
   description: Chance to Burn.
-  imageSprite: {fileID: 21300000, guid: 117efac39bc63364c9e76bf56f2cfa5e, type: 3}
+  picture: {fileID: 0}
   goldCost: 5
   sellCost: 3
   numberInStack: 1
@@ -22,13 +22,15 @@ MonoBehaviour:
   itemRarity: 1
   equipmentSlot: 5
   enchanted: 0
+  pathToPicture: 
   mainDamage: 0
   mainMagicDamage: 3
   mainAttackRange: 5
-  offDamage: 0
+  offDamage: 1
   offMagicDamage: 0
-  offAttackRange: 0
+  offAttackRange: 1
   numberOfHands: 1
+  weaponType: 0
   defense: 0
   magicDefense: 0
   healthModifier: 0
@@ -37,4 +39,8 @@ MonoBehaviour:
   strengthModifier: 0
   intelligenceModifier: 0
   speedModifier: 0
+  attackModifier: 0
+  defenseModifier: 0
+  arcaneModifier: 0
+  wardModifier: 0
   ability: {fileID: 0}

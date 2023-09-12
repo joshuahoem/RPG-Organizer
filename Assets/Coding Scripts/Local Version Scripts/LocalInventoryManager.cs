@@ -37,6 +37,9 @@ public class LocalInventoryManager : MonoBehaviour
     public Transform[] parentObjectTransforms;
     List<GameObject> equipmentDisplayItems = new List<GameObject>();
 
+    [Header("Abilities")]
+    [SerializeField] Ability strengthAbility;
+
     private void Start() 
     {
         itemInfoPanel.SetActive(false);
@@ -100,12 +103,12 @@ public class LocalInventoryManager : MonoBehaviour
 
             if(currentEquipment[slotIndex] == null) 
             {
-                InventoryItem newInstance = new InventoryItem(newItem.item, 1, true, slotIndex); //GOOD TO GO #TODO
+                InventoryItem newInstance = new InventoryItem(newItem.item, 1, true, slotIndex); 
                 currentEquipment[slotIndex] = newInstance;
             }
             else if (currentEquipment[slotIndex].item == null)
             {
-                InventoryItem newInstance = new InventoryItem(newItem.item, 1, true, slotIndex); //GOOD TO GO #TODO
+                InventoryItem newInstance = new InventoryItem(newItem.item, 1, true, slotIndex); 
                 currentEquipment[slotIndex] = newInstance;
             }
             else
@@ -115,19 +118,17 @@ public class LocalInventoryManager : MonoBehaviour
                 {
                     if (slotIndex == (int) EquipmentSlot.MainHand)
                     {
-                        currentEquipment[slotIndex + 1].item = null;
-                        currentEquipment[slotIndex + 1].equipped = false;
+                        currentEquipment[slotIndex + 1] = null;
                     }
                     else if (slotIndex == (int) EquipmentSlot.OffHand)
                     {
-                        currentEquipment[slotIndex - 1].item = null;
-                        currentEquipment[slotIndex - 1].equipped = false;
+                        currentEquipment[slotIndex - 1] = null;
                     }
                     
                 }
                 inventory.Add(UnequipNoSave(currentEquipment[slotIndex].item));
 
-                InventoryItem newInstance = new InventoryItem(newItem.item, 1, true, slotIndex); //GOOD TO GO #TODO
+                InventoryItem newInstance = new InventoryItem(newItem.item, 1, true, slotIndex); 
                 currentEquipment[slotIndex] = newInstance;
 
             }
@@ -138,11 +139,11 @@ public class LocalInventoryManager : MonoBehaviour
         {
             if (currentEquipment[chosenSlotIndex] == null)
             {
-                currentEquipment[chosenSlotIndex] = new InventoryItem(newItem.item, 1, true, chosenSlotIndex); //GOOD TO GO #TODO
+                currentEquipment[chosenSlotIndex] = new InventoryItem(newItem.item, 1, true, chosenSlotIndex); 
             }
             else if(currentEquipment[chosenSlotIndex].item == null)
             {
-                currentEquipment[chosenSlotIndex] = new InventoryItem(newItem.item, 1, true, chosenSlotIndex); //GOOD TO GO #TODO
+                currentEquipment[chosenSlotIndex] = new InventoryItem(newItem.item, 1, true, chosenSlotIndex); 
             }
             else
             {
@@ -151,18 +152,14 @@ public class LocalInventoryManager : MonoBehaviour
                 {
                     if (chosenSlotIndex == (int) EquipmentSlot.MainHand)
                     {
-                        currentEquipment[chosenSlotIndex + 1].item = null;
-                        currentEquipment[chosenSlotIndex + 1].equipped = false;
+                        currentEquipment[chosenSlotIndex + 1] = null;
                     }
                     else if (chosenSlotIndex == (int) EquipmentSlot.OffHand)
                     {
-                        currentEquipment[chosenSlotIndex - 1].item = null;
-                        currentEquipment[chosenSlotIndex - 1].equipped = false;
+                        currentEquipment[chosenSlotIndex - 1] = null;
                     }
                 }
-                currentEquipment[chosenSlotIndex].item = newItem.item;
-                currentEquipment[chosenSlotIndex].equipped = true;
-                currentEquipment[chosenSlotIndex].equipmentSlotIndex = chosenSlotIndex;
+                currentEquipment[chosenSlotIndex] = new InventoryItem(newItem.item, 1, true, chosenSlotIndex);
 
             }
 
@@ -223,7 +220,7 @@ public class LocalInventoryManager : MonoBehaviour
         { newItem.item = LoadGameMasterHandler.Instance.GetItem(newItem.stringID); }
 
         InventoryItem _newItem = new InventoryItem
-                    (newItem.item, newItem.item.numberInStack, false, 0); //GOOD TO GO #TODO
+                    (newItem.item, newItem.item.numberInStack, false, 0); 
         save.inventory.Add(_newItem);
 
         SaveManagerVersion3.SaveGame(CharacterRegistry.Instance);
@@ -241,7 +238,7 @@ public class LocalInventoryManager : MonoBehaviour
             if(save.equipment[i].item == newItem && !removed)
             {
                 save.equipment[i].equipped = false;
-                InventoryItem _newItem = new InventoryItem //GOOD TO GO #TODO
+                InventoryItem _newItem = new InventoryItem 
                     (save.equipment[i].item, 1, false, 0);
 
                     return _newItem;                
@@ -384,7 +381,7 @@ public class LocalInventoryManager : MonoBehaviour
                 // equipmentDisplayItems.Add(equipInstance);
                 // continue;
             }
-            else if (save.equipment[i].item.numberOfHands == NumberOfHands.TwoHanded && i == (int)EquipmentSlot.OffHand)
+            else if (save.equipment[i].item.numberOfHands == NumberOfHands.TwoHanded && i == (int)EquipmentSlot.OffHand && !SaveManagerVersion3.DoesPlayerHaveThisAbility(strengthAbility))
             {
                 GameObject equipInstance = Instantiate(inUseEquipmentPrefab, new Vector2(0,0), transform.rotation);
                 equipInstance.transform.SetParent(parentObjectTransforms[i].transform, false);

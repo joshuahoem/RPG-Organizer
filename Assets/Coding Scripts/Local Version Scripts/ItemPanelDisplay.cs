@@ -92,6 +92,7 @@ public class ItemPanelDisplay : MonoBehaviour
 
     [Header("Abilities")]
     [SerializeField] Perk weakPerk;
+    [SerializeField] Ability strengthAbility;
 
     // private void Update() {
     //     if (Input.GetKeyDown(KeyCode.Alpha1))
@@ -424,6 +425,30 @@ public class ItemPanelDisplay : MonoBehaviour
         if (SaveManagerVersion3.DoesPlayerHaveThisPerk(weakPerk))
         {
             errorMessageHandler.ReceivingOnErrorOccured(ErrorMessageHandler.ErrorType.TooHeavy);
+        }
+        else if (SaveManagerVersion3.DoesPlayerHaveThisAbility(strengthAbility))
+        {
+            SaveObject save = SaveManagerVersion3.FindCurrentSave();
+
+            if (save.equipment[5] == null)
+            {
+                inventoryManager.Equip(itemInfo,5);
+                inventoryManager.DisplayInventoryUI();
+                return;
+            }
+            else if (save.equipment[6] == null)
+            {
+                inventoryManager.Equip(itemInfo,6);
+                inventoryManager.DisplayInventoryUI();
+                return;
+            }
+            else
+            {
+                inventoryManager.Equip(itemInfo,5);
+                inventoryManager.DisplayInventoryUI();
+                return;
+            }
+
         }
         else
         {

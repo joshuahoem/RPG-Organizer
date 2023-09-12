@@ -234,22 +234,26 @@ public class CharacterCreationManager : MonoBehaviour
         float intelligenceX = 1;
         float speedX = 1;
 
-        foreach (Perk perk in _race.startingPerks)
+        if (_race != null)
         {
-            totalHealthNumber += perk.bonusHealth;
-            totalStaminaNumber += perk.bonusStamina;
-            totalMagicNumber += perk.bonusMagic;
-            totalStrengthNumber += perk.bonusStrength;
-            totalIntelligenceNumber += perk.bonusIntelligence;
-            totalSpeedNumber += perk.bonusSpeed;
+            foreach (Perk perk in _race.startingPerks)
+            {
+                totalHealthNumber += perk.bonusHealth;
+                totalStaminaNumber += perk.bonusStamina;
+                totalMagicNumber += perk.bonusMagic;
+                totalStrengthNumber += perk.bonusStrength;
+                totalIntelligenceNumber += perk.bonusIntelligence;
+                totalSpeedNumber += perk.bonusSpeed;
 
-            healthX += perk.healthMultiplier;
-            staminaX += perk.staminaMultiplier;
-            magicX += perk.magicMultiplier;
-            strengthX += perk.strengthMultiplier;
-            intelligenceX += perk.intelligenceMultiplier;
-            speedX += perk.speedMultiplier;
+                healthX += perk.healthMultiplier;
+                staminaX += perk.staminaMultiplier;
+                magicX += perk.magicMultiplier;
+                strengthX += perk.strengthMultiplier;
+                intelligenceX += perk.intelligenceMultiplier;
+                speedX += perk.speedMultiplier;
+            }
         }
+        
 
         totalHealthTMP.text = (totalHealthNumber * healthX).ToString();
         totalStaminaTMP.text = (totalStaminaNumber * staminaX).ToString();
