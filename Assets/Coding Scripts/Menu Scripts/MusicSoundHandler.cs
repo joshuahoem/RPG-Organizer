@@ -29,7 +29,6 @@ public class MusicSoundHandler : MonoBehaviour
             DontDestroyOnLoad(gameObject);
             Instance = this;
         }
-
     }
 
     private void Start() 

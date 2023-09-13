@@ -44,7 +44,7 @@ public class LocalItemStart : MonoBehaviour
     {
         item = _item;
         itemInfo = _itemInfo;
-        // imageSprite.sprite = SaveManagerVersion3.LoadSprite(item.pathToPicture);
+        imageSprite.sprite = SaveManagerVersion3.LoadSprite(item.pathToPicture);
         itemName.text = _item.itemName.ToString();
         if (goldCostNumber != null) { goldCostNumber.text = _item.goldCost.ToString(); }
 

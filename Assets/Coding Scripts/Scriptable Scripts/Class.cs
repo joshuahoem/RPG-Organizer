@@ -27,17 +27,6 @@ public class Class : ScriptableObject
         {
             pathToPicture = AssetDatabase.GetAssetPath(picture);
         }
-        // else
-        // {
-        //     Debug.Log(name);
-        //     byte[] imageData = File.ReadAllBytes(pathToPicture);
-        //     Texture2D tex = new Texture2D(2, 2);
-        //     bool success = tex.LoadImage(imageData);
-        //     Debug.Log(success + " was successful or not");
-
-        //     picture = Sprite.Create(tex, new Rect(0, 0, tex.width, tex.height), Vector2.zero);
-        
-        // }
     }
 
 }

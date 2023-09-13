@@ -2411,6 +2411,10 @@ MonoBehaviour:
   abilityDatabase: {fileID: 11400000, guid: 3bccb5716fddfe1439294a8c6d7eac36, type: 2}
   perkDatabase: {fileID: 11400000, guid: 71216f665e8ceea408660173c6e204ef, type: 2}
   itemDatabase: {fileID: 11400000, guid: e7c7b6f88af1efb4fbac925e29419d0f, type: 2}
+  itemAtlas: {fileID: 4343727234628468602, guid: 44eac6b5cd37874449b004b3f8e055b7, type: 2}
+  abilitiesAtlas: {fileID: 4343727234628468602, guid: 3d0e2a340262ea84cba9229ce5d388af, type: 2}
+  perkAtlas: {fileID: 4343727234628468602, guid: 60bb507dfd293db4bab96b4c73cbf8a3, type: 2}
+  raceAndClassAtlas: {fileID: 4343727234628468602, guid: 823a500dd8ed4754bb36e3e94ce2946d, type: 2}
 --- !u!4 &645138114
 Transform:
   m_ObjectHideFlags: 0

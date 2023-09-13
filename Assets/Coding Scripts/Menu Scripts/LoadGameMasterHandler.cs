@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
+using UnityEngine.U2D;
+
 
 public class LoadGameMasterHandler : MonoBehaviour
 {
@@ -11,6 +13,10 @@ public class LoadGameMasterHandler : MonoBehaviour
     [SerializeField] private AbilityDatabase abilityDatabase; 
     [SerializeField] private PerkDatabase perkDatabase;
     [SerializeField] private ItemDatabase itemDatabase;
+    [SerializeField] private SpriteAtlas itemAtlas;
+    [SerializeField] private SpriteAtlas abilitiesAtlas;
+    [SerializeField] private SpriteAtlas raceAndClassAtlas;
+
     public static LoadGameMasterHandler Instance { get; private set; }
 
     private void Awake() 
@@ -54,7 +60,14 @@ public class LoadGameMasterHandler : MonoBehaviour
 
     public Perk GetPerk(string _perkID)
     {
-        return perkDatabase.GetStringID[_perkID];
+        if (_perkID == null)
+        {
+            return null;
+        }
+        else
+        {
+            return perkDatabase.GetStringID[_perkID];
+        }
     }
 
     public Item GetItem(string _itemID)
@@ -83,7 +96,7 @@ public class LoadGameMasterHandler : MonoBehaviour
 
     private void Start() 
     {
-        // StartMusic();
+        StartMusic();
         SaveManagerVersion3.Init();
         PlayerInfo playerInfo = SaveManagerVersion3.FindPlayerInfoFile();
         SaveState saveState = SaveManagerVersion3.FindSaveState();
