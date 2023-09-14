@@ -17,7 +17,7 @@ MonoBehaviour:
     temperatures from high altitudes Chance to Freeze +2.
 
 '
-  picture: {fileID: 0}
+  picture: {fileID: 21300000, guid: 61c68c87419686e4db5c24454f39d536, type: 3}
   goldCost: 9
   sellCost: 5
   numberInStack: 1
@@ -25,7 +25,7 @@ MonoBehaviour:
   itemRarity: 2
   equipmentSlot: 9
   enchanted: 0
-  pathToPicture: 
+  pathToPicture: Assets/Visuals/Sprites/Weaopn Sprites/Bows & Arrows/Blizzard Arrows.png
   mainDamage: 0
   mainMagicDamage: 0
   mainAttackRange: 0

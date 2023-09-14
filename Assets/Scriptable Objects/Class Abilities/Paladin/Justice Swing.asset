@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Justice Swing
   m_EditorClassIdentifier: 
   abilityName: Justice Swing
-  abilitySpriteIcon: {fileID: 21300000, guid: b8e34bc8d3f261b4dbdcbafe688445de, type: 3}
+  picture: {fileID: 21300000, guid: b8e34bc8d3f261b4dbdcbafe688445de, type: 3}
+  pathToPicture: Assets/Visuals/Sprites/Ability Icons/Paladin/Justice Swing.png
   borderColor: {r: 0.4156863, g: 0.5372549, b: 0.8000001, a: 1}
   costType: 0
   unlockCost: 1

@@ -80,16 +80,19 @@ public class CharacterUnlockItemInfo : MonoBehaviour
 
         foreach (UnlockObject unlock in playerInfo.unlocks)
         {
-            if (newUnlock.unlockedRace == unlock.unlockedRace && newUnlock.unlockedClass == unlock.unlockedClass)
+            Debug.Log("newunlock " + newUnlock.raceStringID);
+            Debug.Log("unlock " + unlock.raceStringID);
+
+            if ((newUnlock.raceStringID == unlock.raceStringID && unlock.raceStringID != "") || (newUnlock.classStringID == unlock.classStringID && unlock.classStringID != ""))
             {
-                // Debug.Log("found result");
+                Debug.Log("found result");
                 thisItemIsUnlocked = true;
             }
         }
 
         if (!thisItemIsUnlocked)
         {
-            // Debug.Log("new one added " + newUnlock.unlockedClass + " " + newUnlock.unlockedRace);
+            Debug.Log("new one added " + newUnlock.unlockedClass + " " + newUnlock.unlockedRace);
             playerInfo.unlocks.Add(newUnlock);
             SaveManagerVersion3.SavePlayerInfo(playerInfo);
 

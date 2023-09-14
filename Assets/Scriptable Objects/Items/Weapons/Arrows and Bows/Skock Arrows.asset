@@ -15,7 +15,7 @@ MonoBehaviour:
   itemName: Shock Arrows
   description: The entirety of these arrows ar made from a newly discover material
     known as Sharken. This material is highly conductive. Chance to stun.
-  picture: {fileID: 0}
+  picture: {fileID: 21300000, guid: fa2ac0ab4f115ea49b5f928942638c2a, type: 3}
   goldCost: 7
   sellCost: 4
   numberInStack: 1
@@ -23,7 +23,7 @@ MonoBehaviour:
   itemRarity: 1
   equipmentSlot: 9
   enchanted: 0
-  pathToPicture: 
+  pathToPicture: Assets/Visuals/Sprites/Weaopn Sprites/Bows & Arrows/Shock Arrows.png
   mainDamage: 0
   mainMagicDamage: 0
   mainAttackRange: 0

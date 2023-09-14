@@ -15,7 +15,7 @@ MonoBehaviour:
   itemName: Magic Infused Arrows
   description: 'These Magic infused arrows converts all your damage this attack action
     into magical damage. '
-  picture: {fileID: 0}
+  picture: {fileID: 21300000, guid: 627cb62bf2303ee4e937b6ca29ed2f52, type: 3}
   goldCost: 4
   sellCost: 2
   numberInStack: 1
@@ -23,7 +23,8 @@ MonoBehaviour:
   itemRarity: 1
   equipmentSlot: 9
   enchanted: 0
-  pathToPicture: 
+  pathToPicture: Assets/Visuals/Sprites/Weaopn Sprites/Bows & Arrows/Magic Infused
+    Arrows.png
   mainDamage: 0
   mainMagicDamage: 0
   mainAttackRange: 0

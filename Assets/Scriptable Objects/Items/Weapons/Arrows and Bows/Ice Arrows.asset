@@ -17,7 +17,7 @@ MonoBehaviour:
     The quiver allows for the insulation in moderate tempretures. Chance for Ice
     arrows to melt when drawn depending on enviroments tempureture. Chance to Freeze
     +1.
-  picture: {fileID: 0}
+  picture: {fileID: 21300000, guid: 2616f8e5831c0f2409a8de889a0bc262, type: 3}
   goldCost: 6
   sellCost: 3
   numberInStack: 1
@@ -25,7 +25,7 @@ MonoBehaviour:
   itemRarity: 1
   equipmentSlot: 9
   enchanted: 0
-  pathToPicture: 
+  pathToPicture: Assets/Visuals/Sprites/Weaopn Sprites/Bows & Arrows/Ice Arrows.png
   mainDamage: 0
   mainMagicDamage: 0
   mainAttackRange: 0

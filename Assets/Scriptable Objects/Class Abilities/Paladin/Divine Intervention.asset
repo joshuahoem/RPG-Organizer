@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Divine Intervention
   m_EditorClassIdentifier: 
   abilityName: Divine Intervention
-  abilitySpriteIcon: {fileID: 21300000, guid: 2c0cf3f7c55b6c54cb52dabe7da0515a, type: 3}
+  picture: {fileID: 21300000, guid: 2c0cf3f7c55b6c54cb52dabe7da0515a, type: 3}
+  pathToPicture: Assets/Visuals/Sprites/Ability Icons/Paladin/Divine intervention.png
   borderColor: {r: 0.039215688, g: 0.2392157, b: 0.38431376, a: 1}
   costType: 0
   unlockCost: 1

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Magic Flow Scroll
   description: Can use an ability as an item action instead
-  imageSprite: {fileID: 21300000, guid: dfc7d15baea1bc94f8d7c411d13af65a, type: 3}
+  picture: {fileID: 21300000, guid: dfc7d15baea1bc94f8d7c411d13af65a, type: 3}
   goldCost: 5
   sellCost: 3
   numberInStack: 1
@@ -22,6 +22,7 @@ MonoBehaviour:
   itemRarity: 3
   equipmentSlot: 12
   enchanted: 1
+  pathToPicture: Assets/Visuals/Sprites/Scrolls/Purple Scroll.png
   mainDamage: 0
   mainMagicDamage: 0
   mainAttackRange: 0

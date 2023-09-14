@@ -15,7 +15,7 @@ MonoBehaviour:
   itemName: Hell Fire Arrows
   description: A heavier quiver with the capabilities to hold lava. Each arrows is
     dipped in the lava to ensure a devistating shot. Chance to burn +2
-  picture: {fileID: 0}
+  picture: {fileID: 21300000, guid: dc1372e419f90654881cf608735bd1a2, type: 3}
   goldCost: 9
   sellCost: 5
   numberInStack: 1
@@ -23,7 +23,7 @@ MonoBehaviour:
   itemRarity: 2
   equipmentSlot: 9
   enchanted: 0
-  pathToPicture: 
+  pathToPicture: Assets/Visuals/Sprites/Weaopn Sprites/Bows & Arrows/Hellfire Arrows.png
   mainDamage: 0
   mainMagicDamage: 0
   mainAttackRange: 0

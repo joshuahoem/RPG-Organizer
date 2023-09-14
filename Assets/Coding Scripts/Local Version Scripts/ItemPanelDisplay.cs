@@ -528,56 +528,57 @@ public class ItemPanelDisplay : MonoBehaviour
 
     public void PurchaseItem()
     {
-        //need to check gold
         SaveObject save = SaveManagerVersion3.FindCurrentSave();
 
-        //Check if can hold
-        lootCheck = 0;
-        foreach (InventoryItem item in save.inventory)
-        {
-            if (item == null) { continue; }
-            if (item.item == null)
-            {
-                item.item = LoadGameMasterHandler.Instance.GetItem(item.stringID);
-            }
+        // Check if can hold ----- OLD SYSTEM
+        // No longer check for loot in inventory, check only to see if they can equip
+        // lootCheck = 0;
+        // foreach (InventoryItem item in save.inventory)
+        // {
+        //     if (item == null) { continue; }
+        //     if (item.item == null)
+        //     {
+        //         item.item = LoadGameMasterHandler.Instance.GetItem(item.stringID);
+        //     }
 
-            if (item.item.GetItemType() != ItemType.Special && item.item.GetItemType() != ItemType.Scroll)
-            {
-                lootCheck += 1;
-            }
-        }
+        //     if (item.item.GetItemType() != ItemType.Special && item.item.GetItemType() != ItemType.Scroll)
+        //     {
+        //         lootCheck += 1;
+        //     }
+        // }
 
-        foreach (InventoryItem item in save.equipment)
-        {
-            if (item == null) { continue; }
-            if (item.item == null) { continue; }
-            if (item.item.GetItemType() != ItemType.Special && item.item.GetItemType() != ItemType.Scroll)
-            {
-                lootCheck += 1;
-            }
-        }
+        // foreach (InventoryItem item in save.equipment)
+        // {
+        //     if (item == null) { continue; }
+        //     if (item.item == null) { continue; }
+        //     if (item.item.GetItemType() != ItemType.Special && item.item.GetItemType() != ItemType.Scroll)
+        //     {
+        //         lootCheck += 1;
+        //     }
+        // }
 
 
-        if (save.equipment[5] != null)
-        {
-            if (save.equipment[5].item != null)
-            {
-                if (save.equipment[5].item.numberOfHands == NumberOfHands.TwoHanded)
-                {
-                    // Debug.Log("removing 1");
-                    lootCheck -= 1;
-                }
-            }
+        // if (save.equipment[5] != null)
+        // {
+        //     if (save.equipment[5].item != null)
+        //     {
+        //         if (save.equipment[5].item.numberOfHands == NumberOfHands.TwoHanded)
+        //         {
+        //             // Debug.Log("removing 1");
+        //             lootCheck -= 1;
+        //         }
+        //     }
 
-        }
+        // }
 
-        if (lootCheck >= save.holdingCapacity && item.GetItemType() != ItemType.Special)
-        {
-            // Debug.Log("not strong enough to carry"); //error
-            errorMessageHandler.ReceivingOnErrorOccured(ErrorMessageHandler.ErrorType.NoStrength);
-            return;
-        }
+        // if (lootCheck >= save.holdingCapacity && item.GetItemType() != ItemType.Special)
+        // {
+        //     // Debug.Log("not strong enough to carry"); //error
+        //     errorMessageHandler.ReceivingOnErrorOccured(ErrorMessageHandler.ErrorType.NoStrength);
+        //     return;
+        // }
 
+        //need to check gold
         if(save.gold >= item.goldCost)
         {
             InventoryItem newItem = new InventoryItem

@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unlockCost: 0
   perkName: Short Legs
-  perkImageIcon: {fileID: 21300000, guid: 201385dc4e7024f4285740a6bbd34312, type: 3}
+  picture: {fileID: 21300000, guid: b37dda84b1d9d114c8c97db2ee3de359, type: 3}
   borderColor: {r: 0, g: 0, b: 0, a: 0}
+  pathToPicture: Assets/Visuals/Sprites/Perk Sprites/Dwarf/Short Legs.png
   bonusHealth: 0
   bonusStamina: 0
   bonusMagic: 0

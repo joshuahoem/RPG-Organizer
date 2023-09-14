@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unlockCost: 0
   perkName: Sapling
-  perkImageIcon: {fileID: 21300000, guid: dcf0bc503da2e5344b624558ca3f0a1d, type: 3}
+  picture: {fileID: 21300000, guid: a45cfef2440b2fd4eb278edf2bf6b698, type: 3}
   borderColor: {r: 0.016153438, g: 0.31132078, b: 0.17547975, a: 1}
+  pathToPicture: Assets/Visuals/Sprites/Perk Sprites/Ent/Sapling.png
   bonusHealth: 0
   bonusStamina: 0
   bonusMagic: 0

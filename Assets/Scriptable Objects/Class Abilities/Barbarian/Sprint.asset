@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Sprint
   m_EditorClassIdentifier: 
   abilityName: Sprint
-  abilitySpriteIcon: {fileID: 21300000, guid: 047399b36863dd749a652475dbce567e, type: 3}
+  picture: {fileID: 21300000, guid: 047399b36863dd749a652475dbce567e, type: 3}
+  pathToPicture: Assets/Visuals/Sprites/Ability Icons/Barbarian/Sprint.png
   borderColor: {r: 0.039215688, g: 0.2392157, b: 0.38431376, a: 1}
   costType: 1
   unlockCost: 1

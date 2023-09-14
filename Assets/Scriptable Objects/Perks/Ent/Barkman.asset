@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unlockCost: 5
   perkName: Barkman
-  perkImageIcon: {fileID: 21300000, guid: 54c40915067519143815498ae2bc0a89, type: 3}
+  picture: {fileID: 21300000, guid: 0fce34716ef27644198ad90f84190fc4, type: 3}
   borderColor: {r: 0, g: 0, b: 0, a: 1}
+  pathToPicture: Assets/Visuals/Sprites/Perk Sprites/Ent/Barkman.png
   bonusHealth: 0
   bonusStamina: 0
   bonusMagic: 0

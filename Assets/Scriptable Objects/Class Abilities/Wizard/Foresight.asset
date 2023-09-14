@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Foresight
   m_EditorClassIdentifier: 
   abilityName: Foresight
-  abilitySpriteIcon: {fileID: 21300000, guid: 0e52fa162cb970e4fa0e7d9eadcfc84c, type: 3}
+  picture: {fileID: 21300000, guid: 0e52fa162cb970e4fa0e7d9eadcfc84c, type: 3}
+  pathToPicture: Assets/Visuals/Sprites/Ability Icons/Wizard/Foresight.png
   borderColor: {r: 0.6893017, g: 0.17443931, b: 0.754717, a: 0.89411765}
   costType: 0
   unlockCost: 1

@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Holy Light
   m_EditorClassIdentifier: 
   abilityName: Holy Light
-  abilitySpriteIcon: {fileID: 21300000, guid: 9c35bcad20d1162419afe80dfeb05e52, type: 3}
+  picture: {fileID: 21300000, guid: 9c35bcad20d1162419afe80dfeb05e52, type: 3}
+  pathToPicture: Assets/Visuals/Sprites/Ability Icons/Paladin/Holy Light.png
   borderColor: {r: 0.47058827, g: 0.87843144, b: 0.56078434, a: 1}
   costType: 0
   unlockCost: 0

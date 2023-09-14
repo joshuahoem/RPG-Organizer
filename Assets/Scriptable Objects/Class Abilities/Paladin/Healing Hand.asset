@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Healing Hand
   m_EditorClassIdentifier: 
   abilityName: Healing Hand
-  abilitySpriteIcon: {fileID: 21300000, guid: 5a1762fd7cd1b9147a6493596c6ee40e, type: 3}
+  picture: {fileID: 21300000, guid: 5a1762fd7cd1b9147a6493596c6ee40e, type: 3}
+  pathToPicture: Assets/Visuals/Sprites/Ability Icons/Paladin/Healing Hands.png
   borderColor: {r: 0.72156864, g: 0.91372555, b: 0.5803922, a: 1}
   costType: 0
   unlockCost: 1

@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: I Am Your Shield
   m_EditorClassIdentifier: 
   abilityName: I Am Your Shield
-  abilitySpriteIcon: {fileID: 21300000, guid: e11b19312c16f92498c6d9c2b5a5b7fd, type: 3}
+  picture: {fileID: 21300000, guid: e11b19312c16f92498c6d9c2b5a5b7fd, type: 3}
+  pathToPicture: Assets/Visuals/Sprites/Ability Icons/Paladin/I Am Your Shield.png
   borderColor: {r: 0.2901961, g: 0.41176474, b: 0.7411765, a: 1}
   costType: 1
   unlockCost: 1

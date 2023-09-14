@@ -15,7 +15,7 @@ MonoBehaviour:
   itemName: Reinforced Bow
   description: An oak bow with brass reinforced along  the entire front prtion of
     the bow. Pierce 1
-  imageSprite: {fileID: 21300000, guid: 516594de01e6e074fa6798915f9a6ef9, type: 3}
+  picture: {fileID: 21300000, guid: 516594de01e6e074fa6798915f9a6ef9, type: 3}
   goldCost: 5
   sellCost: 3
   numberInStack: 1
@@ -23,6 +23,7 @@ MonoBehaviour:
   itemRarity: 2
   equipmentSlot: 5
   enchanted: 0
+  pathToPicture: Assets/Visuals/Sprites/Weaopn Sprites/Bows & Arrows/Reinforced Bow.png
   mainDamage: 4
   mainMagicDamage: 0
   mainAttackRange: 4

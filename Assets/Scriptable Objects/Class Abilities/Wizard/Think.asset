@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Think
   m_EditorClassIdentifier: 
   abilityName: Think
-  abilitySpriteIcon: {fileID: 21300000, guid: 75f2e7c1dfe5af141a45d01154afb624, type: 3}
+  picture: {fileID: 21300000, guid: 75f2e7c1dfe5af141a45d01154afb624, type: 3}
+  pathToPicture: Assets/Visuals/Sprites/Ability Icons/Wizard/Think.png
   borderColor: {r: 0.9215687, g: 0.18431373, b: 0.023529414, a: 1}
   costType: 3
   unlockCost: 1

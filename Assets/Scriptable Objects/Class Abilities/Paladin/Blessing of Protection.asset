@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Blessing of Protection
   m_EditorClassIdentifier: 
   abilityName: Blessing of Protection
-  abilitySpriteIcon: {fileID: 21300000, guid: 89f7375252df3e547858cffc08e59ff3, type: 3}
+  picture: {fileID: 21300000, guid: 89f7375252df3e547858cffc08e59ff3, type: 3}
+  pathToPicture: Assets/Visuals/Sprites/Ability Icons/Paladin/Blessing of Protection.png
   borderColor: {r: 0.9215687, g: 0.18431373, b: 0.023529414, a: 1}
   costType: 0
   unlockCost: 1

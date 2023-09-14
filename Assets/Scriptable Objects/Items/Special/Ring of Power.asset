@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Ring of Power
   description: Adds 2 to Attack
-  imageSprite: {fileID: 21300000, guid: db737a715c2ff254ab77ea186e326442, type: 3}
+  picture: {fileID: 21300000, guid: db737a715c2ff254ab77ea186e326442, type: 3}
   goldCost: 5
   sellCost: 3
   numberInStack: 1
@@ -22,6 +22,7 @@ MonoBehaviour:
   itemRarity: 2
   equipmentSlot: 7
   enchanted: 1
+  pathToPicture: Assets/Visuals/Sprites/Uniques/Ring of Power.png
   mainDamage: 0
   mainMagicDamage: 0
   mainAttackRange: 0

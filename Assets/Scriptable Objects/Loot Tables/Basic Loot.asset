@@ -14,16 +14,56 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GuaranteedLootTable: []
   OneItemFromList:
-  - Weight: 2
-    Drop: {fileID: 11400000, guid: f023d650b80a26d418cb6250029abdf4, type: 2}
+  - Weight: 10
+    Drop: {fileID: 11400000, guid: fbcf22bb1b21e0e4a8c89bec54b384c5, type: 2}
     MinCountItem: 1
     MaxCountItem: 1
-  - Weight: 22
+  - Weight: 15
     Drop: {fileID: 11400000, guid: 4878ed258ec8ca44da84926d0a8746d2, type: 2}
     MinCountItem: 1
     MaxCountItem: 3
-  - Weight: 1
+  - Weight: 10
     Drop: {fileID: 11400000, guid: 6a6c5fb7fa7a52740a8913086a3b7272, type: 2}
     MinCountItem: 1
     MaxCountItem: 1
-  WeightToNoDrop: 75
+  - Weight: 10
+    Drop: {fileID: 11400000, guid: 640328845f2af114da4ca26515931171, type: 2}
+    MinCountItem: 1
+    MaxCountItem: 1
+  - Weight: 10
+    Drop: {fileID: 11400000, guid: ce7661ce47f847f4389a22ab90cb5d09, type: 2}
+    MinCountItem: 1
+    MaxCountItem: 1
+  - Weight: 10
+    Drop: {fileID: 11400000, guid: 03e7868896b53804b81d41cdf88e8f44, type: 2}
+    MinCountItem: 1
+    MaxCountItem: 1
+  - Weight: 10
+    Drop: {fileID: 11400000, guid: 6202f4fef704242498a8b1634b027199, type: 2}
+    MinCountItem: 1
+    MaxCountItem: 1
+  - Weight: 10
+    Drop: {fileID: 11400000, guid: adff76a0bab2188459199564efa0c52b, type: 2}
+    MinCountItem: 1
+    MaxCountItem: 1
+  - Weight: 4
+    Drop: {fileID: 11400000, guid: 9cc774eb6bb134940941e8ea262bd3d8, type: 2}
+    MinCountItem: 1
+    MaxCountItem: 1
+  - Weight: 1
+    Drop: {fileID: 11400000, guid: 8ebed031d0c1b7c4b89b2b36fd2d03ff, type: 2}
+    MinCountItem: 1
+    MaxCountItem: 1
+  - Weight: 4
+    Drop: {fileID: 11400000, guid: 48d33b65d368acb4ca95d3b48e65cfeb, type: 2}
+    MinCountItem: 1
+    MaxCountItem: 1
+  - Weight: 5
+    Drop: {fileID: 11400000, guid: be48687b09a9e4641b14998a0793bf23, type: 2}
+    MinCountItem: 1
+    MaxCountItem: 1
+  - Weight: 1
+    Drop: {fileID: 11400000, guid: 6afa278921979c0459b80b034b42b9af, type: 2}
+    MinCountItem: 1
+    MaxCountItem: 1
+  WeightToNoDrop: 100

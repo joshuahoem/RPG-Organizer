@@ -17,7 +17,7 @@ MonoBehaviour:
     This staff was crafted from the roots of the Elven Forest. This wood contain
     a higher amount of magical properties giving the user more magical defencive
     capabilities.
-  picture: {fileID: 0}
+  picture: {fileID: 21300000, guid: 33cd1c81486be8c42b126cdbf3d941e9, type: 3}
   goldCost: 5
   sellCost: 3
   numberInStack: 1
@@ -25,7 +25,7 @@ MonoBehaviour:
   itemRarity: 1
   equipmentSlot: 5
   enchanted: 0
-  pathToPicture: 
+  pathToPicture: Assets/Visuals/Sprites/Weaopn Sprites/Staffs/Twisted Staff.png
   mainDamage: 0
   mainMagicDamage: 3
   mainAttackRange: 5

@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Coliseum Champion
   m_EditorClassIdentifier: 
   abilityName: Coliseum Champion
-  abilitySpriteIcon: {fileID: 21300000, guid: 00ed3fece3ced6645ac9725b52e9d5b9, type: 3}
+  picture: {fileID: 21300000, guid: 00ed3fece3ced6645ac9725b52e9d5b9, type: 3}
+  pathToPicture: Assets/Visuals/Sprites/Ability Icons/Gladiator/Gladiator Champion.png
   borderColor: {r: 0.2901961, g: 0.41176474, b: 0.7411765, a: 1}
   costType: 1
   unlockCost: 1

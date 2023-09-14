@@ -15,7 +15,7 @@ MonoBehaviour:
   itemName: Arrows
   description: Standard arrows built from firewood flint and feathers to act as a
     counter weight.
-  picture: {fileID: 0}
+  picture: {fileID: 21300000, guid: 32fb1f4deb4730343b638f188a07bd84, type: 3}
   goldCost: 1
   sellCost: 0
   numberInStack: 1
@@ -23,7 +23,7 @@ MonoBehaviour:
   itemRarity: 0
   equipmentSlot: 9
   enchanted: 0
-  pathToPicture: 
+  pathToPicture: Assets/Visuals/Sprites/Weaopn Sprites/Bows & Arrows/Arrows.png
   mainDamage: 0
   mainMagicDamage: 0
   mainAttackRange: 0

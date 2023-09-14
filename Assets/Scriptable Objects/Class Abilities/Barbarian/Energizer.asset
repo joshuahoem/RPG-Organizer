@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Energizer
   m_EditorClassIdentifier: 
   abilityName: Energizer
-  abilitySpriteIcon: {fileID: 21300000, guid: a7e8a0e01f38a4f42b7674e474b2b342, type: 3}
+  picture: {fileID: 21300000, guid: a7e8a0e01f38a4f42b7674e474b2b342, type: 3}
+  pathToPicture: Assets/Visuals/Sprites/Ability Icons/Barbarian/Energizer.png
   borderColor: {r: 0.8980393, g: 0.5568628, b: 0.14901961, a: 1}
   costType: 3
   unlockCost: 1

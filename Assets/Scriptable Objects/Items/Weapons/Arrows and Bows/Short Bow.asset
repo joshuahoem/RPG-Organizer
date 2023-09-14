@@ -15,7 +15,7 @@ MonoBehaviour:
   itemName: Short Bow
   description: A shorter bow about shoulder width in span. Crafted from sturdy oak
     able to be used quickly.
-  imageSprite: {fileID: 21300000, guid: e9afb590c14349e49be14be71bb1e74a, type: 3}
+  picture: {fileID: 21300000, guid: e9afb590c14349e49be14be71bb1e74a, type: 3}
   goldCost: 2
   sellCost: 1
   numberInStack: 1
@@ -23,6 +23,7 @@ MonoBehaviour:
   itemRarity: 0
   equipmentSlot: 5
   enchanted: 0
+  pathToPicture: Assets/Visuals/Sprites/Weaopn Sprites/Bows & Arrows/Short Bow.png
   mainDamage: 2
   mainMagicDamage: 0
   mainAttackRange: 3

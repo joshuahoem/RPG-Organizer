@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Warrior's Instincts
   m_EditorClassIdentifier: 
   abilityName: Warrior's Instincts
-  abilitySpriteIcon: {fileID: 21300000, guid: eae4d7cf7b198ff46ad481b2e042090f, type: 3}
+  picture: {fileID: 21300000, guid: eae4d7cf7b198ff46ad481b2e042090f, type: 3}
+  pathToPicture: Assets/Visuals/Sprites/Ability Icons/Barbarian/Warriors Instinct.png
   borderColor: {r: 0.47058827, g: 0.87843144, b: 0.56078434, a: 1}
   costType: 1
   unlockCost: 1

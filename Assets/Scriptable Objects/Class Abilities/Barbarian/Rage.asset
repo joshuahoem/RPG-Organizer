@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Rage
   m_EditorClassIdentifier: 
   abilityName: Rage
-  abilitySpriteIcon: {fileID: 21300000, guid: f5cba9a747e3e7644992bd745e89330e, type: 3}
+  picture: {fileID: 21300000, guid: f5cba9a747e3e7644992bd745e89330e, type: 3}
+  pathToPicture: Assets/Visuals/Sprites/Ability Icons/Barbarian/Rage.png
   borderColor: {r: 0.50980395, g: 0.8000001, b: 0.86666673, a: 1}
   costType: 1
   unlockCost: 1

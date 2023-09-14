@@ -139,6 +139,8 @@ public static class SaveManagerVersion3
         Texture2D tex = new Texture2D(2, 2);
         bool success = tex.LoadImage(imageData);
 
+        tex.filterMode = FilterMode.Point;
+
         return Sprite.Create(tex, new Rect(0, 0, tex.width, tex.height), Vector2.zero);
     }
 

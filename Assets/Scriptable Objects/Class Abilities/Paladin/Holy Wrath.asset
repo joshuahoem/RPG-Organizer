@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Holy Wrath
   m_EditorClassIdentifier: 
   abilityName: Holy Wrath
-  abilitySpriteIcon: {fileID: 21300000, guid: ecb8093ba30948f488d5aee084d5c958, type: 3}
+  picture: {fileID: 21300000, guid: ecb8093ba30948f488d5aee084d5c958, type: 3}
+  pathToPicture: Assets/Visuals/Sprites/Ability Icons/Paladin/Holy Wrath.png
   borderColor: {r: 0.7176471, g: 0.08235294, b: 0.2509804, a: 1}
   costType: 0
   unlockCost: 1

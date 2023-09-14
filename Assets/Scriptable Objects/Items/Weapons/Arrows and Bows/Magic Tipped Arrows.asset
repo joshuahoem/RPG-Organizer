@@ -15,7 +15,7 @@ MonoBehaviour:
   itemName: Magic Tipped Arrows
   description: 'These Magic tipped arrows converts all your damage this attack action
     into magical damage. '
-  picture: {fileID: 0}
+  picture: {fileID: 21300000, guid: b6bac877ca8bd2a42a540dd3a0e126df, type: 3}
   goldCost: 2
   sellCost: 1
   numberInStack: 1
@@ -23,7 +23,8 @@ MonoBehaviour:
   itemRarity: 0
   equipmentSlot: 9
   enchanted: 0
-  pathToPicture: 
+  pathToPicture: Assets/Visuals/Sprites/Weaopn Sprites/Bows & Arrows/Magic Tipped
+    Arrows.png
   mainDamage: 0
   mainMagicDamage: 0
   mainAttackRange: 0

@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5aa80a4f21652164d8ac37ff492439b4, type: 3}
+  m_Name: Cold Region
+  m_EditorClassIdentifier: 
+  GuaranteedLootTable: []
+  OneItemFromList:
+  - Weight: 2
+    Drop: {fileID: 11400000, guid: 7ccefa607f3e2db44894be915ef46277, type: 2}
+    MinCountItem: 1
+    MaxCountItem: 1
+  - Weight: 3
+    Drop: {fileID: 11400000, guid: 3f019d78791d0d446a218648b4271ae4, type: 2}
+    MinCountItem: 1
+    MaxCountItem: 1
+  - Weight: 10
+    Drop: {fileID: 11400000, guid: 640328845f2af114da4ca26515931171, type: 2}
+    MinCountItem: 1
+    MaxCountItem: 1
+  - Weight: 10
+    Drop: {fileID: 11400000, guid: 6a6c5fb7fa7a52740a8913086a3b7272, type: 2}
+    MinCountItem: 1
+    MaxCountItem: 1
+  - Weight: 10
+    Drop: {fileID: 11400000, guid: ce7661ce47f847f4389a22ab90cb5d09, type: 2}
+    MinCountItem: 1
+    MaxCountItem: 1
+  - Weight: 10
+    Drop: {fileID: 11400000, guid: 03e7868896b53804b81d41cdf88e8f44, type: 2}
+    MinCountItem: 1
+    MaxCountItem: 1
+  - Weight: 10
+    Drop: {fileID: 11400000, guid: 6202f4fef704242498a8b1634b027199, type: 2}
+    MinCountItem: 1
+    MaxCountItem: 1
+  - Weight: 1
+    Drop: {fileID: 11400000, guid: 723fa1920aa9c5741b7b35bf056f8b07, type: 2}
+    MinCountItem: 1
+    MaxCountItem: 1
+  - Weight: 9
+    Drop: {fileID: 11400000, guid: 04f90d46449b82a4aa2ada32d083608a, type: 2}
+    MinCountItem: 1
+    MaxCountItem: 1
+  - Weight: 7
+    Drop: {fileID: 11400000, guid: a945d76a9f5ff334680789ae0cbd40a5, type: 2}
+    MinCountItem: 1
+    MaxCountItem: 1
+  - Weight: 15
+    Drop: {fileID: 11400000, guid: e71035106a42f7b489d11c7dfdf33559, type: 2}
+    MinCountItem: 1
+    MaxCountItem: 3
+  - Weight: 5
+    Drop: {fileID: 11400000, guid: a16c3b00682be5e48975faf18ac13bb1, type: 2}
+    MinCountItem: 1
+    MaxCountItem: 1
+  - Weight: 5
+    Drop: {fileID: 11400000, guid: 97014bb724a5ed944ab6b3883a95a864, type: 2}
+    MinCountItem: 1
+    MaxCountItem: 1
+  - Weight: 3
+    Drop: {fileID: 11400000, guid: 640d53125c18dc74aa895e333b8a29e2, type: 2}
+    MinCountItem: 1
+    MaxCountItem: 1
+  WeightToNoDrop: 100

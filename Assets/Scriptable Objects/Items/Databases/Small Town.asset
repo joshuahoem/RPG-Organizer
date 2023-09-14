@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: Small Town
   m_EditorClassIdentifier: 
   allItems:
+  - {fileID: 11400000, guid: be48687b09a9e4641b14998a0793bf23, type: 2}
+  - {fileID: 11400000, guid: 30506a583ed55644b931cdd708db1d07, type: 2}
   - {fileID: 11400000, guid: 4878ed258ec8ca44da84926d0a8746d2, type: 2}
   - {fileID: 11400000, guid: f023d650b80a26d418cb6250029abdf4, type: 2}
   - {fileID: 11400000, guid: 640328845f2af114da4ca26515931171, type: 2}
@@ -20,7 +22,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ce7661ce47f847f4389a22ab90cb5d09, type: 2}
   - {fileID: 11400000, guid: 03e7868896b53804b81d41cdf88e8f44, type: 2}
   - {fileID: 11400000, guid: 6202f4fef704242498a8b1634b027199, type: 2}
-  - {fileID: 11400000, guid: adff76a0bab2188459199564efa0c52b, type: 2}
-  - {fileID: 11400000, guid: 48d33b65d368acb4ca95d3b48e65cfeb, type: 2}
-  - {fileID: 11400000, guid: ace42cec82cda5c4aad3fbff64c068c3, type: 2}
+  - {fileID: 11400000, guid: e71035106a42f7b489d11c7dfdf33559, type: 2}
+  - {fileID: 11400000, guid: 5c0c87821f0c2084aa9ad7045df928c2, type: 2}
+  - {fileID: 11400000, guid: 4e5501c403b393e4c8806e599b294a5a, type: 2}
   - {fileID: 11400000, guid: fd9e1ffe87dd64841952345340fe9b51, type: 2}
+  - {fileID: 11400000, guid: 04f90d46449b82a4aa2ada32d083608a, type: 2}
+  - {fileID: 11400000, guid: adff76a0bab2188459199564efa0c52b, type: 2}

@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Gladiator's Skill
   m_EditorClassIdentifier: 
   abilityName: Gladiator's Skill
-  abilitySpriteIcon: {fileID: 21300000, guid: fdb7e4e04c11a2441944d72f72d5629f, type: 3}
+  picture: {fileID: 21300000, guid: fdb7e4e04c11a2441944d72f72d5629f, type: 3}
+  pathToPicture: Assets/Visuals/Sprites/Ability Icons/Gladiator/Gladiator Skill.png
   borderColor: {r: 0.9215687, g: 0.18431373, b: 0.023529414, a: 1}
   costType: 1
   unlockCost: 0

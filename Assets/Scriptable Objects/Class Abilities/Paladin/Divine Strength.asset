@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Divine Strength
   m_EditorClassIdentifier: 
   abilityName: Divine Strength
-  abilitySpriteIcon: {fileID: 21300000, guid: 146664c3d4c6ae2428ad8724d845aeb7, type: 3}
+  picture: {fileID: 21300000, guid: 146664c3d4c6ae2428ad8724d845aeb7, type: 3}
+  pathToPicture: Assets/Visuals/Sprites/Ability Icons/Paladin/Divine Strength.png
   borderColor: {r: 0.50980395, g: 0.8000001, b: 0.86666673, a: 1}
   costType: 3
   unlockCost: 1

@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Ponder
   m_EditorClassIdentifier: 
   abilityName: Ponder
-  abilitySpriteIcon: {fileID: 21300000, guid: 266460337ab1989418e40f63e34f6715, type: 3}
+  picture: {fileID: 21300000, guid: 266460337ab1989418e40f63e34f6715, type: 3}
+  pathToPicture: Assets/Visuals/Sprites/Ability Icons/Wizard/Ponder.png
   borderColor: {r: 0.50980395, g: 0.8000001, b: 0.86666673, a: 1}
   costType: 3
   unlockCost: 1

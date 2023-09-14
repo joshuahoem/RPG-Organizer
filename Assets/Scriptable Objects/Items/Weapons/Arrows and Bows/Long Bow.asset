@@ -15,7 +15,7 @@ MonoBehaviour:
   itemName: Long Bow
   description: A longer oak bow with leather padding for greater comfortability.
     Pierce 2
-  imageSprite: {fileID: 21300000, guid: 38f9b30bcd3ffc44997a54a14411f3b5, type: 3}
+  picture: {fileID: 21300000, guid: 38f9b30bcd3ffc44997a54a14411f3b5, type: 3}
   goldCost: 3
   sellCost: 2
   numberInStack: 1
@@ -23,6 +23,7 @@ MonoBehaviour:
   itemRarity: 1
   equipmentSlot: 5
   enchanted: 0
+  pathToPicture: Assets/Visuals/Sprites/Weaopn Sprites/Bows & Arrows/Long Bow.png
   mainDamage: 3
   mainMagicDamage: 0
   mainAttackRange: 4

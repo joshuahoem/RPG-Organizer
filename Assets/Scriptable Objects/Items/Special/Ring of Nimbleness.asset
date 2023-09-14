@@ -16,7 +16,7 @@ MonoBehaviour:
   description: 'Adds 2 to Speed
 
 '
-  imageSprite: {fileID: 21300000, guid: e2c7ce9ec9e2e6e419aaf58a35ce5220, type: 3}
+  picture: {fileID: 21300000, guid: e2c7ce9ec9e2e6e419aaf58a35ce5220, type: 3}
   goldCost: 5
   sellCost: 3
   numberInStack: 1
@@ -24,6 +24,7 @@ MonoBehaviour:
   itemRarity: 2
   equipmentSlot: 7
   enchanted: 1
+  pathToPicture: Assets/Visuals/Sprites/Uniques/Ring of Nimbleness.png
   mainDamage: 0
   mainMagicDamage: 0
   mainAttackRange: 0

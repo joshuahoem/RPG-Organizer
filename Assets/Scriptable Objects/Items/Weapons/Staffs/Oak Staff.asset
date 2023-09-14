@@ -15,7 +15,7 @@ MonoBehaviour:
   itemName: Oak Staff
   description: This normal staff has a moderate potency of magic. Givning no additional
     magic but hitting harder
-  picture: {fileID: 0}
+  picture: {fileID: 21300000, guid: 58f2e3b8d3067ea4cbc9cbf716bf58cb, type: 3}
   goldCost: 4
   sellCost: 2
   numberInStack: 1
@@ -23,7 +23,7 @@ MonoBehaviour:
   itemRarity: 0
   equipmentSlot: 5
   enchanted: 0
-  pathToPicture: 
+  pathToPicture: Assets/Visuals/Sprites/Weaopn Sprites/Staffs/Oak Staff.png
   mainDamage: 0
   mainMagicDamage: 2
   mainAttackRange: 4

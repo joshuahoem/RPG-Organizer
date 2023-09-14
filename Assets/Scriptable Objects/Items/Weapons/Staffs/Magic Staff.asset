@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Magic Staff
   description: 
-  picture: {fileID: 0}
+  picture: {fileID: 21300000, guid: 5e30a53ae369b4442983c7f9ac41a75d, type: 3}
   goldCost: 5
   sellCost: 3
   numberInStack: 1
@@ -22,7 +22,7 @@ MonoBehaviour:
   itemRarity: 1
   equipmentSlot: 5
   enchanted: 0
-  pathToPicture: 
+  pathToPicture: Assets/Visuals/Sprites/Weaopn Sprites/Staffs/Magic Staff.png
   mainDamage: 0
   mainMagicDamage: 4
   mainAttackRange: 5

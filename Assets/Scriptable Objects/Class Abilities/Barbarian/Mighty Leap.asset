@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Mighty Leap
   m_EditorClassIdentifier: 
   abilityName: Mighty Leap
-  abilitySpriteIcon: {fileID: 21300000, guid: a2223dab88498474388592e07f81f4e2, type: 3}
+  picture: {fileID: 21300000, guid: a2223dab88498474388592e07f81f4e2, type: 3}
+  pathToPicture: Assets/Visuals/Sprites/Ability Icons/Barbarian/Mighty Leap.png
   borderColor: {r: 0.9215687, g: 0.18431373, b: 0.023529414, a: 1}
   costType: 1
   unlockCost: 1

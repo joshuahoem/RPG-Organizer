@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Cold Wand
   description: Chance to Freeze.
-  picture: {fileID: 0}
+  picture: {fileID: 21300000, guid: 00bc1f7da70acbd4ca0f5aefb9644e4b, type: 3}
   goldCost: 2
   sellCost: 1
   numberInStack: 1
@@ -22,7 +22,7 @@ MonoBehaviour:
   itemRarity: 1
   equipmentSlot: 5
   enchanted: 0
-  pathToPicture: 
+  pathToPicture: Assets/Visuals/Sprites/Weaopn Sprites/Wands/Cold Wand.png
   mainDamage: 0
   mainMagicDamage: 2
   mainAttackRange: 3

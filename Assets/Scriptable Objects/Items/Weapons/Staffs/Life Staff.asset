@@ -15,7 +15,7 @@ MonoBehaviour:
   itemName: Life Staff
   description: Instead of using this weapons attack you can heal 2dCustom on any
     target with range.
-  picture: {fileID: 0}
+  picture: {fileID: 21300000, guid: a9053b66e671ffb4495832c5a0142c42, type: 3}
   goldCost: 5
   sellCost: 3
   numberInStack: 1
@@ -23,7 +23,7 @@ MonoBehaviour:
   itemRarity: 1
   equipmentSlot: 5
   enchanted: 0
-  pathToPicture: 
+  pathToPicture: Assets/Visuals/Sprites/Weaopn Sprites/Staffs/Life Staff.png
   mainDamage: 0
   mainMagicDamage: 2
   mainAttackRange: 5

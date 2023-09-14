@@ -16,7 +16,7 @@ MonoBehaviour:
   description: This sword once belonged to an ancient warrior who is a legend among
     swordsmen in the land. Kimitana was one of the first teachers of the sword since
     her swordfighting ways were the best in the land
-  imageSprite: {fileID: 21300000, guid: d872d03af5e66ce46919c41d272e4a73, type: 3}
+  picture: {fileID: 21300000, guid: d872d03af5e66ce46919c41d272e4a73, type: 3}
   goldCost: 90
   sellCost: 60
   numberInStack: 1
@@ -24,6 +24,7 @@ MonoBehaviour:
   itemRarity: 4
   equipmentSlot: 5
   enchanted: 1
+  pathToPicture: Assets/Visuals/Sprites/Weaopn Sprites/Swords/Kimitana's Sword.png
   mainDamage: 20
   mainMagicDamage: 0
   mainAttackRange: 1
@@ -31,6 +32,7 @@ MonoBehaviour:
   offMagicDamage: 0
   offAttackRange: 1
   numberOfHands: 0
+  weaponType: 0
   defense: 10
   magicDefense: 10
   healthModifier: 15
@@ -39,4 +41,8 @@ MonoBehaviour:
   strengthModifier: 0
   intelligenceModifier: 0
   speedModifier: 10
+  attackModifier: 0
+  defenseModifier: 0
+  arcaneModifier: 0
+  wardModifier: 0
   ability: {fileID: 0}

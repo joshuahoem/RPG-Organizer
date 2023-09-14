@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Power Drain
   m_EditorClassIdentifier: 
   abilityName: Power Drain
-  abilitySpriteIcon: {fileID: 21300000, guid: f6442ba5d38320649ad83d873fd8f954, type: 3}
+  picture: {fileID: 21300000, guid: f6442ba5d38320649ad83d873fd8f954, type: 3}
+  pathToPicture: Assets/Visuals/Sprites/Ability Icons/Wizard/Power Drain.png
   borderColor: {r: 0.4245283, g: 0.006007465, b: 0.006007465, a: 0.92941177}
   costType: 0
   unlockCost: 1

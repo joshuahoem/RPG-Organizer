@@ -105,42 +105,43 @@ public class LootManager : MonoBehaviour
     {
         SaveObject save = SaveManagerVersion3.FindCurrentSave();
 
-        //check if can hold first
-        lootCheck = 0;
-        foreach (InventoryItem item in save.inventory)
-        {
-            if (item.item.GetItemType() != ItemType.Special && item.item.GetItemType() != ItemType.Scroll)
-            {
-                lootCheck += 1;
-            }
-        }
+        // //check if can hold first  -- OLD SYSTEM
+        //No longer check for loot in inventory, check only to see if they can equip
+        // lootCheck = 0;
+        // foreach (InventoryItem item in save.inventory)
+        // {
+        //     if (item.item.GetItemType() != ItemType.Special && item.item.GetItemType() != ItemType.Scroll)
+        //     {
+        //         lootCheck += 1;
+        //     }
+        // }
 
-        foreach (InventoryItem item in save.equipment)
-        {
-            if (item == null) { continue; }
-            if (item.item == null) { continue; }
-            if (item.item.GetItemType() != ItemType.Special && item.item.GetItemType() != ItemType.Scroll)
-            {
-                lootCheck += 1;
-            }
-        }
+        // foreach (InventoryItem item in save.equipment)
+        // {
+        //     if (item == null) { continue; }
+        //     if (item.item == null) { continue; }
+        //     if (item.item.GetItemType() != ItemType.Special && item.item.GetItemType() != ItemType.Scroll)
+        //     {
+        //         lootCheck += 1;
+        //     }
+        // }
 
-        if (save.equipment[5].item != null)
-        {
-            if (save.equipment[5].item.numberOfHands == NumberOfHands.TwoHanded)
-            {
-                // Debug.Log("removing 1");
-                lootCheck -= 1;
-            }
+        // if (save.equipment[5].item != null)
+        // {
+        //     if (save.equipment[5].item.numberOfHands == NumberOfHands.TwoHanded)
+        //     {
+        //         // Debug.Log("removing 1");
+        //         lootCheck -= 1;
+        //     }
 
-        }
+        // }
 
-        if (lootCheck >= save.holdingCapacity)
-        {
-            // Debug.Log("not strong enough to carry"); //error
-            errorMessageHandler.ReceivingOnErrorOccured(ErrorMessageHandler.ErrorType.NoStrength);
-            return;
-        }
+        // if (lootCheck >= save.holdingCapacity)
+        // {
+        //     // Debug.Log("not strong enough to carry"); //error
+        //     errorMessageHandler.ReceivingOnErrorOccured(ErrorMessageHandler.ErrorType.NoStrength);
+        //     return;
+        // }
 
         List<Item> loot = new List<Item>();
         loot = currentLootTable.SpawnDrop(rolls);

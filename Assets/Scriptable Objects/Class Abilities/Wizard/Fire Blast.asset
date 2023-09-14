@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Fire Blast
   m_EditorClassIdentifier: 
   abilityName: Fire Blast
-  abilitySpriteIcon: {fileID: 21300000, guid: 9cac6483801b94943950475480637d46, type: 3}
+  picture: {fileID: 21300000, guid: 9cac6483801b94943950475480637d46, type: 3}
+  pathToPicture: Assets/Visuals/Sprites/Ability Icons/Wizard/Fire Blast.png
   borderColor: {r: 1, g: 0.033018887, b: 0.033018887, a: 0.94509804}
   costType: 0
   unlockCost: 1

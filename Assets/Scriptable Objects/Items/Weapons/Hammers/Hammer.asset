@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Hammer
   description: A two handed hammer with the end being a heavy stone. Heavy
-  picture: {fileID: 0}
+  picture: {fileID: 21300000, guid: 3ccb6fbb3da3c444d899cc9a412c051a, type: 3}
   goldCost: 4
   sellCost: 2
   numberInStack: 1
@@ -22,7 +22,7 @@ MonoBehaviour:
   itemRarity: 0
   equipmentSlot: 5
   enchanted: 0
-  pathToPicture: 
+  pathToPicture: Assets/Visuals/Sprites/Weaopn Sprites/Hammers/Hammer.png
   mainDamage: 3
   mainMagicDamage: 0
   mainAttackRange: 1
