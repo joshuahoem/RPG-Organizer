@@ -36,13 +36,15 @@ public class Perk : ScriptableObject
     [Header("Description")]
     [TextArea(5,10)] public string description;
 
-    public void OnEnable()
-    {
-        if (picture != null)
-        {
-            pathToPicture = AssetDatabase.GetAssetPath(picture);
-        }
-    }
+    // public void OnEnable()
+    // {
+    //     if (picture != null)
+    //     {
+    //         #if UNITY_EDITOR
+    //         pathToPicture = AssetDatabase.GetAssetPath(picture);
+    //         #endif
+    //     }
+    // }
 
 }
 

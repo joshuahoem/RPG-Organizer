@@ -57,7 +57,8 @@ public class PerkPanelManager : MonoBehaviour
             perkButtonUnlock.SetActive(false);
         }
 
-        perkImageIcon.sprite = SaveManagerVersion3.LoadSprite(perk.pathToPicture);
+        // perkImageIcon.sprite = SaveManagerVersion3.LoadSprite(perk.pathToPicture);
+        perkImageIcon.sprite = perk.picture;
         borderIcon.color = perk.borderColor;
 
         perkNameTMP.text = perk.perkName;

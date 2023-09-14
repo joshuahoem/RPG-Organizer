@@ -21,7 +21,8 @@ public class PerkInstanceObject : MonoBehaviour
         perk = _perkObject.perk;
         perkObject = _perkObject;
 
-        perkImage.sprite = SaveManagerVersion3.LoadSprite(perk.pathToPicture);
+        // perkImage.sprite = SaveManagerVersion3.LoadSprite(perk.pathToPicture);
+        perkImage.sprite = perk.picture;
         
         borderImage.color = perk.borderColor;
 

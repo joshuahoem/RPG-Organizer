@@ -22,7 +22,7 @@ public class JukeBoxHandler : MonoBehaviour
         MusicSoundHandler.Instance.PlayMusic(dictionaryForMusic[key]);
     }
 
-    private void Start() 
+    private void Awake() 
     {
         if (musicDropdown != null)
         {

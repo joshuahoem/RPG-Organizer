@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
-using UnityEngine.U2D;
+// using UnityEngine.U2D;
 
 
 public class LoadGameMasterHandler : MonoBehaviour
@@ -13,9 +13,9 @@ public class LoadGameMasterHandler : MonoBehaviour
     [SerializeField] private AbilityDatabase abilityDatabase; 
     [SerializeField] private PerkDatabase perkDatabase;
     [SerializeField] private ItemDatabase itemDatabase;
-    [SerializeField] private SpriteAtlas itemAtlas;
-    [SerializeField] private SpriteAtlas abilitiesAtlas;
-    [SerializeField] private SpriteAtlas raceAndClassAtlas;
+    // [SerializeField] private SpriteAtlas itemAtlas;
+    // [SerializeField] private SpriteAtlas abilitiesAtlas;
+    // [SerializeField] private SpriteAtlas raceAndClassAtlas;
 
     public static LoadGameMasterHandler Instance { get; private set; }
 
@@ -113,7 +113,7 @@ public class LoadGameMasterHandler : MonoBehaviour
             {
                 //has a class
                 unlock.unlockedClass = classDatabase.GetClassID[unlock.classStringID];
-                unlock.unlockedClass.picture = SaveManagerVersion3.LoadSprite(unlock.unlockedClass.pathToPicture);
+                // unlock.unlockedClass.picture = SaveManagerVersion3.LoadSprite(unlock.unlockedClass.pathToPicture);
             }
             else
             {

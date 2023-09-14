@@ -99,11 +99,14 @@ public class LocalStatDisplay : MonoBehaviour
         if (goldTMP != null) { goldTMP.text = save.gold.ToString(); }
         if (save.raceObject != null)
         {
-            { if (imageReference != null) { imageReference.sprite = SaveManagerVersion3.LoadSprite(save.raceObject.pathToPicture); } }
+            // { if (imageReference != null) { imageReference.sprite = SaveManagerVersion3.LoadSprite(save.raceObject.pathToPicture); } }
+            { if (imageReference != null) { imageReference.sprite = save.raceObject.picture; } }
         }
         if (save.classObject != null)
         {
-            { if (classimage != null) { classimage.sprite = SaveManagerVersion3.LoadSprite(save.classObject.pathToPicture); } }
+            // { if (classimage != null) { classimage.sprite = SaveManagerVersion3.LoadSprite(save.classObject.pathToPicture); } }
+            { if (classimage != null) { classimage.sprite = save.classObject.picture; } }
+
         }
 
         float healthX = 1;

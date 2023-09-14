@@ -24,7 +24,8 @@ public class CharacterUpdate : MonoBehaviour
             
             if (saveObject.raceObject != null)
             {
-                characterPicture.sprite = SaveManagerVersion3.LoadSprite(saveObject.raceObject.pathToPicture);
+                // characterPicture.sprite = SaveManagerVersion3.LoadSprite(saveObject.raceObject.pathToPicture);
+                characterPicture.sprite = saveObject.raceObject.picture;
             }
             else
             {
@@ -32,7 +33,8 @@ public class CharacterUpdate : MonoBehaviour
                 {
                     if (saveObject.race == _race.name)
                     {
-                        characterPicture.sprite = SaveManagerVersion3.LoadSprite(_race.pathToPicture);
+                        // characterPicture.sprite = SaveManagerVersion3.LoadSprite(_race.pathToPicture);
+                        characterPicture.sprite = _race.picture;
                         saveObject.raceObject = _race;
                     }
                 }

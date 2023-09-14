@@ -20,7 +20,8 @@ public class LootDisplay : MonoBehaviour
         amount = 1;
         itemNameTMP.text = _item.name;
         amountTMP.text = amount.ToString();
-        objectImage.sprite = SaveManagerVersion3.LoadSprite(_item.pathToPicture);
+        // objectImage.sprite = SaveManagerVersion3.LoadSprite(_item.pathToPicture);
+        objectImage.sprite = _item.picture;
         GetComponent<RectTransform>().localScale = scale;
     }
 

@@ -3512,9 +3512,6 @@ MonoBehaviour:
   abilityDatabase: {fileID: 11400000, guid: 3bccb5716fddfe1439294a8c6d7eac36, type: 2}
   perkDatabase: {fileID: 11400000, guid: 71216f665e8ceea408660173c6e204ef, type: 2}
   itemDatabase: {fileID: 11400000, guid: e7c7b6f88af1efb4fbac925e29419d0f, type: 2}
-  itemAtlas: {fileID: 0}
-  abilitiesAtlas: {fileID: 0}
-  raceAndClassAtlas: {fileID: 0}
 --- !u!114 &777851735
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18873,13 +18870,13 @@ MonoBehaviour:
   selectedDatabase: {fileID: 0}
   databases:
   - {fileID: 11400000, guid: 470bc335762fbde4a8afa710c513a6d7, type: 2}
-  - {fileID: 11400000, guid: e7c7b6f88af1efb4fbac925e29419d0f, type: 2}
   - {fileID: 11400000, guid: 893300ae4e6261642bd896a95fb0ce84, type: 2}
   - {fileID: 11400000, guid: ae9ba689324152943ae663b47c2edb40, type: 2}
   - {fileID: 11400000, guid: d42e64359e0202f49aa009f7cbaa8afa, type: 2}
   - {fileID: 11400000, guid: 63e06ad87776be3478a3b6bbc33d02d4, type: 2}
   - {fileID: 11400000, guid: ec9c02ee483783843ad16bf877608d46, type: 2}
   - {fileID: 11400000, guid: d158df9a391bc0c40857636c3a07e4d4, type: 2}
+  - {fileID: 11400000, guid: e7c7b6f88af1efb4fbac925e29419d0f, type: 2}
   locationInputField: {fileID: 2904308378098661402}
 --- !u!224 &2904308378098661476
 RectTransform:
@@ -28795,7 +28792,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: 0, y: 2}
-  m_SizeDelta: {x: 0, y: 114.4678}
+  m_SizeDelta: {x: 0, y: 360.6162}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!1 &2904308379392460820
 GameObject:

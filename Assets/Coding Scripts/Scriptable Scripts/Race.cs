@@ -24,11 +24,13 @@ public class Race : ScriptableObject
     [JsonIgnore] [SerializeField] public List<Perk> startingPerks = new List<Perk>();
 
     
-    public void OnEnable()
-    {
-        if (picture != null)
-        {
-            pathToPicture = AssetDatabase.GetAssetPath(picture);
-        }
-    }
+    // public void OnEnable()
+    // {
+    //     if (picture != null)
+    //     {
+    //         #if UNITY_EDITOR
+    //         pathToPicture = AssetDatabase.GetAssetPath(picture);
+    //         #endif
+    //     }
+    // }
 }

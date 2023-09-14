@@ -65,7 +65,7 @@ public class AbilityManager : MonoBehaviour
                     if (_ability.stringID == abilityDatabase.allAbilities[i].abilityName)
                     {
                         _ability.ability = abilityDatabase.allAbilities[i];
-                        _ability.ability.picture = SaveManagerVersion3.LoadSprite(_ability.ability.pathToPicture);
+                        // _ability.ability.picture = SaveManagerVersion3.LoadSprite(_ability.ability.pathToPicture);
                         Debug.Log("replaced");
                     }
                 }

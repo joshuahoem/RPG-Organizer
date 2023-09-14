@@ -135,7 +135,8 @@ public class ItemPanelDisplay : MonoBehaviour
         itemName.text = _item.itemName;
         descriptionText.text = _item.description;
         if(itemImage != null)
-        itemImage.sprite = SaveManagerVersion3.LoadSprite(_item.pathToPicture);
+        // itemImage.sprite = SaveManagerVersion3.LoadSprite(_item.pathToPicture);
+        itemImage.sprite = _item.picture;
 
         //gold cost display
         if (!inShop)

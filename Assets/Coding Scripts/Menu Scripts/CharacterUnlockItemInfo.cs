@@ -48,12 +48,14 @@ public class CharacterUnlockItemInfo : MonoBehaviour
         lockImage.SetActive(false);
         if (raceToUnlock != null)
         {
-            characterImage.sprite = SaveManagerVersion3.LoadSprite(raceToUnlock.pathToPicture);
+            // characterImage.sprite = SaveManagerVersion3.LoadSprite(raceToUnlock.pathToPicture);
+            characterImage.sprite = raceToUnlock.picture;
             bgOject.color = raceToUnlock.imageColor;
         }
         if (classToUnlock != null)
         {
-            characterImage.sprite = SaveManagerVersion3.LoadSprite(classToUnlock.pathToPicture);
+            // characterImage.sprite = SaveManagerVersion3.LoadSprite(classToUnlock.pathToPicture);
+            characterImage.sprite = classToUnlock.picture;
             bgOject.color = classToUnlock.imageColor;
         }
     }
@@ -80,19 +82,17 @@ public class CharacterUnlockItemInfo : MonoBehaviour
 
         foreach (UnlockObject unlock in playerInfo.unlocks)
         {
-            Debug.Log("newunlock " + newUnlock.raceStringID);
-            Debug.Log("unlock " + unlock.raceStringID);
 
             if ((newUnlock.raceStringID == unlock.raceStringID && unlock.raceStringID != "") || (newUnlock.classStringID == unlock.classStringID && unlock.classStringID != ""))
             {
-                Debug.Log("found result");
+                // Debug.Log("found result");
                 thisItemIsUnlocked = true;
             }
         }
 
         if (!thisItemIsUnlocked)
         {
-            Debug.Log("new one added " + newUnlock.unlockedClass + " " + newUnlock.unlockedRace);
+            // Debug.Log("new one added " + newUnlock.unlockedClass + " " + newUnlock.unlockedRace);
             playerInfo.unlocks.Add(newUnlock);
             SaveManagerVersion3.SavePlayerInfo(playerInfo);
 
