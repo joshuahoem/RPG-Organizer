@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Bracelet of Exertion
   description: Adds 5 stat points to Stamina
-  picture: {fileID: 0}
+  picture: {fileID: 21300000, guid: 31d7d7638ac00e94b8a569802b4328e2, type: 3}
   goldCost: 25
   sellCost: 10
   numberInStack: 1

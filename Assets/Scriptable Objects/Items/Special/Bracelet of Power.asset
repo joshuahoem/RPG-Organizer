@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Bracelet of Power
   description: Adds 3 stat points to Attack
-  picture: {fileID: 0}
+  picture: {fileID: 21300000, guid: b28b5d2d056d25b4ea79e2b48ddd9f6a, type: 3}
   goldCost: 25
   sellCost: 10
   numberInStack: 1

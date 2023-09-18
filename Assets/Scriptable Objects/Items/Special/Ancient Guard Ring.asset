@@ -16,7 +16,7 @@ MonoBehaviour:
   description: Allows one to touch a tree and communicate through a tree with the
     Ent King. Proof of membership with the Ancient Guard to those that can recognize
     it
-  picture: {fileID: 0}
+  picture: {fileID: 21300000, guid: f9b7d5dbcd0a7f947afd9cd02ad0b648, type: 3}
   goldCost: 3
   sellCost: 1
   numberInStack: 1

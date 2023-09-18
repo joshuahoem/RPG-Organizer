@@ -10,35 +10,35 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c7f441553f287b4fb57cd0845e2e111, type: 3}
-  m_Name: Bracelet of Nimbleness
+  m_Name: Ring of Protection
   m_EditorClassIdentifier: 
-  itemName: Bracelet of Nimbleness
-  description: Adds 3 stat points to Speed
-  picture: {fileID: 21300000, guid: c4345da67a20ddc41a1488890baa875a, type: 3}
-  goldCost: 25
-  sellCost: 10
+  itemName: Ring of Protection
+  description: Adds 1 to Ward
+  picture: {fileID: 21300000, guid: b9a15d8bf32c7b44aa3b118b31937b95, type: 3}
+  goldCost: 5
+  sellCost: 3
   numberInStack: 1
   itemType: 3
-  itemRarity: 3
+  itemRarity: 2
   equipmentSlot: 7
   enchanted: 1
-  pathToPicture: 
+  pathToPicture: Assets/Visuals/Sprites/Uniques/Ring of Focus.png
   mainDamage: 0
   mainMagicDamage: 0
   mainAttackRange: 0
   offDamage: 0
   offMagicDamage: 0
   offAttackRange: 0
-  numberOfHands: 2
+  numberOfHands: 0
   weaponType: 0
   defense: 0
-  magicDefense: 0
+  magicDefense: 1
   healthModifier: 0
   staminaModifier: 0
   magicModifier: 0
   strengthModifier: 0
   intelligenceModifier: 0
-  speedModifier: 3
+  speedModifier: 0
   attackModifier: 0
   defenseModifier: 0
   arcaneModifier: 0

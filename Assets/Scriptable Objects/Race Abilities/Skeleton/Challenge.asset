@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Challenge
   m_EditorClassIdentifier: 
   abilityName: Challenge
-  abilitySpriteIcon: {fileID: 21300000, guid: 7a07a5c41c6f77b42a60daed30bb2842, type: 3}
+  picture: {fileID: 21300000, guid: 0d5cb5939fbe2b64084fd7303cabc708, type: 3}
+  pathToPicture: 
   borderColor: {r: 0, g: 0, b: 0, a: 1}
   costType: 3
   unlockCost: 1

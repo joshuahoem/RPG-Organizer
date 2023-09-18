@@ -10,10 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b3a5683874466c64da079d94c09f1a43, type: 3}
-  m_Name: After Life
+  m_Name: Past Life
   m_EditorClassIdentifier: 
-  abilityName: After Life
-  abilitySpriteIcon: {fileID: 21300000, guid: c65c58bffc253924a82b7775471b904f, type: 3}
+  abilityName: Past Life
+  picture: {fileID: 21300000, guid: 3244a5d47c34442418bea3a82a1a3f71, type: 3}
+  pathToPicture: 
   borderColor: {r: 0, g: 0, b: 0, a: 1}
   costType: 2
   unlockCost: 5

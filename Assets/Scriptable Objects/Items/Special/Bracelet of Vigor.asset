@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Bracelet of Vigor
   description: Adds 5 stat points to Strength
-  picture: {fileID: 0}
+  picture: {fileID: 21300000, guid: 854c378274eb5b34cac577863eab906a, type: 3}
   goldCost: 25
   sellCost: 10
   numberInStack: 1

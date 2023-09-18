@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Bracelet of Life
   description: Adds 5 stat points to Health
-  picture: {fileID: 0}
+  picture: {fileID: 21300000, guid: ec4c85389ee7cdc4e89fbdf8c3632854, type: 3}
   goldCost: 25
   sellCost: 10
   numberInStack: 1

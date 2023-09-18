@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c7f441553f287b4fb57cd0845e2e111, type: 3}
-  m_Name: Anklet of Water Walking
+  m_Name: Bracelet of Protection
   m_EditorClassIdentifier: 
-  itemName: Anklet of Water Walking
-  description: Allows wearer to walk on water at a speed of 2
-  picture: {fileID: 0}
+  itemName: Bracelet of Fortitude
+  description: Adds 3 to defense
+  picture: {fileID: 21300000, guid: c8daba08e5945044b9153f96bcd6a943, type: 3}
   goldCost: 25
   sellCost: 10
   numberInStack: 1
@@ -32,7 +32,7 @@ MonoBehaviour:
   numberOfHands: 0
   weaponType: 0
   defense: 0
-  magicDefense: 0
+  magicDefense: 3
   healthModifier: 0
   staminaModifier: 0
   magicModifier: 0

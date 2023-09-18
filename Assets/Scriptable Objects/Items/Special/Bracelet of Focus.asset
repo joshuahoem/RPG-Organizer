@@ -16,7 +16,7 @@ MonoBehaviour:
   description: 'Adds 5 stat points to Magic
 
 '
-  picture: {fileID: 0}
+  picture: {fileID: 21300000, guid: 4a17c735ef96e2f43a088da54279a75e, type: 3}
   goldCost: 25
   sellCost: 10
   numberInStack: 1
