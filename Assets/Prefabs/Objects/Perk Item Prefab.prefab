@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2647801245191364650}
   - component: {fileID: 5708491908904372166}
   - component: {fileID: 8861483175255812457}
+  - component: {fileID: -7340320162769238140}
   m_Layer: 5
   m_Name: Perk Item Prefab
   m_TagString: Untagged
@@ -86,9 +87,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8861483175255812457}
-        m_TargetAssemblyTypeName: PerkInstanceObject, Assembly-CSharp
-        m_MethodName: ClickedImage
+      - m_Target: {fileID: -7340320162769238140}
+        m_TargetAssemblyTypeName: AbilityInstanceObject, Assembly-CSharp
+        m_MethodName: DisplayAbilityPanel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -111,12 +112,50 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   perk: {fileID: 0}
+  perkObject:
+    perk: {fileID: 0}
+    count: 0
+    unlockedBool: 0
+    ID: 0
+    stringID: 
   perkImage: {fileID: 1719933032089233402}
+  backgroundImage: {fileID: 0}
   borderImage: {fileID: 6860891440301589796}
   perkNameTMP: {fileID: 6652773550753327839}
   perkCountTMP: {fileID: 3998288473230639131}
+--- !u!114 &-7340320162769238140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 571662316030222034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe089407fa33fc74f894a8d9600ca388, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ability: {fileID: 0}
+  perk: {fileID: 0}
+  borderImage: {fileID: 6860891440301589796}
+  backgroundImage: {fileID: 0}
+  abilityImage: {fileID: 1719933032089233402}
+  objectID: 0
+  abilitySO:
+    stringID: 
+    ability: {fileID: 0}
+    abilityType: 0
+    currentLevel: 0
+    viewingLevel: 0
+    unlocked: 0
+  perkObject:
+    perk: {fileID: 0}
+    count: 0
+    unlockedBool: 0
+    ID: 0
+    stringID: 
   abilitiesThatUnlock: []
-  parentTransformForArrows: {fileID: 0}
+  arrows: []
 --- !u!1 &1251066812388716147
 GameObject:
   m_ObjectHideFlags: 0

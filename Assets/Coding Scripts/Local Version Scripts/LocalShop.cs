@@ -29,8 +29,6 @@ public class LocalShop : MonoBehaviour
 
     public void LoadShop()
     {   
-        database = FindObjectOfType<LocationShopDatabase>().GetItemDatabase();
-        // Debug.Log(database);
         inShop = true;
         foreach (GameObject item in displayedItems)
         {
@@ -38,10 +36,12 @@ public class LocalShop : MonoBehaviour
         }
         displayedItems.Clear();
 
-        while (database == null)
+        if (database == null)
         {
             FindObjectOfType<LocationShopDatabase>().StartUp();
         }
+
+        database = FindObjectOfType<LocationShopDatabase>().GetItemDatabase();
 
         foreach (Item item in database.allItems)
         {

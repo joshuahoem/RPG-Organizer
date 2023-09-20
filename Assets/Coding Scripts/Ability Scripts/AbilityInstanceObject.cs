@@ -60,7 +60,10 @@ public class AbilityInstanceObject : MonoBehaviour
             arrows.Add(ability.GetComponent<ArrowDirectionTest>().arrowInstance);
         }
 
-        parentTransformForArrows = this.transform.parent.transform;
+        if (parentTransformForArrows != null)
+        {
+            parentTransformForArrows = this.transform.parent.transform;
+        }
 
     }
 
@@ -124,6 +127,13 @@ public class AbilityInstanceObject : MonoBehaviour
         {
             FindObjectOfType<AbilityPanelManager>().abilityInfoPanel.SetActive(true);
             FindObjectOfType<AbilityPanelManager>().DisplayAbility(abilitySO, CanUnlockBool());
+            FindObjectOfType<EventHandler>().OnAbilityClickedFunction(abilitySO);
+        }
+        else if (this.gameObject.GetComponent<PerkInstanceObject>() != null)
+        {
+            perkObject.perk = this.gameObject.GetComponent<PerkInstanceObject>().perk;
+            FindObjectOfType<PerkPanelManager>().perkPanelObject.SetActive(true);
+            FindObjectOfType<PerkPanelManager>().DisplayPerkPanel(perkObject, CanUnlockBool());
         }
         else
         {
@@ -134,6 +144,7 @@ public class AbilityInstanceObject : MonoBehaviour
     private bool CanUnlockBool()
     {
         NewAbilityManager newAbilityManager = FindObjectOfType<NewAbilityManager>();
+        if (newAbilityManager == null) { return false; }
         if (borderImage.color == newAbilityManager.clickableColor)
         {
             return true;

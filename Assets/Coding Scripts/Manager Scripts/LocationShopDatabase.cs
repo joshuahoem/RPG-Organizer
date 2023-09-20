@@ -27,7 +27,6 @@ public class LocationShopDatabase : MonoBehaviour
     public void DropdownValueChanged()
     {
         selectedDatabase = databases[locationInputField.value];
-        FindObjectOfType<LocalShop>().LoadShop();
     }
 
     public  ItemDatabase GetItemDatabase()

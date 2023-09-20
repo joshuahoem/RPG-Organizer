@@ -30,15 +30,13 @@ public class Ability : ScriptableObject
 
     public AbilityLevelObject[] allAbilityLevels;
 
-    // public void OnEnable()
-    // {
-    //     if (picture != null)
-    //     {
-    //         #if UNITY_EDITOR
-    //         pathToPicture = AssetDatabase.GetAssetPath(picture);
-    //         #endif
-    //     }
-    // }
+    public void OnEnable()
+    {
+        if (picture == null)
+        {
+            Debug.LogWarning(this.abilityName + " does not have a picture");
+        }
+    }
 
 }
 

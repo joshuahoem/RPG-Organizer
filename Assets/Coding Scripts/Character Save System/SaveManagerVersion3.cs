@@ -146,6 +146,11 @@ public static class SaveManagerVersion3
 
     public static bool DoesPlayerHaveThisAbility(Ability ability)
     {
+        if (ability == null)
+        {
+            Debug.LogWarning("cant pass in a null ability: " + ability);
+            return false;
+        }
         SaveObject save = FindCurrentSave();
         foreach (AbilitySaveObject _ability in save.abilityInventory)
         {
