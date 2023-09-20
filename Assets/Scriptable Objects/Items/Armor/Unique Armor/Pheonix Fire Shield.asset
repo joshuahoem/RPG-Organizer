@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c7f441553f287b4fb57cd0845e2e111, type: 3}
   m_Name: Pheonix Fire Shield
   m_EditorClassIdentifier: 
-  itemName: Pheonix Fire Helmet
+  itemName: Pheonix Fire Shield
   description: If the user was about to have their health reduced to 0, instead,
     break this piece of armor and restore wearer to full life.
   picture: {fileID: 0}
@@ -21,7 +21,7 @@ MonoBehaviour:
   numberInStack: 1
   itemType: 1
   itemRarity: 4
-  equipmentSlot: 0
+  equipmentSlot: 6
   enchanted: 1
   pathToPicture: 
   mainDamage: 0

@@ -10,18 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c7f441553f287b4fb57cd0845e2e111, type: 3}
-  m_Name: Pheonix Fire Chestplate
+  m_Name: Blue Shackle Elixir
   m_EditorClassIdentifier: 
-  itemName: Pheonix Fire Chestplate
-  description: If the user was about to have their health reduced to 0, instead,
-    break this piece of armor and restore wearer to full life.
+  itemName: Blue Shackle Elixir
+  description: '(Interrupt)
+
+    Reroll all blues'
   picture: {fileID: 0}
-  goldCost: 70
-  sellCost: 40
+  goldCost: 5
+  sellCost: 2
   numberInStack: 1
-  itemType: 1
-  itemRarity: 4
-  equipmentSlot: 1
+  itemType: 2
+  itemRarity: 3
+  equipmentSlot: 10
   enchanted: 1
   pathToPicture: 
   mainDamage: 0
@@ -32,8 +33,8 @@ MonoBehaviour:
   offAttackRange: 0
   numberOfHands: 2
   weaponType: 0
-  defense: 10
-  magicDefense: 10
+  defense: 0
+  magicDefense: 0
   healthModifier: 0
   staminaModifier: 0
   magicModifier: 0
