@@ -2855,7 +2855,7 @@ MonoBehaviour:
   bonusStrengthTMP: {fileID: 0}
   bonusIntelligenceTMP: {fileID: 0}
   bonusSpeedTMP: {fileID: 0}
-  dualWieldAbility: {fileID: 0}
+  dualWieldAbility: {fileID: 11400000, guid: 5b9eb45cd3bf1c145a47b936973366f8, type: 2}
   charString: 
 --- !u!1 &1976749117
 GameObject:

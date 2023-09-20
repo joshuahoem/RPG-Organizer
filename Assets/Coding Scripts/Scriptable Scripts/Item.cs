@@ -121,15 +121,13 @@ public class Item : ScriptableObject
         return weaponType;
     }
 
-    // public void OnEnable()
-    // {
-    //     if (picture != null)
-    //     {
-    //         #if UNITY_EDITOR
-    //         pathToPicture = AssetDatabase.GetAssetPath(picture);
-    //         #endif
-    //     }
-    // }
+    public void OnEnable()
+    {
+        if (picture == null)
+        {
+            Debug.LogWarning(this.itemName + " does not have a picture");
+        }
+    }
 
 }
 

@@ -9,6 +9,9 @@ public class ShopContentFitter : MonoBehaviour
     [SerializeField] float sizePerItem;
     [SerializeField] float constantSizeVariable;
 
+    private List<Transform> goList = new List<Transform>();
+
+
     public void FitContent(int numberOfItems)
     {
         GameObject contentToBeSized = this.gameObject;
@@ -28,6 +31,25 @@ public class ShopContentFitter : MonoBehaviour
             contentToBeSized.GetComponent<RectTransform>().offsetMax = new Vector2(0, 0);
         }
         
+    }
+
+    public void FitContentAuto()
+    {
+        goList.Clear();
+
+        foreach (Transform child in GOParent.transform)
+        {
+            goList.Add(child);
+        }
+
+        int numberOfItems = goList.Count;
+
+        float height = numberOfItems * sizePerItem + constantSizeVariable;
+        Debug.Log(numberOfItems);
+        GOParent.GetComponent<RectTransform>().offsetMin = new Vector2(0, -height);
+        GOParent.GetComponent<RectTransform>().offsetMax = new Vector2(0, 0);
+
+
     }
 
 }

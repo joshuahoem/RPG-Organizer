@@ -1,5 +1,6 @@
 {
     "csharp.semanticHighlighting.enabled": false,
     "javascript.format.placeOpenBraceOnNewLineForControlBlocks": true,
-    "typescript.format.placeOpenBraceOnNewLineForFunctions": true
+    "typescript.format.placeOpenBraceOnNewLineForFunctions": true,
+    "dotnet.defaultSolution": "RPG-Organizer.sln"
 }

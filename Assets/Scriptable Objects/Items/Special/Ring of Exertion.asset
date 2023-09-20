@@ -18,7 +18,7 @@ MonoBehaviour:
   goldCost: 5
   sellCost: 3
   numberInStack: 1
-  itemType: 0
+  itemType: 3
   itemRarity: 2
   equipmentSlot: 7
   enchanted: 1

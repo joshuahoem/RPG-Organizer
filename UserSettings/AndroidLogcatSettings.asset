@@ -1,25 +1,13 @@
 {
     "m_SelectedDeviceId": "ZY22GHHX84",
     "m_SelectedPackage": {
-        "deviceId": "",
-        "name": "",
-        "processId": 0,
+        "deviceId": "ZY22GHHX84",
+        "name": "com.HoemMade.RPGOrganizer",
+        "processId": 19930,
         "exited": false
     },
     "m_SelectedPriority": 0,
     "m_KnownPackagesForSerialization": [
-        {
-            "deviceId": "ZY22GHHX84",
-            "name": "com.motorola.launcher3",
-            "processId": 4425,
-            "exited": false
-        },
-        {
-            "deviceId": "ZY22GHHX84",
-            "name": "com.HoemMade.RPGOrganizer",
-            "processId": 642,
-            "exited": true
-        },
         {
             "deviceId": "ZY22GHHX84",
             "name": "com.HoemMade.RPGOrganizer",
@@ -43,6 +31,18 @@
             "name": "com.HoemMade.RPGOrganizer",
             "processId": 4560,
             "exited": true
+        },
+        {
+            "deviceId": "ZY22GHHX84",
+            "name": "com.HoemMade.RPGOrganizer",
+            "processId": 19241,
+            "exited": true
+        },
+        {
+            "deviceId": "ZY22GHHX84",
+            "name": "com.HoemMade.RPGOrganizer",
+            "processId": 19930,
+            "exited": false
         }
     ],
     "m_Tags": {

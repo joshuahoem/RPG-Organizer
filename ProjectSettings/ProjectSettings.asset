@@ -126,10 +126,10 @@ PlayerSettings:
   vulkanEnablePreTransform: 0
   vulkanEnableLateAcquireNextImage: 0
   m_SupportedAspectRatios:
-    4:3: 1
-    5:4: 1
-    16:10: 1
-    16:9: 1
+    4:3: 0
+    5:4: 0
+    16:10: 0
+    16:9: 0
     Others: 1
   bundleVersion: 0.1
   preloadedAssets: []
@@ -158,7 +158,7 @@ PlayerSettings:
     tvOS: 0
   overrideDefaultApplicationIdentifier: 1
   AndroidBundleVersionCode: 1
-  AndroidMinSdkVersion: 29
+  AndroidMinSdkVersion: 26
   AndroidTargetSdkVersion: 0
   AndroidPreferredInstallLocation: 1
   aotOptions: 

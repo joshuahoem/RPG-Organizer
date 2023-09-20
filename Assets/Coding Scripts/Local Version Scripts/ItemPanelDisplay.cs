@@ -229,12 +229,26 @@ public class ItemPanelDisplay : MonoBehaviour
         statNumberOne.text = _item.mainDamage.ToString();
         statNumberTwo.text = _item.mainMagicDamage.ToString();
         statNumberThree.text = _item.mainAttackRange.ToString();
-        statNumberFour.text = _item.numberOfHands.ToString();
 
         offStatNumberOne.text = _item.offDamage.ToString();
         offStatNumberTwo.text = _item.offMagicDamage.ToString();
         offStatNumberThree.text = _item.offAttackRange.ToString();
-        offStatNumberFour.text = string.Empty;
+
+        switch (_item.numberOfHands)
+        {
+            case NumberOfHands.OneHanded:
+                statNumberFour.text = "One";
+                offStatNumberFour.text = "Handed";
+                break;
+            case NumberOfHands.TwoHanded:
+                statNumberFour.text = "Two";
+                offStatNumberFour.text = "Handed";
+                break;
+            case NumberOfHands.NoHands:
+                statNumberFour.text = "No";
+                offStatNumberFour.text = "Hands";
+                break;
+        }
 
         if (FindObjectOfType<LocalShop>().inShop) {return;}
         if (_itemInfo.equipped)
