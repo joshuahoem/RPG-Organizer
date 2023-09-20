@@ -10,20 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c7f441553f287b4fb57cd0845e2e111, type: 3}
-  m_Name: Bracelet of Protection
+  m_Name: Glass Horn Cloak
   m_EditorClassIdentifier: 
-  itemName: Bracelet of Protection
-  description: 'Adds 3 to Ward
-
-'
-  picture: {fileID: 21300000, guid: c8daba08e5945044b9153f96bcd6a943, type: 3}
-  goldCost: 25
-  sellCost: 10
+  itemName: Glass Horn Cloak
+  description: When the user chooses to block with this armor, it negates all damage
+    dealt to user for an entire round. At the end of the round, this armor is destroyed.
+  picture: {fileID: 0}
+  goldCost: 10
+  sellCost: 0
   numberInStack: 1
-  itemType: 3
+  itemType: 1
   itemRarity: 3
-  equipmentSlot: 7
-  enchanted: 1
+  equipmentSlot: 1
+  enchanted: 0
   pathToPicture: 
   mainDamage: 0
   mainMagicDamage: 0
@@ -31,10 +30,10 @@ MonoBehaviour:
   offDamage: 0
   offMagicDamage: 0
   offAttackRange: 0
-  numberOfHands: 0
+  numberOfHands: 2
   weaponType: 0
   defense: 0
-  magicDefense: 3
+  magicDefense: 0
   healthModifier: 0
   staminaModifier: 0
   magicModifier: 0
