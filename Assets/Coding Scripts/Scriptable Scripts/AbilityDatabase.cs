@@ -13,7 +13,15 @@ public class AbilityDatabase : ScriptableObject, ISerializationCallbackReceiver
 
     public void OnAfterDeserialize()
     {
-        Array.Sort(allAbilities, (x,y) => String.Compare(x.abilityName, y.abilityName));
+        allAbilities = allAbilities.Where(ability => ability != null).ToArray();
+        
+        Array.Sort(allAbilities, (x,y) => 
+        { 
+            if (x == null && y == null) { Debug.Log("These are both null: " + x + " " + y); return 0; }
+            if (x == null) { Debug.Log("This is null: " + x); return -1; }
+            if (y == null) { Debug.Log("This is null: " + y); return -1; }
+            return string.Compare(x.abilityName, y.abilityName); 
+        });
     }
 
     private void OnEnable() 
