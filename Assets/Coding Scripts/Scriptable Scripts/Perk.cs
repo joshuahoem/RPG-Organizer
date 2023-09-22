@@ -18,12 +18,19 @@ public class Perk : ScriptableObject
     public string pathToPicture;
     
     [Header("Bonus Stats")]
+    public WeaponType requiredWeapon;
     public int bonusHealth;
     public int bonusStamina;
     public int bonusMagic;
     public int bonusStrength;
     public int bonusIntelligence;
     public int bonusSpeed;
+
+    [Header("Bonus Stats Equipment")]
+    public int bonusAttack;
+    public int bonusDefense;
+    public int bonusArcane;
+    public int bonusWard;
 
     [Header("Bonus Multipliers")]
     public float healthMultiplier;

@@ -17,7 +17,7 @@ MonoBehaviour:
   pathToPicture: Assets/Visuals/Sprites/Ability Icons/Gladiator/Weapon Mastery.png
   borderColor: {r: 0.4156863, g: 0.5372549, b: 0.8000001, a: 1}
   costType: 1
-  unlockCost: 1
+  unlockCost: 3
   unlockHealth: 20
   unlockStamina: 10
   unlockMagic: 0

@@ -2856,6 +2856,7 @@ MonoBehaviour:
   bonusIntelligenceTMP: {fileID: 0}
   bonusSpeedTMP: {fileID: 0}
   dualWieldAbility: {fileID: 11400000, guid: 5b9eb45cd3bf1c145a47b936973366f8, type: 2}
+  weaponMasteryAbility: {fileID: 11400000, guid: 728ff7f09c2bcd64a82f1666279d78b6, type: 2}
   charString: 
 --- !u!1 &1976749117
 GameObject:

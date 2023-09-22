@@ -69,10 +69,17 @@ public class LocalStatDisplay : MonoBehaviour
     int bonusStrength = 0;
     int bonusIntelligence = 0;
     int bonusSpeed = 0;
+
+    int perkBonusAttack = 0;
+    int perkBonusDefense = 0;
+    int perkBonusArcane = 0;
+    int perkBonusWard = 0;
     #endregion
 
     [Header("Abilities")]
     [SerializeField] Ability dualWieldAbility;
+    [SerializeField] Ability weaponMasteryAbility;
+
     public string charString;
 
     private void Start() 
@@ -228,10 +235,10 @@ public class LocalStatDisplay : MonoBehaviour
         _totalMagicAttack += _bonusMagicAttack;
         _totalMagicDefense += _bonusMagicDefense;
 
-        if (bonusAttackStatTMP != null) { bonusAttackStatTMP.text = save.bonusAttack.ToString(); }
-        if (bonusArmorStatTMP != null) { bonusArmorStatTMP.text = save.bonusDefense.ToString(); }
-        if (bonusArcaneStatTMP != null) { bonusArcaneStatTMP.text = save.bonusMagicAttack.ToString(); }
-        if (bonusWardStatTMP != null) { bonusWardStatTMP.text = save.bonusMagicDefense.ToString(); }
+        _totalAttack += perkBonusAttack;
+        _totalDefense += perkBonusDefense;
+        _totalMagicAttack += perkBonusArcane;
+        _totalMagicDefense += perkBonusWard;
 
         if (totalAttackEquipment != null) { totalAttackEquipment.text = _totalAttack.ToString(); }
         if (totalDefenseEquipment != null) { totalDefenseEquipment.text = _totalDefense.ToString(); }
@@ -251,6 +258,11 @@ public class LocalStatDisplay : MonoBehaviour
         bonusIntelligence = 0;
         bonusSpeed = 0;
 
+        perkBonusAttack = 0;
+        perkBonusDefense = 0;
+        perkBonusArcane = 0;
+        perkBonusWard = 0;
+
         foreach (PerkObject perkObject in save.perks)
         {
             if (perkObject.perk == null)
@@ -263,6 +275,54 @@ public class LocalStatDisplay : MonoBehaviour
             bonusStrength += perkObject.perk.bonusStrength * perkObject.count;
             bonusIntelligence += perkObject.perk.bonusIntelligence * perkObject.count;
             bonusSpeed += perkObject.perk.bonusSpeed * perkObject.count;
+
+            if (perkObject.perk.requiredWeapon == WeaponType.None)
+            {
+                perkBonusAttack += perkObject.perk.bonusAttack;
+                perkBonusDefense += perkObject.perk.bonusDefense;
+                perkBonusArcane += perkObject.perk.bonusArcane;
+                perkBonusWard += perkObject.perk.bonusWard;
+            }
+            else if (save.equipment[(int)EquipmentSlot.MainHand] != null)
+            {
+                if (save.equipment[(int)EquipmentSlot.MainHand].item == null) { continue; }
+                if (perkObject.perk.requiredWeapon == save.equipment[(int)EquipmentSlot.MainHand].item.GetWeaponType())
+                {
+                    perkBonusAttack += perkObject.perk.bonusAttack;
+                    perkBonusDefense += perkObject.perk.bonusDefense;
+                    perkBonusArcane += perkObject.perk.bonusArcane;
+                    perkBonusWard += perkObject.perk.bonusWard;
+
+                    if (SaveManagerVersion3.DoesPlayerHaveThisAbility(weaponMasteryAbility))
+                    {
+                        Debug.Log("adding");
+                        perkBonusAttack += perkObject.perk.bonusAttack;
+                        perkBonusDefense += perkObject.perk.bonusDefense;
+                        perkBonusArcane += perkObject.perk.bonusArcane;
+                        perkBonusWard += perkObject.perk.bonusWard;
+                    }
+                }
+                else if (save.equipment[(int)EquipmentSlot.OffHand] != null)
+                {
+                    if (save.equipment[(int)EquipmentSlot.OffHand].item == null) { continue; }
+                    if (perkObject.perk.requiredWeapon == save.equipment[(int)EquipmentSlot.OffHand].item.GetWeaponType())
+                    {
+                        perkBonusAttack += perkObject.perk.bonusAttack;
+                        perkBonusDefense += perkObject.perk.bonusDefense;
+                        perkBonusArcane += perkObject.perk.bonusArcane;
+                        perkBonusWard += perkObject.perk.bonusWard;
+
+                        if (SaveManagerVersion3.DoesPlayerHaveThisAbility(weaponMasteryAbility))
+                        {
+                            Debug.Log("adding");
+                            perkBonusAttack += perkObject.perk.bonusAttack;
+                            perkBonusDefense += perkObject.perk.bonusDefense;
+                            perkBonusArcane += perkObject.perk.bonusArcane;
+                            perkBonusWard += perkObject.perk.bonusWard;
+                        }
+                    }
+                }
+            }
         }
 
         foreach (InventoryItem item in save.equipment)
@@ -281,6 +341,13 @@ public class LocalStatDisplay : MonoBehaviour
                 bonusSpeed += item.item.speedModifier;
             }
         }
+
+
+
+        if (bonusAttackStatTMP != null) { bonusAttackStatTMP.text = (save.bonusAttack + perkBonusAttack).ToString(); }
+        if (bonusArmorStatTMP != null) { bonusArmorStatTMP.text = (save.bonusDefense + perkBonusDefense).ToString(); }
+        if (bonusArcaneStatTMP != null) { bonusArcaneStatTMP.text = (save.bonusMagicAttack + perkBonusArcane).ToString(); }
+        if (bonusWardStatTMP != null) { bonusWardStatTMP.text = (save.bonusMagicDefense + perkBonusWard).ToString(); }
 
         if (bonusHealthTMP != null) { bonusHealthTMP.text = bonusHealth.ToString(); }
         if (bonusStaminaTMP != null) { bonusStaminaTMP.text = bonusStamina.ToString(); }
