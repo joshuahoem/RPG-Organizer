@@ -12,16 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c7f441553f287b4fb57cd0845e2e111, type: 3}
   m_Name: Broken Sundial
   m_EditorClassIdentifier: 
-  itemName: 
-  description: 
+  itemName: Broken Sundial
+  description: 'This shatters on use.
+
+    When used, you can rearrange the turn
+    order for this round in any way'
   picture: {fileID: 0}
-  goldCost: 0
-  sellCost: 0
+  goldCost: 6
+  sellCost: 2
   numberInStack: 1
-  itemType: 0
-  itemRarity: 0
-  equipmentSlot: 0
-  enchanted: 0
+  itemType: 2
+  itemRarity: 2
+  equipmentSlot: 10
+  enchanted: 1
   pathToPicture: 
   mainDamage: 0
   mainMagicDamage: 0
@@ -29,7 +32,7 @@ MonoBehaviour:
   offDamage: 0
   offMagicDamage: 0
   offAttackRange: 0
-  numberOfHands: 0
+  numberOfHands: 2
   weaponType: 0
   defense: 0
   magicDefense: 0

@@ -44,3 +44,6 @@ MonoBehaviour:
   arcaneModifier: 0
   wardModifier: 0
   ability: {fileID: 0}
+  healthToRecover: 0
+  staminaToRecover: 1
+  magicToRecover: 0

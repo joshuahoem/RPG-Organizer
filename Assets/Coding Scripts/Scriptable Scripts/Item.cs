@@ -105,6 +105,13 @@ public class Item : ScriptableObject
     [Header("Scroll Info")]
     public Ability ability;
 
+    [Header("Consumable Info")]
+    public int healthToRecover;
+    public int staminaToRecover;
+    public int magicToRecover;
+
+
+
 
     public ItemType GetItemType()
     {

@@ -1053,8 +1053,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1082,7 +1082,7 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
-  m_wordSpacing: 0
+  m_wordSpacing: 25
   m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
@@ -2862,8 +2862,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1577917709}
   m_HandleRect: {fileID: 1577917708}
   m_Direction: 2
-  m_Value: 0.99999976
-  m_Size: 0.816383
+  m_Value: 1.0000002
+  m_Size: 0.84703684
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:

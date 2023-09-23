@@ -524,6 +524,10 @@ public class ItemPanelDisplay : MonoBehaviour
                 // Debug.Log(inv.amount);
                 removedBool = true;
 
+                save.currentHealth += inv.item.healthToRecover;
+                save.currentStamina += inv.item.staminaToRecover;
+                save.currentMagic += inv.item.magicToRecover;
+
                 if (inv.amount <= 0)
                 {
                     // Debug.Log("need to delete");
@@ -535,6 +539,7 @@ public class ItemPanelDisplay : MonoBehaviour
 
         save.inventory.Remove(searchResult);
 
+        SaveManagerVersion3.SaveGame(CharacterRegistry.Instance);
 
         inventoryManager.LoadInventory();
         inventoryManager.DisplayInventoryUI();

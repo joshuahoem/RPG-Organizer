@@ -295,7 +295,6 @@ public class LocalStatDisplay : MonoBehaviour
 
                     if (SaveManagerVersion3.DoesPlayerHaveThisAbility(weaponMasteryAbility))
                     {
-                        Debug.Log("adding");
                         perkBonusAttack += perkObject.perk.bonusAttack;
                         perkBonusDefense += perkObject.perk.bonusDefense;
                         perkBonusArcane += perkObject.perk.bonusArcane;

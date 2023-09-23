@@ -55,6 +55,7 @@ public class AbilityPanelManager : MonoBehaviour
     [SerializeField] Sprite staminaSprite;
 
     [SerializeField] Sprite experienceSprite;
+    [SerializeField] GameObject popupPanel;
 
     int _levelIndex;
 
@@ -295,6 +296,9 @@ public class AbilityPanelManager : MonoBehaviour
             if (save.currentMagic >= ability.allAbilityLevels[_levelIndex].magicCost)
             {
                 save.currentMagic -= ability.allAbilityLevels[_levelIndex].magicCost;
+
+                popupPanel.SetActive(true);
+                popupPanel.GetComponent<PopupInstance>().Init(abilitySO);
             }
             else
             {
@@ -307,6 +311,9 @@ public class AbilityPanelManager : MonoBehaviour
             if (save.currentStamina >= ability.allAbilityLevels[_levelIndex].staminaCost)
             {
                 save.currentStamina -= ability.allAbilityLevels[_levelIndex].staminaCost;
+
+                popupPanel.SetActive(true);
+                popupPanel.GetComponent<PopupInstance>().Init(abilitySO);
             }
             else
             {

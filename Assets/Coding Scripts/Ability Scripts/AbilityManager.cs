@@ -66,7 +66,6 @@ public class AbilityManager : MonoBehaviour
                     {
                         _ability.ability = abilityDatabase.allAbilities[i];
                         // _ability.ability.picture = SaveManagerVersion3.LoadSprite(_ability.ability.pathToPicture);
-                        Debug.Log("replaced");
                     }
                 }
             }
