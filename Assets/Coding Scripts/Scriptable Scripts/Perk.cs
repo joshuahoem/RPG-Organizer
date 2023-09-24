@@ -18,7 +18,6 @@ public class Perk : ScriptableObject
     public string pathToPicture;
     
     [Header("Bonus Stats")]
-    public WeaponType requiredWeapon;
     public int bonusHealth;
     public int bonusStamina;
     public int bonusMagic;
@@ -27,6 +26,7 @@ public class Perk : ScriptableObject
     public int bonusSpeed;
 
     [Header("Bonus Stats Equipment")]
+    public WeaponType requiredWeapon;
     public int bonusAttack;
     public int bonusDefense;
     public int bonusArcane;

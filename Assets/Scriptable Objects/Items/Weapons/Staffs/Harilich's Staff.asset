@@ -10,31 +10,32 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c7f441553f287b4fb57cd0845e2e111, type: 3}
-  m_Name: Nature Cloak
+  m_Name: Harilich's Staff
   m_EditorClassIdentifier: 
-  itemName: Nature Cloak
-  description: A grean cloak with magical properties. Gives the wearer +3 Stamina
-  picture: {fileID: 21300000, guid: 6564e7d4372401f498a3df5c5e99df8f, type: 3}
-  goldCost: 8
-  sellCost: 2
+  itemName: Harilich's Staff
+  description: The staff that belonged to an Ancient Elf King that was hidden underground
+    in his grave protected by an ancient spell. The staff seems to contain greatness.
+  picture: {fileID: 0}
+  goldCost: 100
+  sellCost: 60
   numberInStack: 1
-  itemType: 1
-  itemRarity: 1
-  equipmentSlot: 1
+  itemType: 0
+  itemRarity: 4
+  equipmentSlot: 5
   enchanted: 1
   pathToPicture: 
-  mainDamage: 0
-  mainMagicDamage: 0
-  mainAttackRange: 0
-  offDamage: 0
-  offMagicDamage: 0
-  offAttackRange: 0
-  numberOfHands: 0
+  mainDamage: 1
+  mainMagicDamage: 1
+  mainAttackRange: 1
+  offDamage: 1
+  offMagicDamage: 1
+  offAttackRange: 1
+  numberOfHands: 1
   weaponType: 0
-  defense: 0
-  magicDefense: 4
+  defense: 1
+  magicDefense: 1
   healthModifier: 0
-  staminaModifier: 3
+  staminaModifier: 0
   magicModifier: 0
   strengthModifier: 0
   intelligenceModifier: 0
