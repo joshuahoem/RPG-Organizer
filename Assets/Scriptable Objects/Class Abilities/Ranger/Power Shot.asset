@@ -16,7 +16,7 @@ MonoBehaviour:
   picture: {fileID: 21300000, guid: 33bc94149962c7d4d892cf26d4fda367, type: 3}
   pathToPicture: Assets/Visuals/Sprites/Ability Icons/Ranger/Power Shot.png
   borderColor: {r: 0.254717, g: 0.0252314, b: 0.07702288, a: 0.9137255}
-  costType: 0
+  costType: 1
   unlockCost: 1
   unlockHealth: 6
   unlockStamina: 6

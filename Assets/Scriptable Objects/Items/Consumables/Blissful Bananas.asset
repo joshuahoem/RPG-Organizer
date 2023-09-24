@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Blissful Bananas
   description: Restores 5 health points
-  picture: {fileID: 0}
+  picture: {fileID: 21300000, guid: 06306d5ff31a72e45b67e2dafc8077c1, type: 3}
   goldCost: 5
   sellCost: 2
   numberInStack: 3

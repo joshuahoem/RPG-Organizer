@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Potion of Essence
   m_EditorClassIdentifier: 
   itemName: Potion of Essence
-  description: Restore half Magic points
-  picture: {fileID: 0}
+  description: Restore 10 Magic points
+  picture: {fileID: 21300000, guid: dd121fdcfb9883d41b331322d634b32a, type: 3}
   goldCost: 8
   sellCost: 3
   numberInStack: 1
@@ -46,4 +46,4 @@ MonoBehaviour:
   ability: {fileID: 0}
   healthToRecover: 0
   staminaToRecover: 0
-  magicToRecover: 999
+  magicToRecover: 10
