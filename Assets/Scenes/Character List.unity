@@ -517,8 +517,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 70151451}
   m_HandleRect: {fileID: 70151450}
   m_Direction: 2
-  m_Value: 0.99999917
-  m_Size: 0.895157
+  m_Value: 1
+  m_Size: 0.8985664
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -573,6 +573,7 @@ GameObject:
   - component: {fileID: 424421097}
   - component: {fileID: 424421096}
   - component: {fileID: 424421095}
+  - component: {fileID: 424421098}
   m_Layer: 5
   m_Name: Create New Character Button
   m_TagString: Untagged
@@ -694,6 +695,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 424421093}
   m_CullTransparentMesh: 1
+--- !u!114 &424421098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 424421093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6160e567fc2ad564cb8f9dd024303a46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pressedPos: {x: 0, y: -5, z: 0}
 --- !u!1 &473644573
 GameObject:
   m_ObjectHideFlags: 0

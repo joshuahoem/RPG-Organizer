@@ -24,12 +24,17 @@ public class ButtonTextMovement : MonoBehaviour, IPointerDownHandler, IPointerUp
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        buttonText.rectTransform.localPosition = pressedPos;
+        buttonText.rectTransform.localPosition = originalPos + pressedPos;
     }
 
     public void OnPointerUp(PointerEventData eventData)
     {
         buttonText.rectTransform.localPosition = originalPos;
+    }
+
+    private void Update() {
+        Debug.Log(buttonText.rectTransform.localPosition);
+        
     }
 
 }

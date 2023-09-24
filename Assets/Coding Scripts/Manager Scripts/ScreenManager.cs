@@ -1,13 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class ScreenManager : MonoBehaviour
 {
-    [SerializeField] public float sceneLoadTime = 1f;
+    [SerializeField] float sceneLoadTime = 1f;
     int scene;
 
+    #region scene Index
     [SerializeField] int mainMenuSceneIndex = 0;
     [SerializeField] int characterSceneIndex = 1;
     [SerializeField] int characterCreationSceneIndex = 2;
@@ -22,119 +21,110 @@ public class ScreenManager : MonoBehaviour
     [SerializeField] int enemySceneIndex = 11;
     [SerializeField] int charactersUnlockSceneIndex = 12;
     [SerializeField] int diceSceneIndex = 13;
-    [SerializeField] int jukeboxIndex = 14;
-    [SerializeField] int NoteSceneIndex = 15;
-
-
+    [SerializeField] int noteSceneIndex = 14;
+    #endregion
 
     public void LoadMainMenu ()
     {
         scene = mainMenuSceneIndex;
         PlaySound();
-        Invoke("LoadNextScene", sceneLoadTime);
+        Invoke(nameof(LoadNextScene), sceneLoadTime);
     }
 
     public void LoadCharactersMenu()
     {
         scene = characterSceneIndex;
         PlaySound();
-        Invoke("LoadNextScene", sceneLoadTime);
+        Invoke(nameof(LoadNextScene), sceneLoadTime);
     }
 
     public void LoadCharacterCreationMenu()
     {
         scene = characterCreationSceneIndex;
         PlaySound();
-        Invoke("LoadNextScene", sceneLoadTime);
+        Invoke(nameof(LoadNextScene), sceneLoadTime);
     }
 
     public void LoadOnline()
     {
         scene = onlineSceneIndex;
         PlaySound();
-        Invoke("LoadNextScene", sceneLoadTime);
+        Invoke(nameof(LoadNextScene), sceneLoadTime);
     }
 
     public void LoadCharacterInfoScene()
     {
         scene = CharacterInfoSceneIndex;
         PlaySound();
-        Invoke("LoadNextScene", sceneLoadTime);
+        Invoke(nameof(LoadNextScene), sceneLoadTime);
     }
 
     public void LoadGameScene()
     {
         scene = GameSceneIndex;
         PlaySound();
-        Invoke("LoadNextScene", sceneLoadTime);
+        Invoke(nameof(LoadNextScene), sceneLoadTime);
     }
 
     public void LoadOnlineLoadingScene()
     {
         scene = onlineLoadingSceneIndex;
         PlaySound();
-        Invoke("LoadNextScene", sceneLoadTime);
+        Invoke(nameof(LoadNextScene), sceneLoadTime);
     }
     public void LoadMapScene()
     {
         scene = mapSceneIndex;
         PlaySound();
-        Invoke("LoadNextScene", sceneLoadTime);
+        Invoke(nameof(LoadNextScene), sceneLoadTime);
     }
     public void LoadOptionScene()
     {
         scene = optionSceneIndex;
         PlaySound();
-        Invoke("LoadNextScene", sceneLoadTime);
+        Invoke(nameof(LoadNextScene), sceneLoadTime);
     }
 
     public void LoadAbilitieScene()
     {
         scene = abilitieScene;
         PlaySound();
-        Invoke("LoadNextScene", sceneLoadTime);
+        Invoke(nameof(LoadNextScene), sceneLoadTime);
     }
 
     public void LoadGlossaryScene()
     {
         scene = glossarySceneIndex;
         PlaySound();
-        Invoke("LoadNextScene", sceneLoadTime);
+        Invoke(nameof(LoadNextScene), sceneLoadTime);
     }
 
     public void LoadEnemyScene()
     {
         scene = enemySceneIndex;
         PlaySound();
-        Invoke("LoadNextScene", sceneLoadTime);
+        Invoke(nameof(LoadNextScene), sceneLoadTime);
     }
 
     public void LoadCharacterUnlockScene()
     {
         scene = charactersUnlockSceneIndex;
         PlaySound();
-        Invoke("LoadNextScene", sceneLoadTime);
+        Invoke(nameof(LoadNextScene), sceneLoadTime);
     }
 
     public void LoadDiceScene()
     {
         scene = diceSceneIndex;
         PlaySound();
-        Invoke("LoadNextScene", sceneLoadTime);
-    }
-
-    public void LoadJukeBoxScene()
-    {
-        scene = jukeboxIndex;
-        PlaySound();
-        Invoke("LoadNextScene", sceneLoadTime);
+        Invoke(nameof(LoadNextScene), sceneLoadTime);
     }
 
     public void LoadNoteScene()
     {
-        scene = NoteSceneIndex;
+        scene = noteSceneIndex;
         PlaySound();
-        Invoke("LoadNextScene", sceneLoadTime);
+        Invoke(nameof(LoadNextScene), sceneLoadTime);
     }
 
 
@@ -159,7 +149,7 @@ public class ScreenManager : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
-        Invoke("QuitGameInvoke", sceneLoadTime);
+        Invoke(nameof(QuitGameInvoke), sceneLoadTime);
     }
 
     private void QuitGameInvoke()
