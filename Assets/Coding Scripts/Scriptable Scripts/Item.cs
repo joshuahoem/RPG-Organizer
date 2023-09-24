@@ -76,6 +76,8 @@ public class Item : ScriptableObject
     public bool enchanted = false;
     public string pathToPicture;
 
+    public bool isIncluded;
+
     [Header("Weapon Info")]
     public int mainDamage;
     public int mainMagicDamage;

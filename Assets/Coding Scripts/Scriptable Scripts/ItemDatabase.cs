@@ -13,20 +13,10 @@ public class ItemDatabase : ScriptableObject, ISerializationCallbackReceiver
 
     public void OnAfterDeserialize()
     {
-        allItems = allItems.Where(item => item != null).ToArray();
-
-
-        Array.Sort(allItems, (x,y) => 
-        { 
-            if (x == null && y == null) { /* Debug.Log("These are both null: " + x + " " + y); */ return 0; }
-            if (x == null) {/* Debug.Log("This is null: " + x); */ return -1; }
-            if (y == null) {/* Debug.Log("This is null: " + y); */ return -1; }
-            return string.Compare(x.itemName, y.itemName); 
-        });
-
+        //
     }
 
-    private void OnEnable() 
+    public void OnEnable() 
     {
         // GetID = new Dictionary<Item, int>();
         GetItem = new Dictionary<string, Item>();
@@ -38,6 +28,9 @@ public class ItemDatabase : ScriptableObject, ISerializationCallbackReceiver
             }
             // GetItem.Add(i, allItems[i]);
         }
+
+        UnityEditor.EditorUtility.SetDirty(this);
+
     }
 
     public void OnBeforeSerialize()

@@ -14,6 +14,7 @@ public class ClassDatabase : ScriptableObject, ISerializationCallbackReceiver
     public void OnAfterDeserialize()
     {
         Array.Sort(allClasses, (x,y) => String.Compare(x.name, y.name));
+
     }
 
     private void OnEnable() 
@@ -26,6 +27,9 @@ public class ClassDatabase : ScriptableObject, ISerializationCallbackReceiver
                 GetClassID.Add(allClasses[i].name, allClasses[i]);
             }
         }
+
+        UnityEditor.EditorUtility.SetDirty(this);
+
     }
 
     public void OnBeforeSerialize()

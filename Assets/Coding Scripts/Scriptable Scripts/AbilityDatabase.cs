@@ -22,6 +22,7 @@ public class AbilityDatabase : ScriptableObject, ISerializationCallbackReceiver
             if (y == null) {/* Debug.Log("This is null: " + y); */ return -1; }
             return string.Compare(x.abilityName, y.abilityName); 
         });
+
     }
 
     private void OnEnable() 
@@ -34,6 +35,9 @@ public class AbilityDatabase : ScriptableObject, ISerializationCallbackReceiver
                 GetStringID.Add(allAbilities[i].abilityName, allAbilities[i]);
             }
         }
+
+        UnityEditor.EditorUtility.SetDirty(this);
+
     }
 
     public void OnBeforeSerialize()

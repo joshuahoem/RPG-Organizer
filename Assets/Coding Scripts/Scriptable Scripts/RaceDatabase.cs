@@ -14,6 +14,7 @@ public class RaceDatabase : ScriptableObject, ISerializationCallbackReceiver
     public void OnAfterDeserialize()
     {
         Array.Sort(allRaces, (x,y) => String.Compare(x.name, y.name));
+
     }
 
     private void OnEnable() 
@@ -26,6 +27,9 @@ public class RaceDatabase : ScriptableObject, ISerializationCallbackReceiver
                 GetRaceID.Add(allRaces[i].name, allRaces[i]);
             }
         }
+
+        UnityEditor.EditorUtility.SetDirty(this);
+
     }
 
     public void OnBeforeSerialize()

@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5aa80a4f21652164d8ac37ff492439b4, type: 3}
+  m_Name: Mining
+  m_EditorClassIdentifier: 
+  GuaranteedLootTable:
+  - Weight: 1
+    Drop: {fileID: 11400000, guid: 361d22d2bd942734bba02513498ff6b2, type: 2}
+    MinCountItem: 1
+    MaxCountItem: 2
+  OneItemFromList:
+  - Weight: 20
+    Drop: {fileID: 11400000, guid: 361d22d2bd942734bba02513498ff6b2, type: 2}
+    MinCountItem: 1
+    MaxCountItem: 3
+  - Weight: 10
+    Drop: {fileID: 11400000, guid: cf640de36694d0141815befbf6782ab9, type: 2}
+    MinCountItem: 1
+    MaxCountItem: 2
+  - Weight: 10
+    Drop: {fileID: 11400000, guid: 353128a0ffbc9cb489557471f513d01e, type: 2}
+    MinCountItem: 1
+    MaxCountItem: 2
+  - Weight: 6
+    Drop: {fileID: 11400000, guid: d6005cf3713c9f74d9e475cf20298e41, type: 2}
+    MinCountItem: 1
+    MaxCountItem: 2
+  - Weight: 1
+    Drop: {fileID: 11400000, guid: 9592b5269422fec428cd70cc5b9f2356, type: 2}
+    MinCountItem: 1
+    MaxCountItem: 1
+  - Weight: 1
+    Drop: {fileID: 11400000, guid: 0c046cb35e12c6442ad02ba585439fbc, type: 2}
+    MinCountItem: 1
+    MaxCountItem: 1
+  - Weight: 1
+    Drop: {fileID: 11400000, guid: 39cdea98ad5ce3048addcf73bd8e9410, type: 2}
+    MinCountItem: 1
+    MaxCountItem: 1
+  - Weight: 1
+    Drop: {fileID: 11400000, guid: 1f6a3ebb59b6461468f62f774efe29d5, type: 2}
+    MinCountItem: 1
+    MaxCountItem: 1
+  WeightToNoDrop: 50

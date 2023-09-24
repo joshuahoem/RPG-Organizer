@@ -13939,6 +13939,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lootTables:
   - {fileID: 11400000, guid: 183583478e81d774fa02b18a807e258b, type: 2}
+  - {fileID: 11400000, guid: 18ca7eb4b58b479408f2c2fb5d84a7c1, type: 2}
   - {fileID: 11400000, guid: ff1a42adfe892a944ba89d48de3dbc45, type: 2}
   - {fileID: 11400000, guid: 934230fb09bcad346a09cb3d08f0b8dd, type: 2}
   - {fileID: 11400000, guid: e2f70da30300a0c40ace903197096a16, type: 2}

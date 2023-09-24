@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Topaz
   m_EditorClassIdentifier: 
   itemName: Topaz
-  description: Basic Material
+  description: Rare Material
   picture: {fileID: 21300000, guid: 37696a39f78889c4ea9a8ae69c6da125, type: 3}
   goldCost: 2
   sellCost: 1
-  numberInStack: 1
+  numberInStack: 99
   itemType: 2
   itemRarity: 0
   equipmentSlot: 10

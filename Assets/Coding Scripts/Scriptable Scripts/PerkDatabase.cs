@@ -13,6 +13,7 @@ public class PerkDatabase : ScriptableObject, ISerializationCallbackReceiver
     public void OnAfterDeserialize()
     {
         Array.Sort(allPerks, (x,y) => String.Compare(x.perkName, y.perkName));
+
     }
 
     private void OnEnable() 
@@ -25,6 +26,9 @@ public class PerkDatabase : ScriptableObject, ISerializationCallbackReceiver
                 GetStringID.Add(allPerks[i].perkName, allPerks[i]);
             }
         }
+
+        UnityEditor.EditorUtility.SetDirty(this);
+
     }
 
     public void OnBeforeSerialize()
