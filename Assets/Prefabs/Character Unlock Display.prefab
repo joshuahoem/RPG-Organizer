@@ -187,6 +187,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   raceToUnlock: {fileID: 0}
   classToUnlock: {fileID: 0}
+  errorMessage: {fileID: 2780351070431798323, guid: 17e6f24f69ca5324dab27fa6cc449291, type: 3}
+  canvas: {fileID: 0}
   lockImage: {fileID: 2216177683926916807}
   characterImage: {fileID: 2216177684680812790}
   bgOject: {fileID: 2216177684970158224}
