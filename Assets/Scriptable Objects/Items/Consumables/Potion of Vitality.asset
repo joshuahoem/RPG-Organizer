@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Potion of Vitality
   m_EditorClassIdentifier: 
   itemName: Potion of Vitality
-  description: +3 Defence until the end of combat
-  picture: {fileID: 0}
+  description: +3 Defence and Ward until the end of combat
+  picture: {fileID: 21300000, guid: 24e185b23b6fca84489b84de9a69d285, type: 3}
   goldCost: 10
   sellCost: 4
   numberInStack: 1
@@ -44,6 +44,6 @@ MonoBehaviour:
   arcaneModifier: 0
   wardModifier: 0
   ability: {fileID: 0}
-  healthToRecover: 999
+  healthToRecover: 0
   staminaToRecover: 0
   magicToRecover: 0

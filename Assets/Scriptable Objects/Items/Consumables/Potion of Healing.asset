@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Potion of Healing
   m_EditorClassIdentifier: 
   itemName: Potion of Healing
-  description: Restore half health points
-  picture: {fileID: 0}
+  description: Restore 15 Health points
+  picture: {fileID: 21300000, guid: a4f737729491d0e4bb737d5e00607071, type: 3}
   goldCost: 10
   sellCost: 4
   numberInStack: 1
@@ -44,3 +44,6 @@ MonoBehaviour:
   arcaneModifier: 0
   wardModifier: 0
   ability: {fileID: 0}
+  healthToRecover: 15
+  staminaToRecover: 0
+  magicToRecover: 0
