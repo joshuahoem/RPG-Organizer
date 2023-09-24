@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Potion of Essence
   m_EditorClassIdentifier: 
   itemName: Potion of Essence
-  description: Restore all Magic points
+  description: Restore half Magic points
   picture: {fileID: 0}
   goldCost: 8
   sellCost: 3

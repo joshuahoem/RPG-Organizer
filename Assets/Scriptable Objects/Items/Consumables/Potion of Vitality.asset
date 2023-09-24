@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Potion of Vitality
   m_EditorClassIdentifier: 
   itemName: Potion of Vitality
-  description: Restore all health points
+  description: +3 Defence until the end of combat
   picture: {fileID: 0}
   goldCost: 10
   sellCost: 4

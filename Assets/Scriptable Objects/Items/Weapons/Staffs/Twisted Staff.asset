@@ -16,7 +16,7 @@ MonoBehaviour:
   description: This slightly better then normal staff has a high potency of magic.
     This staff was crafted from the roots of the Elven Forest. This wood contain
     a higher amount of magical properties giving the user more magical defencive
-    capabilities.
+    capabilities. +1 Ward
   picture: {fileID: 21300000, guid: 33cd1c81486be8c42b126cdbf3d941e9, type: 3}
   goldCost: 5
   sellCost: 3
@@ -30,8 +30,8 @@ MonoBehaviour:
   mainMagicDamage: 3
   mainAttackRange: 5
   offDamage: 0
-  offMagicDamage: 1
-  offAttackRange: 1
+  offMagicDamage: 0
+  offAttackRange: 0
   numberOfHands: 1
   weaponType: 0
   defense: 0

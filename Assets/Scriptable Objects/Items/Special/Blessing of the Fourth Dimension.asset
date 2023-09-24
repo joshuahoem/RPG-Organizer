@@ -14,13 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Blessing of the Fourth Dimension
   description: Whenever a 4 is rolled, gain 1 health, 1 magic, and 1 stamina.
-  picture: {fileID: 0}
-  goldCost: 0
-  sellCost: 0
+  picture: {fileID: 21300000, guid: 21c63f7c98bf2c346bac9e4d9c49a554, type: 3}
+  goldCost: 60
+  sellCost: 25
   numberInStack: 1
   itemType: 3
   itemRarity: 4
-  equipmentSlot: 10
+  equipmentSlot: 7
   enchanted: 1
   pathToPicture: 
   mainDamage: 0

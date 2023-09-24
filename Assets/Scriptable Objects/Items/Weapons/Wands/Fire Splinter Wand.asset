@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Fire Splinter Wand
   description: A Basic Wand imbuded with firey particals. Chance to Burn +1.
-  picture: {fileID: 0}
+  picture: {fileID: 21300000, guid: 5f495a728c3f10044bdb98974cdbb7dc, type: 3}
   goldCost: 4
   sellCost: 2
   numberInStack: 1

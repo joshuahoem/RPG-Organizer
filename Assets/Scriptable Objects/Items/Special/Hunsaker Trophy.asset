@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Hunsaker Trophy
   description: A claw from a fully fledged Hunsaker Beast
-  picture: {fileID: 0}
+  picture: {fileID: 21300000, guid: a97a9265e31dd254ab952667dc4b23ce, type: 3}
   goldCost: 50
   sellCost: 20
   numberInStack: 1
@@ -29,7 +29,7 @@ MonoBehaviour:
   offDamage: 0
   offMagicDamage: 0
   offAttackRange: 0
-  numberOfHands: 0
+  numberOfHands: 2
   weaponType: 0
   defense: 0
   magicDefense: 0

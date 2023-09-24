@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Magical Quartstaff
   description: A short staff that packs a magical punch!
-  picture: {fileID: 0}
+  picture: {fileID: 21300000, guid: 7c7d9dbff7b8f804080fdc13259200ed, type: 3}
   goldCost: 5
   sellCost: 2
   numberInStack: 1
@@ -27,8 +27,8 @@ MonoBehaviour:
   mainMagicDamage: 3
   mainAttackRange: 4
   offDamage: 0
-  offMagicDamage: 1
-  offAttackRange: 1
+  offMagicDamage: 0
+  offAttackRange: 0
   numberOfHands: 1
   weaponType: 7
   defense: 0

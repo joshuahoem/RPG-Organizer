@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Potion of Strength
   m_EditorClassIdentifier: 
   itemName: Potion of Strength
-  description: Restore all Stamina points
+  description: Restore half Stamina points
   picture: {fileID: 0}
   goldCost: 8
   sellCost: 3

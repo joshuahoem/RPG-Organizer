@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Magic Staff
   m_EditorClassIdentifier: 
   itemName: Magic Staff
-  description: 
+  description: A basic staff used to cast spells.
   picture: {fileID: 21300000, guid: 5e30a53ae369b4442983c7f9ac41a75d, type: 3}
   goldCost: 5
   sellCost: 3
@@ -27,8 +27,8 @@ MonoBehaviour:
   mainMagicDamage: 4
   mainAttackRange: 5
   offDamage: 0
-  offMagicDamage: 1
-  offAttackRange: 1
+  offMagicDamage: 0
+  offAttackRange: 0
   numberOfHands: 1
   weaponType: 0
   defense: 0

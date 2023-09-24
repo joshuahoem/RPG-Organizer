@@ -28,8 +28,8 @@ MonoBehaviour:
   mainMagicDamage: 2
   mainAttackRange: 4
   offDamage: 0
-  offMagicDamage: 1
-  offAttackRange: 1
+  offMagicDamage: 0
+  offAttackRange: 0
   numberOfHands: 1
   weaponType: 0
   defense: 0

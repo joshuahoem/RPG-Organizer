@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Axe
   description: An axe used primarly as a tool with some applications in war for its
-    greater spliting power. Pierce 1
+    greater spliting power. Pierce 2
   picture: {fileID: 21300000, guid: bee38dcf04ba8444bb0c3e08602accac, type: 3}
   goldCost: 5
   sellCost: 2

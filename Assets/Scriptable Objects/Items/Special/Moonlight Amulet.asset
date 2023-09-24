@@ -14,13 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Moonlight Amulet
   description: A magical item with unknown powers and filled with an evil aura
-  picture: {fileID: 0}
+  picture: {fileID: 21300000, guid: 79f20c1aa0443bd4ebe10c5736758955, type: 3}
   goldCost: 100
   sellCost: 40
   numberInStack: 1
   itemType: 3
   itemRarity: 4
-  equipmentSlot: 10
+  equipmentSlot: 7
   enchanted: 1
   pathToPicture: 
   mainDamage: 0
