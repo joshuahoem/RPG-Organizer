@@ -87,6 +87,7 @@ public class ItemPanelDisplay : MonoBehaviour
     [SerializeField] LocalInventoryManager inventoryManager;
 
     [SerializeField] private ErrorMessageHandler errorMessageHandler;
+    [SerializeField] private GameObject popupItemPanel;
     int lootCheck;
     int searchIndex;
 
@@ -523,6 +524,9 @@ public class ItemPanelDisplay : MonoBehaviour
                 inv.amount -= 1;
                 // Debug.Log(inv.amount);
                 removedBool = true;
+
+                popupItemPanel.SetActive(true);
+                popupItemPanel.GetComponent<PopupInstance>().ConsumedItemInit(inv);
 
                 save.currentHealth += inv.item.healthToRecover;
                 save.currentStamina += inv.item.staminaToRecover;

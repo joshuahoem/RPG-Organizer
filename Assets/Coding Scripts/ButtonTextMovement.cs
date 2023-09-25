@@ -32,9 +32,4 @@ public class ButtonTextMovement : MonoBehaviour, IPointerDownHandler, IPointerUp
         buttonText.rectTransform.localPosition = originalPos;
     }
 
-    private void Update() {
-        Debug.Log(buttonText.rectTransform.localPosition);
-        
-    }
-
 }

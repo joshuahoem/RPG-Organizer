@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5aa80a4f21652164d8ac37ff492439b4, type: 3}
+  m_Name: Foraging
+  m_EditorClassIdentifier: 
+  GuaranteedLootTable: []
+  OneItemFromList:
+  - Weight: 5
+    Drop: {fileID: 11400000, guid: b4427b5fac1fc2c4fb746b86503610dd, type: 2}
+    MinCountItem: 1
+    MaxCountItem: 1
+  - Weight: 5
+    Drop: {fileID: 11400000, guid: 05e8a528a94706a4e89692f4f792367a, type: 2}
+    MinCountItem: 1
+    MaxCountItem: 1
+  - Weight: 10
+    Drop: {fileID: 11400000, guid: 3e967421a1f71844cbe8c20d09335f49, type: 2}
+    MinCountItem: 1
+    MaxCountItem: 1
+  - Weight: 10
+    Drop: {fileID: 11400000, guid: a7fa8c32dbaa781468b2809c4f5a363a, type: 2}
+    MinCountItem: 1
+    MaxCountItem: 1
+  - Weight: 10
+    Drop: {fileID: 11400000, guid: 30506a583ed55644b931cdd708db1d07, type: 2}
+    MinCountItem: 1
+    MaxCountItem: 1
+  - Weight: 20
+    Drop: {fileID: 11400000, guid: 4878ed258ec8ca44da84926d0a8746d2, type: 2}
+    MinCountItem: 1
+    MaxCountItem: 1
+  - Weight: 20
+    Drop: {fileID: 11400000, guid: e71035106a42f7b489d11c7dfdf33559, type: 2}
+    MinCountItem: 1
+    MaxCountItem: 1
+  - Weight: 20
+    Drop: {fileID: 11400000, guid: 5c0c87821f0c2084aa9ad7045df928c2, type: 2}
+    MinCountItem: 1
+    MaxCountItem: 1
+  - Weight: 5
+    Drop: {fileID: 11400000, guid: 37d85841354302840a180badfd46ba1d, type: 2}
+    MinCountItem: 1
+    MaxCountItem: 1
+  - Weight: 20
+    Drop: {fileID: 11400000, guid: 057d950ceb525074880b8c0505c7b9dd, type: 2}
+    MinCountItem: 1
+    MaxCountItem: 1
+  - Weight: 20
+    Drop: {fileID: 11400000, guid: 3fcfdb4ae72ed9d41ab17f6435f0ab3a, type: 2}
+    MinCountItem: 1
+    MaxCountItem: 1
+  - Weight: 20
+    Drop: {fileID: 11400000, guid: 361d22d2bd942734bba02513498ff6b2, type: 2}
+    MinCountItem: 1
+    MaxCountItem: 1
+  - Weight: 20
+    Drop: {fileID: 11400000, guid: fda09c82f3c66704bb12ef8f85a6714e, type: 2}
+    MinCountItem: 1
+    MaxCountItem: 1
+  - Weight: 20
+    Drop: {fileID: 11400000, guid: 15a9521377a5e6f47a92a76e5727f5ea, type: 2}
+    MinCountItem: 1
+    MaxCountItem: 1
+  WeightToNoDrop: 23

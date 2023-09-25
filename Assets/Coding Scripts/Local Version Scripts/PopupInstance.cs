@@ -6,10 +6,10 @@ using UnityEngine;
 
 public class PopupInstance : MonoBehaviour
 {
-    [SerializeField] Sprite magicSprite;
-    [SerializeField] Sprite staminaSprite;
+    [SerializeField] Sprite magicSprite, staminaSprite, healthSprite;
     [SerializeField] TextMeshProUGUI numberTMP;
     [SerializeField] Image image;   
+    [SerializeField] Color normalColor, invisibleColor;
 
     public void Init(AbilitySaveObject abilitySaveObject)
     {
@@ -30,6 +30,34 @@ public class PopupInstance : MonoBehaviour
         else
         {
             //none
+        }
+    }
+
+    public void ConsumedItemInit(InventoryItem inventoryItem)
+    {
+        if (inventoryItem.item.magicToRecover > 0)
+        {
+            image.sprite = magicSprite;
+            image.color = normalColor;
+            numberTMP.text = $"+{inventoryItem.item.magicToRecover}";
+        }
+        else if (inventoryItem.item.healthToRecover > 0)
+        {
+            image.sprite = healthSprite;
+            image.color = normalColor;
+            numberTMP.text = $"+{inventoryItem.item.healthToRecover}";            
+        }
+        else if (inventoryItem.item.staminaToRecover > 0)
+        {
+            image.sprite = staminaSprite;
+            image.color = normalColor;
+            numberTMP.text = $"+{inventoryItem.item.staminaToRecover}";
+        }
+        else
+        {
+            //nothing to display
+            image.color = invisibleColor;
+            numberTMP.text = "";
         }
     }
 
