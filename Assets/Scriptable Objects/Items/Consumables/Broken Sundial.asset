@@ -17,7 +17,7 @@ MonoBehaviour:
 
     When used, you can rearrange the turn
     order for this round in any way'
-  picture: {fileID: 0}
+  picture: {fileID: 21300000, guid: 5e19b89271cac8746bd1b7d7e1e5f77d, type: 3}
   goldCost: 6
   sellCost: 2
   numberInStack: 1
@@ -26,6 +26,7 @@ MonoBehaviour:
   equipmentSlot: 10
   enchanted: 1
   pathToPicture: 
+  isIncluded: 0
   mainDamage: 0
   mainMagicDamage: 0
   mainAttackRange: 0
@@ -47,3 +48,6 @@ MonoBehaviour:
   arcaneModifier: 0
   wardModifier: 0
   ability: {fileID: 0}
+  healthToRecover: 0
+  staminaToRecover: 0
+  magicToRecover: 0

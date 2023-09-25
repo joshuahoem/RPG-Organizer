@@ -40,4 +40,4 @@ MonoBehaviour:
       Each attack gets a -1 after the first attack, stacking to the
       next.
 
-      After this attack, use is stunned.'
+      After this attack, user is stunned.'

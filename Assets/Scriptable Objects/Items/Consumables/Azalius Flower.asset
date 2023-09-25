@@ -15,7 +15,7 @@ MonoBehaviour:
   itemName: Azalius Flower
   description: A flower with nectar that can neutralize most poisons. On use, remove
     any poison effects
-  picture: {fileID: 0}
+  picture: {fileID: 21300000, guid: d5704cca7c6719d4f9667c2c165c8e1e, type: 3}
   goldCost: 4
   sellCost: 1
   numberInStack: 1
@@ -24,6 +24,7 @@ MonoBehaviour:
   equipmentSlot: 10
   enchanted: 0
   pathToPicture: 
+  isIncluded: 0
   mainDamage: 0
   mainMagicDamage: 0
   mainAttackRange: 0

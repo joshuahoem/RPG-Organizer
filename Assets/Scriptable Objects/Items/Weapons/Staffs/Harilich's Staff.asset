@@ -15,7 +15,7 @@ MonoBehaviour:
   itemName: Harilich's Staff
   description: The staff that belonged to an Ancient Elf King that was hidden underground
     in his grave protected by an ancient spell. The staff seems to contain greatness.
-  picture: {fileID: 0}
+  picture: {fileID: 21300000, guid: 90c34e5c5060aca4f935c687fa70623a, type: 3}
   goldCost: 100
   sellCost: 60
   numberInStack: 1
@@ -24,6 +24,7 @@ MonoBehaviour:
   equipmentSlot: 5
   enchanted: 1
   pathToPicture: 
+  isIncluded: 0
   mainDamage: 1
   mainMagicDamage: 1
   mainAttackRange: 1

@@ -13,10 +13,17 @@ MonoBehaviour:
   m_Name: Magic Knife
   m_EditorClassIdentifier: 
   abilityName: Magic Knife
-  abilitySpriteIcon: {fileID: 0}
+  picture: {fileID: 21300000, guid: c111db7f6c483dc449fcec4250cb771a, type: 3}
+  pathToPicture: 
   borderColor: {r: 0.50980395, g: 0.8000001, b: 0.86666673, a: 1}
   costType: 0
   unlockCost: 1
+  unlockHealth: 1
+  unlockStamina: 1
+  unlockMagic: 1
+  unlockStrength: 1
+  unlockIntelligence: 1
+  unlockSpeed: 1
   allAbilityLevels:
   - level: 1
     upgradeCost: 0
