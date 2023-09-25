@@ -408,6 +408,7 @@ GameObject:
   - component: {fileID: 1734320889978531020}
   - component: {fileID: 1734320889978531009}
   - component: {fileID: 1734320889978531010}
+  - component: {fileID: 1992385916313230540}
   - component: {fileID: 1734320889978531011}
   m_Layer: 5
   m_Name: Button Confirm
@@ -474,6 +475,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &1992385916313230540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1734320889978531021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6160e567fc2ad564cb8f9dd024303a46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pressedPos: {x: 0, y: -10, z: 0}
 --- !u!114 &1734320889978531011
 MonoBehaviour:
   m_ObjectHideFlags: 0
