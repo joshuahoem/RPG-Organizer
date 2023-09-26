@@ -15,7 +15,7 @@ MonoBehaviour:
   abilityName: Rage
   picture: {fileID: 21300000, guid: 0b83416960f3059488e00aca1764e06c, type: 3}
   pathToPicture: 
-  borderColor: {r: 0, g: 0, b: 0, a: 1}
+  borderColor: {r: 0.9725491, g: 0.7607844, b: 0.5686275, a: 1}
   costType: 1
   unlockCost: 5
   unlockHealth: 1

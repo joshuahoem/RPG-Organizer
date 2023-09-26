@@ -15,9 +15,9 @@ MonoBehaviour:
   abilityName: Improvments
   picture: {fileID: 21300000, guid: f422bb6bce5b447448396af8bb36b632, type: 3}
   pathToPicture: Assets/Visuals/Sprites/Class Ability/Dwarf/Improvements.png
-  borderColor: {r: 0, g: 0, b: 0, a: 1}
+  borderColor: {r: 0.039215688, g: 0.2392157, b: 0.38431376, a: 1}
   costType: 3
-  unlockCost: 1
+  unlockCost: 5
   unlockHealth: 1
   unlockStamina: 1
   unlockMagic: 1

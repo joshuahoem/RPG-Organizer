@@ -15,7 +15,7 @@ MonoBehaviour:
   abilityName: Eagle Eye
   picture: {fileID: 21300000, guid: ba0214d7bc072ee41b98bc46feac2d50, type: 3}
   pathToPicture: Assets/Visuals/Sprites/Ability Icons/Ranger/Eagel Eye.png
-  borderColor: {r: 0.8113208, g: 0.77687794, b: 0.77687794, a: 0.84313726}
+  borderColor: {r: 0.027450982, g: 0.6, b: 0.57254905, a: 1}
   costType: 3
   unlockCost: 0
   unlockHealth: 0

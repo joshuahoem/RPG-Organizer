@@ -15,7 +15,7 @@ MonoBehaviour:
   abilityName: Power Zap
   picture: {fileID: 21300000, guid: e74da7439c073194181dd55a99b6027f, type: 3}
   pathToPicture: Assets/Visuals/Sprites/Ability Icons/Wizard/Power Zap.png
-  borderColor: {r: 0.5754717, g: 0.04071733, b: 0.04071733, a: 0.9490196}
+  borderColor: {r: 0.5754717, g: 0.04071733, b: 0.04071733, a: 1}
   costType: 0
   unlockCost: 1
   unlockHealth: 0

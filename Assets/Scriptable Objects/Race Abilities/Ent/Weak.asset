@@ -15,7 +15,7 @@ MonoBehaviour:
   abilityName: Weak
   picture: {fileID: 21300000, guid: a936c4687b72a7440af86e6052a17983, type: 3}
   pathToPicture: Assets/Visuals/Sprites/Class Ability/Ent/Weak.png
-  borderColor: {r: 0, g: 0, b: 0, a: 1}
+  borderColor: {r: 0.9725491, g: 0.7607844, b: 0.5686275, a: 1}
   costType: 3
   unlockCost: 1
   unlockHealth: 1

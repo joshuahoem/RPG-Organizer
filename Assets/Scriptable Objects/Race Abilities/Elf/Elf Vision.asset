@@ -15,7 +15,7 @@ MonoBehaviour:
   abilityName: Elf Vision
   picture: {fileID: 21300000, guid: f6366675dd312ae4387457fdb61d7cf1, type: 3}
   pathToPicture: Assets/Visuals/Sprites/Class Ability/Elf/Elf Vision.png
-  borderColor: {r: 0, g: 0, b: 0, a: 1}
+  borderColor: {r: 0.9725491, g: 0.7607844, b: 0.5686275, a: 1}
   costType: 3
   unlockCost: 5
   unlockHealth: 1

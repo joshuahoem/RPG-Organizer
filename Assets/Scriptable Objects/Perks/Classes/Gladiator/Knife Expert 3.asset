@@ -10,20 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e66b32bf09104544db89100661d99a02, type: 3}
-  m_Name: Ax Expert 2
+  m_Name: Knife Expert 3
   m_EditorClassIdentifier: 
   unlockCost: 1
-  perkName: Ax Expert 2
-  picture: {fileID: 21300000, guid: eea9647f40f7b5743bf11556f3c75fff, type: 3}
-  borderColor: {r: 0, g: 0, b: 0, a: 0}
+  perkName: Knife Expert 3
+  picture: {fileID: 21300000, guid: dce9e552222c3754eaa5f3a4d8c2e6fd, type: 3}
+  borderColor: {r: 0.7176471, g: 0.08235294, b: 0.2509804, a: 1}
   pathToPicture: 
-  requiredWeapon: 4
   bonusHealth: 0
   bonusStamina: 0
   bonusMagic: 0
   bonusStrength: 0
   bonusIntelligence: 0
   bonusSpeed: 0
+  requiredWeapon: 6
   bonusAttack: 1
   bonusDefense: 0
   bonusArcane: 0
@@ -34,4 +34,4 @@ MonoBehaviour:
   strengthMultiplier: 0
   intelligenceMultiplier: 0
   speedMultiplier: 0
-  description: Adds 1 to attack when using an Ax
+  description: Adds 1 to attack when using an Knife

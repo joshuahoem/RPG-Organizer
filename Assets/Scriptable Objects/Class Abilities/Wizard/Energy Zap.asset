@@ -15,7 +15,7 @@ MonoBehaviour:
   abilityName: Energy Zap
   picture: {fileID: 21300000, guid: d42fd934997df164497f1fb7a914f96a, type: 3}
   pathToPicture: Assets/Visuals/Sprites/Ability Icons/Wizard/Energy Zap.png
-  borderColor: {r: 0.054734774, g: 0.7735849, b: 0.33252707, a: 0.83137256}
+  borderColor: {r: 0.054734774, g: 0.7735849, b: 0.33252707, a: 1}
   costType: 0
   unlockCost: 1
   unlockHealth: 0

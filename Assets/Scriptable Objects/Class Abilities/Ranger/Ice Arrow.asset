@@ -15,7 +15,7 @@ MonoBehaviour:
   abilityName: Ice Arrow
   picture: {fileID: 21300000, guid: d237bf8ee8ecb59468ed3fba6962b584, type: 3}
   pathToPicture: Assets/Visuals/Sprites/Ability Icons/Ranger/Ice Arrows.png
-  borderColor: {r: 0.2951673, g: 0.9339623, b: 0.8444618, a: 0.89411765}
+  borderColor: {r: 0.027450982, g: 0.6, b: 0.57254905, a: 1}
   costType: 0
   unlockCost: 1
   unlockHealth: 10

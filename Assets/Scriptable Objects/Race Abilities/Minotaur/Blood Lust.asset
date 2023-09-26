@@ -15,7 +15,7 @@ MonoBehaviour:
   abilityName: Blood Lust
   picture: {fileID: 21300000, guid: ad7c782b93c48b34cac9d502ccaa9d64, type: 3}
   pathToPicture: 
-  borderColor: {r: 0, g: 0, b: 0, a: 1}
+  borderColor: {r: 0.96470594, g: 0.7254902, b: 0.23137257, a: 1}
   costType: 3
   unlockCost: 5
   unlockHealth: 1

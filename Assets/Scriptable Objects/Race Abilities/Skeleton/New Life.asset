@@ -15,7 +15,7 @@ MonoBehaviour:
   abilityName: New Life
   picture: {fileID: 21300000, guid: 3244a5d47c34442418bea3a82a1a3f71, type: 3}
   pathToPicture: 
-  borderColor: {r: 0, g: 0, b: 0, a: 1}
+  borderColor: {r: 0.21960786, g: 0.6784314, b: 0.6627451, a: 1}
   costType: 2
   unlockCost: 5
   unlockHealth: 1

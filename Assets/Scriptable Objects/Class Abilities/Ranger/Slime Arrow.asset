@@ -15,7 +15,7 @@ MonoBehaviour:
   abilityName: Slime Arrow
   picture: {fileID: 21300000, guid: 610214c60f386544fa018765a77fab0a, type: 3}
   pathToPicture: Assets/Visuals/Sprites/Ability Icons/Ranger/Slime Arrows.png
-  borderColor: {r: 0.1517189, g: 0.9339623, b: 0.09251513, a: 0.87058824}
+  borderColor: {r: 0.027450982, g: 0.6, b: 0.57254905, a: 1}
   costType: 0
   unlockCost: 1
   unlockHealth: 12

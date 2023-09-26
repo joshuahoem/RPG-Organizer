@@ -15,7 +15,7 @@ MonoBehaviour:
   abilityName: Time Rift
   picture: {fileID: 21300000, guid: cc48c4ee35a987042ba64d4f91ad9792, type: 3}
   pathToPicture: Assets/Visuals/Sprites/Ability Icons/Wizard/Time Rift.png
-  borderColor: {r: 0.9245283, g: 0.8678355, b: 0.8678355, a: 0.85882354}
+  borderColor: {r: 0.9245283, g: 0.8678355, b: 0.8678355, a: 1}
   costType: 0
   unlockCost: 1
   unlockHealth: 0

@@ -15,9 +15,9 @@ MonoBehaviour:
   abilityName: Crafting Proficiency
   picture: {fileID: 21300000, guid: 0f034eb5b5e3ce344846e001a719287f, type: 3}
   pathToPicture: Assets/Visuals/Sprites/Class Ability/Dwarf/Crafting Proficiency.png
-  borderColor: {r: 0, g: 0, b: 0, a: 1}
+  borderColor: {r: 0.9215687, g: 0.18431373, b: 0.023529414, a: 1}
   costType: 3
-  unlockCost: 1
+  unlockCost: 5
   unlockHealth: 1
   unlockStamina: 1
   unlockMagic: 1

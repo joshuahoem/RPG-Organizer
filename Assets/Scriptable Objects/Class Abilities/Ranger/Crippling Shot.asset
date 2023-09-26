@@ -15,7 +15,7 @@ MonoBehaviour:
   abilityName: Crippling Shot
   picture: {fileID: 21300000, guid: 75d266b41967170469013323e94c3eba, type: 3}
   pathToPicture: Assets/Visuals/Sprites/Ability Icons/Ranger/Crippiling Shot.png
-  borderColor: {r: 0.8947375, g: 0.9433962, b: 0.09344962, a: 0.8862745}
+  borderColor: {r: 0.027450982, g: 0.6, b: 0.57254905, a: 1}
   costType: 1
   unlockCost: 1
   unlockHealth: 10

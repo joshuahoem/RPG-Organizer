@@ -15,7 +15,7 @@ MonoBehaviour:
   abilityName: Power Drain
   picture: {fileID: 21300000, guid: f6442ba5d38320649ad83d873fd8f954, type: 3}
   pathToPicture: Assets/Visuals/Sprites/Ability Icons/Wizard/Power Drain.png
-  borderColor: {r: 0.4245283, g: 0.006007465, b: 0.006007465, a: 0.92941177}
+  borderColor: {r: 0.7176471, g: 0.08235294, b: 0.2509804, a: 1}
   costType: 0
   unlockCost: 1
   unlockHealth: 0

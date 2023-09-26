@@ -15,7 +15,7 @@ MonoBehaviour:
   abilityName: Short Legs
   picture: {fileID: 21300000, guid: b37dda84b1d9d114c8c97db2ee3de359, type: 3}
   pathToPicture: Assets/Visuals/Sprites/Class Ability/Dwarf/Short Legs.png
-  borderColor: {r: 0, g: 0, b: 0, a: 1}
+  borderColor: {r: 0.9215687, g: 0.18431373, b: 0.023529414, a: 1}
   costType: 3
   unlockCost: 0
   unlockHealth: 1

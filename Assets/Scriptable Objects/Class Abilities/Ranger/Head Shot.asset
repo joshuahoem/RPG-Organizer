@@ -15,7 +15,7 @@ MonoBehaviour:
   abilityName: Head Shot
   picture: {fileID: 21300000, guid: 0a6b4ac773a089b4b86645e39b00a4cd, type: 3}
   pathToPicture: Assets/Visuals/Sprites/Ability Icons/Ranger/Headshot.png
-  borderColor: {r: 0.46390587, g: 0.6132076, b: 0.10702208, a: 0.8235294}
+  borderColor: {r: 0.027450982, g: 0.6, b: 0.57254905, a: 1}
   costType: 1
   unlockCost: 1
   unlockHealth: 10

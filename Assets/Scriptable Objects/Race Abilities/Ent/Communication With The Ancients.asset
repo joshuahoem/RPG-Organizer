@@ -15,7 +15,7 @@ MonoBehaviour:
   abilityName: Communication With The Ancients
   picture: {fileID: 21300000, guid: c7ed85e078243884e8534c0afb9040b3, type: 3}
   pathToPicture: Assets/Visuals/Sprites/Class Ability/Ent/Communiction with the Ancients.png
-  borderColor: {r: 0, g: 0, b: 0, a: 1}
+  borderColor: {r: 0.37647063, g: 0.6392157, b: 0.7372549, a: 1}
   costType: 3
   unlockCost: 5
   unlockHealth: 1

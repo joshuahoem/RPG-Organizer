@@ -15,9 +15,9 @@ MonoBehaviour:
   abilityName: Natural Skin
   picture: {fileID: 21300000, guid: f98bc89100a20954cb9724ddd3c8529f, type: 3}
   pathToPicture: Assets/Visuals/Sprites/Class Ability/Ent/Natural Skin.png
-  borderColor: {r: 0, g: 0, b: 0, a: 1}
+  borderColor: {r: 0.72156864, g: 0.91372555, b: 0.5803922, a: 1}
   costType: 3
-  unlockCost: 1
+  unlockCost: 0
   unlockHealth: 1
   unlockStamina: 1
   unlockMagic: 1

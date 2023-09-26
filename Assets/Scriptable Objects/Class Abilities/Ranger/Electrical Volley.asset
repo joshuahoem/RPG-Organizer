@@ -15,7 +15,7 @@ MonoBehaviour:
   abilityName: Electrical Volley
   picture: {fileID: 21300000, guid: e337a540b1d421848992839dc46efef9, type: 3}
   pathToPicture: Assets/Visuals/Sprites/Ability Icons/Ranger/Eletrical Volly.png
-  borderColor: {r: 0.4015731, g: 0.4245283, b: 0.23429157, a: 0.9490196}
+  borderColor: {r: 0.027450982, g: 0.6, b: 0.57254905, a: 1}
   costType: 0
   unlockCost: 1
   unlockHealth: 15
