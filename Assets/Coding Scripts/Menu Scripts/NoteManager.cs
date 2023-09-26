@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,12 +9,17 @@ public class NoteManager : MonoBehaviour
     [SerializeField] GameObject notePrefab;
     [SerializeField] Transform parentForNotes;
 
+    [SerializeField] TextMeshProUGUI parentDrop;
+    [SerializeField] TextMeshProUGUI childDrop;
+
     List<GameObject> noteObjects = new List<GameObject>();
     List<string> notes = new List<string>();
 
     private void Start() 
     {
         SaveObject save = SaveManagerVersion3.FindCurrentSave();
+        if (save == null) { Debug.Log("No Save Found"); return; }
+
         foreach (string note in save.notes)
         {
             GameObject newNote = Instantiate(notePrefab, transform.position, transform.rotation);
@@ -68,5 +74,10 @@ public class NoteManager : MonoBehaviour
         save.notes = notes;
 
         SaveManagerVersion3.SaveGame(CharacterRegistry.Instance);
+    }
+
+    public void onValueChangedNote()
+    {
+        parentDrop.text = childDrop.text;
     }
 }

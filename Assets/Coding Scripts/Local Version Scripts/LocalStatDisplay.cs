@@ -78,7 +78,7 @@ public class LocalStatDisplay : MonoBehaviour
 
     [Header("Abilities")]
     [SerializeField] Ability dualWieldAbility;
-    [SerializeField] Ability weaponMasteryAbility;
+    [SerializeField] Perk weaponMasteryAbility;
 
     public string charString;
 
@@ -97,6 +97,8 @@ public class LocalStatDisplay : MonoBehaviour
     private void LoadCurrentSave()
     {
         SaveObject save = SaveManagerVersion3.FindCurrentSave();
+        if (save == null) { Debug.Log("No Save Found"); return; }
+
         if (nameOfCharacter != null) { nameOfCharacter.text = save.nameOfCharacter; }
         if (race != null) { race.text = save.race; }
         if (characterSelectedClass != null) { characterSelectedClass.text = save.characterClass; }
@@ -175,6 +177,8 @@ public class LocalStatDisplay : MonoBehaviour
     private void UpdateBonusUI()
     {
         SaveObject save = SaveManagerVersion3.FindCurrentSave();
+        if (save == null) { Debug.Log("No Save Found"); return; }
+
         int _bonusAttack = 0;
         int _totalAttack = save.bonusAttack;
         int _bonusDefense = 0;
@@ -251,6 +255,7 @@ public class LocalStatDisplay : MonoBehaviour
     private void LoadBaseStatBonus()
     {
         SaveObject save = SaveManagerVersion3.FindCurrentSave();
+        if (save == null) { Debug.Log("No Save Found"); return; }
         bonusHealth = 0;
         bonusStamina = 0;
         bonusMagic = 0;
@@ -293,7 +298,7 @@ public class LocalStatDisplay : MonoBehaviour
                     perkBonusArcane += perkObject.perk.bonusArcane;
                     perkBonusWard += perkObject.perk.bonusWard;
 
-                    if (SaveManagerVersion3.DoesPlayerHaveThisAbility(weaponMasteryAbility))
+                    if (SaveManagerVersion3.DoesPlayerHaveThisPerk(weaponMasteryAbility))
                     {
                         perkBonusAttack += perkObject.perk.bonusAttack;
                         perkBonusDefense += perkObject.perk.bonusDefense;
@@ -311,7 +316,7 @@ public class LocalStatDisplay : MonoBehaviour
                         perkBonusArcane += perkObject.perk.bonusArcane;
                         perkBonusWard += perkObject.perk.bonusWard;
 
-                        if (SaveManagerVersion3.DoesPlayerHaveThisAbility(weaponMasteryAbility))
+                        if (SaveManagerVersion3.DoesPlayerHaveThisPerk(weaponMasteryAbility))
                         {
                             Debug.Log("adding");
                             perkBonusAttack += perkObject.perk.bonusAttack;

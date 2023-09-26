@@ -5,6 +5,7 @@ using UnityEngine;
 public class SaveState
 {
     public int numberOfCharacters;
+    public int diceLastRolled;
     public string fileIndexString;
     public bool raceAbilityBool;
     public bool classAbilityBool;

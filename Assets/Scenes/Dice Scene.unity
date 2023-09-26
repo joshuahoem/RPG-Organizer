@@ -1635,6 +1635,7 @@ GameObject:
   - component: {fileID: 1571464314}
   - component: {fileID: 1571464313}
   - component: {fileID: 1571464312}
+  - component: {fileID: 1571464315}
   m_Layer: 5
   m_Name: Button Roll Dice
   m_TagString: Untagged
@@ -1756,6 +1757,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1571464310}
   m_CullTransparentMesh: 1
+--- !u!114 &1571464315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1571464310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6160e567fc2ad564cb8f9dd024303a46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pressedPos: {x: 0, y: -6, z: 0}
 --- !u!1 &1585420914
 GameObject:
   m_ObjectHideFlags: 0
@@ -2557,6 +2571,10 @@ MonoBehaviour:
   contentObjectCountBeforeGrowth: 21
   contentGrowthEveryXObjects: 7
   diceTimeToWait: 1
+  interactableColor: {r: 0.4156863, g: 0.5372549, b: 0.8000001, a: 1}
+  disabledColor: {r: 0.11764707, g: 0.21568629, b: 0.6, a: 0.3529412}
+  textColor: {r: 0, g: 0, b: 0, a: 1}
+  disabledTextColor: {r: 0, g: 0, b: 0, a: 0.5882353}
 --- !u!1 &1906206929
 GameObject:
   m_ObjectHideFlags: 0
@@ -2856,7 +2874,7 @@ MonoBehaviour:
   bonusIntelligenceTMP: {fileID: 0}
   bonusSpeedTMP: {fileID: 0}
   dualWieldAbility: {fileID: 11400000, guid: 5b9eb45cd3bf1c145a47b936973366f8, type: 2}
-  weaponMasteryAbility: {fileID: 11400000, guid: 728ff7f09c2bcd64a82f1666279d78b6, type: 2}
+  weaponMasteryAbility: {fileID: 11400000, guid: 19d3de8b632d2654e984aeb0833c5f2e, type: 2}
   charString: 
 --- !u!1 &1976749117
 GameObject:

@@ -25,9 +25,24 @@ public class DiceManager : MonoBehaviour
     [SerializeField] int contentObjectCountBeforeGrowth;
     [SerializeField] int contentGrowthEveryXObjects;
     [SerializeField] private float diceTimeToWait;
+    [SerializeField] Color interactableColor;
+    [SerializeField] Color disabledColor;
+    [SerializeField] Color textColor;
+    [SerializeField] Color disabledTextColor;
 
 
     private List<GameObject> diceObjectsList = new List<GameObject>(); 
+
+    private void Start() 
+    {
+        SaveState state = SaveManagerVersion3.FindSaveState();    
+
+        if (state.diceLastRolled > 0)
+        {
+            diceNumberTMP.text = state.diceLastRolled.ToString();
+            SpawnDice();
+        }
+    }
 
 
     public void SpawnDice()
@@ -47,6 +62,10 @@ public class DiceManager : MonoBehaviour
             diceTempObject.transform.SetParent(diceParentTransform, false);
             diceObjectsList.Add(diceTempObject);
         }
+
+        SaveState state = SaveManagerVersion3.FindSaveState();    
+        state.diceLastRolled = diceNumber;
+        SaveManagerVersion3.SaveStateOfGame(state);
 
         ChangeRollArea();
         ChangeContentArea();
@@ -89,6 +108,9 @@ public class DiceManager : MonoBehaviour
     public void RollDice()
     {
         buttonRollDice.GetComponent<Button>().interactable = false;
+        buttonRollDice.GetComponent<Image>().color = disabledColor;
+        buttonRollDice.GetComponentInChildren<TMPro.TextMeshProUGUI>().color = disabledTextColor;
+
         StartCoroutine(DiceTimer());
         int attack = 0;
         int defense = 0;
@@ -110,6 +132,9 @@ public class DiceManager : MonoBehaviour
     {
         yield return new WaitForSeconds(diceTimeToWait);
         buttonRollDice.GetComponent<Button>().interactable = true;
+        buttonRollDice.GetComponent<Image>().color = interactableColor;
+        buttonRollDice.GetComponentInChildren<TMPro.TextMeshProUGUI>().color = textColor;
+
     }
     
 }

@@ -128,7 +128,16 @@ public static class SaveManagerVersion3
     {
         SaveState state = FindSaveState();
 
-        return CharacterRegistry.Instance.GetCharacter(state.fileIndexString);
+        if (CharacterRegistry.Instance != null)
+        {
+            return CharacterRegistry.Instance.GetCharacter(state.fileIndexString);
+        }
+        else
+        {
+            Debug.LogWarning("Character Registry not found");
+            return null;
+        }
+
 
     }
 
@@ -170,9 +179,18 @@ public static class SaveManagerVersion3
 
     public static bool DoesPlayerHaveThisPerk(Perk perk)
     {
+        if (perk == null)
+        {
+            Debug.LogWarning("cant pass in a null perk");
+            return false;
+        }
         SaveObject save = FindCurrentSave();
         foreach (PerkObject _perk in save.perks)
         {
+            if (_perk.perk == null)
+            {
+                _perk.perk = LoadGameMasterHandler.Instance.GetPerk(_perk.stringID);
+            }
             if (_perk.perk.perkName == perk.perkName)
             {
                 return true;

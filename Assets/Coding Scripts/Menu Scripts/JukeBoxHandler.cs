@@ -19,7 +19,10 @@ public class JukeBoxHandler : MonoBehaviour
 
     public void PlaySong(string key)
     {
-        MusicSoundHandler.Instance.PlayMusic(dictionaryForMusic[key]);
+        if (MusicSoundHandler.Instance != null)
+        {
+            MusicSoundHandler.Instance.PlayMusic(dictionaryForMusic[key]);
+        }
     }
 
     private void Awake() 

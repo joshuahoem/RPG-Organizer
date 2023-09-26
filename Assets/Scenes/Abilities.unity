@@ -32668,7 +32668,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1661003642
 RectTransform:
   m_ObjectHideFlags: 0
@@ -33429,7 +33429,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1704129061
 RectTransform:
   m_ObjectHideFlags: 0
@@ -51725,8 +51725,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe089407fa33fc74f894a8d9600ca388, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ability: {fileID: 11400000, guid: 728ff7f09c2bcd64a82f1666279d78b6, type: 2}
-  perk: {fileID: 0}
+  ability: {fileID: 0}
+  perk: {fileID: 11400000, guid: 19d3de8b632d2654e984aeb0833c5f2e, type: 2}
   borderImage: {fileID: 3066882012067683305}
   backgroundImage: {fileID: 1267382630}
   abilityImage: {fileID: 3066882010616797121}
