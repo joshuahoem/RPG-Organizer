@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class ButtonTextMovement : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
     private TextMeshProUGUI buttonText;
-    private Image imageToMove;
+    [SerializeField] private Image imageToMove;
     private Vector3 originalPos;
     private Button button;
     [SerializeField] private Vector3 pressedPos;
@@ -14,17 +14,7 @@ public class ButtonTextMovement : MonoBehaviour, IPointerDownHandler, IPointerUp
     void Start()
     {
         buttonText = GetComponentInChildren<TextMeshProUGUI>();
-        button = GetComponent<Button>();
-
-        if (buttonText == null)
-        {
-            imageToMove = GetComponent<Image>();
-        }
-
-        if (imageToMove == null)
-        {
-            imageToMove = GetComponentInChildren<Image>();
-        }
+        button = GetComponent<Button>();       
 
         if (buttonText != null)
         {

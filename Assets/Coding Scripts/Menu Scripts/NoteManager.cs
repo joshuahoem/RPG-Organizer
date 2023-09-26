@@ -9,9 +9,6 @@ public class NoteManager : MonoBehaviour
     [SerializeField] GameObject notePrefab;
     [SerializeField] Transform parentForNotes;
 
-    [SerializeField] TextMeshProUGUI parentDrop;
-    [SerializeField] TextMeshProUGUI childDrop;
-
     List<GameObject> noteObjects = new List<GameObject>();
     List<string> notes = new List<string>();
 
@@ -31,6 +28,8 @@ public class NoteManager : MonoBehaviour
         }
 
         FindObjectOfType<ShopContentFitter>().FitContent(noteObjects.Count + 1);
+
+        ChangeContentSize();
 
         LayoutRebuilder.ForceRebuildLayoutImmediate(parentForNotes.GetComponent<RectTransform>());
     }
@@ -74,10 +73,26 @@ public class NoteManager : MonoBehaviour
         save.notes = notes;
 
         SaveManagerVersion3.SaveGame(CharacterRegistry.Instance);
+
+        ChangeContentSize();
     }
 
-    public void onValueChangedNote()
+    public void ChangeContentSize()
     {
-        parentDrop.text = childDrop.text;
+        float currentSize = parentForNotes.gameObject.GetComponent<RectTransform>().sizeDelta.y;
+
+        float runningHeight = 0f;
+
+        foreach (GameObject note in noteObjects)
+        {
+            runningHeight += note.GetComponent<RectTransform>().sizeDelta.y;
+        }
+
+        if (runningHeight > currentSize)
+        {
+            float x = parentForNotes.GetComponent<RectTransform>().sizeDelta.x; 
+            parentForNotes.GetComponent<RectTransform>().sizeDelta = new Vector2(x, runningHeight);
+        }
+
     }
 }
