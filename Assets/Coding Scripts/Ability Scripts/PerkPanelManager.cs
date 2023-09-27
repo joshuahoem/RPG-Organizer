@@ -111,19 +111,6 @@ public class PerkPanelManager : MonoBehaviour
 
         PerkObject perkObject = new PerkObject(perk.perkName, perk, 1, true, perkObjectFromItem.ID);
         foundPerkObject = perkObject;
-        save.perks.Add(perkObject);
-
-        // Debug.Log("class " + state.classAbilityBool);
-        // Debug.Log("race " + state.raceAbilityBool);
-
-        if (state.classAbilityBool)
-            { 
-                // Debug.Log(save.classAbilityPoints);
-                save.classAbilityPoints -= perk.unlockCost; 
-                // Debug.Log(save.classAbilityPoints);
-            }
-        else if (state.raceAbilityBool)
-            { save.raceAbilityPoints -= perk.unlockCost; }
 
         onPerkUnlocked?.Invoke(this, new UnlockPerkEventArgs { eventPerkObject = foundPerkObject });
 

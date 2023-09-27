@@ -29,7 +29,9 @@ public class ItemDatabase : ScriptableObject, ISerializationCallbackReceiver
             // GetItem.Add(i, allItems[i]);
         }
 
+#if UNITY_EDITOR
         UnityEditor.EditorUtility.SetDirty(this);
+#endif
 
     }
 

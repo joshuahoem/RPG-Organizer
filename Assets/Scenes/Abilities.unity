@@ -1680,7 +1680,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ability: {fileID: 0}
-  perk: {fileID: 11400000, guid: c7ff51c2fcee15a4f9d45db04519f862, type: 2}
+  perk: {fileID: 11400000, guid: af00768eeb5508b408444d8b3f821d05, type: 2}
   borderImage: {fileID: 1537255542}
   backgroundImage: {fileID: 1839257485}
   abilityImage: {fileID: 152147791}
@@ -12777,7 +12777,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ability: {fileID: 0}
-  perk: {fileID: 11400000, guid: 9a8649d56f396224f99b1b3a4101badf, type: 2}
+  perk: {fileID: 11400000, guid: c7ff51c2fcee15a4f9d45db04519f862, type: 2}
   borderImage: {fileID: 347245368}
   backgroundImage: {fileID: 633989143}
   abilityImage: {fileID: 1914673251}
@@ -13267,7 +13267,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ability: {fileID: 0}
-  perk: {fileID: 11400000, guid: d20f1d4f34e24934596206c68ae6fa17, type: 2}
+  perk: {fileID: 11400000, guid: c40776ce7c1ea604784756bc407ff6b0, type: 2}
   borderImage: {fileID: 1112742242}
   backgroundImage: {fileID: 152031034}
   abilityImage: {fileID: 344479110}
@@ -16373,7 +16373,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ability: {fileID: 0}
-  perk: {fileID: 11400000, guid: c40776ce7c1ea604784756bc407ff6b0, type: 2}
+  perk: {fileID: 11400000, guid: 3863d0cba8d74c243b0220f22d8b6310, type: 2}
   borderImage: {fileID: 1208107855}
   backgroundImage: {fileID: 1642045014}
   abilityImage: {fileID: 1063795149}
@@ -19649,7 +19649,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ability: {fileID: 0}
-  perk: {fileID: 11400000, guid: cfe1421a655d1ab48b68c65b4ec3b3d2, type: 2}
+  perk: {fileID: 11400000, guid: 6e3bb9273de1a024db7a352576ba0c7e, type: 2}
   borderImage: {fileID: 337645725}
   backgroundImage: {fileID: 1244379236}
   abilityImage: {fileID: 1052663463}
@@ -24115,7 +24115,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ability: {fileID: 0}
-  perk: {fileID: 11400000, guid: 271c99710ed820340a8abfe9ce4cbc26, type: 2}
+  perk: {fileID: 11400000, guid: cfe1421a655d1ab48b68c65b4ec3b3d2, type: 2}
   borderImage: {fileID: 890070967}
   backgroundImage: {fileID: 571676844}
   abilityImage: {fileID: 1336597964}
@@ -40219,9 +40219,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -34.8497}
-  m_SizeDelta: {x: 0, y: -34.8499}
-  m_Pivot: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2085898662
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46164,7 +46164,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ability: {fileID: 0}
-  perk: {fileID: 11400000, guid: 4d440a1a0768330429db63288f5549f4, type: 2}
+  perk: {fileID: 11400000, guid: 9a8649d56f396224f99b1b3a4101badf, type: 2}
   borderImage: {fileID: 3066882011514514261}
   backgroundImage: {fileID: 1667361837}
   abilityImage: {fileID: 3066882011170236285}
@@ -47448,7 +47448,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ability: {fileID: 0}
-  perk: {fileID: 11400000, guid: ba074e1e5a1ddea44b49272dbacfe0e4, type: 2}
+  perk: {fileID: 11400000, guid: 271c99710ed820340a8abfe9ce4cbc26, type: 2}
   borderImage: {fileID: 3066882011895855202}
   backgroundImage: {fileID: 1430818411}
   abilityImage: {fileID: 3066882011451601994}
@@ -63484,7 +63484,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ability: {fileID: 0}
-  perk: {fileID: 11400000, guid: c070e69bbaa40634e89dadcbf1e83640, type: 2}
+  perk: {fileID: 11400000, guid: d20f1d4f34e24934596206c68ae6fa17, type: 2}
   borderImage: {fileID: 3066882011025477299}
   backgroundImage: {fileID: 1088919154}
   abilityImage: {fileID: 3066882011654800027}

@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "ZY22GHHX84",
         "name": "com.HoemMade.RPGOrganizer",
-        "processId": 19930,
+        "processId": 27209,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -42,6 +42,12 @@
             "deviceId": "ZY22GHHX84",
             "name": "com.HoemMade.RPGOrganizer",
             "processId": 19930,
+            "exited": false
+        },
+        {
+            "deviceId": "ZY22GHHX84",
+            "name": "com.HoemMade.RPGOrganizer",
+            "processId": 27209,
             "exited": false
         }
     ],

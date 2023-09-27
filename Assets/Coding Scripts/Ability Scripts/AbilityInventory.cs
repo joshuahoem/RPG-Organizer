@@ -33,6 +33,9 @@ public class AbilityInventory : MonoBehaviour
         AbilityPanelManager panelManager = FindObjectOfType<AbilityPanelManager>();
         panelManager.onAbilityUnlocked += Subscriber_UnlockAbility;
 
+        PerkPanelManager perkPanelManager = FindObjectOfType<PerkPanelManager>();
+        perkPanelManager.onPerkUnlocked += Subscriber_UnlockPerk;
+
         SaveState saveState = SaveManagerVersion3.FindSaveState();
         saveState.screenState = ScreenState.AbilityScreen;
         SaveManagerVersion3.SaveStateOfGame(saveState);
@@ -76,6 +79,8 @@ public class AbilityInventory : MonoBehaviour
 
             abilitySaveObject.unlocked = true;
             save.abilityInventory.Add(abilitySaveObject);
+            SaveManagerVersion3.SaveGame(CharacterRegistry.Instance);      
+
         }
         else
         {
@@ -114,7 +119,7 @@ public class AbilityInventory : MonoBehaviour
                 if (e._ability.unlocked)
                 {
                     //find new cost
-                    save.classAbilityPoints -= e._ability.ability.allAbilityLevels[e._ability.currentLevel].upgradeCost;
+                    save.classAbilityPoints -= e._ability.ability.allAbilityLevels[e._ability.viewingLevel].upgradeCost;
                     abilityPointsTextNumber.text = save.classAbilityPoints.ToString(); 
                 }
                 else
@@ -188,6 +193,33 @@ public class AbilityInventory : MonoBehaviour
         }
 
         return _abilityToAdd;
+    }
+
+    private void Subscriber_UnlockPerk(object sender, PerkPanelManager.UnlockPerkEventArgs e)
+    {
+        PerkObject perkObject = e.eventPerkObject;
+        SaveState state = SaveManagerVersion3.FindSaveState();
+        SaveObject save = SaveManagerVersion3.FindCurrentSave();
+
+        if (perkObject != null)
+        {
+            //just unlocked
+            if (state.classAbilityBool)
+            { 
+                save.classAbilityPoints -= perkObject.perk.unlockCost;
+                abilityPointsTextNumber.text = save.classAbilityPoints.ToString();    
+            }
+            else if (state.raceAbilityBool)
+            { 
+                save.raceAbilityPoints -= perkObject.perk.unlockCost;
+                abilityPointsTextNumber.text = save.raceAbilityPoints.ToString(); 
+            }
+
+            // perkObject.unlocked = true; //no unlocked state for perkobject
+            save.perks.Add(perkObject);
+
+            SaveManagerVersion3.SaveGame(CharacterRegistry.Instance);
+        }
     }
 
 }

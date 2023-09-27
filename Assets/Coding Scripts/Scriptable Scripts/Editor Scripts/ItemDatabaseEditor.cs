@@ -1,3 +1,4 @@
+#if UNITY_EDITOR
 using UnityEngine;
 using UnityEditor;
 using System;
@@ -97,3 +98,5 @@ public class ItemDatabaseEditor : Editor
         EditorUtility.SetDirty(itemDatabase);
     }
 }
+
+#endif

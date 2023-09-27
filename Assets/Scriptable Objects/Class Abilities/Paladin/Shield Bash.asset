@@ -26,7 +26,7 @@ MonoBehaviour:
   unlockSpeed: 0
   allAbilityLevels:
   - level: 1
-    upgradeCost: 0
+    upgradeCost: 1
     magicCost: 0
     staminaCost: 1
     range: 1
@@ -34,22 +34,22 @@ MonoBehaviour:
     magicDamage: 0
     description: Push Enemy back 3 spaces. Chance to disarm.
   - level: 2
-    upgradeCost: 0
+    upgradeCost: 1
     magicCost: 0
     staminaCost: 1
     range: 1
     damage: 2
     magicDamage: 0
-    description: 'Push Enemy back 3 spaces.
+    description: 'Push Enemy back 5 spaces.
 
-      Chance to disarm (18+)'
+      Chance to disarm (17+)'
   - level: 3
-    upgradeCost: 0
+    upgradeCost: 1
     magicCost: 0
     staminaCost: 1
     range: 1
     damage: 3
     magicDamage: 0
-    description: 'Push Enemy back 3 spaces.
+    description: 'Push Enemy back 7 spaces.
 
-      Chance to disarm (18+)'
+      Chance to disarm (16+)'

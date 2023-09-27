@@ -36,7 +36,9 @@ public class AbilityDatabase : ScriptableObject, ISerializationCallbackReceiver
             }
         }
 
+#if UNITY_EDITOR
         UnityEditor.EditorUtility.SetDirty(this);
+#endif
 
     }
 

@@ -93,6 +93,7 @@ public class MainMenuPanelManager : MonoBehaviour
         SaveManagerVersion3.SavePlayerInfo(info);
 
         SaveObject save = SaveManagerVersion3.FindCurrentSave();
+        if (save == null) { return; }
         save.abilityInventory.Clear();
         save.inventory.Clear();
         save.perks.Clear();

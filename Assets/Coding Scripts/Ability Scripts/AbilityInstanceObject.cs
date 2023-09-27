@@ -39,6 +39,11 @@ public class AbilityInstanceObject : MonoBehaviour
 
             abilitySO = GetAbilitySaveObject();
 
+            if (ability == null && perk == null)
+            {
+                Debug.LogWarning("Both empty: " + gameObject.name);
+            }
+
         }
 
         if (perk != null)

@@ -188,7 +188,7 @@ public class AbilityManager : MonoBehaviour
                     int displayNumber = GO.GetComponent<PerkInstanceObject>().perkObject.count + perk.count;
                     GO.GetComponent<PerkInstanceObject>().perkObject.count = displayNumber;
                     GO.GetComponent<PerkInstanceObject>().perkCountTMP.text = displayNumber.ToString();
-                    return;
+                    continue;
                 }
 
             }
