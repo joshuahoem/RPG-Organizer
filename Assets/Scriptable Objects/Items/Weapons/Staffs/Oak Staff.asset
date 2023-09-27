@@ -24,6 +24,7 @@ MonoBehaviour:
   equipmentSlot: 5
   enchanted: 0
   pathToPicture: Assets/Visuals/Sprites/Weaopn Sprites/Staffs/Oak Staff.png
+  isIncluded: 0
   mainDamage: 0
   mainMagicDamage: 2
   mainAttackRange: 4
@@ -31,7 +32,7 @@ MonoBehaviour:
   offMagicDamage: 0
   offAttackRange: 0
   numberOfHands: 1
-  weaponType: 0
+  weaponType: 7
   defense: 0
   magicDefense: 0
   healthModifier: 0
@@ -45,3 +46,6 @@ MonoBehaviour:
   arcaneModifier: 0
   wardModifier: 0
   ability: {fileID: 0}
+  healthToRecover: 0
+  staminaToRecover: 0
+  magicToRecover: 0

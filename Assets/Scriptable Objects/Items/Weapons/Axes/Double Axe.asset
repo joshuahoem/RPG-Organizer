@@ -23,13 +23,14 @@ MonoBehaviour:
   equipmentSlot: 5
   enchanted: 0
   pathToPicture: Assets/Visuals/Sprites/Weaopn Sprites/Axes/Doubled Axe.png
+  isIncluded: 0
   mainDamage: 4
   mainMagicDamage: 0
   mainAttackRange: 0
   offDamage: 0
   offMagicDamage: 0
   offAttackRange: 0
-  numberOfHands: 0
+  numberOfHands: 1
   weaponType: 4
   defense: 0
   magicDefense: 0

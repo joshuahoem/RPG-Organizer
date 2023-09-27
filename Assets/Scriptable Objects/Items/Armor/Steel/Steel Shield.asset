@@ -23,13 +23,14 @@ MonoBehaviour:
   equipmentSlot: 6
   enchanted: 0
   pathToPicture: Assets/Visuals/Sprites/Armor Sprites/Steel Shield.png
+  isIncluded: 0
   mainDamage: 0
   mainMagicDamage: 0
   mainAttackRange: 0
   offDamage: 0
   offMagicDamage: 0
   offAttackRange: 0
-  numberOfHands: 0
+  numberOfHands: 2
   weaponType: 0
   defense: 3
   magicDefense: 0
@@ -44,3 +45,6 @@ MonoBehaviour:
   arcaneModifier: 0
   wardModifier: 0
   ability: {fileID: 0}
+  healthToRecover: 0
+  staminaToRecover: 0
+  magicToRecover: 0
