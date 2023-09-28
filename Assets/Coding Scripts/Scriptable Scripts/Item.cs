@@ -7,9 +7,9 @@ using UnityEditor;
 
 public enum NumberOfHands
 {
+    NoHands,
     OneHanded,
-    TwoHanded,
-    NoHands
+    TwoHanded
 }
 
 public enum EquipmentSlot

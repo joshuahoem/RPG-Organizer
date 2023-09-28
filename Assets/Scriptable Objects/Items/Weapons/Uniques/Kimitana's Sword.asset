@@ -25,13 +25,14 @@ MonoBehaviour:
   equipmentSlot: 5
   enchanted: 1
   pathToPicture: Assets/Visuals/Sprites/Weaopn Sprites/Swords/Kimitana's Sword.png
+  isIncluded: 0
   mainDamage: 20
   mainMagicDamage: 0
   mainAttackRange: 1
   offDamage: 10
   offMagicDamage: 0
   offAttackRange: 1
-  numberOfHands: 0
+  numberOfHands: 1
   weaponType: 5
   defense: 10
   magicDefense: 10
@@ -46,3 +47,6 @@ MonoBehaviour:
   arcaneModifier: 0
   wardModifier: 0
   ability: {fileID: 0}
+  healthToRecover: 0
+  staminaToRecover: 0
+  magicToRecover: 0

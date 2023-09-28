@@ -23,13 +23,14 @@ MonoBehaviour:
   equipmentSlot: 10
   enchanted: 0
   pathToPicture: 
+  isIncluded: 0
   mainDamage: 0
   mainMagicDamage: 0
   mainAttackRange: 0
   offDamage: 0
   offMagicDamage: 0
   offAttackRange: 0
-  numberOfHands: 2
+  numberOfHands: 0
   weaponType: 0
   defense: 0
   magicDefense: 0

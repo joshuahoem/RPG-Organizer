@@ -23,6 +23,7 @@ MonoBehaviour:
   equipmentSlot: 12
   enchanted: 0
   pathToPicture: Assets/Visuals/Sprites/Consumable Icons/Pink Berries.png
+  isIncluded: 0
   mainDamage: 0
   mainMagicDamage: 0
   mainAttackRange: 0

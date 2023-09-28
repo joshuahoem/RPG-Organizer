@@ -31,7 +31,7 @@ MonoBehaviour:
   offDamage: 1
   offMagicDamage: 0
   offAttackRange: 1
-  numberOfHands: 0
+  numberOfHands: 1
   weaponType: 4
   defense: 0
   magicDefense: 0
