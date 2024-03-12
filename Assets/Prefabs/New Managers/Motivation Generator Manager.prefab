@@ -1,0 +1,117 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7591085392622617194
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7591085392622617196}
+  - component: {fileID: 7591085392622617195}
+  m_Layer: 0
+  m_Name: Motivation Generator Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7591085392622617196
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7591085392622617194}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7591085392622617195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7591085392622617194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b30ff84494bf41409f48bb36044e923, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  motivationTMP: {fileID: 0}
+  motivationReasons:
+  - "Traversing the dungeon would restore your clan\u2019s honor."
+  - "A friend of yours perished in the dungeon, and survivors claim their death was
+    a coward\u2019s one. You seek the truth."
+  - By completing the challenges of the dungeon, you aim to atone for a grave mistake
+    that brought shame upon your community.
+  - "A loved one was condemned to an expedition into the dungeon. You\u2019ve taken
+    their place."
+  - Evil is seeping out of the dungeon. It is your duty to protect the world above
+    and fight.
+  - "A powerful entity demands reparation for a misdeed done by your ancestors. The
+    dungeon\u2019s completion is the price."
+  - A deadly disease ravages your homeland, and ancient texts speak of a cure found
+    within the dungeon.
+  - "Scholars believe an artifact in the dungeon can bring plentiful harvests and
+    end the community\u2019s famine."
+  - There are whispers that the dungeon hides the blueprints of forgotten technology
+    that could uplift society.
+  - "A vision from your deity tasks you with retrieving a sacred relic from the dungeon\u2019s
+    depths."
+  - Prophecies speak of a chosen one entering the dungeon to avert a looming catastrophe.
+  - Pilgrims speak of a sanctified chamber within the dungeon, a place of great power,
+    needing a guardian.
+  - An encroaching threat from another realm focuses on the dungeon. You go in defense
+    of your home.
+  - Loved ones have been taken hostage, and the kidnappers demand an item from the
+    dungeon as ransom.
+  - "The village\u2019s protective barrier is waning, and the dungeon is said to
+    house its power source."
+  - "Your beloved went in search of the dungeon\u2019s wonders and has not returned.
+    You go in search of them."
+  - "An old friend\u2019s letter spoke of the dungeon\u2019s challenges. Concerned
+    for their safety, you follow their path."
+  - "Reconnecting with a lost family member hinges upon a task tied to the dungeon\u2019s
+    many rooms."
+  - "Rumors suggest a gemstone of immense value rests in the dungeon\u2019s heart,
+    enough to make anyone fabulously wealthy."
+  - "You\u2019ve discovered an old debt contract that promises vast lands and titles
+    in exchange for a unique treasure from the dungeon."
+  - An anonymous tip hints that the dungeon hides a pool filled with golden coins,
+    a treasure many deem a myth.
+  - "Stories of the few who\u2019ve returned from the dungeon alive are legendary.
+    You crave that same notoriety."
+  - A group of elite adventurers often boast of their dungeon feats. You intend to
+    outshine them.
+  - "A famous bard promises to immortalize in song the one who uncovers the dungeon\u2019s
+    deepest secrets."
+  - Legends state that an ancient spellbook, granting immense power, is locked away
+    within the dungeon.
+  - The dungeon is said to be the final resting place of a lost civilization. Unearthing
+    their secrets could grant significant influence.
+  - Whispers abound that deep within the dungeon lies the knowledge to manipulate
+    time itself.
+  - "A nemesis who wronged you has sought refuge in the dungeon. You\u2019ll brave
+    its dangers to settle the score."
+  - A group of bandits who harmed your family is rumored to be using the dungeon
+    as a hideout.
+  - The mastermind behind a plot that tarnished your reputation is believed to be
+    seeking power within the dungeon.
+  - "You\u2019ve been cursed, and the only antidote is an herb found in the dungeon\u2019s
+    darkest corner."
+  - "A relentless hunter pursues you, and the dungeon\u2019s perilous reputation
+    makes it a good place to hide."
+  - Rumors say that a fountain of youth exists within the dungeon, and you seek its
+    rejuvenating waters.
+  - "A former lover claims they\u2019ll only return to you if you bring them a specific
+    trinket from the dungeon."
+  - Winning the heart of someone you admire requires presenting them with a rare
+    artifact said to be in the dungeon.
+  - Estranged from your family, you believe that a successful dungeon expedition
+    might earn back their respect and love.
